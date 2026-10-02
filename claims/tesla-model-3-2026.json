@@ -1,0 +1,308 @@
+[
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "recalls.campaign_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (TESLA MODEL 3, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL%203&modelYear=2026",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "Distinct NHTSA campaigns returned for MY2026 (make/model/year query; not filtered by trim). Cross-checked against NHTSA flat file https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip (same campaign set). Model strings queried: 'MODEL 3'; strings returning HTTP 400 had no matching records."
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "recalls.campaign_25V410",
+    "value": "SEATS:CRITICAL FASTENERS: The fasteners attaching the seat back to the seat bottom may have been improperly tightened.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (TESLA MODEL 3, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL%203&modelYear=2026",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "NHTSA campaign 25V410000; Part 573 report received 2025-06-18. Potential units affected across all models in campaign (flat file POTAFF): 48. NHTSA scope: Tesla, Inc. (Tesla) is recalling certain 2026 Model 3 and Model Y vehicles. Listed for the MY2026 MODEL 3 nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50251 (2026 Tesla Model 3 Standard RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50251",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_range_mi",
+    "value": 321,
+    "notes": "EPA id 50251, 'Model 3 Standard RWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim."
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50251 (2026 Tesla Model 3 Standard RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50251",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 24.3033,
+    "notes": "Wall-side, combined (EPA combE). The label and the printable page (https://www.fueleconomy.gov/feg/noframes/50251.shtml) round this to 24. EPA id 50251, 'Model 3 Standard RWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim."
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50251 (2026 Tesla Model 3 Standard RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50251",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 139,
+    "notes": "EPA id 50251, 'Model 3 Standard RWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim."
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50251 (2026 Tesla Model 3 Standard RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50251",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.drive_layout",
+    "value": "RWD",
+    "notes": "EPA 'drive' field: 'Rear-Wheel Drive'. EPA id 50251, 'Model 3 Standard RWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim."
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50251 (2026 Tesla Model 3 Standard RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50251",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.epa_motor_description",
+    "value": "225 kW ACPM 3-Phase",
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type: the EPA text isn't consistent enough for that (e.g. motor counts don't always match the drive layout). EPA id 50251, 'Model 3 Standard RWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim."
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "identity.msrp_usd",
+    "value": 38630,
+    "tier": "P",
+    "source_name": "Tesla Model 3 page, Standard / Rear-Wheel Drive specs (Wayback Machine snapshot 2026-04-13)",
+    "source_url": "https://web.archive.org/web/20260413083357/https://www.tesla.com/model3",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Tesla: 'Model 3 starts at $38,630. Price includes Destination and Order Fees but excludes taxes and other fees.' Differs from the EPA side-by-side MSRP ($36,990, Edmunds-sourced).",
+    "conflicts_with": [
+      "tesla-model-3-2026#identity.msrp_usd#EPA/DOE fueleconomy.gov Find.do side-by-side for vehicle 50251 (2026 Tesla Model 3 Standard RWD)"
+    ]
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "identity.msrp_usd",
+    "value": 36990,
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov Find.do side-by-side for vehicle 50251 (2026 Tesla Model 3 Standard RWD)",
+    "source_url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=50251",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "MSRP shown on the EPA side-by-side page. EPA footnote: MSRP data provided by Edmunds.com, Inc. Differs from Tesla's Wayback page figure that includes Destination and Order Fees ($38,630).",
+    "conflicts_with": [
+      "tesla-model-3-2026#identity.msrp_usd#Tesla Model 3 page, Standard / Rear-Wheel Drive specs (Wayback Machine snapshot 2026-04-13)"
+    ]
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "battery.pack_kwh",
+    "value": 69.5,
+    "tier": "S",
+    "source_name": "Green Cars Compare PDF: Tesla Model 3 Standard RWD (2025-...), USA listing (updated 2026-09-27)",
+    "source_url": "https://greencarscompare.com/assets/pdf/specs/us/299074.pdf",
+    "access_date": "2026-10-02",
+    "confidence": "low",
+    "notes": "Aggregator lists Battery (Usable/Nominal) 69.5/73 kWh; this claim is the usable figure. Tesla product page (live and Wayback) does not state pack kWh (only 'Standard Range'). Listing title is '2025-...' but EPA range on the sheet is 321 mi, matching EPA id 50251 for MY2026 Standard RWD."
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "usable",
+    "tier": "S",
+    "source_name": "Green Cars Compare PDF: Tesla Model 3 Standard RWD (2025-...), USA listing (updated 2026-09-27)",
+    "source_url": "https://greencarscompare.com/assets/pdf/specs/us/299074.pdf",
+    "access_date": "2026-10-02",
+    "confidence": "low",
+    "notes": "Paired with battery.pack_kwh 69.5 from the same aggregator usable/nominal pair."
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "charging.port_type",
+    "value": "NACS",
+    "tier": "S",
+    "source_name": "Green Cars Compare PDF: Tesla Model 3 Standard RWD (2025-...), USA listing (updated 2026-09-27)",
+    "source_url": "https://greencarscompare.com/assets/pdf/specs/us/299074.pdf",
+    "access_date": "2026-10-02",
+    "confidence": "low",
+    "notes": "Aggregator: Charge Port Tesla (NACS), USA listing. Tesla product page (live and Wayback) does not name the port type in the specs tables fetched here."
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "charging.peak_dc_kw",
+    "value": 225,
+    "tier": "P",
+    "source_name": "Tesla Model 3 page, Standard / Rear-Wheel Drive specs (Wayback Machine snapshot 2026-04-13)",
+    "source_url": "https://web.archive.org/web/20260413083357/https://www.tesla.com/model3",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Standard Range Rear-Wheel Drive: '225 kW Max; Pay Per Use' Supercharging. Premium and Performance list 250 kW on the same page."
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "charging.onboard_ac_kw",
+    "value": 7.7,
+    "tier": "S",
+    "source_name": "Green Cars Compare PDF: Tesla Model 3 Standard RWD (2025-...), USA listing (updated 2026-09-27)",
+    "source_url": "https://greencarscompare.com/assets/pdf/specs/us/299074.pdf",
+    "access_date": "2026-10-02",
+    "confidence": "low",
+    "notes": "Aggregator: Max AC Charging 7.7 kW (USA listing). Tesla product page (live and Wayback) does not state onboard AC kW."
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "body.curb_weight_lb",
+    "value": 3759,
+    "tier": "P",
+    "source_name": "Tesla Model 3 page, Standard / Rear-Wheel Drive specs (Wayback Machine snapshot 2026-04-13)",
+    "source_url": "https://web.archive.org/web/20260413083357/https://www.tesla.com/model3",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Tesla label: Weight (Curb Mass), Standard Range Rear-Wheel Drive."
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "derived.kwh_per_100mi_battery_side",
+    "value": 21.65,
+    "unit": "kWh/100mi",
+    "tier": "D",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "derivation": {
+      "formula": "battery.pack_kwh / efficiency.epa_range_mi * 100",
+      "inputs": [
+        "battery.pack_kwh",
+        "battery.pack_kwh_basis",
+        "efficiency.epa_range_mi"
+      ],
+      "assumptions": [
+        "Uses tier S usable pack_kwh (69.5 kWh) and EPA range; not the same as wall-side efficiency.epa_kwh_per_100mi."
+      ]
+    }
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "derived.wh_per_lb",
+    "value": 18.49,
+    "unit": "Wh/lb",
+    "tier": "D",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "derivation": {
+      "formula": "battery.pack_kwh * 1000 / body.curb_weight_lb",
+      "inputs": [
+        "battery.pack_kwh",
+        "battery.pack_kwh_basis",
+        "body.curb_weight_lb"
+      ],
+      "assumptions": [
+        "Uses tier S usable pack_kwh and OEM curb weight; rough stored-energy proxy, not driving efficiency."
+      ]
+    }
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "powertrain.power_hp",
+    "value": 315,
+    "tier": "S",
+    "source_name": "Green Cars Compare PDF: Tesla Model 3 Standard RWD (2025-...), USA listing (updated 2026-09-27)",
+    "source_url": "https://greencarscompare.com/assets/pdf/specs/us/299074.pdf",
+    "access_date": "2026-10-02",
+    "confidence": "low",
+    "notes": "Aggregator: Motor (Power/Torque) 235 kW (315 hp). Tesla Standard RWD specs table on the Wayback page does not list Peak Power (Performance lists 510 hp)."
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "powertrain.accel_0_60_s",
+    "value": 5.8,
+    "tier": "P",
+    "source_name": "Tesla Model 3 page, Standard / Rear-Wheel Drive specs (Wayback Machine snapshot 2026-04-13)",
+    "source_url": "https://web.archive.org/web/20260413083357/https://www.tesla.com/model3",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Standard Range Rear-Wheel Drive specs table: '5.8 s 0-60 mph'."
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "body.length_in",
+    "value": 185.8,
+    "tier": "P",
+    "source_name": "Tesla Model 3 page, Standard / Rear-Wheel Drive specs (Wayback Machine snapshot 2026-04-13)",
+    "source_url": "https://web.archive.org/web/20260413083357/https://www.tesla.com/model3",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Overall Length, Standard Range Rear-Wheel Drive."
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "body.width_in",
+    "value": 82.2,
+    "tier": "P",
+    "source_name": "Tesla Model 3 page, Standard / Rear-Wheel Drive specs (Wayback Machine snapshot 2026-04-13)",
+    "source_url": "https://web.archive.org/web/20260413083357/https://www.tesla.com/model3",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "medium",
+    "notes": "Tesla Overall Width: extended mirrors 82.2 in (folded mirrors 76.1 in). Differs from Green Cars Compare's width without mirrors (72.8 in).",
+    "conflicts_with": [
+      "tesla-model-3-2026#body.width_in#Green Cars Compare PDF: Tesla Model 3 Standard RWD (2025-...), USA listing (updated 2026-09-27)"
+    ]
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "body.width_in",
+    "value": 72.8,
+    "tier": "S",
+    "source_name": "Green Cars Compare PDF: Tesla Model 3 Standard RWD (2025-...), USA listing (updated 2026-09-27)",
+    "source_url": "https://greencarscompare.com/assets/pdf/specs/us/299074.pdf",
+    "access_date": "2026-10-02",
+    "confidence": "low",
+    "notes": "Aggregator: width without mirrors 72.8 in (also lists 82.2 in with mirrors). Differs from the Tesla Wayback Overall Width value claimed as extended mirrors.",
+    "conflicts_with": [
+      "tesla-model-3-2026#body.width_in#Tesla Model 3 page, Standard / Rear-Wheel Drive specs (Wayback Machine snapshot 2026-04-13)"
+    ]
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "body.height_in",
+    "value": 56.7,
+    "tier": "P",
+    "source_name": "Tesla Model 3 page, Standard / Rear-Wheel Drive specs (Wayback Machine snapshot 2026-04-13)",
+    "source_url": "https://web.archive.org/web/20260413083357/https://www.tesla.com/model3",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Overall Height, Standard Range Rear-Wheel Drive."
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "body.wheelbase_in",
+    "value": 113.2,
+    "tier": "S",
+    "source_name": "Green Cars Compare PDF: Tesla Model 3 Standard RWD (2025-...), USA listing (updated 2026-09-27)",
+    "source_url": "https://greencarscompare.com/assets/pdf/specs/us/299074.pdf",
+    "access_date": "2026-10-02",
+    "confidence": "low",
+    "notes": "Aggregator wheelbase. Tesla product page specs tables on the Wayback snapshot do not list wheelbase."
+  }
+]

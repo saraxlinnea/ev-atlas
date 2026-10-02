@@ -1,0 +1,270 @@
+[
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "powertrain.drive_layout",
+    "value": "RWD",
+    "tier": "P",
+    "source_name": "Tesla Model Y page, 'Model Y Premium Specs' (Rear-Wheel Drive tab)",
+    "source_url": "https://www.tesla.com/modely",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high"
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "powertrain.accel_0_60_s",
+    "value": 5.4,
+    "tier": "P",
+    "source_name": "Tesla Model Y page, 'Model Y Premium Specs' (Rear-Wheel Drive tab)",
+    "source_url": "https://www.tesla.com/modely",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high"
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "charging.peak_dc_kw",
+    "value": 250,
+    "tier": "P",
+    "source_name": "Tesla Model Y page, 'Model Y Premium Specs' (Rear-Wheel Drive tab)",
+    "source_url": "https://www.tesla.com/modely",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Tesla: '250 kW Max' Supercharging."
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "charging.range_added_mi",
+    "value": 182,
+    "tier": "P",
+    "source_name": "Tesla Model Y page, 'Model Y Premium Specs' (Rear-Wheel Drive tab)",
+    "source_url": "https://www.tesla.com/modely",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Tesla: 'Up to 182 miles added in 15 minutes', based on constant speed data."
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "charging.range_added_time_min",
+    "value": 15,
+    "tier": "P",
+    "source_name": "Tesla Model Y page, 'Model Y Premium Specs' (Rear-Wheel Drive tab)",
+    "source_url": "https://www.tesla.com/modely",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high"
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "body.curb_weight_lb",
+    "value": 4184,
+    "tier": "P",
+    "source_name": "Tesla Model Y page, 'Model Y Premium Specs' (Rear-Wheel Drive tab)",
+    "source_url": "https://www.tesla.com/modely",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high"
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "body.length_in",
+    "value": 188.6,
+    "tier": "P",
+    "source_name": "Tesla Model Y page, 'Model Y Premium Specs' (Rear-Wheel Drive tab)",
+    "source_url": "https://www.tesla.com/modely",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high"
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "body.height_in",
+    "value": 63.9,
+    "tier": "P",
+    "source_name": "Tesla Model Y page, 'Model Y Premium Specs' (Rear-Wheel Drive tab)",
+    "source_url": "https://www.tesla.com/modely",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high"
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "derived.miles_per_min_dc",
+    "value": 12.13,
+    "unit": "mi/min",
+    "tier": "D",
+    "access_date": "2026-09-29",
+    "confidence": "medium",
+    "derivation": {
+      "formula": "charging.range_added_mi / charging.range_added_time_min",
+      "inputs": [
+        "charging.range_added_mi",
+        "charging.range_added_time_min"
+      ],
+      "assumptions": [
+        "Tesla states this figure assumes constant 65 mph efficiency, unlike Lucid's equivalent figure, so the two are not perfectly apples-to-apples."
+      ]
+    }
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "recalls.campaign_count",
+    "value": 8,
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (TESLA MODEL Y, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL%20Y&modelYear=2026",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "Distinct NHTSA campaigns returned for MY2026 (make/model/year query; not filtered by trim). Cross-checked against NHTSA flat file https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip (same campaign set). Model strings queried: 'MODEL Y'; strings returning HTTP 400 had no matching records."
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "recalls.campaign_25V359",
+    "value": "VISIBILITY:WINDSHIELD WIPER/WASHER:LINKAGES: The hose connector may block the windshield washer nozzles, preventing washer fluid from reaching the windshield.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (TESLA MODEL Y, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL%20Y&modelYear=2026",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "NHTSA campaign 25V359000; Part 573 report received 2025-05-30. Potential units affected across all models in campaign (flat file POTAFF): 172. NHTSA scope: Tesla, Inc. (Tesla) is recalling certain 2026 Model Y vehicles. Listed for the MY2026 MODEL Y nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "recalls.campaign_25V410",
+    "value": "SEATS:CRITICAL FASTENERS: The fasteners attaching the seat back to the seat bottom may have been improperly tightened.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (TESLA MODEL Y, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL%20Y&modelYear=2026",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "NHTSA campaign 25V410000; Part 573 report received 2025-06-18. Potential units affected across all models in campaign (flat file POTAFF): 48. NHTSA scope: Tesla, Inc. (Tesla) is recalling certain 2026 Model 3 and Model Y vehicles. Listed for the MY2026 MODEL Y nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "recalls.campaign_25V490",
+    "value": "ELECTRICAL SYSTEM:HORN: The ring terminal of the horn ground wire may be improperly secured, allowing the circuit to open and preventing the horn from sounding.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (TESLA MODEL Y, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL%20Y&modelYear=2026",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "NHTSA campaign 25V490000; Part 573 report received 2025-07-28. Potential units affected across all models in campaign (flat file POTAFF): 6. NHTSA scope: Tesla, Inc. (Tesla) is recalling certain 2026 Model Y vehicles. Listed for the MY2026 MODEL Y nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "recalls.campaign_25V658",
+    "value": "ELECTRICAL SYSTEM:WIRING: The reverse lights may fail to illuminate while the vehicle is in reverse, due to a defect in the wiring.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (TESLA MODEL Y, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL%20Y&modelYear=2026",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "NHTSA campaign 25V658000; Part 573 report received 2025-10-01. Potential units affected across all models in campaign (flat file POTAFF): 260. NHTSA scope: Tesla, Inc. (Tesla) is recalling certain 2026 Model Y vehicles. Listed for the MY2026 MODEL Y nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "recalls.campaign_25V690",
+    "value": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:FUSES, RELAYS, CONTACTS, AND SHUNTS: The battery pack contactors may fail, causing a loss of drive power.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (TESLA MODEL Y, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL%20Y&modelYear=2026",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "NHTSA campaign 25V690000; Part 573 report received 2025-10-10. Potential units affected across all models in campaign (flat file POTAFF): 12963. NHTSA scope: Tesla, Inc. (Tesla) is recalling certain 2025 Model 3 and 2026 Model Y vehicles. Listed for the MY2026 MODEL Y nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "recalls.campaign_26V315",
+    "value": "EQUIPMENT:OTHER:LABELS: The certification label may not have been installed.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (TESLA MODEL Y, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL%20Y&modelYear=2026",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "NHTSA campaign 26V315000; Part 573 report received 2026-05-19. Potential units affected across all models in campaign (flat file POTAFF): 14575. NHTSA scope: Tesla, Inc. (Tesla) is recalling certain 2025-2026 Model Y vehicles. Listed for the MY2026 MODEL Y nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "recalls.campaign_26V445",
+    "value": "STRUCTURE:BODY:BUMPERS: The vehicles were originally built for a foreign market and do not have knee air bags, may not be equipped with certain interior safety countermeasures, and may not have been tested for bumper impact resistance procedures.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (TESLA MODEL Y, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL%20Y&modelYear=2026",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "NHTSA campaign 26V445000; Part 573 report received 2026-07-07. Potential units affected across all models in campaign (flat file POTAFF): 15. NHTSA scope: Tesla, Inc. (Tesla) is recalling certain 2026 Model Y and 2024 Model 3 vehicles. Listed for the MY2026 MODEL Y nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "recalls.campaign_26V558",
+    "value": "SUSPENSION:CRITICAL FASTENERS: One or more front suspension lateral link fasteners may not have been properly tightened, allowing the lateral link to loosen or separate from the sub-frame.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (TESLA MODEL Y, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=TESLA&model=MODEL%20Y&modelYear=2026",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "NHTSA campaign 26V558000; Part 573 report received 2026-09-01. Potential units affected across all models in campaign (flat file POTAFF): 19. NHTSA scope: Tesla, Inc. (Tesla) is recalling certain 2026 Model Y vehicles. Listed for the MY2026 MODEL Y nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49743 (2026 Tesla Model Y Long Range RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49743",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_range_mi",
+    "value": 357,
+    "notes": "EPA id 49743, 'Model Y Long Range RWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: EPA MY2026 row is named 'Model Y Long Range RWD'; matches Tesla's 'Premium' Rear-Wheel Drive, whose page lists the same 357 mi EPA range (checked 2026-09-29)."
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49743 (2026 Tesla Model Y Long Range RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49743",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 25.2252,
+    "notes": "Wall-side, combined (EPA combE). The label and the printable page (https://www.fueleconomy.gov/feg/noframes/49743.shtml) round this to 25. EPA id 49743, 'Model Y Long Range RWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: EPA MY2026 row is named 'Model Y Long Range RWD'; matches Tesla's 'Premium' Rear-Wheel Drive, whose page lists the same 357 mi EPA range (checked 2026-09-29)."
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49743 (2026 Tesla Model Y Long Range RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49743",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 134,
+    "notes": "EPA id 49743, 'Model Y Long Range RWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: EPA MY2026 row is named 'Model Y Long Range RWD'; matches Tesla's 'Premium' Rear-Wheel Drive, whose page lists the same 357 mi EPA range (checked 2026-09-29)."
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49743 (2026 Tesla Model Y Long Range RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49743",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.drive_layout",
+    "value": "RWD",
+    "notes": "EPA 'drive' field: 'Rear-Wheel Drive'. EPA id 49743, 'Model Y Long Range RWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: EPA MY2026 row is named 'Model Y Long Range RWD'; matches Tesla's 'Premium' Rear-Wheel Drive, whose page lists the same 357 mi EPA range (checked 2026-09-29)."
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49743 (2026 Tesla Model Y Long Range RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49743",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.epa_motor_description",
+    "value": "228 and 243 kW ACPM",
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type: the EPA text isn't consistent enough for that (e.g. motor counts don't always match the drive layout). EPA id 49743, 'Model Y Long Range RWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: EPA MY2026 row is named 'Model Y Long Range RWD'; matches Tesla's 'Premium' Rear-Wheel Drive, whose page lists the same 357 mi EPA range (checked 2026-09-29)."
+  }
+]

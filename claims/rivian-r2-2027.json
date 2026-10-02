@@ -1,0 +1,220 @@
+[
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "recalls.campaign_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R2, MY2027)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R2&modelYear=2027",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "Distinct NHTSA campaigns returned for MY2027 (make/model/year query; not filtered by trim). Cross-checked against NHTSA flat file https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip (same campaign set). Model strings queried: 'R2'; strings returning HTTP 400 had no matching records."
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "recalls.campaign_26V597",
+    "value": "BACK OVER PREVENTION:SOFTWARE: The rearview camera image may be obstructed by a notification when in reverse.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R2, MY2027)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R2&modelYear=2027",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "NHTSA campaign 26V597000; Part 573 report received 2026-09-16. Potential units affected across all models in campaign (flat file POTAFF): 98828. NHTSA scope: Rivian Automotive, LLC (Rivian) is recalling certain 2022-2027 R1S, 2022-2026 R1T, and 2027 R2 vehicles. Listed for the MY2027 R2 nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50390 (2027 Rivian R2 Performance AWD (20in AT))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50390",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_range_mi",
+    "value": 307,
+    "notes": "EPA id 50390, 'R2 Performance AWD (20in AT)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Only R2 configuration in EPA's MY2027 data is Performance AWD, on 20in all-terrain (307 mi) or 21in (330 mi) wheels; picked the smaller wheel on the assumption it's the base wheel, not confirmed by Rivian."
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50390 (2027 Rivian R2 Performance AWD (20in AT))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50390",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 34.0963,
+    "notes": "Wall-side, combined (EPA combE). The label and the printable page (https://www.fueleconomy.gov/feg/noframes/50390.shtml) round this to 34. EPA id 50390, 'R2 Performance AWD (20in AT)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Only R2 configuration in EPA's MY2027 data is Performance AWD, on 20in all-terrain (307 mi) or 21in (330 mi) wheels; picked the smaller wheel on the assumption it's the base wheel, not confirmed by Rivian."
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50390 (2027 Rivian R2 Performance AWD (20in AT))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50390",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 99,
+    "notes": "EPA id 50390, 'R2 Performance AWD (20in AT)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Only R2 configuration in EPA's MY2027 data is Performance AWD, on 20in all-terrain (307 mi) or 21in (330 mi) wheels; picked the smaller wheel on the assumption it's the base wheel, not confirmed by Rivian."
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50390 (2027 Rivian R2 Performance AWD (20in AT))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50390",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.drive_layout",
+    "value": "AWD",
+    "notes": "EPA 'drive' field: '4-Wheel Drive'. EPA id 50390, 'R2 Performance AWD (20in AT)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Only R2 configuration in EPA's MY2027 data is Performance AWD, on 20in all-terrain (307 mi) or 21in (330 mi) wheels; picked the smaller wheel on the assumption it's the base wheel, not confirmed by Rivian."
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50390 (2027 Rivian R2 Performance AWD (20in AT))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50390",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.epa_motor_description",
+    "value": "300 kW ACPM",
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type: the EPA text isn't consistent enough for that (e.g. motor counts don't always match the drive layout). EPA id 50390, 'R2 Performance AWD (20in AT)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Only R2 configuration in EPA's MY2027 data is Performance AWD, on 20in all-terrain (307 mi) or 21in (330 mi) wheels; picked the smaller wheel on the assumption it's the base wheel, not confirmed by Rivian."
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "identity.msrp_usd",
+    "value": 57990,
+    "tier": "P",
+    "source_name": "Rivian stories: Explore R2 from Every Angle (2026-05-15)",
+    "source_url": "https://rivian.com/stories/r2-builder-live",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "R2 Performance with Launch Package starting at $57,990 (limited time). Atlas trim is Performance AWD."
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "battery.pack_kwh",
+    "value": 88,
+    "tier": "P",
+    "source_name": "Rivian Support: usable kWh capacity of your batteries",
+    "source_url": "https://rivian.com/support/article/what-is-the-usable-kwh-capacity-of-your-batteries",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "R2 Performance usable capacity 88 kWh (same figure listed for Premium and Standard Long Range)."
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "battery.pack_kwh_basis",
+    "value": "usable",
+    "tier": "P",
+    "source_name": "Rivian Support: usable kWh capacity of your batteries",
+    "source_url": "https://rivian.com/support/article/what-is-the-usable-kwh-capacity-of-your-batteries",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high"
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "derived.kwh_per_100mi_battery_side",
+    "value": 28.66,
+    "unit": "kWh/100mi",
+    "tier": "D",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "derivation": {
+      "formula": "battery.pack_kwh / efficiency.epa_range_mi * 100",
+      "inputs": [
+        "battery.pack_kwh",
+        "battery.pack_kwh_basis",
+        "efficiency.epa_range_mi"
+      ],
+      "assumptions": [
+        "Uses Rivian usable pack_kwh (88 kWh) and EPA range; not the same as wall-side efficiency.epa_kwh_per_100mi."
+      ]
+    }
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "charging.port_type",
+    "value": "NACS",
+    "tier": "P",
+    "source_name": "Rivian USA R2 product page",
+    "source_url": "https://rivian.com/r2",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "R2 page: 'Every R2 has a NACS charge port'."
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "powertrain.power_hp",
+    "value": 656,
+    "tier": "P",
+    "source_name": "Rivian stories: Explore R2 from Every Angle (2026-05-15)",
+    "source_url": "https://rivian.com/stories/r2-builder-live",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Performance dual-motor AWD: 656 hp. Also restated on the R2 product page trim summary."
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "powertrain.accel_0_60_s",
+    "value": 3.6,
+    "tier": "P",
+    "source_name": "Rivian stories: Explore R2 from Every Angle (2026-05-15)",
+    "source_url": "https://rivian.com/stories/r2-builder-live",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "0-60 as quick as 3.6 seconds for Performance; footnote says with 21 in wheels. Atlas EPA trim uses 20 in all-terrain wheels."
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "body.length_in",
+    "value": 185.9,
+    "tier": "P",
+    "source_name": "Rivian USA R2 product page",
+    "source_url": "https://rivian.com/r2",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high"
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "body.width_in",
+    "value": 78.1,
+    "tier": "P",
+    "source_name": "Rivian USA R2 product page",
+    "source_url": "https://rivian.com/r2",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Width with side mirrors folded 78.1 in. Width with mirrors is listed separately as 84.7 in."
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "body.height_in",
+    "value": 66.9,
+    "tier": "P",
+    "source_name": "Rivian USA R2 product page",
+    "source_url": "https://rivian.com/r2",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high"
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "body.wheelbase_in",
+    "value": 115.6,
+    "tier": "P",
+    "source_name": "Rivian USA R2 product page",
+    "source_url": "https://rivian.com/r2",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high"
+  }
+]

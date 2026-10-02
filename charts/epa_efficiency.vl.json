@@ -1,0 +1,59 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "EPA range vs wall-side energy use",
+    "subtitle": "Only vehicles with EPA claims. kWh/100mi is wall-side (includes charging losses). Vehicles without EPA data are omitted.",
+    "fontSize": 16,
+    "subtitleFontSize": 11,
+    "subtitleColor": "#666"
+  },
+  "data": { "url": "../data/flattened.csv" },
+  "transform": [
+    {
+      "filter": "isValid(datum['efficiency.epa_range_mi']) && isValid(datum['efficiency.epa_kwh_per_100mi']) && datum['efficiency.epa_range_mi'] !== '' && datum['efficiency.epa_kwh_per_100mi'] !== ''"
+    },
+    {
+      "calculate": "datum.make + ' ' + datum.model",
+      "as": "label"
+    }
+  ],
+  "width": 640,
+  "height": 420,
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 90,
+    "opacity": 0.85
+  },
+  "encoding": {
+    "x": {
+      "field": "efficiency.epa_range_mi",
+      "type": "quantitative",
+      "title": "EPA range (mi)",
+      "scale": { "zero": false }
+    },
+    "y": {
+      "field": "efficiency.epa_kwh_per_100mi",
+      "type": "quantitative",
+      "title": "EPA kWh/100mi (wall-side)",
+      "scale": { "zero": false }
+    },
+    "color": {
+      "field": "make",
+      "type": "nominal",
+      "title": "Make"
+    },
+    "tooltip": [
+      { "field": "label", "title": "Vehicle" },
+      { "field": "trim", "title": "Trim" },
+      { "field": "model_year", "title": "Model year" },
+      { "field": "efficiency.epa_range_mi", "title": "EPA range (mi)", "type": "quantitative" },
+      { "field": "efficiency.epa_kwh_per_100mi", "title": "kWh/100mi (wall-side)", "type": "quantitative" },
+      { "field": "efficiency.epa_mpge_combined", "title": "EPA MPGe combined", "type": "quantitative" }
+    ]
+  },
+  "config": {
+    "view": { "stroke": null },
+    "axis": { "labelFontSize": 11, "titleFontSize": 12 }
+  }
+}

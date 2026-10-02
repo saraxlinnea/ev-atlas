@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Methods | EV Atlas</title>
+  <meta name="description" content="How EV Atlas sources specifications: claims, tiers, EPA and NHTSA, and known limitations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <nav aria-label="Site">
+      <ul class="site-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="charts.html">Charts</a></li>
+        <li><a href="methodology.html" aria-current="page">Methods</a></li>
+      </ul>
+    </nav>
+
+    <header class="hero">
+      <p class="brand">EV Atlas</p>
+      <h1>Methods</h1>
+      <p class="lede">
+        How values enter the table, and where coverage remains incomplete. The
+        longer record is <code>docs/METHODOLOGY.md</code>.
+      </p>
+    </header>
+
+    <section class="content-section" aria-labelledby="claims-heading">
+      <h2 id="claims-heading">Claims</h2>
+      <p>
+        Each value begins as a claim: field, value, source, access date, and
+        tier. Compare and Charts read a file generated from those claims. A
+        wrong number is corrected in the claim, then regenerated. The CSV is
+        not edited by hand.
+      </p>
+      <p>
+        When no trustworthy source is found, the cell stays empty. Primary and
+        secondary claims require a concrete URL. Derived values require a
+        formula and inputs. Gaps are left blank rather than estimated.
+      </p>
+    </section>
+
+    <section class="content-section" aria-labelledby="tiers-heading">
+      <h2 id="tiers-heading">Source tiers</h2>
+      <ul>
+        <li><strong>P (primary):</strong> OEM page or press kit, EPA, NHTSA, or other government source.</li>
+        <li><strong>S (secondary):</strong> Outlet, teardown, or aggregator. Ranked below P even when the figure looks solid.</li>
+        <li><strong>D (derived):</strong> Computed from other claims, with formula and inputs recorded.</li>
+        <li><strong>unverified:</strong> Plausible but not confirmed. Repetition across sites does not upgrade the tier.</li>
+      </ul>
+      <p>
+        When sources disagree, both claims remain and are marked as conflicts.
+        The table shows the higher tier and keeps the conflict flagged.
+      </p>
+    </section>
+
+    <section class="content-section" aria-labelledby="sources-heading">
+      <h2 id="sources-heading">EPA and NHTSA</h2>
+      <p>
+        <strong>EPA:</strong> Per-vehicle records from fueleconomy.gov, checked
+        against the bulk download. The EPA vehicle id appears in each claim's
+        notes. Most rows use the entry-level EPA configuration; notes record
+        which trim or wheel set was selected.
+      </p>
+      <p>
+        <strong>NHTSA recalls:</strong> Queried by make, model, and year, not
+        trim. An HTTP 400 with count zero often means the model string did not
+        match, not that no campaigns exist. Zero-recall results are checked
+        against NHTSA's recall flat file.
+      </p>
+    </section>
+
+    <section class="content-section" aria-labelledby="limits-heading">
+      <h2 id="limits-heading">Known limitations</h2>
+      <p>As of 2026-10-02. Coverage is incomplete; this is not full OEM disclosure for all 20 vehicles.</p>
+
+      <h3>Tesla and Lucid</h3>
+      <ul>
+        <li>Lucid Air Pure and Tesla Model Y, Model 3, and Model S have OEM-sourced claims where pages were reachable. Model 3 and Model S figures use Wayback snapshots because live tesla.com blocks scripted fetch.</li>
+        <li>Recorded conflicts include Model 3 MSRP and width, and Model S MSRP and curb weight. Some pack, port, and dimension fields remain secondary-only or missing.</li>
+        <li>Lucid MY2026 Air Pure claims draw on a 2025 press release and Wayback; Lucid's live site shows MY2027. Some specs carry a different model year on the claim.</li>
+      </ul>
+
+      <h3>OEM core</h3>
+      <ul>
+        <li>Hyundai Ioniq 5 and 6, Kia EV6, Equinox EV, Lyriq, Mach-E, ID.4, EX30, R1T, R2, and Lucid Gravity Touring have OEM claims from fetchable pages.</li>
+        <li>Porsche Taycan, Mercedes CLA Electric, Nissan Leaf, and Chevrolet Bolt later gained OEM buyer fields from dated OEM or newsroom sources. Leaf and Bolt 0–60 remain missing on those pages.</li>
+        <li>BMW i4 eDrive35 is the atlas trim, but BMW USA no longer lists eDrive35 for 2026, so no OEM core was added for that trim.</li>
+      </ul>
+
+      <h3>Model years and availability</h3>
+      <ul>
+        <li>Most entries are MY2026. Rivian R2 and Chevrolet Bolt are MY2027; Hyundai Ioniq 6 is MY2025 (no MY2026 in EPA or NHTSA).</li>
+        <li>Only <code>chevrolet-bolt-2027</code> is marked <code>current</code>, from Chevrolet's product page and newsroom. The other 19 remain <code>unverified_availability</code>.</li>
+      </ul>
+
+      <h3>Other caveats</h3>
+      <ul>
+        <li>NHTSA's products endpoint sometimes lists recalls where no MY2026 campaign exists (Model S, Mach-E, i4); both views are recorded as conflicts.</li>
+        <li>EPA range labels do not state whether range used 5-cycle testing, the 0.7 multiplier, or an approved factor, so range comparisons carry that unknown.</li>
+        <li>Some unverified claims were removed when no re-findable URL existed; those fields stay blank in Compare and on the disclosure chart.</li>
+      </ul>
+    </section>
+
+    <section class="content-section" aria-labelledby="pipeline-heading">
+      <h2 id="pipeline-heading">Regenerate data</h2>
+      <pre class="code-block"><code>pip install -r requirements.txt
+python scripts/validate.py
+python scripts/flatten.py
+python scripts/build_site.py</code></pre>
+      <p class="chart-note">
+        Or <code>npm run build:site</code>, then <code>npm run preview</code>.
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        Longer writeup: <code>docs/METHODOLOGY.md</code>.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

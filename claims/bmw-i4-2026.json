@@ -1,0 +1,90 @@
+[
+  {
+    "vehicle_id": "bmw-i4-2026",
+    "field": "recalls.campaign_count",
+    "value": 0,
+    "tier": "P",
+    "source_name": "NHTSA recall flat file FLAT_RCL_POST_2010 (MY2026 search)",
+    "source_url": "https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip",
+    "access_date": "2026-09-29",
+    "confidence": "medium",
+    "notes": "No MY2026 records for this nameplate in NHTSA's recall flat file (file dated 2026-09-29; searched MODELTXT by regex, not exact string). The recallsByVehicle API returned HTTP 400 / Count 0 for every model string tried ('I4 GRAN COUPE', 'I4'), which is how it responds to an unmatched string, so the API alone can't confirm zero.",
+    "conflicts_with": [
+      "bmw-i4-2026#recalls.listed_as_having_recalls#NHTSA products API model list (issueType=r, BMW MY2026)"
+    ]
+  },
+  {
+    "vehicle_id": "bmw-i4-2026",
+    "field": "recalls.listed_as_having_recalls",
+    "value": true,
+    "tier": "P",
+    "source_name": "NHTSA products API model list (issueType=r, BMW MY2026)",
+    "source_url": "https://api.nhtsa.gov/products/vehicle/models?modelYear=2026&make=bmw&issueType=r",
+    "access_date": "2026-09-29",
+    "confidence": "low",
+    "conflicts_with": [
+      "bmw-i4-2026#recalls.campaign_count#NHTSA recall flat file FLAT_RCL_POST_2010 (MY2026 search)"
+    ],
+    "notes": "NHTSA's products endpoint lists 'I4 GRAN COUPE BEV' among MY2026 models with recalls, but neither recallsByVehicle nor the flat file returns any MY2026 campaign for it. Unresolved discrepancy between two NHTSA sources."
+  },
+  {
+    "vehicle_id": "bmw-i4-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50187 (2026 BMW i4 eDrive35 Gran Coupe (19 inch Wheels))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50187",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_range_mi",
+    "value": 251,
+    "notes": "EPA id 50187, 'i4 eDrive35 Gran Coupe (19 inch Wheels)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim; only eDrive35 row."
+  },
+  {
+    "vehicle_id": "bmw-i4-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50187 (2026 BMW i4 eDrive35 Gran Coupe (19 inch Wheels))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50187",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 30.8327,
+    "notes": "Wall-side, combined (EPA combE). The label and the printable page (https://www.fueleconomy.gov/feg/noframes/50187.shtml) round this to 31. EPA id 50187, 'i4 eDrive35 Gran Coupe (19 inch Wheels)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim; only eDrive35 row."
+  },
+  {
+    "vehicle_id": "bmw-i4-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50187 (2026 BMW i4 eDrive35 Gran Coupe (19 inch Wheels))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50187",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 109,
+    "notes": "EPA id 50187, 'i4 eDrive35 Gran Coupe (19 inch Wheels)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim; only eDrive35 row."
+  },
+  {
+    "vehicle_id": "bmw-i4-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50187 (2026 BMW i4 eDrive35 Gran Coupe (19 inch Wheels))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50187",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.drive_layout",
+    "value": "RWD",
+    "notes": "EPA 'drive' field: 'Rear-Wheel Drive'. EPA id 50187, 'i4 eDrive35 Gran Coupe (19 inch Wheels)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim; only eDrive35 row."
+  },
+  {
+    "vehicle_id": "bmw-i4-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50187 (2026 BMW i4 eDrive35 Gran Coupe (19 inch Wheels))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50187",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.epa_motor_description",
+    "value": "210 kW EESM",
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type: the EPA text isn't consistent enough for that (e.g. motor counts don't always match the drive layout). EPA id 50187, 'i4 eDrive35 Gran Coupe (19 inch Wheels)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim; only eDrive35 row."
+  }
+]

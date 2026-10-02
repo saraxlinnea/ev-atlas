@@ -1,0 +1,86 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Battery-side vs wall-side energy use",
+    "subtitle": "4 vehicles with sourced inputs (pack kWh with stated basis plus EPA range). Battery-side = pack_kwh / EPA range; wall-side EPA kWh/100mi includes charging losses.",
+    "fontSize": 16,
+    "subtitleFontSize": 11,
+    "subtitleColor": "#666"
+  },
+  "data": { "url": "../data/flattened.csv" },
+  "transform": [
+    {
+      "filter": "isValid(datum['derived.kwh_per_100mi_battery_side']) && isValid(datum['efficiency.epa_kwh_per_100mi']) && datum['derived.kwh_per_100mi_battery_side'] !== '' && datum['efficiency.epa_kwh_per_100mi'] !== ''"
+    },
+    {
+      "calculate": "datum.make + ' ' + datum.model",
+      "as": "label"
+    },
+    {
+      "fold": [
+        "derived.kwh_per_100mi_battery_side",
+        "efficiency.epa_kwh_per_100mi"
+      ],
+      "as": ["metric_key", "kwh_per_100mi"]
+    },
+    {
+      "calculate": "datum.metric_key === 'derived.kwh_per_100mi_battery_side' ? 'Battery-side (pack / EPA range)' : 'Wall-side (EPA label)'",
+      "as": "metric"
+    }
+  ],
+  "width": 640,
+  "height": 320,
+  "mark": { "type": "bar" },
+  "encoding": {
+    "y": {
+      "field": "label",
+      "type": "nominal",
+      "title": null,
+      "sort": "-x"
+    },
+    "x": {
+      "field": "kwh_per_100mi",
+      "type": "quantitative",
+      "title": "kWh per 100 mi",
+      "scale": { "zero": true }
+    },
+    "color": {
+      "field": "metric",
+      "type": "nominal",
+      "title": "Basis",
+      "scale": {
+        "domain": [
+          "Battery-side (pack / EPA range)",
+          "Wall-side (EPA label)"
+        ],
+        "range": ["#2a6f97", "#e76f51"]
+      }
+    },
+    "xOffset": { "field": "metric" },
+    "tooltip": [
+      { "field": "label", "title": "Vehicle" },
+      { "field": "trim", "title": "Trim" },
+      { "field": "model_year", "title": "Model year" },
+      { "field": "metric", "title": "Metric" },
+      {
+        "field": "kwh_per_100mi",
+        "title": "kWh/100mi",
+        "type": "quantitative",
+        "format": ".2f"
+      },
+      {
+        "field": "battery.pack_kwh",
+        "title": "Pack kWh (flattened)",
+        "type": "quantitative"
+      },
+      {
+        "field": "battery.pack_kwh_basis",
+        "title": "Pack basis"
+      }
+    ]
+  },
+  "config": {
+    "view": { "stroke": null },
+    "axis": { "labelFontSize": 11, "titleFontSize": 12 }
+  }
+}

@@ -1,0 +1,207 @@
+[
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "recalls.campaign_count",
+    "value": 2,
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1T, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1T&modelYear=2026",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "Distinct NHTSA campaigns returned for MY2026 (make/model/year query; not filtered by trim). Cross-checked against NHTSA flat file https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip (same campaign set). Model strings queried: 'R1T'; strings returning HTTP 400 had no matching records."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "recalls.campaign_26V508",
+    "value": "EXTERIOR LIGHTING:TURN SIGNAL: One or both front turn signals may fail to illuminate and flash.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1T, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1T&modelYear=2026",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "NHTSA campaign 26V508000; Part 573 report received 2026-08-06. Potential units affected across all models in campaign (flat file POTAFF): 3829. NHTSA scope: Rivian Automotive, LLC (Rivian) is recalling certain 2025-2026 R1S and R1T vehicles. Listed for the MY2026 R1T nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "recalls.campaign_26V597",
+    "value": "BACK OVER PREVENTION:SOFTWARE: The rearview camera image may be obstructed by a notification when in reverse.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1T, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1T&modelYear=2026",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "NHTSA campaign 26V597000; Part 573 report received 2026-09-16. Potential units affected across all models in campaign (flat file POTAFF): 98828. NHTSA scope: Rivian Automotive, LLC (Rivian) is recalling certain 2022-2027 R1S, 2022-2026 R1T, and 2027 R2 vehicles. Listed for the MY2026 R1T nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49692 (2026 Rivian R1T Dual Standard (20in))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49692",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_range_mi",
+    "value": 258,
+    "notes": "EPA id 49692, 'R1T Dual Standard (20in)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim. EPA lists Dual Standard on 20in (258 mi) and 22in (270 mi); picked the smaller wheel on the assumption it is the base wheel, which is not confirmed by Rivian here."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49692 (2026 Rivian R1T Dual Standard (20in))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49692",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 42.8683,
+    "notes": "Wall-side, combined (EPA combE). The label and the printable page (https://www.fueleconomy.gov/feg/noframes/49692.shtml) round this to 43. EPA id 49692, 'R1T Dual Standard (20in)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim. EPA lists Dual Standard on 20in (258 mi) and 22in (270 mi); picked the smaller wheel on the assumption it is the base wheel, which is not confirmed by Rivian here."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49692 (2026 Rivian R1T Dual Standard (20in))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49692",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 79,
+    "notes": "EPA id 49692, 'R1T Dual Standard (20in)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim. EPA lists Dual Standard on 20in (258 mi) and 22in (270 mi); picked the smaller wheel on the assumption it is the base wheel, which is not confirmed by Rivian here."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49692 (2026 Rivian R1T Dual Standard (20in))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49692",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.drive_layout",
+    "value": "AWD",
+    "notes": "EPA 'drive' field: 'Part-time 4-Wheel Drive'. EPA id 49692, 'R1T Dual Standard (20in)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim. EPA lists Dual Standard on 20in (258 mi) and 22in (270 mi); picked the smaller wheel on the assumption it is the base wheel, which is not confirmed by Rivian here."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49692 (2026 Rivian R1T Dual Standard (20in))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49692",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.epa_motor_description",
+    "value": "208 kW ACPM",
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type: the EPA text isn't consistent enough for that (e.g. motor counts don't always match the drive layout). EPA id 49692, 'R1T Dual Standard (20in)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim. EPA lists Dual Standard on 20in (258 mi) and 22in (270 mi); picked the smaller wheel on the assumption it is the base wheel, which is not confirmed by Rivian here."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "battery.pack_kwh",
+    "value": 95.6,
+    "tier": "P",
+    "source_name": "Rivian Support: battery specifications on Rivian vehicles",
+    "source_url": "https://rivian.com/support/article/what-are-the-battery-specifications-on-rivian-vehicles",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "conflicts_with": [
+      "rivian-r1t-2026#battery.pack_kwh#Rivian Support: usable kWh capacity of your batteries"
+    ],
+    "notes": "R1 Dual Standard 'Rated Capacity/Energy' 95.6 kWh. Conflicts with the usable-capacity article's 92.5 kWh for Dual Standard."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "P",
+    "source_name": "Rivian Support: battery specifications on Rivian vehicles",
+    "source_url": "https://rivian.com/support/article/what-are-the-battery-specifications-on-rivian-vehicles",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Paired with the 95.6 kWh rated-energy claim. OEM labels it 'Rated Capacity/Energy' without saying gross or usable."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "battery.pack_kwh",
+    "value": 92.5,
+    "tier": "P",
+    "source_name": "Rivian Support: usable kWh capacity of your batteries",
+    "source_url": "https://rivian.com/support/article/what-is-the-usable-kwh-capacity-of-your-batteries",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "conflicts_with": [
+      "rivian-r1t-2026#battery.pack_kwh#Rivian Support: battery specifications on Rivian vehicles"
+    ],
+    "notes": "R1 Gen 2 Dual Standard usable capacity 92.5 kWh. Conflicts with the battery-specifications article's 95.6 kWh rated energy."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "usable",
+    "tier": "P",
+    "source_name": "Rivian Support: usable kWh capacity of your batteries",
+    "source_url": "https://rivian.com/support/article/what-is-the-usable-kwh-capacity-of-your-batteries",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Paired with the 92.5 kWh usable-capacity claim."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "powertrain.power_hp",
+    "value": 533,
+    "tier": "P",
+    "source_name": "Rivian R1T Compare PDF, Dual Standard column (2024-06-04)",
+    "source_url": "https://assets.rivian.com/2md5qhoeajym/3UpbsXT5cIL6fLVALlqCaa/717108f8874ef00015d83ac8cf9ba7c7/R1T-Compare-06-04-24.pdf",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "medium",
+    "notes": "Dual Standard column: 533 hp. PDF dated 2024-06-04; Gen 2 Dual Standard still listed on current support pages with the same 258-mile EPA class."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "powertrain.accel_0_60_s",
+    "value": 4.5,
+    "tier": "P",
+    "source_name": "Rivian R1T Compare PDF, Dual Standard column (2024-06-04)",
+    "source_url": "https://assets.rivian.com/2md5qhoeajym/3UpbsXT5cIL6fLVALlqCaa/717108f8874ef00015d83ac8cf9ba7c7/R1T-Compare-06-04-24.pdf",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "medium",
+    "notes": "Dual Standard column: 4.5 sec 0-60. PDF dated 2024-06-04."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "body.length_in",
+    "value": 217.1,
+    "tier": "P",
+    "source_name": "Rivian Support: bumper to bumper length",
+    "source_url": "https://rivian.com/support/article/what-is-the-bumper-to-bumper-length",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high"
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "body.wheelbase_in",
+    "value": 135.8,
+    "tier": "P",
+    "source_name": "Rivian Support: wheelbase length",
+    "source_url": "https://rivian.com/support/article/what-is-the-wheelbase-length",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high"
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "body.width_in",
+    "value": 81.8,
+    "tier": "P",
+    "source_name": "Rivian Support: vehicle width with side mirrors folded",
+    "source_url": "https://rivian.com/support/article/what-is-the-vehicle-width-with-the-side-mirrors-folded",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Width with side mirrors folded for R1T."
+  }
+]

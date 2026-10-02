@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env/
+ENV/
+
+# macOS
+.DS_Store
+
+# Proprietary material (teardown subscriptions, paid reports, etc.) — never commit
+/private/
+
+# Generated site assets (from scripts/build_site.py)
+/site/data/
+/site/charts/
+
+# Node (local preview only)
+node_modules/

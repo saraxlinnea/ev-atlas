@@ -1,0 +1,9 @@
+{
+  "name": "ev-atlas",
+  "private": true,
+  "description": "Static preview for EV Atlas disclosure charts",
+  "scripts": {
+    "build:site": "python scripts/flatten.py && python scripts/build_site.py",
+    "preview": "npx --yes serve site -p 4173"
+  }
+}

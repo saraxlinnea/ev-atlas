@@ -1,0 +1,222 @@
+[
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "field": "recalls.campaign_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CADILLAC LYRIQ, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CADILLAC&model=LYRIQ&modelYear=2026",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "Distinct NHTSA campaigns returned for MY2026 (make/model/year query; not filtered by trim). Cross-checked against NHTSA flat file https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip (same campaign set). Model strings queried: 'LYRIQ', 'LYRIQ-V'; strings returning HTTP 400 had no matching records."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "field": "recalls.campaign_26V114",
+    "value": "EQUIPMENT:OTHER:OWNERS/SERVICE/OTHER MANUAL: The radio may not have been set to the correct status to download the electronic owner's manual during production.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CADILLAC LYRIQ, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CADILLAC&model=LYRIQ&modelYear=2026",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "NHTSA campaign 26V114000; Part 573 report received 2026-02-26. Potential units affected across all models in campaign (flat file POTAFF): 5861. NHTSA scope: General Motors has decided that certain 2027 Chevrolet Bolt EV, 2025-2026 Cadillac OPTIQ, Chevrolet Colorado, Equinox EV, GMC Canyon, 2026 Buick Enclave, Envision, Cadillac CT5, Escalade, Escalade ESV, Escalade IQ, Escalade IQL, LYRIQ, VISTIQ, Chevrolet Blazer EV, Corvette Convertible, Corvette Coupe, Corvette Convertible E-Ray, Equinox, Silverado 1500, 2500, 3500, Silverado EV, Suburban 1500, Tahoe, Traverse, GMC Acadia, Hummer EV Pickup, Hummer EV SUV, Sierra 1500, 2500, 3500, Sierra EV, Terrain, Yukon, and Yukon XL vehicles. Listed for the MY2026 LYRIQ nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49631 (2026 Cadillac LYRIQ (11 kW Charger))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49631",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_range_mi",
+    "value": 326,
+    "notes": "EPA id 49631, 'LYRIQ (11 kW Charger)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim. EPA lists RWD with 11 kW and 19 kW chargers (same 326 mi range; 92 vs 91 MPGe); picked 11 kW on the assumption it is the standard charger, not confirmed."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49631 (2026 Cadillac LYRIQ (11 kW Charger))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49631",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 36.8206,
+    "notes": "Wall-side, combined (EPA combE). The label and the printable page (https://www.fueleconomy.gov/feg/noframes/49631.shtml) round this to 37. EPA id 49631, 'LYRIQ (11 kW Charger)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim. EPA lists RWD with 11 kW and 19 kW chargers (same 326 mi range; 92 vs 91 MPGe); picked 11 kW on the assumption it is the standard charger, not confirmed."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49631 (2026 Cadillac LYRIQ (11 kW Charger))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49631",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 92,
+    "notes": "EPA id 49631, 'LYRIQ (11 kW Charger)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim. EPA lists RWD with 11 kW and 19 kW chargers (same 326 mi range; 92 vs 91 MPGe); picked 11 kW on the assumption it is the standard charger, not confirmed."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49631 (2026 Cadillac LYRIQ (11 kW Charger))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49631",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.drive_layout",
+    "value": "RWD",
+    "notes": "EPA 'drive' field: 'Rear-Wheel Drive'. EPA id 49631, 'LYRIQ (11 kW Charger)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim. EPA lists RWD with 11 kW and 19 kW chargers (same 326 mi range; 92 vs 91 MPGe); picked 11 kW on the assumption it is the standard charger, not confirmed."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49631 (2026 Cadillac LYRIQ (11 kW Charger))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49631",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.epa_motor_description",
+    "value": "255 kW DCPM",
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type: the EPA text isn't consistent enough for that (e.g. motor counts don't always match the drive layout). EPA id 49631, 'LYRIQ (11 kW Charger)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim. EPA lists RWD with 11 kW and 19 kW chargers (same 326 mi range; 92 vs 91 MPGe); picked 11 kW on the assumption it is the standard charger, not confirmed."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 LYRIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/lyriq/specs",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "battery.pack_kwh",
+    "value": 102,
+    "notes": "Specs: '102 kWh rated energy capacity'."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 LYRIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/lyriq/specs",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "battery.pack_kwh_basis",
+    "value": "usable",
+    "notes": "OEM wording is 'rated energy capacity', treated as usable rather than unstated gross."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "field": "derived.kwh_per_100mi_battery_side",
+    "value": 31.29,
+    "unit": "kWh/100mi",
+    "tier": "D",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "derivation": {
+      "formula": "battery.pack_kwh / efficiency.epa_range_mi * 100",
+      "inputs": [
+        "battery.pack_kwh",
+        "battery.pack_kwh_basis",
+        "efficiency.epa_range_mi"
+      ],
+      "assumptions": [
+        "Uses OEM usable pack_kwh (102) and EPA range; not the same as wall-side efficiency.epa_kwh_per_100mi."
+      ]
+    }
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 LYRIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/lyriq/specs",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "charging.port_type",
+    "value": "CCS1",
+    "notes": "Specs: 'Combined Charging System Type 1 (CCS1) port'. NACS DC adapter sold separately. Page notes '2025 model year and simulated charging shown throughout' on the 2026 preceding-year specs URL."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 LYRIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/lyriq/specs",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "charging.peak_dc_kw",
+    "value": 190,
+    "notes": "Specs: '190 kW maximum charge speed'."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 LYRIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/lyriq/specs",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "charging.onboard_ac_kw",
+    "value": 11.5,
+    "notes": "Standard 11.5 kW Level 2 AC charging. Matches this atlas trim ('11 kW onboard charger'). Available 19.2 kW module is optional and not used here."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 LYRIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/lyriq/specs",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.power_hp",
+    "value": 365,
+    "notes": "Single motor RWD: 365 hp, Cadillac-estimated."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 LYRIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/lyriq/specs",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.length_in",
+    "value": 196.7
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 LYRIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/lyriq/specs",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.height_in",
+    "value": 64.3
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 LYRIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/lyriq/specs",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.wheelbase_in",
+    "value": 121.8,
+    "notes": "Width is published only as 'Width with mirrors' (86.9 in), so body.width_in is left missing."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "field": "identity.msrp_usd",
+    "value": 59200,
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 LYRIQ preceding-year page",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/lyriq",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "FROM: $59,200 for 2026 LYRIQ entry configuration on the preceding-year product page."
+  }
+]

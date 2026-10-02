@@ -1,0 +1,249 @@
+[
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "field": "recalls.campaign_count",
+    "value": 0,
+    "tier": "P",
+    "source_name": "NHTSA recall flat file FLAT_RCL_POST_2010 (MY2026 search)",
+    "source_url": "https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip",
+    "access_date": "2026-09-29",
+    "confidence": "medium",
+    "notes": "No MY2026 records for this nameplate in NHTSA's recall flat file (file dated 2026-09-29; searched MODELTXT by regex, not exact string). The recallsByVehicle API returned HTTP 400 / Count 0 for every model string tried ('MODEL S'), which is how it responds to an unmatched string, so the API alone can't confirm zero.",
+    "conflicts_with": [
+      "tesla-model-s-2026#recalls.listed_as_having_recalls#NHTSA products API model list (issueType=r, TESLA MY2026)"
+    ]
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "field": "recalls.listed_as_having_recalls",
+    "value": true,
+    "tier": "P",
+    "source_name": "NHTSA products API model list (issueType=r, TESLA MY2026)",
+    "source_url": "https://api.nhtsa.gov/products/vehicle/models?modelYear=2026&make=tesla&issueType=r",
+    "access_date": "2026-09-29",
+    "confidence": "low",
+    "conflicts_with": [
+      "tesla-model-s-2026#recalls.campaign_count#NHTSA recall flat file FLAT_RCL_POST_2010 (MY2026 search)"
+    ],
+    "notes": "NHTSA's products endpoint lists 'MODEL S BEV' among MY2026 models with recalls, but neither recallsByVehicle nor the flat file returns any MY2026 campaign for it. Unresolved discrepancy between two NHTSA sources."
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49741 (2026 Tesla Model S)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49741",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_range_mi",
+    "value": 410,
+    "notes": "EPA id 49741, 'Model S'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim; only non-Plaid Model S row."
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49741 (2026 Tesla Model S)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49741",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 27.1309,
+    "notes": "Wall-side, combined (EPA combE). The label and the printable page (https://www.fueleconomy.gov/feg/noframes/49741.shtml) round this to 27. EPA id 49741, 'Model S'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim; only non-Plaid Model S row."
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49741 (2026 Tesla Model S)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49741",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 124,
+    "notes": "EPA id 49741, 'Model S'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim; only non-Plaid Model S row."
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49741 (2026 Tesla Model S)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49741",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.drive_layout",
+    "value": "AWD",
+    "notes": "EPA 'drive' field: 'All-Wheel Drive'. EPA id 49741, 'Model S'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim; only non-Plaid Model S row."
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49741 (2026 Tesla Model S)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49741",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.epa_motor_description",
+    "value": "243 and 248 kW ACPM 3-Phase",
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type: the EPA text isn't consistent enough for that (e.g. motor counts don't always match the drive layout). EPA id 49741, 'Model S'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim; only non-Plaid Model S row."
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "field": "identity.msrp_usd",
+    "value": 94990,
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov Find.do side-by-side for vehicle 49741 (2026 Tesla Model S)",
+    "source_url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=49741",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "MSRP shown on the EPA side-by-side page for the non-Plaid Model S row. EPA footnote: MSRP data provided by Edmunds.com, Inc. Tesla product page (live 403; Wayback snapshot) had no static starts-at price in the fetched HTML.",
+    "conflicts_with": [
+      "tesla-model-s-2026#identity.msrp_usd#Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)"
+    ]
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "field": "identity.msrp_usd",
+    "value": 96630,
+    "tier": "S",
+    "source_name": "Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)",
+    "source_url": "https://www.kbb.com/tesla/model-s/2026/specs/",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "KBB MSRP for the non-Plaid Model S column. Differs from the EPA/Edmunds MSRP on fueleconomy.gov ($94,990).",
+    "conflicts_with": [
+      "tesla-model-s-2026#identity.msrp_usd#EPA/DOE fueleconomy.gov Find.do side-by-side for vehicle 49741 (2026 Tesla Model S)"
+    ]
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "field": "battery.pack_kwh",
+    "value": 100,
+    "tier": "S",
+    "source_name": "Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)",
+    "source_url": "https://www.kbb.com/tesla/model-s/2026/specs/",
+    "access_date": "2026-10-02",
+    "confidence": "low",
+    "notes": "KBB lists Battery 100.00 kWh for both Model S and Plaid columns without saying gross vs usable. Tesla product page (live and Wayback) does not state pack kWh."
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "S",
+    "source_name": "Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)",
+    "source_url": "https://www.kbb.com/tesla/model-s/2026/specs/",
+    "access_date": "2026-10-02",
+    "confidence": "low",
+    "notes": "KBB does not state whether 100 kWh is gross or usable."
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "field": "charging.peak_dc_kw",
+    "value": 250,
+    "tier": "P",
+    "source_name": "Tesla Model S page, Model S (non-Plaid) specs (Wayback Machine snapshot 2026-01-22)",
+    "source_url": "https://web.archive.org/web/20260122131939/https://www.tesla.com/models",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Model S (non-Plaid): Supercharging Max 250 kW. Same figure listed for Plaid."
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "field": "body.curb_weight_lb",
+    "value": 4561,
+    "tier": "P",
+    "source_name": "Tesla Model S page, Model S (non-Plaid) specs (Wayback Machine snapshot 2026-01-22)",
+    "source_url": "https://web.archive.org/web/20260122131939/https://www.tesla.com/models",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Tesla label: Weight (Curb Mass), Model S Dual Motor (non-Plaid). Differs by 1 lb from KBB's 4,560 pounds.",
+    "conflicts_with": [
+      "tesla-model-s-2026#body.curb_weight_lb#Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)"
+    ]
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "field": "body.curb_weight_lb",
+    "value": 4560,
+    "tier": "S",
+    "source_name": "Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)",
+    "source_url": "https://www.kbb.com/tesla/model-s/2026/specs/",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "KBB curb weight for non-Plaid Model S (4,560 pounds). Differs by 1 lb from Tesla Wayback (4,561 lbs).",
+    "conflicts_with": [
+      "tesla-model-s-2026#body.curb_weight_lb#Tesla Model S page, Model S (non-Plaid) specs (Wayback Machine snapshot 2026-01-22)"
+    ]
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "field": "powertrain.power_hp",
+    "value": 670,
+    "tier": "P",
+    "source_name": "Tesla Model S page, Model S (non-Plaid) specs (Wayback Machine snapshot 2026-01-22)",
+    "source_url": "https://web.archive.org/web/20260122131939/https://www.tesla.com/models",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Model S (non-Plaid) Dual Motor: Peak Power 670 hp. Plaid lists 1,020 hp on the same page."
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "field": "powertrain.accel_0_60_s",
+    "value": 3.1,
+    "tier": "P",
+    "source_name": "Tesla Model S page, Model S (non-Plaid) specs (Wayback Machine snapshot 2026-01-22)",
+    "source_url": "https://web.archive.org/web/20260122131939/https://www.tesla.com/models",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Model S (non-Plaid): '3.1 s 0-60 mph'. Matches EPA range row (410 mi)."
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "field": "body.length_in",
+    "value": 197.7,
+    "tier": "S",
+    "source_name": "Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)",
+    "source_url": "https://www.kbb.com/tesla/model-s/2026/specs/",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "KBB overall length. Tesla product page (live and Wayback) specs tables do not list exterior dimensions."
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "field": "body.width_in",
+    "value": 86.2,
+    "tier": "S",
+    "source_name": "Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)",
+    "source_url": "https://www.kbb.com/tesla/model-s/2026/specs/",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "KBB Width with mirrors 86.2 inches (no without-mirrors figure on the page)."
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "field": "body.height_in",
+    "value": 56.3,
+    "tier": "S",
+    "source_name": "Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)",
+    "source_url": "https://www.kbb.com/tesla/model-s/2026/specs/",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "From KBB Dimensions row (197.7 L x 86.2 W x 56.3 H)."
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "field": "body.wheelbase_in",
+    "value": 116.5,
+    "tier": "S",
+    "source_name": "Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)",
+    "source_url": "https://www.kbb.com/tesla/model-s/2026/specs/",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "KBB wheel base. Tesla product page (live and Wayback) specs tables do not list wheelbase."
+  }
+]

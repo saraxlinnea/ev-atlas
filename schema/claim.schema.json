@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/saraxlinne/ev-atlas/main/schema/claim.schema.json",
+  "title": "Claim",
+  "description": "One sourced value for one field of one vehicle. Every number in the charts and CSVs traces back to a claim.",
+  "type": "object",
+  "required": ["vehicle_id", "field", "value", "tier", "access_date"],
+  "additionalProperties": false,
+  "properties": {
+    "vehicle_id": {
+      "type": "string",
+      "description": "Foreign key into vehicles.json, e.g. 'lucid-air-pure-2026'"
+    },
+    "field": {
+      "type": "string",
+      "description": "Dot-path into the vehicle schema, e.g. 'battery.pack_kwh' or 'charging.peak_dc_kw'"
+    },
+    "value": {
+      "description": "The claimed value, any JSON type. Default units are defined in vehicle-fields.md."
+    },
+    "unit": {
+      "type": "string",
+      "description": "Optional explicit unit override if it differs from the field default (e.g. 'lb-ft' vs 'Nm')."
+    },
+    "tier": {
+      "type": "string",
+      "enum": ["P", "S", "D", "unverified"],
+      "description": "P = primary (OEM spec sheet or press kit, EPA, NHTSA, DOE/Argonne, USPTO, government filing). S = secondary (outlet, teardown report, spec aggregator). D = derived from other claims; requires derivation. unverified = plausible but unconfirmed; flag it wherever it's shown."
+    },
+    "source_name": {
+      "type": "string",
+      "description": "Human-readable source, e.g. 'Lucid Motors Air Pure Technical Specifications (MY2025 PDF)'"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Required for tier P and S. Omit only for tier D or unverified."
+    },
+    "access_date": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO date the claim was captured. Required on every claim so staleness is visible."
+    },
+    "model_year": {
+      "type": "integer",
+      "description": "Model year of the source, if it differs from the vehicle's (e.g. a MY2025 spec sheet cited for a MY2026 vehicle)."
+    },
+    "disclosed_by_oem": {
+      "type": "boolean",
+      "description": "True if the OEM published this value, even when it's cited through a secondary report (tier S). False or absent: the value comes from third-party testing or our own inference."
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low"],
+      "description": "Subjective reliability, separate from tier. A single teardown report might be tier S, confidence medium."
+    },
+    "conflicts_with": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Ids (vehicle_id#field#source_name) of claims that disagree with this one. Both claims are kept and the conflict is flagged in the output."
+    },
+    "derivation": {
+      "type": "object",
+      "description": "Required when tier == 'D'.",
+      "properties": {
+        "formula": { "type": "string", "description": "Human-readable formula, e.g. 'label_range_mi * label_kwh_per_100mi / 100'" },
+        "inputs": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Field paths used as inputs; use vehicle_id#field for another vehicle's claim."
+        },
+        "assumptions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Assumptions built into the formula, e.g. 'assumes pack_kwh is usable, not gross'"
+        }
+      },
+      "required": ["formula", "inputs"]
+    },
+    "uncertainty": {
+      "type": "object",
+      "description": "Interval or stated error for derived or inferred values.",
+      "properties": {
+        "low": { "type": "number" },
+        "high": { "type": "number" },
+        "method": { "type": "string", "description": "e.g. 'Monte Carlo, 10000 draws' or 'EPA 0.7x adjustment-factor bound'" }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Caveats, what couldn't be confirmed, why a value looks odd."
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "tier": { "const": "D" } } },
+      "then": { "required": ["derivation"] }
+    },
+    {
+      "if": { "properties": { "tier": { "enum": ["P", "S"] } } },
+      "then": { "required": ["source_url", "source_name"] }
+    }
+  ]
+}

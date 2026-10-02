@@ -1,0 +1,217 @@
+[
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "field": "recalls.campaign_count",
+    "value": 0,
+    "tier": "P",
+    "source_name": "NHTSA recall flat file FLAT_RCL_POST_2010 (MY2026 search)",
+    "source_url": "https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip",
+    "access_date": "2026-09-29",
+    "confidence": "medium",
+    "notes": "No MY2026 records for this nameplate in NHTSA's recall flat file (file dated 2026-09-29; searched MODELTXT by regex, not exact string). The recallsByVehicle API returned HTTP 400 / Count 0 for every model string tried ('MUSTANG MACH-E'), which is how it responds to an unmatched string, so the API alone can't confirm zero.",
+    "conflicts_with": [
+      "ford-mustang-mach-e-2026#recalls.listed_as_having_recalls#NHTSA products API model list (issueType=r, FORD MY2026)"
+    ]
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "field": "recalls.listed_as_having_recalls",
+    "value": true,
+    "tier": "P",
+    "source_name": "NHTSA products API model list (issueType=r, FORD MY2026)",
+    "source_url": "https://api.nhtsa.gov/products/vehicle/models?modelYear=2026&make=ford&issueType=r",
+    "access_date": "2026-09-29",
+    "confidence": "low",
+    "conflicts_with": [
+      "ford-mustang-mach-e-2026#recalls.campaign_count#NHTSA recall flat file FLAT_RCL_POST_2010 (MY2026 search)"
+    ],
+    "notes": "NHTSA's products endpoint lists 'MUSTANG MACH-E BEV BEV' among MY2026 models with recalls, but neither recallsByVehicle nor the flat file returns any MY2026 campaign for it. Unresolved discrepancy between two NHTSA sources."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50204 (2026 Ford Mustang Mach-E RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50204",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_range_mi",
+    "value": 260,
+    "notes": "EPA id 50204, 'Mustang Mach-E RWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50204 (2026 Ford Mustang Mach-E RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50204",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 31.4375,
+    "notes": "Wall-side, combined (EPA combE). The label and the printable page (https://www.fueleconomy.gov/feg/noframes/50204.shtml) round this to 31. EPA id 50204, 'Mustang Mach-E RWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50204 (2026 Ford Mustang Mach-E RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50204",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 107,
+    "notes": "EPA id 50204, 'Mustang Mach-E RWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50204 (2026 Ford Mustang Mach-E RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50204",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.drive_layout",
+    "value": "RWD",
+    "notes": "EPA 'drive' field: 'Rear-Wheel Drive'. EPA id 50204, 'Mustang Mach-E RWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50204 (2026 Ford Mustang Mach-E RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50204",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.epa_motor_description",
+    "value": "197 kW ACPM",
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type: the EPA text isn't consistent enough for that (e.g. motor counts don't always match the drive layout). EPA id 50204, 'Mustang Mach-E RWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "tier": "P",
+    "source_name": "Ford From the Road, 2025-10-20: 2026 Mustang Mach-E GT California Special",
+    "source_url": "https://www.fromtheroad.ford.com/us/en/articles/2025/2026-mustang-mach-e-california-special",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "identity.msrp_usd",
+    "value": 37795,
+    "notes": "Ford: 'the range starting at $37,795' for the 2026 Mustang Mach-E lineup (Select is the entry trim)."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "tier": "P",
+    "source_name": "Ford USA 2026 Mustang Mach-E Select page",
+    "source_url": "https://www.ford.com/suvs/mach-e/2026/models/select/",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "battery.pack_kwh",
+    "value": 73,
+    "notes": "Standard Range listed as 'Usable Battery Capacity 73kWh'."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "tier": "P",
+    "source_name": "Ford USA 2026 Mustang Mach-E Select page",
+    "source_url": "https://www.ford.com/suvs/mach-e/2026/models/select/",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "battery.pack_kwh_basis",
+    "value": "usable",
+    "notes": "OEM explicitly labels usable battery capacity."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "field": "derived.kwh_per_100mi_battery_side",
+    "value": 28.08,
+    "unit": "kWh/100mi",
+    "tier": "D",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "derivation": {
+      "formula": "battery.pack_kwh / efficiency.epa_range_mi * 100",
+      "inputs": [
+        "battery.pack_kwh",
+        "battery.pack_kwh_basis",
+        "efficiency.epa_range_mi"
+      ],
+      "assumptions": [
+        "Uses OEM usable pack_kwh (73 kWh) and EPA range; not the same as wall-side efficiency.epa_kwh_per_100mi."
+      ]
+    }
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "tier": "P",
+    "source_name": "Ford USA 2026 Mustang Mach-E Select page",
+    "source_url": "https://www.ford.com/suvs/mach-e/2026/models/select/",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "charging.port_type",
+    "value": "CCS1",
+    "notes": "Fast Charging Adapter (NACS) listed as available equipment, implying the vehicle port is CCS1."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "tier": "P",
+    "source_name": "Ford USA 2026 Mustang Mach-E Select page",
+    "source_url": "https://www.ford.com/suvs/mach-e/2026/models/select/",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.power_hp",
+    "value": 264,
+    "notes": "Standard-range RWD: 264 hp."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "tier": "P",
+    "source_name": "Ford USA 2026 Mustang Mach-E Select page",
+    "source_url": "https://www.ford.com/suvs/mach-e/2026/models/select/",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.accel_0_60_s",
+    "value": 5.6,
+    "notes": "Select with standard-range battery and RWD: 5.6 seconds."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "tier": "P",
+    "source_name": "Ford USA 2026 Mustang Mach-E Select page",
+    "source_url": "https://www.ford.com/suvs/mach-e/2026/models/select/",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.length_in",
+    "value": 185.6,
+    "notes": "Select length from Exterior Dimensions table."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "tier": "P",
+    "source_name": "Ford USA 2026 Mustang Mach-E Select page",
+    "source_url": "https://www.ford.com/suvs/mach-e/2026/models/select/",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.height_in",
+    "value": 64,
+    "notes": "Select vehicle height from Exterior Dimensions table."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "tier": "P",
+    "source_name": "Ford USA 2026 Mustang Mach-E Select page",
+    "source_url": "https://www.ford.com/suvs/mach-e/2026/models/select/",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.wheelbase_in",
+    "value": 117.5
+  }
+]

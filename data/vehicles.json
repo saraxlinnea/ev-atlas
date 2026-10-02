@@ -1,0 +1,222 @@
+[
+  {
+    "vehicle_id": "lucid-air-pure-2026",
+    "make": "Lucid",
+    "model": "Air",
+    "trim": "Pure RWD (19in wheels)",
+    "model_year": 2026,
+    "lineage_id": "lucid-air",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "make": "Tesla",
+    "model": "Model Y",
+    "trim": "Premium RWD",
+    "model_year": 2026,
+    "lineage_id": "tesla-model-y",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "make": "Tesla",
+    "model": "Model 3",
+    "trim": "Standard RWD",
+    "model_year": 2026,
+    "lineage_id": "tesla-model-3",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "make": "Tesla",
+    "model": "Model S",
+    "trim": "AWD (non-Plaid)",
+    "model_year": 2026,
+    "lineage_id": "tesla-model-s",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "lucid-gravity-2026",
+    "make": "Lucid",
+    "model": "Gravity",
+    "trim": "Touring (20in front / 21in rear wheels)",
+    "model_year": 2026,
+    "lineage_id": "lucid-gravity",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "make": "Rivian",
+    "model": "R1T",
+    "trim": "Dual Standard (20in wheels)",
+    "model_year": 2026,
+    "lineage_id": "rivian-r1",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "make": "Rivian",
+    "model": "R2",
+    "trim": "Performance AWD (20in all-terrain wheels)",
+    "model_year": 2027,
+    "lineage_id": "rivian-r2",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "hyundai-ioniq5-2026",
+    "make": "Hyundai",
+    "model": "Ioniq 5",
+    "trim": "Standard Range RWD",
+    "model_year": 2026,
+    "lineage_id": "hyundai-ioniq5",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "make": "Hyundai",
+    "model": "Ioniq 6",
+    "trim": "Standard Range",
+    "model_year": 2025,
+    "lineage_id": "hyundai-ioniq6",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "kia-ev6-2026",
+    "make": "Kia",
+    "model": "EV6",
+    "trim": "Standard Range RWD",
+    "model_year": 2026,
+    "lineage_id": "kia-ev6",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "porsche-taycan-2026",
+    "make": "Porsche",
+    "model": "Taycan",
+    "trim": "Base (RWD, Performance Battery)",
+    "model_year": 2026,
+    "lineage_id": "porsche-taycan",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "chevrolet-equinox-ev-2026",
+    "make": "Chevrolet",
+    "model": "Equinox EV",
+    "trim": "FWD",
+    "model_year": 2026,
+    "lineage_id": "chevrolet-equinox-ev",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "make": "Cadillac",
+    "model": "Lyriq",
+    "trim": "RWD (11 kW onboard charger)",
+    "model_year": 2026,
+    "lineage_id": "cadillac-lyriq",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "make": "Ford",
+    "model": "Mustang Mach-E",
+    "trim": "RWD (standard range)",
+    "model_year": 2026,
+    "lineage_id": "ford-mach-e",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "make": "Volkswagen",
+    "model": "ID.4",
+    "trim": "RWD",
+    "model_year": 2026,
+    "lineage_id": "vw-id4",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "bmw-i4-2026",
+    "make": "BMW",
+    "model": "i4",
+    "trim": "eDrive35 Gran Coupe (19in wheels)",
+    "model_year": 2026,
+    "lineage_id": "bmw-i4",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "mercedes-cla-electric-2026",
+    "make": "Mercedes-Benz",
+    "model": "CLA (electric)",
+    "trim": "CLA 250+ with EQ Technology",
+    "model_year": 2026,
+    "lineage_id": "mercedes-cla-electric",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "nissan-leaf-2026",
+    "make": "Nissan",
+    "model": "Leaf",
+    "trim": "75 kWh (18in steel wheels)",
+    "model_year": 2026,
+    "lineage_id": "nissan-leaf",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-2027",
+    "make": "Chevrolet",
+    "model": "Bolt",
+    "trim": "LT",
+    "model_year": 2027,
+    "lineage_id": "chevrolet-bolt",
+    "region": "US",
+    "status": "current",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "volvo-ex30-2026",
+    "make": "Volvo",
+    "model": "EX30",
+    "trim": "Single Motor Extended Range",
+    "model_year": 2026,
+    "lineage_id": "volvo-ex30",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  }
+]

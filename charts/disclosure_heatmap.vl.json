@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Where each spec comes from",
+    "subtitle": "Each cell is one field for one vehicle. P = OEM or government source, S = secondary or teardown, D = derived from other claims, unverified = unconfirmed, missing = not found.",
+    "fontSize": 16,
+    "subtitleFontSize": 11,
+    "subtitleColor": "#666"
+  },
+  "data": { "url": "../data/disclosure_heatmap.csv" },
+  "width": {"step": 14},
+  "height": {"step": 18},
+  "mark": { "type": "rect", "stroke": "white", "strokeWidth": 0.5 },
+  "encoding": {
+    "x": {
+      "field": "field",
+      "type": "nominal",
+      "title": null,
+      "axis": { "labelAngle": -60, "labelFontSize": 9 }
+    },
+    "y": {
+      "field": "vehicle_id",
+      "type": "nominal",
+      "title": null,
+      "axis": { "labelFontSize": 9 }
+    },
+    "color": {
+      "field": "tier",
+      "type": "nominal",
+      "title": "Source tier",
+      "scale": {
+        "domain": ["P", "S", "D", "unverified", "missing"],
+        "range": ["#1a7a3a", "#7ea6d8", "#c9a227", "#e07b39", "#e8e8e8"]
+      }
+    },
+    "tooltip": [
+      { "field": "vehicle_id", "title": "Vehicle" },
+      { "field": "field", "title": "Field" },
+      { "field": "tier", "title": "Tier" }
+    ]
+  },
+  "config": { "view": { "stroke": null } }
+}

@@ -1,0 +1,252 @@
+[
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "field": "recalls.campaign_count",
+    "value": 3,
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (HYUNDAI IONIQ 6, MY2025)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=HYUNDAI&model=IONIQ%206&modelYear=2025",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "Distinct NHTSA campaigns returned for MY2025 (make/model/year query; not filtered by trim). Cross-checked against NHTSA flat file https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip (same campaign set). Model strings queried: 'IONIQ 6'; strings returning HTTP 400 had no matching records."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "field": "recalls.campaign_24V868",
+    "value": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY: The Integrated Charging Control Unit (ICCU) may become damaged and stop charging the 12-volt battery, which can result in a loss of drive power.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (HYUNDAI IONIQ 6, MY2025)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=HYUNDAI&model=IONIQ%206&modelYear=2025",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "NHTSA campaign 24V868000; Part 573 report received 2024-11-18. Potential units affected across all models in campaign (flat file POTAFF): 145642. NHTSA scope: Hyundai Motor America (Hyundai) is recalling certain 2022-2024 IONIQ 5, 2023-2025 IONIQ 6, Genesis GV60, Genesis GV70 \"Electrified,\" and Genesis G80 \"Electrified\" vehicles. Listed for the MY2025 IONIQ 6 nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "field": "recalls.campaign_25V606",
+    "value": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:CHARGING:PORT: The charging port door panel may detach.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (HYUNDAI IONIQ 6, MY2025)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=HYUNDAI&model=IONIQ%206&modelYear=2025",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "NHTSA campaign 25V606000; Part 573 report received 2025-09-12. Potential units affected across all models in campaign (flat file POTAFF): 31042. NHTSA scope: Hyundai Motor America (Hyundai) is recalling certain 2023-2025 IONIQ 6 electric vehicles. Listed for the MY2025 IONIQ 6 nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "field": "recalls.campaign_26V218",
+    "value": "SEAT BELTS:FRONT:ANCHORAGE: The driver and passenger seat belt anchors may detach.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (HYUNDAI IONIQ 6, MY2025)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=HYUNDAI&model=IONIQ%206&modelYear=2025",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "NHTSA campaign 26V218000; Part 573 report received 2026-04-06. Potential units affected across all models in campaign (flat file POTAFF): 294448. NHTSA scope: Hyundai Motor America (Hyundai) is recalling certain 2023-2025 Hyundai Ioniq 6, 2023-2026 Genesis G90, 2024-2026 Hyundai Santa Fe, and Hyundai Santa Fe Hybrid vehicles. Listed for the MY2025 IONIQ 6 nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 48364 (2025 Hyundai Ioniq 6 Standard Range)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48364",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_range_mi",
+    "value": 240,
+    "notes": "EPA id 48364, 'Ioniq 6 Standard Range'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim. Moved to MY2025 because EPA and NHTSA have no MY2026 Ioniq 6 and Hyundai's US site sells the 2025 model (checked 2026-09-29)."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 48364 (2025 Hyundai Ioniq 6 Standard Range)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48364",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 25.0,
+    "notes": "Wall-side, combined (EPA combE). The label and the printable page (https://www.fueleconomy.gov/feg/noframes/48364.shtml) round this to 25. EPA id 48364, 'Ioniq 6 Standard Range'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim. Moved to MY2025 because EPA and NHTSA have no MY2026 Ioniq 6 and Hyundai's US site sells the 2025 model (checked 2026-09-29)."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 48364 (2025 Hyundai Ioniq 6 Standard Range)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48364",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 135,
+    "notes": "EPA id 48364, 'Ioniq 6 Standard Range'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim. Moved to MY2025 because EPA and NHTSA have no MY2026 Ioniq 6 and Hyundai's US site sells the 2025 model (checked 2026-09-29)."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 48364 (2025 Hyundai Ioniq 6 Standard Range)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48364",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.drive_layout",
+    "value": "RWD",
+    "notes": "EPA 'drive' field: 'Rear-Wheel Drive'. EPA id 48364, 'Ioniq 6 Standard Range'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim. Moved to MY2025 because EPA and NHTSA have no MY2026 Ioniq 6 and Hyundai's US site sells the 2025 model (checked 2026-09-29)."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 48364 (2025 Hyundai Ioniq 6 Standard Range)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48364",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.epa_motor_description",
+    "value": "111 kW PMSM",
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type: the EPA text isn't consistent enough for that (e.g. motor counts don't always match the drive layout). EPA id 48364, 'Ioniq 6 Standard Range'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim. Moved to MY2025 because EPA and NHTSA have no MY2026 Ioniq 6 and Hyundai's US site sells the 2025 model (checked 2026-09-29)."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "tier": "P",
+    "source_name": "Hyundai USA 2025 IONIQ 6 compare-specs (SE Standard Range)",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-6/compare-specs",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "identity.msrp_usd",
+    "value": 37850,
+    "notes": "Starting MSRP for SE Standard Range. Excludes freight, tax, title, and license."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "tier": "P",
+    "source_name": "Hyundai USA 2025 IONIQ 6 compare-specs (SE Standard Range)",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-6/compare-specs",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "battery.pack_kwh",
+    "value": 53.0,
+    "notes": "Hyundai: 'Battery system capacity' 53.0 kWh for SE Standard Range. Same figure in the Hyundai News specs PDF."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "tier": "P",
+    "source_name": "Hyundai USA 2025 IONIQ 6 compare-specs (SE Standard Range)",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-6/compare-specs",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "notes": "OEM lists 'Battery system capacity' / 'Battery System Capacity' without saying gross or usable."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "tier": "P",
+    "source_name": "Hyundai News 2025 IONIQ 6 Specs & Features PDF (2025-01-15)",
+    "source_url": "https://www.hyundainews.com/assets/documents/original/64772-2025IONIQ6SpecsFeatures011525.pdf",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "charging.peak_dc_kw",
+    "value": 350,
+    "notes": "PDF: 'Ultra-Fast Charger (up to 800V / 350 kW)' standard. Compare-specs page also lists 'Ultra-fast charger (up to 800V / 350kW)' and 'Rapid Charging: >350kW'."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "tier": "P",
+    "source_name": "Hyundai News 2025 IONIQ 6 Specs & Features PDF (2025-01-15)",
+    "source_url": "https://www.hyundainews.com/assets/documents/original/64772-2025IONIQ6SpecsFeatures011525.pdf",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "charging.onboard_ac_kw",
+    "value": 10.9,
+    "notes": "PDF On-Board Charger (OBC): 'Max Capacity (kW) 10.9' for all models."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "tier": "P",
+    "source_name": "Hyundai USA 2025 IONIQ 6 compare-specs (SE Standard Range)",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-6/compare-specs",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.power_hp",
+    "value": 149,
+    "notes": "SE Standard Range RWD: '111 kW (149 hp)'. Same in the Hyundai News specs PDF."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "tier": "P",
+    "source_name": "Hyundai USA 2025 IONIQ 6 compare-specs (SE Standard Range)",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-6/compare-specs",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.curb_weight_lb",
+    "value": 3395,
+    "conflicts_with": [
+      "hyundai-ioniq6-2025#body.curb_weight_lb#Hyundai News 2025 IONIQ 6 Specs & Features PDF (2025-01-15)"
+    ],
+    "notes": "Compare-specs table lists 3,395 under 'Curb weight (lbs.) (RWD) Long Range' in the SE Standard Range column. Conflicts with the Hyundai News PDF lightest curb weight of 3,935 lb for RWD Standard Range."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "tier": "P",
+    "source_name": "Hyundai News 2025 IONIQ 6 Specs & Features PDF (2025-01-15)",
+    "source_url": "https://www.hyundainews.com/assets/documents/original/64772-2025IONIQ6SpecsFeatures011525.pdf",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.curb_weight_lb",
+    "value": 3935,
+    "conflicts_with": [
+      "hyundai-ioniq6-2025#body.curb_weight_lb#Hyundai USA 2025 IONIQ 6 compare-specs (SE Standard Range)"
+    ],
+    "notes": "PDF: Curb Weight Lightest for RWD (Standard Range) is 3,935 lb. Conflicts with the compare-specs page value of 3,395 lb."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "tier": "P",
+    "source_name": "Hyundai USA 2025 IONIQ 6 compare-specs (SE Standard Range)",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-6/compare-specs",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.length_in",
+    "value": 191.1
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "tier": "P",
+    "source_name": "Hyundai USA 2025 IONIQ 6 compare-specs (SE Standard Range)",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-6/compare-specs",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.width_in",
+    "value": 74.0
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "tier": "P",
+    "source_name": "Hyundai USA 2025 IONIQ 6 compare-specs (SE Standard Range)",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-6/compare-specs",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.height_in",
+    "value": 58.9
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "tier": "P",
+    "source_name": "Hyundai USA 2025 IONIQ 6 compare-specs (SE Standard Range)",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-6/compare-specs",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.wheelbase_in",
+    "value": 116.1
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/saraxlinne/ev-atlas/main/schema/vehicle.schema.json",
+  "title": "Vehicle",
+  "description": "Identity record for one vehicle configuration. Specs are stored as claims, not here.",
+  "type": "object",
+  "required": [
+    "vehicle_id",
+    "make",
+    "model",
+    "model_year",
+    "trim",
+    "status"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "vehicle_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Slug: {make}-{model}[-{trim}]-{year}, e.g. 'lucid-air-pure-2026'. Include the trim only when needed to tell configurations apart."
+    },
+    "make": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "trim": {
+      "type": "string"
+    },
+    "model_year": {
+      "type": "integer"
+    },
+    "lineage_id": {
+      "type": "string",
+      "description": "Groups model years of the same nameplate for evolution charts, e.g. 'tesla-model-y'"
+    },
+    "region": {
+      "type": "string",
+      "default": "US",
+      "description": "Spec market. US EPA figures assumed unless noted."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "current",
+        "discontinued",
+        "unverified_availability"
+      ],
+      "description": "Whether this configuration is on sale as of status_checked_date. Use unverified_availability until confirmed against a current source."
+    },
+    "status_checked_date": {
+      "type": "string",
+      "format": "date"
+    }
+  }
+}

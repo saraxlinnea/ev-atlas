@@ -1,0 +1,120 @@
+[
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "recalls.campaign_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (VOLKSWAGEN ID.4, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=VOLKSWAGEN&model=ID.4&modelYear=2026",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "Distinct NHTSA campaigns returned for MY2026 (make/model/year query; not filtered by trim). Cross-checked against NHTSA flat file https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip (same campaign set). Model strings queried: 'ID.4', 'ID4'; strings returning HTTP 400 had no matching records."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "recalls.campaign_25V835",
+    "value": "WHEELS:LUGS/NUTS/BOLTS/STUDS: The incorrect wheel bolts may have been installed during vehicle manufacturing.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (VOLKSWAGEN ID.4, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=VOLKSWAGEN&model=ID.4&modelYear=2026",
+    "access_date": "2026-09-29",
+    "confidence": "high",
+    "notes": "NHTSA campaign 25V835000; Part 573 report received 2025-12-03. Potential units affected across all models in campaign (flat file POTAFF): 27. Advisories/flags: park it / do not drive. NHTSA scope: Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2026 Atlas, Atlas Cross Sport, and ID.4 vehicles. Listed for the MY2026 ID.4 nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49987 (2026 Volkswagen ID.4)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49987",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_range_mi",
+    "value": 291,
+    "notes": "EPA id 49987, 'ID.4'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49987 (2026 Volkswagen ID.4)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49987",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 29.783,
+    "notes": "Wall-side, combined (EPA combE). The label and the printable page (https://www.fueleconomy.gov/feg/noframes/49987.shtml) round this to 30. EPA id 49987, 'ID.4'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49987 (2026 Volkswagen ID.4)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49987",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 113,
+    "notes": "EPA id 49987, 'ID.4'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49987 (2026 Volkswagen ID.4)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49987",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.drive_layout",
+    "value": "RWD",
+    "notes": "EPA 'drive' field: 'Rear-Wheel Drive'. EPA id 49987, 'ID.4'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49987 (2026 Volkswagen ID.4)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49987",
+    "access_date": "2026-09-29",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.epa_motor_description",
+    "value": "210 kW ACPM 3-Phase",
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type: the EPA text isn't consistent enough for that (e.g. motor counts don't always match the drive layout). EPA id 49987, 'ID.4'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "tier": "P",
+    "source_name": "Volkswagen USA 2026 ID.4 model page",
+    "source_url": "https://www.vw.com/en/models/id-4.html",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "identity.msrp_usd",
+    "value": 45095,
+    "notes": "Starting MSRP for the 2026 ID.4 lineup. Entry RWD configuration matching EPA 'ID.4' / Pro range class."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "tier": "P",
+    "source_name": "Volkswagen USA 2026 ID.4 model page",
+    "source_url": "https://www.vw.com/en/models/id-4.html",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "charging.port_type",
+    "value": "CCS1",
+    "notes": "Page says customers must purchase a Volkswagen-approved NACS adapter to use Tesla Superchargers, implying a CCS1 vehicle port."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "tier": "P",
+    "source_name": "Volkswagen USA 2026 ID.4 model page",
+    "source_url": "https://www.vw.com/en/models/id-4.html",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "charging.onboard_ac_kw",
+    "value": 11,
+    "notes": "FAQ: home charging 'at up to 11 kW with the available home wall charger'. Treated as the onboard AC capability paired with that charger."
+  }
+]
