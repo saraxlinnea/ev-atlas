@@ -216,5 +216,27 @@
     "access_date": "2026-10-02",
     "disclosed_by_oem": true,
     "confidence": "high"
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "body.curb_weight_lb",
+    "value": 4985,
+    "tier": "S",
+    "source_name": "Car and Driver instrumented test: 2027 Rivian R2 Performance AWD Launch Edition",
+    "source_url": "https://www.caranddriver.com/reviews/a73308571/2027-rivian-r2-performance-awd-launch-edition-test/",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "C/D measured curb weight 4,985 lb for Performance with Launch package. Atlas trim is Performance AWD (20in all-terrain); test car also had Launch package options."
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "charging.peak_dc_kw",
+    "value": 230,
+    "tier": "S",
+    "source_name": "Car and Driver instrumented test: 2027 Rivian R2 Performance AWD Launch Edition",
+    "source_url": "https://www.caranddriver.com/reviews/a73308571/2027-rivian-r2-performance-awd-launch-edition-test/",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "C/D: 'Rivian claims a peak charging rate of 230 kilowatts' and measured 226 kW peak in their 10-90% test. Recorded as Rivian's stated peak via secondary report."
   }
 ]

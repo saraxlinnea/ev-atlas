@@ -86,5 +86,55 @@
     "field": "powertrain.epa_motor_description",
     "value": "210 kW EESM",
     "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type: the EPA text isn't consistent enough for that (e.g. motor counts don't always match the drive layout). EPA id 50187, 'i4 eDrive35 Gran Coupe (19 inch Wheels)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry trim; only eDrive35 row."
+  },
+  {
+    "vehicle_id": "bmw-i4-2026",
+    "field": "identity.msrp_usd",
+    "value": 57900,
+    "tier": "S",
+    "source_name": "EPA/DOE fueleconomy.gov side-by-side page for vehicle 50187 (MSRP attributed to Edmunds)",
+    "source_url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=50187",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "Page lists MSRP $57,900 for 2026 BMW i4 eDrive35 Gran Coupe (19 inch Wheels). Footnote: MSRP data provided by Edmunds.com, Inc. BMW USA no longer lists eDrive35 for 2026; no OEM US price page used."
+  },
+  {
+    "vehicle_id": "bmw-i4-2026",
+    "field": "battery.pack_kwh",
+    "value": 70.3,
+    "tier": "P",
+    "source_name": "BMW Group press technical data attachment for refreshed BMW i4 (eDrive35)",
+    "source_url": "https://www.press.bmwgroup.com/asia/article/attachment/T0442758EN/617078",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "medium",
+    "model_year": 2024,
+    "notes": "BMW technical data lists 70.3 kWh for i4 eDrive35. Atlas row is EPA MY2026 eDrive35; BMW USA no longer lists that trim for 2026. Gross vs usable not labeled on the attachment summary."
+  },
+  {
+    "vehicle_id": "bmw-i4-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "P",
+    "source_name": "BMW Group press technical data attachment for refreshed BMW i4 (eDrive35)",
+    "source_url": "https://www.press.bmwgroup.com/asia/article/attachment/T0442758EN/617078",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "medium",
+    "model_year": 2024,
+    "notes": "Attachment lists 70.3 kWh without an explicit gross/usable label in the extracted summary."
+  },
+  {
+    "vehicle_id": "bmw-i4-2026",
+    "field": "body.curb_weight_lb",
+    "value": 4409,
+    "tier": "P",
+    "source_name": "BMW Group press technical data attachment for refreshed BMW i4 (eDrive35)",
+    "source_url": "https://www.press.bmwgroup.com/asia/article/attachment/T0442758EN/617078",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "medium",
+    "model_year": 2024,
+    "notes": "DIN curb weight 2,000 kg converted to 4,409 lb (1 kg = 2.20462 lb). EU DIN definition; not a US curb-weight certification label."
   }
 ]

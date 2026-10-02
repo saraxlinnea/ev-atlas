@@ -44,6 +44,7 @@ COMPARE_SPEC_FIELDS = (
     "charging.peak_dc_kw",
     "charging.port_type",
     "battery.pack_kwh",
+    "battery.cell_chemistry",
     "powertrain.accel_0_60_s",
 )
 
@@ -80,14 +81,20 @@ def write_compare_json(flattened_path: Path, out_path: Path) -> None:
                     entry[key] = None
 
             tiers: dict[str, str] = {}
+            sources: dict[str, str] = {}
             for field in COMPARE_SPEC_FIELDS:
                 raw = _cell(row, field)
                 entry[field] = _json_value(raw)
                 tier = _cell(row, f"{field}__tier")
+                url = _cell(row, f"{field}__source_url")
                 if raw and tier:
                     tiers[field] = tier
+                if raw and url:
+                    sources[field] = url
             if tiers:
                 entry["tiers"] = tiers
+            if sources:
+                entry["sources"] = sources
             rows_out.append(entry)
 
     out_path.write_text(

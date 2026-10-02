@@ -213,5 +213,28 @@
     "confidence": "high",
     "field": "body.wheelbase_in",
     "value": 117.5
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "field": "charging.peak_dc_kw",
+    "value": 115,
+    "tier": "S",
+    "source_name": "Car and Driver 2026 Ford Mustang Mach-E review: standard-range peak DC",
+    "source_url": "https://www.caranddriver.com/ford/mustang-mach-e",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "C/D: 'Standard range models have a peak rate of 115kW' (long-range up to 150 kW). Matches atlas Select standard-range RWD configuration. Ford Select page does not state peak kW."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "field": "body.curb_weight_lb",
+    "value": 4620,
+    "tier": "S",
+    "source_name": "Car and Driver 2026 Mustang Mach-E Select RWD test curb weight",
+    "source_url": "https://www.caranddriver.com/ford/mustang-mach-e",
+    "access_date": "2026-10-02",
+    "confidence": "high",
+    "notes": "C/D instrumented curb weight for 2026 Mustang Mach-E Select RWD: 4,620 lb. Not an OEM published curb weight."
   }
 ]

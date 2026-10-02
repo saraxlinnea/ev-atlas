@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Compare | EV Atlas</title>
-  <meta name="description" content="Side-by-side sourced fields for 20 EVs. Empty cells are —, not zero.">
+  <meta name="description" content="Side-by-side sourced fields for 23 EVs. Empty cells are —, not zero.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -25,36 +25,68 @@
       <p class="brand">EV Atlas</p>
       <h1>Compare</h1>
       <p class="lede">
-        Twenty vehicles, one row each. Values come from sourced claims. Empty
-        cells are —, not zero. Click a header to sort.
+        Twenty-three vehicles, one row each. Values come from sourced claims.
+        Empty cells are —, not zero. Filter, group by make, or click a header
+        to sort.
       </p>
     </header>
 
-    <section class="content-section" aria-labelledby="table-heading">
+    <section class="content-section compare-section" aria-labelledby="table-heading" data-compare-root data-src="data/compare.json">
       <h2 id="table-heading">Key fields</h2>
       <p class="chart-note">
-        Hover a filled cell for the source tier when available.
+        Filled cells link to the claim source when a URL is recorded. Hover for
+        source tier. — means not found, not zero. Sourcing rules:
+        <a href="methodology.html">Methods</a>.
       </p>
+
+      <div class="compare-toolbar">
+        <div class="compare-toolbar-row">
+          <label class="compare-field">
+            <span class="compare-field-label">Search</span>
+            <input type="search" data-compare-search placeholder="Make, model, or trim" autocomplete="off">
+          </label>
+          <label class="compare-field">
+            <span class="compare-field-label">Make</span>
+            <select data-compare-filter-make></select>
+          </label>
+          <label class="compare-field">
+            <span class="compare-field-label">Year</span>
+            <select data-compare-filter-year></select>
+          </label>
+          <label class="compare-field">
+            <span class="compare-field-label">Drive</span>
+            <select data-compare-filter-drive></select>
+          </label>
+          <label class="compare-field">
+            <span class="compare-field-label">Port</span>
+            <select data-compare-filter-port></select>
+          </label>
+        </div>
+        <div class="compare-toolbar-row compare-toolbar-meta">
+          <label class="compare-check">
+            <input type="checkbox" data-compare-group checked>
+            <span>Group by make</span>
+          </label>
+          <fieldset class="compare-presets" data-compare-presets>
+            <legend class="compare-field-label">Columns</legend>
+            <label class="compare-check"><input type="checkbox" data-preset="buyer"> Buyer</label>
+            <label class="compare-check"><input type="checkbox" data-preset="efficiency"> Efficiency</label>
+            <label class="compare-check"><input type="checkbox" data-preset="charging"> Charging</label>
+            <label class="compare-check"><input type="checkbox" data-preset="chemistry"> Chemistry</label>
+          </fieldset>
+          <p class="compare-count" data-compare-count aria-live="polite"></p>
+        </div>
+      </div>
+
       <div class="compare-wrap">
-        <table class="compare-table" id="compare-table">
+        <table class="compare-table" data-compare-table hidden>
           <thead>
-            <tr>
-              <th scope="col" class="sortable" data-key="label">Vehicle</th>
-              <th scope="col" class="sortable num" data-key="identity.msrp_usd">MSRP ($)</th>
-              <th scope="col" class="sortable num" data-key="efficiency.epa_range_mi">EPA range (mi)</th>
-              <th scope="col" class="sortable num" data-key="efficiency.epa_kwh_per_100mi">kWh/100 mi</th>
-              <th scope="col" class="sortable num" data-key="efficiency.epa_mpge_combined">MPGe</th>
-              <th scope="col" class="sortable" data-key="powertrain.drive_layout">Drive</th>
-              <th scope="col" class="sortable num" data-key="charging.peak_dc_kw">Peak DC (kW)</th>
-              <th scope="col" class="sortable" data-key="charging.port_type">Port</th>
-              <th scope="col" class="sortable num" data-key="battery.pack_kwh">Pack (kWh)</th>
-              <th scope="col" class="sortable num" data-key="powertrain.accel_0_60_s">0–60 (s)</th>
-            </tr>
+            <tr data-compare-thead-row></tr>
           </thead>
-          <tbody id="compare-body"></tbody>
+          <tbody data-compare-body></tbody>
         </table>
       </div>
-      <p id="compare-error" class="error" hidden></p>
+      <p data-compare-error class="error" hidden></p>
     </section>
 
     <footer>
@@ -63,151 +95,6 @@
       </p>
     </footer>
   </div>
-
-  <script>
-    var MISSING = "\u2014";
-
-    var SPEC_COLS = [
-      { key: "identity.msrp_usd", num: true },
-      { key: "efficiency.epa_range_mi", num: true },
-      { key: "efficiency.epa_kwh_per_100mi", num: true },
-      { key: "efficiency.epa_mpge_combined", num: true },
-      { key: "powertrain.drive_layout", num: false },
-      { key: "charging.peak_dc_kw", num: true },
-      { key: "charging.port_type", num: false },
-      { key: "battery.pack_kwh", num: true },
-      { key: "powertrain.accel_0_60_s", num: true }
-    ];
-
-    function vehicleLabel(row) {
-      var parts = [row.make, row.model].filter(Boolean).join(" ");
-      if (row.model_year) {
-        parts += " (" + row.model_year + ")";
-      }
-      return parts || row.vehicle_id || MISSING;
-    }
-
-    function formatCell(key, value) {
-      if (value === null || value === undefined || value === "") {
-        return { text: MISSING, missing: true };
-      }
-      if (key === "identity.msrp_usd" && typeof value === "number") {
-        return { text: value.toLocaleString("en-US"), missing: false };
-      }
-      if (typeof value === "number") {
-        var text = Number.isInteger(value) ? String(value) : String(value);
-        return { text: text, missing: false };
-      }
-      return { text: String(value), missing: false };
-    }
-
-    function sortKey(row, key) {
-      if (key === "label") {
-        return vehicleLabel(row).toLowerCase();
-      }
-      var v = row[key];
-      if (v === null || v === undefined || v === "") {
-        return null;
-      }
-      if (typeof v === "number") {
-        return v;
-      }
-      return String(v).toLowerCase();
-    }
-
-    function renderRows(rows) {
-      var tbody = document.getElementById("compare-body");
-      tbody.innerHTML = "";
-      rows.forEach(function (row) {
-        var tr = document.createElement("tr");
-        var label = vehicleLabel(row);
-        var td0 = document.createElement("td");
-        td0.innerHTML =
-          '<span class="vehicle-label">' +
-          label +
-          "</span>" +
-          (row.trim
-            ? '<span class="trim-note">' + row.trim + "</span>"
-            : "");
-        tr.appendChild(td0);
-
-        SPEC_COLS.forEach(function (col) {
-          var key = col.key;
-          var td = document.createElement("td");
-          var cell = formatCell(key, row[key]);
-          td.textContent = cell.text;
-          if (cell.missing) {
-            td.className = "missing";
-          } else {
-            td.className = col.num ? "num" : "";
-            var tiers = row.tiers || {};
-            if (tiers[key]) {
-              td.title = "Source tier: " + tiers[key];
-            }
-          }
-          tr.appendChild(td);
-        });
-        tbody.appendChild(tr);
-      });
-    }
-
-    var sortState = { key: "label", dir: 1 };
-
-    function applySort(rows) {
-      var key = sortState.key;
-      var dir = sortState.dir;
-      rows.sort(function (a, b) {
-        var av = sortKey(a, key);
-        var bv = sortKey(b, key);
-        if (av === null && bv === null) {
-          return 0;
-        }
-        if (av === null) {
-          return 1;
-        }
-        if (bv === null) {
-          return -1;
-        }
-        if (typeof av === "number" && typeof bv === "number") {
-          return (av - bv) * dir;
-        }
-        return String(av).localeCompare(String(bv)) * dir;
-      });
-      return rows;
-    }
-
-    fetch("data/compare.json")
-      .then(function (res) {
-        if (!res.ok) {
-          throw new Error("HTTP " + res.status);
-        }
-        return res.json();
-      })
-      .then(function (data) {
-        var rows = applySort(data.slice());
-        renderRows(rows);
-
-        document.querySelectorAll(".compare-table th.sortable").forEach(function (th) {
-          th.addEventListener("click", function () {
-            var key = th.getAttribute("data-key");
-            if (sortState.key === key) {
-              sortState.dir = -sortState.dir;
-            } else {
-              sortState.key = key;
-              sortState.dir = 1;
-            }
-            renderRows(applySort(data.slice()));
-          });
-        });
-      })
-      .catch(function (err) {
-        var el = document.getElementById("compare-error");
-        el.hidden = false;
-        el.textContent =
-          "Could not load compare.json. Run npm run build:site, then refresh. (" +
-          err.message +
-          ")";
-      });
-  </script>
+  <script src="compare.js"></script>
 </body>
 </html>

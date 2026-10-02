@@ -245,5 +245,17 @@
     "access_date": "2026-10-02",
     "confidence": "medium",
     "notes": "KBB wheel base. Tesla product page (live and Wayback) specs tables do not list wheelbase."
+  },
+  {
+    "field": "charging.port_type",
+    "value": "NACS",
+    "tier": "P",
+    "source_name": "Tesla blog: Opening the North American Charging Standard (2022-11-11)",
+    "source_url": "https://www.tesla.com/blog/opening-north-american-charging-standard",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Tesla states its vehicles use the Tesla connector now called NACS. Applied to US Model S / Model Y as native port type; not a measured peak rate.",
+    "vehicle_id": "tesla-model-s-2026"
   }
 ]

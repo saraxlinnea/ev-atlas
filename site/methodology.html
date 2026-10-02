@@ -39,9 +39,9 @@
         not edited by hand.
       </p>
       <p>
-        When no trustworthy source is found, the cell stays empty. Primary and
-        secondary claims require a concrete URL. Derived values require a
-        formula and inputs. Gaps are left blank rather than estimated.
+        When no qualifying source is found, the cell stays empty. Blank means
+        not found, not zero. Primary and secondary claims require a concrete
+        URL. Derived values require a formula and inputs.
       </p>
     </section>
 
@@ -65,7 +65,10 @@
         <strong>EPA:</strong> Per-vehicle records from fueleconomy.gov, checked
         against the bulk download. The EPA vehicle id appears in each claim's
         notes. Most rows use the entry-level EPA configuration; notes record
-        which trim or wheel set was selected.
+        which trim or wheel set was selected. Label kWh/100mi is wall-side
+        (includes charging losses) and is not the same as derived battery-side
+        figures. EPA does not publish which range factor (5-cycle, 0.7, or
+        approved) produced each label.
       </p>
       <p>
         <strong>NHTSA recalls:</strong> Queried by make, model, and year, not
@@ -77,33 +80,38 @@
 
     <section class="content-section" aria-labelledby="limits-heading">
       <h2 id="limits-heading">Known limitations</h2>
-      <p>As of 2026-10-02. Coverage is incomplete; this is not full OEM disclosure for all 20 vehicles.</p>
+      <p>As of 2026-10-02. Coverage is incomplete; this is not a ranking and not full OEM disclosure for all vehicles.</p>
+
+      <h3>Reading the table</h3>
+      <ul>
+        <li>Rows are trim-specific. Sister trims can differ on range, pack, and price.</li>
+        <li>Secondary sources may appear where primary OEM text was unavailable; they rank below primary.</li>
+        <li>Pack-based derived metrics require a gross or usable pack basis, not unstated.</li>
+        <li>OEM peak DC kW and 0-60 times are manufacturer claims under conditions that are often underspecified.</li>
+        <li>MSRP is the stated base for the configured trim; destination, tax, and options vary.</li>
+      </ul>
 
       <h3>Tesla and Lucid</h3>
       <ul>
-        <li>Lucid Air Pure and Tesla Model Y, Model 3, and Model S have OEM-sourced claims where pages were reachable. Model 3 and Model S figures use Wayback snapshots because live tesla.com blocks scripted fetch.</li>
+        <li>Live tesla.com often blocks scripted fetch. Model 3 and Model S OEM figures commonly use Wayback snapshots, which can lag the live page.</li>
         <li>Recorded conflicts include Model 3 MSRP and width, and Model S MSRP and curb weight. Some pack, port, and dimension fields remain secondary-only or missing.</li>
-        <li>Lucid MY2026 Air Pure claims draw on a 2025 press release and Wayback; Lucid's live site shows MY2027. Some specs carry a different model year on the claim.</li>
+        <li>Lucid live pages advance model years early. MY2026 Air Pure claims draw on press and Wayback; some specs carry a later model year on the claim.</li>
       </ul>
 
-      <h3>OEM core</h3>
+      <h3>OEM coverage</h3>
       <ul>
-        <li>Hyundai Ioniq 5 and 6, Kia EV6, Equinox EV, Lyriq, Mach-E, ID.4, EX30, R1T, R2, and Lucid Gravity Touring have OEM claims from fetchable pages.</li>
-        <li>Porsche Taycan, Mercedes CLA Electric, Nissan Leaf, and Chevrolet Bolt later gained OEM buyer fields from dated OEM or newsroom sources. Leaf and Bolt 0–60 remain missing on those pages.</li>
-        <li>BMW i4 eDrive35 is the atlas trim, but BMW USA no longer lists eDrive35 for 2026, so no OEM core was added for that trim.</li>
+        <li>Most vehicles have at least partial OEM or newsroom buyer fields from fetchable pages.</li>
+        <li>BMW i4 eDrive35 is the atlas trim, but BMW USA no longer lists eDrive35 for 2026 (eDrive40 and above). No remapping was invented.</li>
+        <li>Genesis GV60 MY2026 MSRP uses the offers page; pack and NACS claims may cite the live product page after it advances to 2027 labeling.</li>
+        <li>Honda Prologue Supercharger access is described via a NACS-CCS adapter; the vehicle port is recorded as CCS.</li>
+        <li>Leaf and Bolt 0-60 were not stated on the fetchable OEM pages used here.</li>
       </ul>
 
       <h3>Model years and availability</h3>
       <ul>
-        <li>Most entries are MY2026. Rivian R2 and Chevrolet Bolt are MY2027; Hyundai Ioniq 6 is MY2025 (no MY2026 in EPA or NHTSA).</li>
-        <li>Only <code>chevrolet-bolt-2027</code> is marked <code>current</code>, from Chevrolet's product page and newsroom. The other 19 remain <code>unverified_availability</code>.</li>
-      </ul>
-
-      <h3>Other caveats</h3>
-      <ul>
-        <li>NHTSA's products endpoint sometimes lists recalls where no MY2026 campaign exists (Model S, Mach-E, i4); both views are recorded as conflicts.</li>
-        <li>EPA range labels do not state whether range used 5-cycle testing, the 0.7 multiplier, or an approved factor, so range comparisons carry that unknown.</li>
-        <li>Some unverified claims were removed when no re-findable URL existed; those fields stay blank in Compare and on the disclosure chart.</li>
+        <li>Most entries are MY2026. Rivian R2 and Chevrolet Bolt are MY2027; Hyundai Ioniq 6 and Polestar 2 are MY2025.</li>
+        <li>Only <code>chevrolet-bolt-2027</code> is marked <code>current</code>. The other vehicles remain <code>unverified_availability</code>.</li>
+        <li>NHTSA products vs campaign conflicts are recorded for some MY2026 nameplates; both views are kept.</li>
       </ul>
     </section>
 

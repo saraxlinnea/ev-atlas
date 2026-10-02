@@ -266,5 +266,28 @@
     "field": "powertrain.epa_motor_description",
     "value": "228 and 243 kW ACPM",
     "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type: the EPA text isn't consistent enough for that (e.g. motor counts don't always match the drive layout). EPA id 49743, 'Model Y Long Range RWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: EPA MY2026 row is named 'Model Y Long Range RWD'; matches Tesla's 'Premium' Rear-Wheel Drive, whose page lists the same 357 mi EPA range (checked 2026-09-29)."
+  },
+  {
+    "field": "charging.port_type",
+    "value": "NACS",
+    "tier": "P",
+    "source_name": "Tesla blog: Opening the North American Charging Standard (2022-11-11)",
+    "source_url": "https://www.tesla.com/blog/opening-north-american-charging-standard",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Tesla states its vehicles use the Tesla connector now called NACS. Applied to US Model S / Model Y as native port type; not a measured peak rate.",
+    "vehicle_id": "tesla-model-y-premium-rwd-2026"
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "identity.msrp_usd",
+    "value": 44990,
+    "tier": "S",
+    "source_name": "Chevrolet Equinox EV vs Tesla Model Y Premium RWD comparison (listed Tesla starting price)",
+    "source_url": "https://www.chevrolet.com/electric/equinox-ev-vs-tesla-model-y-premium",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "Chevy competitive page lists 2026 Tesla Model Y Premium RWD at $44,990 and states Equinox EV LT 2 is $3,000 less than Model Y Premium. Live tesla.com/modely did not expose a clear Premium RWD starting price in the fetched page (Model Y L Premium Launch Series shown at $61,990). Pack kWh remains undisclosed."
   }
 ]

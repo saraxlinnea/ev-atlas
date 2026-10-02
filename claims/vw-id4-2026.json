@@ -116,5 +116,69 @@
     "field": "charging.onboard_ac_kw",
     "value": 11,
     "notes": "FAQ: home charging 'at up to 11 kW with the available home wall charger'. Treated as the onboard AC capability paired with that charger."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "battery.pack_kwh",
+    "value": 77.0,
+    "tier": "S",
+    "source_name": "Car and Driver 2026 Volkswagen ID.4 review: battery pack",
+    "source_url": "https://www.caranddriver.com/volkswagen/id4",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "C/D: 'All Volkswagen ID.4 models come with a 77.0-kWh battery pack'. 2026 VW USA model page states range/MSRP/charge times but not pack kWh. Treated as usable-class figure per C/D wording and common net-capacity reporting; see pack_kwh_basis."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "usable",
+    "tier": "S",
+    "source_name": "Car and Driver 2026 Volkswagen ID.4 review: battery pack",
+    "source_url": "https://www.caranddriver.com/volkswagen/id4",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "C/D states 77.0 kWh without saying gross; matched to the commonly cited usable/net figure for the Pro pack. Not an OEM gross/usable label."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "charging.peak_dc_kw",
+    "value": 175,
+    "tier": "S",
+    "source_name": "Car and Driver 2026 Volkswagen ID.4 review / 2024 Pro S AWD test specs",
+    "source_url": "https://www.caranddriver.com/volkswagen/id4",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "C/D powertrain table for tested 2024 ID.4 Pro S AWD lists Peak DC Fast-Charge Rate 175 kW. Applied to 2026 entry RWD with medium confidence because C/D says the 2026 model is largely unchanged on battery/motor tech; VW USA page gives 10-80% time but not peak kW."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "powertrain.accel_0_60_s",
+    "value": 7.3,
+    "tier": "S",
+    "source_name": "Car and Driver 2026 Volkswagen ID.4 review: entry 0-60 test",
+    "source_url": "https://www.caranddriver.com/volkswagen/id4",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "C/D: '60 mph in 7.3 seconds (Entry)'. Instrumented outlet test, not an OEM claim."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "derived.kwh_per_100mi_battery_side",
+    "value": 26.46,
+    "unit": "kWh/100mi",
+    "tier": "D",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "derivation": {
+      "formula": "battery.pack_kwh / efficiency.epa_range_mi * 100",
+      "inputs": [
+        "battery.pack_kwh",
+        "battery.pack_kwh_basis",
+        "efficiency.epa_range_mi"
+      ],
+      "assumptions": [
+        "Uses C/D 77.0 kWh pack treated as usable and EPA range 291 mi; not the same as wall-side efficiency.epa_kwh_per_100mi."
+      ]
+    }
   }
 ]

@@ -203,5 +203,39 @@
     "disclosed_by_oem": true,
     "confidence": "high",
     "notes": "Width with side mirrors folded for R1T."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "identity.msrp_usd",
+    "value": 74885,
+    "tier": "S",
+    "source_name": "Car and Driver specs: 2026 Rivian R1T Dual Motor Standard Pack",
+    "source_url": "https://www.caranddriver.com/rivian/r1t/specs",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "C/D lists MSRP $74,885 for Dual Motor Standard Pack. May include destination; not taken from rivian.com (configurator fetch returned little usable text)."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "body.curb_weight_lb",
+    "value": 6772,
+    "tier": "S",
+    "source_name": "Car and Driver specs: 2026 Rivian R1T Dual Motor Standard Pack",
+    "source_url": "https://www.caranddriver.com/rivian/r1t/specs",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "Base curb weight 6,772 lb for Dual Motor Standard Pack."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "charging.port_type",
+    "value": "NACS",
+    "tier": "P",
+    "source_name": "Rivian Support: charging network compatibility (MY2026+ NACS)",
+    "source_url": "https://rivian.com/support/article/what-charging-networks-are-rivian-vehicles-compatible-with",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Rivian: Starting with model year 2026, Rivian vehicles use a NACS charge port. Atlas R1T is MY2026 Dual Standard."
   }
 ]

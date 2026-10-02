@@ -389,5 +389,31 @@
     "disclosed_by_oem": true,
     "confidence": "high",
     "notes": "Lucid sells a DC NACS-to-CCS1 adapter separately ($220 US); Supercharger charging through it is limited to 50 kW."
+  },
+  {
+    "vehicle_id": "lucid-air-pure-2026",
+    "field": "battery.pack_kwh",
+    "value": 84,
+    "tier": "P",
+    "source_name": "Lucid Air Pure technical specifications PDF (2025)",
+    "source_url": "https://lucidmotors.com/media/document/lucid-air-pure-technical-specs-2025.pdf",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "medium",
+    "model_year": 2025,
+    "notes": "PDF: Battery capacity 84 kWh (16 module) for Air Pure. Matches 420 mi EPA on 19in wheels. MY2025 PDF used because live MY2026 Lucid pages emphasize the next year; value is OEM-stated capacity without gross/usable label."
+  },
+  {
+    "vehicle_id": "lucid-air-pure-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "P",
+    "source_name": "Lucid Air Pure technical specifications PDF (2025)",
+    "source_url": "https://lucidmotors.com/media/document/lucid-air-pure-technical-specs-2025.pdf",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "medium",
+    "model_year": 2025,
+    "notes": "PDF lists 'Battery capacity kWh 84' without gross vs usable label."
   }
 ]

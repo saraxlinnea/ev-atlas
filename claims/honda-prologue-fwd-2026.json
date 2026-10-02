@@ -1,0 +1,133 @@
+[
+  {
+    "vehicle_id": "honda-prologue-fwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50208 (2026 2026 Honda Prologue FWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50208",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_range_mi",
+    "value": 308,
+    "notes": "EPA id 50208, '2026 Honda Prologue FWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry FWD EPA configuration.."
+  },
+  {
+    "vehicle_id": "honda-prologue-fwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50208 (2026 2026 Honda Prologue FWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50208",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 32.5465,
+    "notes": "Wall-side, combined (EPA combE). The label rounds this. EPA id 50208, '2026 Honda Prologue FWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry FWD EPA configuration.."
+  },
+  {
+    "vehicle_id": "honda-prologue-fwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50208 (2026 2026 Honda Prologue FWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50208",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 104,
+    "notes": "EPA id 50208, '2026 Honda Prologue FWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry FWD EPA configuration.."
+  },
+  {
+    "vehicle_id": "honda-prologue-fwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50208 (2026 2026 Honda Prologue FWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50208",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.drive_layout",
+    "value": "FWD",
+    "notes": "EPA 'drive' field mapped to FWD. EPA id 50208, '2026 Honda Prologue FWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry FWD EPA configuration.."
+  },
+  {
+    "vehicle_id": "honda-prologue-fwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50208 (2026 2026 Honda Prologue FWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50208",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.epa_motor_description",
+    "value": "180 kW ACPM",
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type. EPA id 50208, '2026 Honda Prologue FWD'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry FWD EPA configuration.."
+  },
+  {
+    "vehicle_id": "honda-prologue-fwd-2026",
+    "field": "recalls.campaign_count",
+    "value": 0,
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (HONDA PROLOGUE, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=HONDA&model=PROLOGUE&modelYear=2026",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "API returned Count 0 with empty results for make=HONDA&model=PROLOGUE&modelYear=2026 (HTTP 200). Treated as zero campaigns for this query string; not a flat-file re-scan in this pass."
+  },
+  {
+    "vehicle_id": "honda-prologue-fwd-2026",
+    "field": "identity.msrp_usd",
+    "value": 39900,
+    "tier": "P",
+    "source_name": "Honda automobiles Prologue page: starting MSRP",
+    "source_url": "https://automobiles.honda.com/prologue",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Page lists starting MSRP $39,900 for 2026 Prologue. Matches entry FWD positioning; higher trims cost more."
+  },
+  {
+    "vehicle_id": "honda-prologue-fwd-2026",
+    "field": "battery.pack_kwh",
+    "value": 85,
+    "tier": "P",
+    "source_name": "Honda automobiles Prologue page: 85 kWh battery capacity",
+    "source_url": "https://automobiles.honda.com/prologue",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Trim cards list 85 kWh Battery Capacity for 2026 Prologue starting at $39,900. Gross vs usable not labeled."
+  },
+  {
+    "vehicle_id": "honda-prologue-fwd-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "P",
+    "source_name": "Honda automobiles Prologue page: 85 kWh battery capacity",
+    "source_url": "https://automobiles.honda.com/prologue",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "OEM states 85 kWh Battery Capacity without gross/usable label."
+  },
+  {
+    "vehicle_id": "honda-prologue-fwd-2026",
+    "field": "charging.port_type",
+    "value": "CCS",
+    "tier": "P",
+    "source_name": "Honda automobiles Prologue page: NACS-CCS adapter required for Superchargers",
+    "source_url": "https://automobiles.honda.com/prologue",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Page describes Tesla Supercharger / NACS network access with purchase of the Honda NACS-CCS adapter, implying the vehicle port is CCS and NACS is via adapter."
+  },
+  {
+    "vehicle_id": "honda-prologue-fwd-2026",
+    "field": "body.curb_weight_lb",
+    "value": 4932,
+    "tier": "P",
+    "source_name": "Honda automobiles 2026 Prologue specs (EX 2WD curb weight)",
+    "source_url": "https://automobiles.honda.com/prologue/specs-features-trim-comparison",
+    "access_date": "2026-10-02",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Curb Weight (lbs) (2WD) for EX: 4,932. Matches entry FWD atlas trim."
+  }
+]

@@ -218,5 +218,38 @@
     "region": "US",
     "status": "unverified_availability",
     "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "genesis-gv60-rwd-2026",
+    "make": "Genesis",
+    "model": "GV60",
+    "trim": "RWD",
+    "model_year": 2026,
+    "lineage_id": "genesis-gv60",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "polestar-2-single-motor-2025",
+    "make": "Polestar",
+    "model": "2",
+    "trim": "Single Motor (19in wheels)",
+    "model_year": 2025,
+    "lineage_id": "polestar-2",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "honda-prologue-fwd-2026",
+    "make": "Honda",
+    "model": "Prologue",
+    "trim": "FWD",
+    "model_year": 2026,
+    "lineage_id": "honda-prologue",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
   }
 ]

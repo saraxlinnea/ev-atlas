@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EV Atlas</title>
-  <meta name="description" content="Sourced specifications for 20 electric vehicles. Blank cells mean not found, not zero.">
+  <meta name="description" content="Sourced specifications for 23 electric vehicles. Blank cells mean not found, not zero.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="page">
+  <div class="page page-wide">
     <nav aria-label="Site">
       <ul class="site-nav">
         <li><a href="index.html" aria-current="page">Home</a></li>
@@ -22,27 +22,79 @@
     </nav>
     <header class="hero hero-home">
       <p class="brand">EV Atlas</p>
-      <h1>Sourced specs for 20 EVs.</h1>
+      <h1>Sourced specs for 23 EVs.</h1>
       <p class="lede">
-        Each figure is tied to a claim with a source, or left blank. Blank means
-        not found.
-      </p>
-      <p class="hero-cta">
-        <a class="cta" href="compare.html">Compare vehicles</a>
+        Side-by-side fields from claims with a source, or left blank. Blank
+        means not found, not zero. Not a ranking.
       </p>
     </header>
+
+    <section class="content-section compare-section" aria-labelledby="compare-heading" data-compare-root data-src="data/compare.json">
+      <h2 id="compare-heading">Compare</h2>
+      <p class="chart-note">
+        Filled cells link to the claim source when a URL is recorded. Hover for
+        source tier. — means not found, not zero. Sourcing rules:
+        <a href="methodology.html">Methods</a>.
+      </p>
+
+      <div class="compare-toolbar">
+        <div class="compare-toolbar-row">
+          <label class="compare-field">
+            <span class="compare-field-label">Search</span>
+            <input type="search" data-compare-search placeholder="Make, model, or trim" autocomplete="off">
+          </label>
+          <label class="compare-field">
+            <span class="compare-field-label">Make</span>
+            <select data-compare-filter-make></select>
+          </label>
+          <label class="compare-field">
+            <span class="compare-field-label">Year</span>
+            <select data-compare-filter-year></select>
+          </label>
+          <label class="compare-field">
+            <span class="compare-field-label">Drive</span>
+            <select data-compare-filter-drive></select>
+          </label>
+          <label class="compare-field">
+            <span class="compare-field-label">Port</span>
+            <select data-compare-filter-port></select>
+          </label>
+        </div>
+        <div class="compare-toolbar-row compare-toolbar-meta">
+          <label class="compare-check">
+            <input type="checkbox" data-compare-group checked>
+            <span>Group by make</span>
+          </label>
+          <fieldset class="compare-presets" data-compare-presets>
+            <legend class="compare-field-label">Columns</legend>
+            <label class="compare-check"><input type="checkbox" data-preset="buyer"> Buyer</label>
+            <label class="compare-check"><input type="checkbox" data-preset="efficiency"> Efficiency</label>
+            <label class="compare-check"><input type="checkbox" data-preset="charging"> Charging</label>
+            <label class="compare-check"><input type="checkbox" data-preset="chemistry"> Chemistry</label>
+          </fieldset>
+          <p class="compare-count" data-compare-count aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="compare-wrap">
+        <table class="compare-table" data-compare-table hidden>
+          <thead>
+            <tr data-compare-thead-row></tr>
+          </thead>
+          <tbody data-compare-body></tbody>
+        </table>
+      </div>
+      <p data-compare-error class="error" hidden></p>
+    </section>
 
     <section class="content-section" aria-labelledby="about-heading">
       <h2 id="about-heading">Scope</h2>
       <p>
-        A table of range, efficiency, price, charging, and related fields where
-        a source could be located. Not a ranking. Not complete coverage of every
-        trim or manufacturer page.
-      </p>
-      <p>
-        The side-by-side table is on <a href="compare.html">Compare</a>. Figures
-        and sourcing rules are under <a href="charts.html">Charts</a> and
-        <a href="methodology.html">Methods</a>.
+        Range, efficiency, price, charging, and related fields where a source
+        could be located. Not complete coverage of every trim or manufacturer
+        page. Figures and disclosure coverage also appear under
+        <a href="charts.html">Charts</a>. The standalone compare page is
+        <a href="compare.html">Compare</a>.
       </p>
     </section>
 
@@ -50,5 +102,6 @@
       <p>Claims live in the repository. Empty cells stay empty.</p>
     </footer>
   </div>
+  <script src="compare.js"></script>
 </body>
 </html>
