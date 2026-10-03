@@ -218,5 +218,16 @@
     "disclosed_by_oem": true,
     "confidence": "high",
     "notes": "FROM: $59,200 for 2026 LYRIQ entry configuration on the preceding-year product page."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "field": "body.curb_weight_lb",
+    "value": 5606,
+    "tier": "S",
+    "source_name": "Kelley Blue Book: 2026 Cadillac LYRIQ Luxury dimensions (RWD)",
+    "source_url": "https://www.kbb.com/cadillac/lyriq/2026/luxury/",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "KBB lists curb weight 5,606 lbs for 2026 LYRIQ Luxury (RWD). Cadillac preceding-year specs page opened in this pass does not publish curb weight."
   }
 ]

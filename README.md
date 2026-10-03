@@ -1,15 +1,15 @@
 # EV Atlas
 
-EV Atlas is a sourced comparison of 23 battery-electric vehicles listed for
+EV Atlas is a sourced comparison of 26 battery-electric vehicles listed for
 the U.S. market. Each displayed value originates as a claim with a source
 tier, access date, and (for primary and secondary tiers) a URL. Fields
 without a qualifying source are left blank. Blank means not found, not zero.
 
 The corpus is mostly model year 2026, with exceptions where that year is
 absent from EPA/NHTSA or OEM listings (Hyundai Ioniq 6 and Polestar 2,
-2025; Rivian R2 and Chevrolet Bolt, 2027). Rows generally follow the
-entry-level EPA configuration; claim notes record trim and wheel or charger
-choices.
+2025; Rivian R2, Chevrolet Bolt, and BMW iX3 50 xDrive, 2027). Rows
+generally follow the entry-level EPA configuration; claim notes record trim
+and wheel or charger choices.
 
 This is not a ranking. It is not a complete OEM catalog. Compare and Charts
 read generated tables only; they do not contain hand-typed specifications.
@@ -43,29 +43,32 @@ LICENSE            MIT
 ## Status (2026-10-02)
 
 - Schema, validator, flattener, and static site build succeed on the current
-  claim set (on the order of 410+ claims across 23 vehicles).
-- All 23 vehicles have NHTSA recall campaign-count claims for their model
-  year (API; flat-file cross-check was done for the original 20).
-- All 23 have EPA range, efficiency, MPGe, and drive layout from
+  claim set (on the order of 480+ claims across 26 vehicles).
+- 25 of 26 vehicles have NHTSA recall campaign-count claims for their model
+  year (API; flat-file cross-check was done for the original 20). BMW iX3
+  MY2027 recallsByVehicle returned HTTP 504 in this pass, so that row has
+  no recall count yet.
+- All 26 have EPA range, efficiency, MPGe, and drive layout from
   fueleconomy.gov.
 - Makes include Tesla, Lucid, Rivian, Hyundai, Kia, Ford, GM, VW, BMW,
-  Mercedes, Nissan, Genesis, Polestar, and Honda. OEM or newsroom buyer
-  fields exist for most vehicles. BMW i4 remains on the atlas trim
-  eDrive35, which BMW USA no longer lists for 2026 (lineup is eDrive40 and
-  above); no eDrive40 mapping was invented. Pack/MSRP gaps are closed for
-  BMW i4 and VW ID.4 (secondary or adjacent-year sources where noted);
-  Model Y pack kWh is still blank. Curb weight, 0-60, and peak DC remain
-  sparse for LYRIQ, Equinox EV, Leaf, Bolt, Gravity, Rivian R1T peak DC,
-  and several OEM silence cases.
+  Mercedes, Nissan, Genesis, Polestar, Honda, Toyota, and Audi. OEM or
+  newsroom buyer fields exist for most vehicles. BMW i4 remains on the
+  atlas trim eDrive35, which BMW USA no longer lists for 2026. Newest rows:
+  BMW iX3 50 xDrive (MY2027 entry EPA; no iX3 40 EPA row), Toyota bZ FWD
+  (EPA energy capacity 200 Ah / 236 mi), Audi Q4 45 e-tron. All 26 rows
+  now have curb weight (several secondary). Model Y pack kWh is filled
+  from secondary sources that disagree (C/D 80 kWh unstated vs aggregator
+  usable 75). Polestar 2 single-motor MSRP stays blank (US 2025 retail
+  dropped that configuration). Peak DC and 0-60 remain sparse in places.
 - Secondary-tier fills appear where primary OEM text was unavailable (notably
   some Tesla pack and dimension fields). Secondary ranks below primary.
 - Sale status: only the 2027 Chevrolet Bolt LT is marked `current`. The
-  other 22 remain `unverified_availability`.
+  other 25 remain `unverified_availability`.
 - Site pages: Home hosts the Compare table (group by make, year column,
   search and facets, column presets, source tier and URL where present).
   Compare is the same table standalone. Charts cover EPA efficiency,
-  battery-side vs wall-side, and disclosure coverage. Methods documents
-  sourcing. GitHub Pages deploys from `site/` after validate, flatten, and
+  battery-side vs wall-side, disclosure coverage, and range vs MSRP,
+  pack kWh, and curb weight. Methods documents sourcing. GitHub Pages deploys from `site/` after validate, flatten, and
   build. Chemistry is an optional column; most cells stay blank until claims
   exist.
 

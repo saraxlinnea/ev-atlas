@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Charts | EV Atlas</title>
-  <meta name="description" content="EPA efficiency and disclosure coverage from sourced claims. Charts read generated CSV only.">
+  <meta name="description" content="EPA efficiency, range relationships, and disclosure coverage from sourced claims. Charts read generated CSV only.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -64,6 +64,36 @@
       <p id="chart-error" class="error" hidden></p>
     </section>
 
+    <section class="chart-section" aria-labelledby="range-msrp-heading">
+      <h2 id="range-msrp-heading">EPA range vs MSRP</h2>
+      <p class="chart-note">
+        Figure 4. EPA range versus sourced MSRP. Vehicles missing either value
+        are omitted; blanks are not plotted as zero.
+      </p>
+      <div id="vis-range-msrp" class="chart-vis" role="img" aria-label="Scatter of EPA range versus MSRP"></div>
+      <p id="chart-error-range-msrp" class="error" hidden></p>
+    </section>
+
+    <section class="chart-section" aria-labelledby="range-pack-heading">
+      <h2 id="range-pack-heading">EPA range vs pack energy</h2>
+      <p class="chart-note">
+        Figure 5. EPA range versus pack kWh. Pack basis may be gross, usable,
+        or unstated. Vehicles missing either value are omitted.
+      </p>
+      <div id="vis-range-pack" class="chart-vis" role="img" aria-label="Scatter of EPA range versus pack energy, colored by drive layout"></div>
+      <p id="chart-error-range-pack" class="error" hidden></p>
+    </section>
+
+    <section class="chart-section" aria-labelledby="weight-eff-heading">
+      <h2 id="weight-eff-heading">Curb weight vs wall-side efficiency</h2>
+      <p class="chart-note">
+        Figure 6. Curb weight versus EPA wall-side kWh/100 mi. Wall-side
+        includes charging losses. Vehicles missing either value are omitted.
+      </p>
+      <div id="vis-weight-eff" class="chart-vis" role="img" aria-label="Scatter of curb weight versus wall-side EPA kWh per 100 miles"></div>
+      <p id="chart-error-weight-eff" class="error" hidden></p>
+    </section>
+
     <footer>
       <p>
         Specs in <code>charts/</code>. Rebuild with
@@ -97,6 +127,18 @@
 
     vegaEmbed("#vis", "charts/disclosure_heatmap.vl.json", embedOpts).catch(function (err) {
       chartFail("chart-error", err);
+    });
+
+    vegaEmbed("#vis-range-msrp", "charts/range_vs_msrp.vl.json", embedOpts).catch(function (err) {
+      chartFail("chart-error-range-msrp", err);
+    });
+
+    vegaEmbed("#vis-range-pack", "charts/range_vs_pack.vl.json", embedOpts).catch(function (err) {
+      chartFail("chart-error-range-pack", err);
+    });
+
+    vegaEmbed("#vis-weight-eff", "charts/weight_vs_efficiency.vl.json", embedOpts).catch(function (err) {
+      chartFail("chart-error-weight-eff", err);
     });
   </script>
 </body>

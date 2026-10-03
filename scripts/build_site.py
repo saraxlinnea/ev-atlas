@@ -26,6 +26,9 @@ CHART_DATA = {
     "disclosure_heatmap.vl.json": "disclosure_heatmap.csv",
     "epa_efficiency.vl.json": "flattened.csv",
     "battery_side_efficiency.vl.json": "flattened.csv",
+    "range_vs_msrp.vl.json": "flattened.csv",
+    "range_vs_pack.vl.json": "flattened.csv",
+    "weight_vs_efficiency.vl.json": "flattened.csv",
 }
 
 COMPARE_IDENTITY = (

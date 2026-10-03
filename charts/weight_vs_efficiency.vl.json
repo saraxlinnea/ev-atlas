@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "EPA range vs wall-side energy use",
-    "subtitle": "Only vehicles with EPA claims. kWh/100mi is wall-side (includes charging losses). Vehicles without EPA data are omitted.",
+    "text": "Curb weight vs wall-side efficiency",
+    "subtitle": "Only vehicles with both a sourced curb weight and EPA wall-side kWh/100 mi. Wall-side includes charging losses. Blank values are omitted.",
     "fontSize": 16,
     "subtitleFontSize": 11,
     "subtitleColor": "#666"
@@ -10,23 +10,27 @@
   "data": { "url": "../data/flattened.csv" },
   "transform": [
     {
-      "filter": "isValid(datum['efficiency.epa_range_mi']) && isValid(datum['efficiency.epa_kwh_per_100mi']) && datum['efficiency.epa_range_mi'] !== '' && datum['efficiency.epa_kwh_per_100mi'] !== ''"
+      "filter": "isValid(datum['body.curb_weight_lb']) && isValid(datum['efficiency.epa_kwh_per_100mi']) && datum['body.curb_weight_lb'] !== '' && datum['efficiency.epa_kwh_per_100mi'] !== ''"
     },
     {
       "calculate": "datum.make + ' ' + datum.model",
       "as": "label"
     },
     {
-      "calculate": "toNumber(datum['efficiency.epa_range_mi'])",
-      "as": "epa_range_mi"
+      "calculate": "toNumber(datum['body.curb_weight_lb'])",
+      "as": "curb_weight_lb"
     },
     {
       "calculate": "toNumber(datum['efficiency.epa_kwh_per_100mi'])",
       "as": "epa_kwh_per_100mi"
     },
     {
-      "calculate": "toNumber(datum['efficiency.epa_mpge_combined'])",
-      "as": "epa_mpge_combined"
+      "calculate": "datum['body.curb_weight_lb__tier']",
+      "as": "weight_tier"
+    },
+    {
+      "calculate": "datum['efficiency.epa_kwh_per_100mi__tier']",
+      "as": "efficiency_tier"
     }
   ],
   "width": 640,
@@ -39,9 +43,9 @@
   },
   "encoding": {
     "x": {
-      "field": "epa_range_mi",
+      "field": "curb_weight_lb",
       "type": "quantitative",
-      "title": "EPA range (mi)",
+      "title": "Curb weight (lb)",
       "scale": { "zero": false }
     },
     "y": {
@@ -59,9 +63,10 @@
       { "field": "label", "title": "Vehicle" },
       { "field": "trim", "title": "Trim" },
       { "field": "model_year", "title": "Model year" },
-      { "field": "epa_range_mi", "title": "EPA range (mi)", "type": "quantitative" },
-      { "field": "epa_kwh_per_100mi", "title": "kWh/100mi (wall-side)", "type": "quantitative" },
-      { "field": "epa_mpge_combined", "title": "EPA MPGe combined", "type": "quantitative" }
+      { "field": "curb_weight_lb", "title": "Curb weight (lb)", "type": "quantitative" },
+      { "field": "weight_tier", "title": "Weight tier" },
+      { "field": "epa_kwh_per_100mi", "title": "kWh/100mi (wall-side)", "type": "quantitative", "format": ".2f" },
+      { "field": "efficiency_tier", "title": "Efficiency tier" }
     ]
   },
   "config": {

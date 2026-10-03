@@ -224,5 +224,16 @@
     "confidence": "medium",
     "model_year": 2027,
     "notes": "Live page labels Touring as Model Year 2027."
+  },
+  {
+    "vehicle_id": "lucid-gravity-2026",
+    "field": "body.curb_weight_lb",
+    "value": 5670,
+    "tier": "S",
+    "source_name": "2026 Lucid Gravity Touring Technical Specifications (U.S. Market) hosted on Lucid Owners",
+    "source_url": "https://lucidowners.com/attachments/2026-lucid-gravity-touring-tech-specs-pdf.34475/",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "Tech specs sheet lists curb weight 5,670 / 5,794 lb for two rows / three rows. Value is the two-row figure, matching atlas Touring with 20in front / 21in rear wheels. Sheet hosted on Lucid Owners rather than lucidmotors.com; live Gravity page does not publish curb weight."
   }
 ]

@@ -80,9 +80,10 @@ As of 2026-10-02:
 - Lucid's live site advances to the next model year early. MY2026 Lucid
   claims draw on press releases, technical PDFs, and Wayback snapshots; some
   weight, dimension, and charging figures carry `model_year: 2027`.
-- Recorded conflicts include Model 3 MSRP and width, and Model S MSRP and
-  curb weight. Some Tesla pack, port, and dimension fields remain
-  secondary-only or missing.
+- Recorded conflicts include Model 3 MSRP and width, Model S MSRP and curb
+  weight, and Model Y Premium RWD pack kWh (Car and Driver 80 kWh unstated
+  vs Green Cars Compare usable 75 kWh). Some Tesla port and dimension
+  fields remain secondary-only.
 
 ### OEM coverage and trims
 
@@ -112,9 +113,13 @@ As of 2026-10-02:
 
 ### Model years, recalls, availability
 
-- Corpus is mostly MY2026. Rivian R2 and Chevrolet Bolt are MY2027; Hyundai
-  Ioniq 6 and Polestar 2 are MY2025 (no matching MY2026 EPA row used for
-  those entries).
+- Corpus is mostly MY2026. Rivian R2, Chevrolet Bolt, and BMW iX3 50 xDrive
+  are MY2027; Hyundai Ioniq 6 and Polestar 2 are MY2025 (no matching MY2026
+  EPA row used for those entries). No EPA row for BMW iX3 40 was found; the
+  atlas uses the entry listed iX3 50 xDrive 20-inch all-season configuration.
+- Toyota bZ uses the entry FWD EPA row labeled energy capacity 200 Ah
+  (236 mi), paired with Toyota newsroom 57.7 kWh / XLE FWD pricing, not the
+  FWD Plus 191 Ah / 314 mi configuration.
 - NHTSA's products endpoint sometimes lists MY2026 Model S, Mach-E, and i4
   as having recalls when no MY2026 campaign exists in the API or flat file.
   Both views are recorded as conflicts. Recall queries are not trim-specific.

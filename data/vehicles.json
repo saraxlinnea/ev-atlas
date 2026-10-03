@@ -251,5 +251,38 @@
     "region": "US",
     "status": "unverified_availability",
     "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "bmw-ix3-50-xdrive-2027",
+    "make": "BMW",
+    "model": "iX3",
+    "trim": "50 xDrive (20in all-season)",
+    "model_year": 2027,
+    "lineage_id": "bmw-ix3",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "toyota-bz-fwd-2026",
+    "make": "Toyota",
+    "model": "bZ",
+    "trim": "FWD (energy capacity 200 Ah)",
+    "model_year": 2026,
+    "lineage_id": "toyota-bz",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "audi-q4-45-etron-2026",
+    "make": "Audi",
+    "model": "Q4 e-tron",
+    "trim": "45",
+    "model_year": 2026,
+    "lineage_id": "audi-q4-etron",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-02"
   }
 ]

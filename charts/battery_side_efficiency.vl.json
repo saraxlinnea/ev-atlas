@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Battery-side vs wall-side energy use",
-    "subtitle": "4 vehicles with sourced inputs (pack kWh with stated basis plus EPA range). Battery-side = pack_kwh / EPA range; wall-side EPA kWh/100mi includes charging losses.",
+    "subtitle": "7 vehicles with sourced inputs (pack kWh with stated basis plus EPA range). Battery-side = pack_kwh / EPA range; wall-side EPA kWh/100mi includes charging losses.",
     "fontSize": 16,
     "subtitleFontSize": 11,
     "subtitleColor": "#666"
@@ -17,14 +17,27 @@
       "as": "label"
     },
     {
-      "fold": [
-        "derived.kwh_per_100mi_battery_side",
-        "efficiency.epa_kwh_per_100mi"
-      ],
+      "calculate": "toNumber(datum['derived.kwh_per_100mi_battery_side'])",
+      "as": "battery_side_kwh"
+    },
+    {
+      "calculate": "toNumber(datum['efficiency.epa_kwh_per_100mi'])",
+      "as": "wall_side_kwh"
+    },
+    {
+      "calculate": "toNumber(datum['battery.pack_kwh'])",
+      "as": "pack_kwh"
+    },
+    {
+      "calculate": "datum['battery.pack_kwh_basis']",
+      "as": "pack_basis"
+    },
+    {
+      "fold": ["battery_side_kwh", "wall_side_kwh"],
       "as": ["metric_key", "kwh_per_100mi"]
     },
     {
-      "calculate": "datum.metric_key === 'derived.kwh_per_100mi_battery_side' ? 'Battery-side (pack / EPA range)' : 'Wall-side (EPA label)'",
+      "calculate": "datum.metric_key === 'battery_side_kwh' ? 'Battery-side (pack / EPA range)' : 'Wall-side (EPA label)'",
       "as": "metric"
     }
   ],
@@ -69,12 +82,12 @@
         "format": ".2f"
       },
       {
-        "field": "battery.pack_kwh",
+        "field": "pack_kwh",
         "title": "Pack kWh (flattened)",
         "type": "quantitative"
       },
       {
-        "field": "battery.pack_kwh_basis",
+        "field": "pack_basis",
         "title": "Pack basis"
       }
     ]

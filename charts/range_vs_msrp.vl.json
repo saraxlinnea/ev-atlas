@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "EPA range vs wall-side energy use",
-    "subtitle": "Only vehicles with EPA claims. kWh/100mi is wall-side (includes charging losses). Vehicles without EPA data are omitted.",
+    "text": "EPA range vs MSRP",
+    "subtitle": "Only vehicles with both a sourced MSRP and EPA range. Blank values are omitted, not plotted as zero.",
     "fontSize": 16,
     "subtitleFontSize": 11,
     "subtitleColor": "#666"
@@ -10,23 +10,27 @@
   "data": { "url": "../data/flattened.csv" },
   "transform": [
     {
-      "filter": "isValid(datum['efficiency.epa_range_mi']) && isValid(datum['efficiency.epa_kwh_per_100mi']) && datum['efficiency.epa_range_mi'] !== '' && datum['efficiency.epa_kwh_per_100mi'] !== ''"
+      "filter": "isValid(datum['identity.msrp_usd']) && isValid(datum['efficiency.epa_range_mi']) && datum['identity.msrp_usd'] !== '' && datum['efficiency.epa_range_mi'] !== ''"
     },
     {
       "calculate": "datum.make + ' ' + datum.model",
       "as": "label"
     },
     {
+      "calculate": "toNumber(datum['identity.msrp_usd'])",
+      "as": "msrp_usd"
+    },
+    {
       "calculate": "toNumber(datum['efficiency.epa_range_mi'])",
       "as": "epa_range_mi"
     },
     {
-      "calculate": "toNumber(datum['efficiency.epa_kwh_per_100mi'])",
-      "as": "epa_kwh_per_100mi"
+      "calculate": "datum['identity.msrp_usd__tier']",
+      "as": "msrp_tier"
     },
     {
-      "calculate": "toNumber(datum['efficiency.epa_mpge_combined'])",
-      "as": "epa_mpge_combined"
+      "calculate": "datum['efficiency.epa_range_mi__tier']",
+      "as": "range_tier"
     }
   ],
   "width": 640,
@@ -39,15 +43,16 @@
   },
   "encoding": {
     "x": {
+      "field": "msrp_usd",
+      "type": "quantitative",
+      "title": "MSRP (USD)",
+      "scale": { "zero": false },
+      "axis": { "format": "~s" }
+    },
+    "y": {
       "field": "epa_range_mi",
       "type": "quantitative",
       "title": "EPA range (mi)",
-      "scale": { "zero": false }
-    },
-    "y": {
-      "field": "epa_kwh_per_100mi",
-      "type": "quantitative",
-      "title": "EPA kWh/100mi (wall-side)",
       "scale": { "zero": false }
     },
     "color": {
@@ -59,9 +64,10 @@
       { "field": "label", "title": "Vehicle" },
       { "field": "trim", "title": "Trim" },
       { "field": "model_year", "title": "Model year" },
+      { "field": "msrp_usd", "title": "MSRP (USD)", "type": "quantitative", "format": "," },
+      { "field": "msrp_tier", "title": "MSRP tier" },
       { "field": "epa_range_mi", "title": "EPA range (mi)", "type": "quantitative" },
-      { "field": "epa_kwh_per_100mi", "title": "kWh/100mi (wall-side)", "type": "quantitative" },
-      { "field": "epa_mpge_combined", "title": "EPA MPGe combined", "type": "quantitative" }
+      { "field": "range_tier", "title": "Range tier" }
     ]
   },
   "config": {

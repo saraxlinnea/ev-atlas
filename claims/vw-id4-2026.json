@@ -180,5 +180,16 @@
         "Uses C/D 77.0 kWh pack treated as usable and EPA range 291 mi; not the same as wall-side efficiency.epa_kwh_per_100mi."
       ]
     }
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "body.curb_weight_lb",
+    "value": 4575,
+    "tier": "S",
+    "source_name": "CarsDirect: 2026 Volkswagen ID.4 Pro RWD curb weight",
+    "source_url": "https://www.carsdirect.com/compare/2026-volkswagen-id-4-trims",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "Trim comparison lists curb weight 4,575 lbs for 2026 ID.4 Pro rear-wheel drive. Matches atlas RWD entry. VW USA model page opened in prior claims does not publish curb weight; C/D instrumented curb on this review page is for a Pro S AWD test car."
   }
 ]

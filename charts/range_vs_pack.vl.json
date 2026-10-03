@@ -1,0 +1,86 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "EPA range vs pack energy",
+    "subtitle": "Only vehicles with both a sourced pack kWh and EPA range. Pack basis may be gross, usable, or unstated. Blank values are omitted.",
+    "fontSize": 16,
+    "subtitleFontSize": 11,
+    "subtitleColor": "#666"
+  },
+  "data": { "url": "../data/flattened.csv" },
+  "transform": [
+    {
+      "filter": "isValid(datum['battery.pack_kwh']) && isValid(datum['efficiency.epa_range_mi']) && datum['battery.pack_kwh'] !== '' && datum['efficiency.epa_range_mi'] !== ''"
+    },
+    {
+      "calculate": "datum.make + ' ' + datum.model",
+      "as": "label"
+    },
+    {
+      "calculate": "toNumber(datum['battery.pack_kwh'])",
+      "as": "pack_kwh"
+    },
+    {
+      "calculate": "toNumber(datum['efficiency.epa_range_mi'])",
+      "as": "epa_range_mi"
+    },
+    {
+      "calculate": "datum['battery.pack_kwh_basis']",
+      "as": "pack_basis"
+    },
+    {
+      "calculate": "datum['battery.pack_kwh__tier']",
+      "as": "pack_tier"
+    },
+    {
+      "calculate": "datum['efficiency.epa_range_mi__tier']",
+      "as": "range_tier"
+    },
+    {
+      "calculate": "datum['powertrain.drive_layout']",
+      "as": "drive_layout"
+    }
+  ],
+  "width": 640,
+  "height": 420,
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 90,
+    "opacity": 0.85
+  },
+  "encoding": {
+    "x": {
+      "field": "pack_kwh",
+      "type": "quantitative",
+      "title": "Pack energy (kWh)",
+      "scale": { "zero": false }
+    },
+    "y": {
+      "field": "epa_range_mi",
+      "type": "quantitative",
+      "title": "EPA range (mi)",
+      "scale": { "zero": false }
+    },
+    "color": {
+      "field": "drive_layout",
+      "type": "nominal",
+      "title": "Drive"
+    },
+    "tooltip": [
+      { "field": "label", "title": "Vehicle" },
+      { "field": "trim", "title": "Trim" },
+      { "field": "model_year", "title": "Model year" },
+      { "field": "pack_kwh", "title": "Pack kWh", "type": "quantitative" },
+      { "field": "pack_basis", "title": "Pack basis" },
+      { "field": "pack_tier", "title": "Pack tier" },
+      { "field": "epa_range_mi", "title": "EPA range (mi)", "type": "quantitative" },
+      { "field": "range_tier", "title": "Range tier" },
+      { "field": "drive_layout", "title": "Drive" }
+    ]
+  },
+  "config": {
+    "view": { "stroke": null },
+    "axis": { "labelFontSize": 11, "titleFontSize": 12 }
+  }
+}

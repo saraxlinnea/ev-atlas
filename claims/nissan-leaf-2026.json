@@ -235,5 +235,25 @@
     "disclosed_by_oem": true,
     "confidence": "high",
     "notes": "Exterior Wheelbase for S+. S+ / 75 kWh with 18in steel wheels (entry grade matching atlas trim)."
+  },
+  {
+    "vehicle_id": "nissan-leaf-2026",
+    "field": "derived.kwh_per_100mi_battery_side",
+    "value": 24.75,
+    "unit": "kWh/100mi",
+    "tier": "D",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "derivation": {
+      "formula": "battery.pack_kwh / efficiency.epa_range_mi * 100",
+      "inputs": [
+        "battery.pack_kwh",
+        "battery.pack_kwh_basis",
+        "efficiency.epa_range_mi"
+      ],
+      "assumptions": [
+        "Uses OEM usable pack_kwh (75) and EPA range; not the same as wall-side efficiency.epa_kwh_per_100mi."
+      ]
+    }
   }
 ]

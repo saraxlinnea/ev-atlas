@@ -3,7 +3,7 @@
 Instructions for AI coding agents (Cursor, Claude Code, etc.) working in this
 repo. Human-facing docs are `README.md` and `docs/METHODOLOGY.md`.
 
-EV Atlas compares 23 EVs. Every number has to be traceable to a source. Follow
+EV Atlas compares 26 EVs. Every number has to be traceable to a source. Follow
 these rules even when it's slower.
 
 ## Branding

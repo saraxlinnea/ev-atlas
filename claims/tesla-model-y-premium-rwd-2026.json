@@ -288,6 +288,62 @@
     "source_url": "https://www.chevrolet.com/electric/equinox-ev-vs-tesla-model-y-premium",
     "access_date": "2026-10-02",
     "confidence": "medium",
-    "notes": "Chevy competitive page lists 2026 Tesla Model Y Premium RWD at $44,990 and states Equinox EV LT 2 is $3,000 less than Model Y Premium. Live tesla.com/modely did not expose a clear Premium RWD starting price in the fetched page (Model Y L Premium Launch Series shown at $61,990). Pack kWh remains undisclosed."
+    "notes": "Chevy competitive page lists 2026 Tesla Model Y Premium RWD at $44,990 and states Equinox EV LT 2 is $3,000 less than Model Y Premium. Live tesla.com/modely did not expose a clear Premium RWD starting price in the fetched page (Model Y L Premium Launch Series shown at $61,990)."
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "battery.pack_kwh",
+    "value": 80,
+    "tier": "S",
+    "source_name": "Car and Driver: 2026 Tesla Model Y Premium RWD specifications (battery pack)",
+    "source_url": "https://www.caranddriver.com/tesla/model-y",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "C/D Premium RWD powertrain table lists Battery Pack liquid-cooled lithium-ion, 80 kWh, without gross/usable label. Tesla product page does not state pack kWh. Conflicts with Green Cars Compare usable 75 kWh.",
+    "conflicts_with": [
+      "tesla-model-y-premium-rwd-2026#battery.pack_kwh#Green Cars Compare: Tesla Model Y Premium RWD USA specs (usable capacity)"
+    ]
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "S",
+    "source_name": "Car and Driver: 2026 Tesla Model Y Premium RWD specifications (battery pack)",
+    "source_url": "https://www.caranddriver.com/tesla/model-y",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "C/D states 80 kWh without gross or usable wording. Conflicts with Green Cars Compare usable label on its 75 kWh figure.",
+    "conflicts_with": [
+      "tesla-model-y-premium-rwd-2026#battery.pack_kwh_basis#Green Cars Compare: Tesla Model Y Premium RWD USA specs (usable capacity)"
+    ]
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "battery.pack_kwh",
+    "value": 75,
+    "tier": "S",
+    "source_name": "Green Cars Compare: Tesla Model Y Premium RWD USA specs (usable capacity)",
+    "source_url": "https://greencarscompare.com/car/tesla-model-y-premium-rwd-2025/specs/",
+    "access_date": "2026-10-02",
+    "confidence": "low",
+    "notes": "Aggregator lists Battery Capacity (Usable) 75 kWh and (Nominal) 78.1 kWh; this claim is the usable figure. EPA range on the page is 357 mi, matching EPA id 49743. Conflicts with Car and Driver 80 kWh.",
+    "conflicts_with": [
+      "tesla-model-y-premium-rwd-2026#battery.pack_kwh#Car and Driver: 2026 Tesla Model Y Premium RWD specifications (battery pack)"
+    ]
+  },
+  {
+    "vehicle_id": "tesla-model-y-premium-rwd-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "usable",
+    "tier": "S",
+    "source_name": "Green Cars Compare: Tesla Model Y Premium RWD USA specs (usable capacity)",
+    "source_url": "https://greencarscompare.com/car/tesla-model-y-premium-rwd-2025/specs/",
+    "access_date": "2026-10-02",
+    "confidence": "low",
+    "notes": "Paired with battery.pack_kwh 75 from the same aggregator usable/nominal pair. Conflicts with Car and Driver unstated basis on its 80 kWh figure.",
+    "conflicts_with": [
+      "tesla-model-y-premium-rwd-2026#battery.pack_kwh_basis#Car and Driver: 2026 Tesla Model Y Premium RWD specifications (battery pack)"
+    ]
   }
 ]

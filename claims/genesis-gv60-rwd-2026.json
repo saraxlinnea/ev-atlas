@@ -144,5 +144,16 @@
     "confidence": "medium",
     "model_year": 2027,
     "notes": "Page: charge 10% to 80% in as little as 18 minutes when using a 350kW/800V DC Ultra-Fast Charger. Live page labeled 2027; applied to atlas MY2026 RWD as the OEM charging claim currently presented for GV60. Peak is the charger class the OEM pairs with that time, not an independently instrumented vehicle curve."
+  },
+  {
+    "vehicle_id": "genesis-gv60-rwd-2026",
+    "field": "body.curb_weight_lb",
+    "value": 4515,
+    "tier": "S",
+    "source_name": "Kelley Blue Book: 2026 Genesis GV60 Standard dimensions (RWD)",
+    "source_url": "https://www.kbb.com/genesis/gv60/2026/standard/",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "KBB lists curb weight 4,515 lbs for 2026 GV60 Standard with RWD. Matches atlas RWD entry trim. Genesis USA page and the 2026 GV60 spec sheet opened in this pass did not expose a curb-weight figure in the readable text."
   }
 ]

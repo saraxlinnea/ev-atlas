@@ -162,5 +162,17 @@
     "field": "charging.peak_dc_kw",
     "value": 150,
     "notes": "FAQ: '85 kWh battery pack capable of 150 kW public DC Fast Charging'."
+  },
+  {
+    "vehicle_id": "chevrolet-equinox-ev-2026",
+    "field": "body.curb_weight_lb",
+    "value": 4923,
+    "tier": "S",
+    "source_name": "Car and Driver instrumented test: 2024 Chevrolet Equinox EV 3RS FWD curb weight",
+    "source_url": "https://www.caranddriver.com/chevrolet/equinox-ev",
+    "access_date": "2026-10-02",
+    "confidence": "low",
+    "model_year": 2024,
+    "notes": "C/D measured curb weight 4,923 lb for a 2024 Equinox EV 3RS front-wheel-drive test car. Atlas row is MY2026 FWD entry; Chevrolet previous-year page does not publish curb weight. Confidence lowered for model-year and trim (3RS) mismatch."
   }
 ]
