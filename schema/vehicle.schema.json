@@ -37,8 +37,9 @@
     },
     "region": {
       "type": "string",
+      "enum": ["US", "CN"],
       "default": "US",
-      "description": "Spec market. US EPA figures assumed unless noted."
+      "description": "Spec market for this row (which market's official specs), not brand HQ or factory country. US and China variants of the same badge are different vehicle_id rows."
     },
     "status": {
       "type": "string",

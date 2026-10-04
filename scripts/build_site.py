@@ -20,6 +20,11 @@ ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
 CHARTS_SRC = ROOT / "charts"
 DATA_SRC = ROOT / "data"
+CLAIMS_DIR = ROOT / "claims"
+
+# Same ranks as flatten.py; keep winner rules in lockstep.
+TIER_RANK = {"P": 3, "S": 2, "D": 1, "unverified": 0}
+CONFIDENCE_RANK = {"high": 3, "medium": 2, "low": 1}
 
 # Chart filename -> CSV filename relative to data/
 CHART_DATA = {
@@ -37,18 +42,29 @@ COMPARE_IDENTITY = (
     "model",
     "trim",
     "model_year",
+    "region",
 )
 COMPARE_SPEC_FIELDS = (
     "identity.msrp_usd",
+    "identity.msrp_cny",
     "efficiency.epa_range_mi",
     "efficiency.epa_mpge_combined",
     "efficiency.epa_kwh_per_100mi",
+    "efficiency.cltc_range_km",
+    "efficiency.cltc_kwh_per_100km",
+    "battery.pack_kwh",
+    "battery.pack_kwh_basis",
+    "battery.system_voltage_v",
     "powertrain.drive_layout",
     "charging.peak_dc_kw",
     "charging.port_type",
-    "battery.pack_kwh",
-    "battery.cell_chemistry",
+    "charging.onboard_ac_kw",
     "powertrain.accel_0_60_s",
+    "powertrain.power_hp",
+    "body.curb_weight_lb",
+    "derived.kwh_per_100mi_battery_side",
+    "recalls.campaign_count",
+    "battery.cell_chemistry",
 )
 
 
@@ -67,8 +83,92 @@ def _json_value(raw: str):
         return raw
 
 
+def _value_key(claim: dict) -> tuple[str, str]:
+    return (json.dumps(claim.get("value"), sort_keys=True), claim.get("unit") or "")
+
+
+def _is_better_claim(candidate: dict, current: dict) -> bool:
+    tier_delta = TIER_RANK.get(candidate.get("tier"), -1) - TIER_RANK.get(
+        current.get("tier"), -1
+    )
+    conf_delta = CONFIDENCE_RANK.get(candidate.get("confidence"), 0) - CONFIDENCE_RANK.get(
+        current.get("confidence"), 0
+    )
+    return tier_delta > 0 or (tier_delta == 0 and conf_delta > 0)
+
+
+def _pick_winner(claims: list[dict]) -> dict | None:
+    """Match flatten.py: higher tier, then confidence; ties keep the earlier claim."""
+    winner = None
+    for claim in claims:
+        if winner is None or _is_better_claim(claim, winner):
+            winner = claim
+    return winner
+
+
+def _pick_alt(claims: list[dict], winner: dict) -> dict | None:
+    """Next-best claim with a different value (same tier/confidence rules)."""
+    win_key = _value_key(winner)
+    alt = None
+    for claim in claims:
+        if _value_key(claim) == win_key:
+            continue
+        if alt is None or _is_better_claim(claim, alt):
+            alt = claim
+    return alt
+
+
+def _alt_payload(claim: dict) -> dict:
+    out: dict = {
+        "value": claim.get("value"),
+        "tier": claim.get("tier"),
+    }
+    if claim.get("source_url"):
+        out["source_url"] = claim["source_url"]
+    if claim.get("source_name"):
+        out["source_name"] = claim["source_name"]
+    if claim.get("notes"):
+        out["notes"] = claim["notes"]
+    if claim.get("unit"):
+        out["unit"] = claim["unit"]
+    return out
+
+
+def load_compare_claim_meta() -> tuple[
+    dict[str, dict[str, dict]], dict[str, dict[str, str]]
+]:
+    """From claims/: conflict alts and winning source_names for Compare fields."""
+    by_field: dict[tuple[str, str], list[dict]] = {}
+    for path in sorted(CLAIMS_DIR.glob("*.json")):
+        claims = json.loads(path.read_text(encoding="utf-8"))
+        for claim in claims:
+            field = claim.get("field")
+            vid = claim.get("vehicle_id")
+            if not vid or field not in COMPARE_SPEC_FIELDS:
+                continue
+            by_field.setdefault((vid, field), []).append(claim)
+
+    conflict_alts: dict[str, dict[str, dict]] = {}
+    source_names: dict[str, dict[str, str]] = {}
+    for (vid, field), claims in by_field.items():
+        winner = _pick_winner(claims)
+        if winner is None:
+            continue
+        name = winner.get("source_name")
+        if name:
+            source_names.setdefault(vid, {})[field] = name
+        if len({_value_key(c) for c in claims}) < 2:
+            continue
+        alt = _pick_alt(claims, winner)
+        if alt is None:
+            continue
+        conflict_alts.setdefault(vid, {})[field] = _alt_payload(alt)
+    return conflict_alts, source_names
+
+
 def write_compare_json(flattened_path: Path, out_path: Path) -> None:
-    """One row per vehicle from winning flattened values only."""
+    """One row per vehicle from winning flattened values, plus conflict alts."""
+    conflict_alts, source_names_by_vid = load_compare_claim_meta()
     rows_out: list[dict] = []
     with flattened_path.open(newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
@@ -78,13 +178,22 @@ def write_compare_json(flattened_path: Path, out_path: Path) -> None:
                 raw = _cell(row, key)
                 if key == "model_year" and raw:
                     entry[key] = int(raw)
+                elif key == "region":
+                    entry[key] = raw or "US"
                 elif raw:
                     entry[key] = raw
                 else:
                     entry[key] = None
 
+            vid = entry.get("vehicle_id") or ""
             tiers: dict[str, str] = {}
             sources: dict[str, str] = {}
+            source_names: dict[str, str] = {}
+            conflicts: dict[str, bool] = {}
+            alts: dict[str, dict] = {}
+            names_for_vid = source_names_by_vid.get(vid, {})
+            alts_for_vid = conflict_alts.get(vid, {})
+
             for field in COMPARE_SPEC_FIELDS:
                 raw = _cell(row, field)
                 entry[field] = _json_value(raw)
@@ -94,10 +203,23 @@ def write_compare_json(flattened_path: Path, out_path: Path) -> None:
                     tiers[field] = tier
                 if raw and url:
                     sources[field] = url
+                if raw and names_for_vid.get(field):
+                    source_names[field] = names_for_vid[field]
+                # Prefer flatten's *__conflict flag; attach alt when present.
+                if _cell(row, f"{field}__conflict") == "true":
+                    conflicts[field] = True
+                    if field in alts_for_vid:
+                        alts[field] = alts_for_vid[field]
             if tiers:
                 entry["tiers"] = tiers
             if sources:
                 entry["sources"] = sources
+            if source_names:
+                entry["source_names"] = source_names
+            if conflicts:
+                entry["conflicts"] = conflicts
+            if alts:
+                entry["conflict_alts"] = alts
             rows_out.append(entry)
 
     out_path.write_text(

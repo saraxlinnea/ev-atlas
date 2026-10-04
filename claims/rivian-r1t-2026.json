@@ -99,13 +99,13 @@
     "tier": "P",
     "source_name": "Rivian Support: battery specifications on Rivian vehicles",
     "source_url": "https://rivian.com/support/article/what-are-the-battery-specifications-on-rivian-vehicles",
-    "access_date": "2026-10-02",
+    "access_date": "2026-10-03",
     "disclosed_by_oem": true,
     "confidence": "high",
     "conflicts_with": [
       "rivian-r1t-2026#battery.pack_kwh#Rivian Support: usable kWh capacity of your batteries"
     ],
-    "notes": "R1 Dual Standard 'Rated Capacity/Energy' 95.6 kWh. Conflicts with the usable-capacity article's 92.5 kWh for Dual Standard."
+    "notes": "R1 Dual Standard 'Rated Capacity/Energy' 95.6 kWh. Re-checked 2026-10-03: still listed on battery specifications article. Conflicts with the usable-capacity article's 92.5 kWh for Dual Standard."
   },
   {
     "vehicle_id": "rivian-r1t-2026",
@@ -114,10 +114,13 @@
     "tier": "P",
     "source_name": "Rivian Support: battery specifications on Rivian vehicles",
     "source_url": "https://rivian.com/support/article/what-are-the-battery-specifications-on-rivian-vehicles",
-    "access_date": "2026-10-02",
+    "access_date": "2026-10-03",
     "disclosed_by_oem": true,
     "confidence": "high",
-    "notes": "Paired with the 95.6 kWh rated-energy claim. OEM labels it 'Rated Capacity/Energy' without saying gross or usable."
+    "notes": "Paired with the 95.6 kWh rated-energy claim. OEM labels it 'Rated Capacity/Energy' without saying gross or usable. Re-checked 2026-10-03. Conflicts with the usable-capacity article's usable basis.",
+    "conflicts_with": [
+      "rivian-r1t-2026#battery.pack_kwh_basis#Rivian Support: usable kWh capacity of your batteries"
+    ]
   },
   {
     "vehicle_id": "rivian-r1t-2026",
@@ -126,13 +129,13 @@
     "tier": "P",
     "source_name": "Rivian Support: usable kWh capacity of your batteries",
     "source_url": "https://rivian.com/support/article/what-is-the-usable-kwh-capacity-of-your-batteries",
-    "access_date": "2026-10-02",
+    "access_date": "2026-10-03",
     "disclosed_by_oem": true,
     "confidence": "high",
     "conflicts_with": [
       "rivian-r1t-2026#battery.pack_kwh#Rivian Support: battery specifications on Rivian vehicles"
     ],
-    "notes": "R1 Gen 2 Dual Standard usable capacity 92.5 kWh. Conflicts with the battery-specifications article's 95.6 kWh rated energy."
+    "notes": "R1 Gen 2 Dual Standard usable capacity 92.5 kWh. Re-checked 2026-10-03: still listed. Conflicts with the battery-specifications article's 95.6 kWh rated energy."
   },
   {
     "vehicle_id": "rivian-r1t-2026",
@@ -141,10 +144,13 @@
     "tier": "P",
     "source_name": "Rivian Support: usable kWh capacity of your batteries",
     "source_url": "https://rivian.com/support/article/what-is-the-usable-kwh-capacity-of-your-batteries",
-    "access_date": "2026-10-02",
+    "access_date": "2026-10-03",
     "disclosed_by_oem": true,
     "confidence": "high",
-    "notes": "Paired with the 92.5 kWh usable-capacity claim."
+    "notes": "Paired with the 92.5 kWh usable-capacity claim. Re-checked 2026-10-03. Conflicts with the battery-specifications article's unstated (rated-energy) basis.",
+    "conflicts_with": [
+      "rivian-r1t-2026#battery.pack_kwh_basis#Rivian Support: battery specifications on Rivian vehicles"
+    ]
   },
   {
     "vehicle_id": "rivian-r1t-2026",
@@ -237,5 +243,27 @@
     "disclosed_by_oem": true,
     "confidence": "high",
     "notes": "Rivian: Starting with model year 2026, Rivian vehicles use a NACS charge port. Atlas R1T is MY2026 Dual Standard."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "charging.peak_dc_kw",
+    "value": 200,
+    "tier": "S",
+    "source_name": "Car and Driver 2026 Rivian R1T review: Standard battery max DC charge rate",
+    "source_url": "https://www.caranddriver.com/rivian/r1t",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "C/D: 'The Standard battery has a max charge rate of 200 kW on a DC fast charger' (Large/Max listed at 220 kW). Matches atlas Dual Standard pack. Rivian compare PDF and support pages checked here state 10-80% times or Adventure Network charger peaks, not a Dual Standard vehicle peak kW."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "powertrain.torque_lbft",
+    "value": 610,
+    "tier": "P",
+    "source_name": "Rivian: Rivian Drive Systems, Decoded (Dual-Motor AWD torque)",
+    "source_url": "https://rivian.com/stories/difference-between-r1-drive-systems",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Dual-Motor AWD: 610 lb-ft of torque (533 hp). Performance Dual-Motor 829 lb-ft and Quad-Motor figures not applied. Matches Dual Standard atlas trim. Article originally 2022; page states updated with final production figures."
   }
 ]

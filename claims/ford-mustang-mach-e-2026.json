@@ -236,5 +236,38 @@
     "access_date": "2026-10-02",
     "confidence": "high",
     "notes": "C/D instrumented curb weight for 2026 Mustang Mach-E Select RWD: 4,620 lb. Not an OEM published curb weight."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "field": "powertrain.torque_lbft",
+    "value": 387,
+    "tier": "P",
+    "source_name": "Ford USA 2026 Mustang Mach-E Select model page (RWD Standard Range torque)",
+    "source_url": "https://www.ford.com/suvs/mach-e/2026/models/select/?intcmp=vhp-modwalk-cta-moddetails",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "RWD: 387 lb.-ft. of torque with Standard Range (73 kWh usable). eAWD 500 lb-ft and GT figures not applied."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "field": "charging.onboard_ac_kw",
+    "value": 11.0,
+    "tier": "S",
+    "source_name": "Newport Ford 2026 Mustang Mach-E digital showroom: onboard charger 11.0 kW",
+    "source_url": "https://www.fordnewport.com/showroom/2026/Ford/Mustang+Mach-E/SUV.htm",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Hybrid traction battery onboard charger (kW) 11.0. Ford.com Select page states Level 2 charge times but not the onboard kW figure."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "field": "body.width_in",
+    "value": 74.1,
+    "tier": "S",
+    "source_name": "U.S. News 2026 Ford Mustang Mach-E Select RWD specs: width max w/o mirrors",
+    "source_url": "https://cars.usnews.com/cars-trucks/ford/mustang-mach-e/2026/specs/mustang-mach-e-select-rwd-481823",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Width, Max w/o mirrors 74.1 in. Ford.com lists vehicle width with mirrors 82.6 in only; that with-mirrors figure not used."
   }
 ]

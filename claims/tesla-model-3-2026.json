@@ -88,10 +88,10 @@
     "tier": "P",
     "source_name": "Tesla Model 3 page, Standard / Rear-Wheel Drive specs (Wayback Machine snapshot 2026-04-13)",
     "source_url": "https://web.archive.org/web/20260413083357/https://www.tesla.com/model3",
-    "access_date": "2026-10-02",
+    "access_date": "2026-10-03",
     "disclosed_by_oem": true,
     "confidence": "high",
-    "notes": "Tesla: 'Model 3 starts at $38,630. Price includes Destination and Order Fees but excludes taxes and other fees.' Differs from the EPA side-by-side MSRP ($36,990, Edmunds-sourced).",
+    "notes": "Tesla: 'Model 3 starts at $38,630. Price includes Destination and Order Fees but excludes taxes and other fees.' Re-checked 2026-10-03 on Wayback snapshot 2026-04-13: figure still present. Differs from the EPA side-by-side MSRP ($36,990, Edmunds-sourced).",
     "conflicts_with": [
       "tesla-model-3-2026#identity.msrp_usd#EPA/DOE fueleconomy.gov Find.do side-by-side for vehicle 50251 (2026 Tesla Model 3 Standard RWD)"
     ]
@@ -103,9 +103,9 @@
     "tier": "P",
     "source_name": "EPA/DOE fueleconomy.gov Find.do side-by-side for vehicle 50251 (2026 Tesla Model 3 Standard RWD)",
     "source_url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=50251",
-    "access_date": "2026-10-02",
+    "access_date": "2026-10-03",
     "confidence": "medium",
-    "notes": "MSRP shown on the EPA side-by-side page. EPA footnote: MSRP data provided by Edmunds.com, Inc. Differs from Tesla's Wayback page figure that includes Destination and Order Fees ($38,630).",
+    "notes": "MSRP shown on the EPA side-by-side page. EPA footnote: MSRP data provided by Edmunds.com, Inc. Re-checked 2026-10-03: still $36,990. Differs from Tesla's Wayback page figure that includes Destination and Order Fees ($38,630).",
     "conflicts_with": [
       "tesla-model-3-2026#identity.msrp_usd#Tesla Model 3 page, Standard / Rear-Wheel Drive specs (Wayback Machine snapshot 2026-04-13)"
     ]
@@ -256,31 +256,13 @@
   {
     "vehicle_id": "tesla-model-3-2026",
     "field": "body.width_in",
-    "value": 82.2,
-    "tier": "P",
-    "source_name": "Tesla Model 3 page, Standard / Rear-Wheel Drive specs (Wayback Machine snapshot 2026-04-13)",
-    "source_url": "https://web.archive.org/web/20260413083357/https://www.tesla.com/model3",
-    "access_date": "2026-10-02",
-    "disclosed_by_oem": true,
-    "confidence": "medium",
-    "notes": "Tesla Overall Width: extended mirrors 82.2 in (folded mirrors 76.1 in). Differs from Green Cars Compare's width without mirrors (72.8 in).",
-    "conflicts_with": [
-      "tesla-model-3-2026#body.width_in#Green Cars Compare PDF: Tesla Model 3 Standard RWD (2025-...), USA listing (updated 2026-09-27)"
-    ]
-  },
-  {
-    "vehicle_id": "tesla-model-3-2026",
-    "field": "body.width_in",
     "value": 72.8,
     "tier": "S",
     "source_name": "Green Cars Compare PDF: Tesla Model 3 Standard RWD (2025-...), USA listing (updated 2026-09-27)",
     "source_url": "https://greencarscompare.com/assets/pdf/specs/us/299074.pdf",
-    "access_date": "2026-10-02",
+    "access_date": "2026-10-03",
     "confidence": "low",
-    "notes": "Aggregator: width without mirrors 72.8 in (also lists 82.2 in with mirrors). Differs from the Tesla Wayback Overall Width value claimed as extended mirrors.",
-    "conflicts_with": [
-      "tesla-model-3-2026#body.width_in#Tesla Model 3 page, Standard / Rear-Wheel Drive specs (Wayback Machine snapshot 2026-04-13)"
-    ]
+    "notes": "Aggregator: width without mirrors 72.8 in (also lists 82.2 in with mirrors). Re-checked 2026-10-03 on PDF updated 2026-09-27: both figures still present. Differs from the Tesla Wayback Overall Width value claimed as extended mirrors. Tesla product page lists overall width with mirrors extended (82.2 in) / folded (76.1 in); those with-mirrors figures are not used for body.width_in."
   },
   {
     "vehicle_id": "tesla-model-3-2026",

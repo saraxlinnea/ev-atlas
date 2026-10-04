@@ -249,5 +249,16 @@
     "confidence": "medium",
     "model_year": 2027,
     "notes": "Live MBUSA pages label the vehicle as 2027; atlas entry and EPA record remain MY2026."
+  },
+  {
+    "vehicle_id": "mercedes-cla-electric-2026",
+    "field": "powertrain.torque_lbft",
+    "value": 247,
+    "tier": "P",
+    "source_name": "Mercedes-Benz USA CLA 250+ with EQ Technology model page (torque)",
+    "source_url": "https://www.mbusa.com/en/vehicles/model/cla/sedan/cla250e",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Torque 247 lb-ft for rear 200 kW PSM. Live MBUSA pages label the vehicle as 2027; atlas entry and EPA record remain MY2026 CLA250 Plus with EQ Tech."
   }
 ]

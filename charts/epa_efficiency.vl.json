@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "EPA range vs wall-side energy use",
-    "subtitle": "Only vehicles with EPA claims. kWh/100mi is wall-side (includes charging losses). Vehicles without EPA data are omitted.",
+    "subtitle": "US-market rows with EPA claims only. kWh/100mi is wall-side (includes charging losses). Non-US and rows without EPA data are omitted; no CLTC conversion.",
     "fontSize": 16,
     "subtitleFontSize": 11,
     "subtitleColor": "#666"
@@ -10,7 +10,7 @@
   "data": { "url": "../data/flattened.csv" },
   "transform": [
     {
-      "filter": "isValid(datum['efficiency.epa_range_mi']) && isValid(datum['efficiency.epa_kwh_per_100mi']) && datum['efficiency.epa_range_mi'] !== '' && datum['efficiency.epa_kwh_per_100mi'] !== ''"
+      "filter": "(datum.region === 'US' || datum.region === '' || datum.region === null) && isValid(datum['efficiency.epa_range_mi']) && isValid(datum['efficiency.epa_kwh_per_100mi']) && datum['efficiency.epa_range_mi'] !== '' && datum['efficiency.epa_kwh_per_100mi'] !== ''"
     },
     {
       "calculate": "datum.make + ' ' + datum.model",

@@ -131,5 +131,49 @@
     "disclosed_by_oem": true,
     "confidence": "low",
     "notes": "UK specs list curb weight 2009-2081 kg for Long range Single motor. Recorded 2,009 kg converted to 4,429 lb (lower end of range). EU curb definition; US MSRP not filled because US 2025 retail dropped single-motor."
+  },
+  {
+    "vehicle_id": "polestar-2-single-motor-2025",
+    "field": "powertrain.power_hp",
+    "value": 299,
+    "tier": "S",
+    "source_name": "Polestar UK Polestar 2 specifications: Long range Single motor horsepower",
+    "source_url": "https://www.polestar.com/uk/polestar-2/specifications/",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Long range Single motor: 220 kW / 299 hp. Matches this atlas row's 82 kWh long-range pack and existing UK-page 0-60 claim. Standard range Single motor 272 hp not applied."
+  },
+  {
+    "vehicle_id": "polestar-2-single-motor-2025",
+    "field": "powertrain.torque_lbft",
+    "value": 361,
+    "tier": "S",
+    "source_name": "Polestar UK Polestar 2 specifications: Long range Single motor torque",
+    "source_url": "https://www.polestar.com/uk/polestar-2/specifications/",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Long range Single motor: Torque 490 Nm / 361 lbf-ft. Dual-motor 546 lbf-ft not applied."
+  },
+  {
+    "vehicle_id": "polestar-2-single-motor-2025",
+    "field": "charging.onboard_ac_kw",
+    "value": 11,
+    "tier": "S",
+    "source_name": "Polestar UK Polestar 2 specifications: 11 kW AC charging (long range)",
+    "source_url": "https://www.polestar.com/uk/polestar-2/specifications/",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Long range versions: 11 kW AC charging time table (3-phase 16A AC). Same UK specs page already used for 0-60 and curb. US manual charging-time article also states highest AC output 11 kW."
+  },
+  {
+    "vehicle_id": "polestar-2-single-motor-2025",
+    "field": "body.width_in",
+    "value": 73.2,
+    "tier": "S",
+    "source_name": "Polestar UK Polestar 2 specifications: car width",
+    "source_url": "https://www.polestar.com/uk/polestar-2/specifications/",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Car width 1,859 mm (73.2 in). Width including folded-out door mirrors 1,985 mm not used for this field."
   }
 ]

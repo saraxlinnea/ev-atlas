@@ -180,22 +180,22 @@
     "tier": "P",
     "source_name": "Hyundai USA 2025 IONIQ 6 compare-specs (SE Standard Range)",
     "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-6/compare-specs",
-    "access_date": "2026-10-02",
+    "access_date": "2026-10-03",
     "disclosed_by_oem": true,
-    "confidence": "high",
+    "confidence": "low",
     "field": "body.curb_weight_lb",
     "value": 3395,
     "conflicts_with": [
       "hyundai-ioniq6-2025#body.curb_weight_lb#Hyundai News 2025 IONIQ 6 Specs & Features PDF (2025-01-15)"
     ],
-    "notes": "Compare-specs table lists 3,395 under 'Curb weight (lbs.) (RWD) Long Range' in the SE Standard Range column. Conflicts with the Hyundai News PDF lightest curb weight of 3,935 lb for RWD Standard Range."
+    "notes": "Compare-specs table lists 3,395 under 'Curb weight (lbs.) (RWD) Long Range' in the SE Standard Range column. Re-checked 2026-10-03: value and Long Range label under the Standard Range column still present; likely a transposed typo for 3,935. Conflicts with the Hyundai News PDF lightest curb weight of 3,935 lb for RWD Standard Range. Confidence lowered on re-check."
   },
   {
     "vehicle_id": "hyundai-ioniq6-2025",
     "tier": "P",
     "source_name": "Hyundai News 2025 IONIQ 6 Specs & Features PDF (2025-01-15)",
     "source_url": "https://www.hyundainews.com/assets/documents/original/64772-2025IONIQ6SpecsFeatures011525.pdf",
-    "access_date": "2026-10-02",
+    "access_date": "2026-10-03",
     "disclosed_by_oem": true,
     "confidence": "high",
     "field": "body.curb_weight_lb",
@@ -203,7 +203,7 @@
     "conflicts_with": [
       "hyundai-ioniq6-2025#body.curb_weight_lb#Hyundai USA 2025 IONIQ 6 compare-specs (SE Standard Range)"
     ],
-    "notes": "PDF: Curb Weight Lightest for RWD (Standard Range) is 3,935 lb. Conflicts with the compare-specs page value of 3,395 lb."
+    "notes": "PDF: Curb Weight Lightest for RWD (Standard Range) is 3,935 lb. Re-checked 2026-10-03: still 3,935. Conflicts with the compare-specs page value of 3,395 lb under a mislabeled Long Range row in the SE Standard Range column."
   },
   {
     "vehicle_id": "hyundai-ioniq6-2025",
@@ -248,5 +248,16 @@
     "confidence": "high",
     "field": "body.wheelbase_in",
     "value": 116.1
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "field": "powertrain.torque_lbft",
+    "value": 258,
+    "tier": "P",
+    "source_name": "Hyundai USA 2025 IONIQ 6 compare-specs (SE Standard Range RWD torque)",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-6/compare-specs",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Torque (lb.-ft.) RWD: 350 Nm (258 lb.-ft.) for SE Standard Range. AWD dual-motor 446 lb-ft not applied."
   }
 ]

@@ -191,5 +191,27 @@
     "access_date": "2026-10-02",
     "confidence": "medium",
     "notes": "Trim comparison lists curb weight 4,575 lbs for 2026 ID.4 Pro rear-wheel drive. Matches atlas RWD entry. VW USA model page opened in prior claims does not publish curb weight; C/D instrumented curb on this review page is for a Pro S AWD test car."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "powertrain.torque_lbft",
+    "value": 402,
+    "tier": "S",
+    "source_name": "Team Volkswagen dealer research page: 2026 ID.4 RWD torque",
+    "source_url": "https://www.teamvw.com/research-aa-id-4/",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "RWD single rear PMSM: 402 lb.-ft. of torque (282 hp). AWD front/rear motor split not applied."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "body.width_in",
+    "value": 72.9,
+    "tier": "S",
+    "source_name": "Car and Driver 2026 Volkswagen ID.4 Pro RWD specs: width without mirrors",
+    "source_url": "https://www.caranddriver.com/volkswagen/id4/specs",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Width, without mirrors 72.9 in for 2026 ID.4 Pro RWD."
   }
 ]

@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "EPA range vs pack energy",
-    "subtitle": "Only vehicles with both a sourced pack kWh and EPA range. Pack basis may be gross, usable, or unstated. Blank values are omitted.",
+    "subtitle": "US-market rows with both a sourced pack kWh and EPA range. Pack basis may be gross, usable, or unstated. Blank and non-US rows are omitted.",
     "fontSize": 16,
     "subtitleFontSize": 11,
     "subtitleColor": "#666"
@@ -10,7 +10,7 @@
   "data": { "url": "../data/flattened.csv" },
   "transform": [
     {
-      "filter": "isValid(datum['battery.pack_kwh']) && isValid(datum['efficiency.epa_range_mi']) && datum['battery.pack_kwh'] !== '' && datum['efficiency.epa_range_mi'] !== ''"
+      "filter": "(datum.region === 'US' || datum.region === '' || datum.region === null) && isValid(datum['battery.pack_kwh']) && isValid(datum['efficiency.epa_range_mi']) && datum['battery.pack_kwh'] !== '' && datum['efficiency.epa_range_mi'] !== ''"
     },
     {
       "calculate": "datum.make + ' ' + datum.model",

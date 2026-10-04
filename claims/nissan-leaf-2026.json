@@ -255,5 +255,27 @@
         "Uses OEM usable pack_kwh (75) and EPA range; not the same as wall-side efficiency.epa_kwh_per_100mi."
       ]
     }
+  },
+  {
+    "vehicle_id": "nissan-leaf-2026",
+    "field": "powertrain.accel_0_60_s",
+    "value": 6.9,
+    "tier": "S",
+    "source_name": "Car and Driver instrumented test: 2026 Nissan Leaf Platinum+ 0-60",
+    "source_url": "https://www.caranddriver.com/nissan/leaf",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "C/D tested Leaf Platinum+ with the 214-hp front motor at 6.9 sec to 60 mph. Atlas trim is S+ / 75 kWh with 18in steel wheels; Nissan and C/D state the same 214-hp motor across S+/SV+/Platinum+. C/D notes it has not tested the base S (52 kWh) configuration. Nissan OEM pages checked here do not state 0-60."
+  },
+  {
+    "vehicle_id": "nissan-leaf-2026",
+    "field": "powertrain.torque_lbft",
+    "value": 261,
+    "tier": "P",
+    "source_name": "Nissan News 2026 Nissan LEAF Press Kit (S+/SV+/PLAT+ torque)",
+    "source_url": "https://usa.nissannews.com/en-US/releases/2026-nissan-leaf-press-kit",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "214 horsepower, 261 lb-ft of torque for 160 kW / 75 kWh S+/SV+/PLAT+ configuration used in this atlas. 130 kW / 254 lb-ft row marked unavailable (-)."
   }
 ]

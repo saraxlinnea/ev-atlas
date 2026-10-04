@@ -129,5 +129,52 @@
     "disclosed_by_oem": true,
     "confidence": "high",
     "notes": "Curb Weight (lbs) (2WD) for EX: 4,932. Matches entry FWD atlas trim."
+  },
+  {
+    "vehicle_id": "honda-prologue-fwd-2026",
+    "field": "charging.peak_dc_kw",
+    "value": 155,
+    "tier": "S",
+    "source_name": "Car and Driver 2026 Honda Prologue review: peak DC fast-charge rate",
+    "source_url": "https://www.caranddriver.com/honda/prologue",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "C/D charging section: Prologue max DC rate of 155 kW. Instrumented Elite AWD specs block on the same page lists Peak DC Fast-Charge Rate 150 kW; recorded the prose figure for the model line. Honda specs and product pages checked here publish miles-in-10-min and 20-80% times, not peak kW. No FWD 0-60 on those pages or in C/D (tested Elite AWD only)."
+  },
+  {
+    "vehicle_id": "honda-prologue-fwd-2026",
+    "field": "powertrain.power_hp",
+    "value": 220,
+    "tier": "P",
+    "source_name": "Honda News, 2025-10-28: 2026 Prologue Specifications & Features (FWD horsepower)",
+    "source_url": "https://hondanews.com/en-US/honda-automobiles/releases/release-e5d30c25af38c0c6604e43e79c015883-2026-honda-prologue-specifications-features",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Horsepower (hp) - FWD: 220 for EX FWD and Touring FWD. Footnote: 220 hp (SAE J2908) for FWD. AWD 300 hp not applied."
+  },
+  {
+    "vehicle_id": "honda-prologue-fwd-2026",
+    "field": "powertrain.torque_lbft",
+    "value": 243,
+    "tier": "P",
+    "source_name": "Honda News, 2025-10-28: 2026 Prologue Specifications & Features (FWD torque)",
+    "source_url": "https://hondanews.com/en-US/honda-automobiles/releases/release-e5d30c25af38c0c6604e43e79c015883-2026-honda-prologue-specifications-features",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Torque (lb.-ft.) - FWD: 243 for EX FWD and Touring FWD. Footnote: 243 lb.-ft. (SAE J2908) for FWD. AWD 355 lb-ft not applied."
+  },
+  {
+    "vehicle_id": "honda-prologue-fwd-2026",
+    "field": "body.width_in",
+    "value": 78.3,
+    "tier": "P",
+    "source_name": "Honda News, 2025-10-28: 2026 Prologue Specifications & Features (width)",
+    "source_url": "https://hondanews.com/en-US/honda-automobiles/releases/release-e5d30c25af38c0c6604e43e79c015883-2026-honda-prologue-specifications-features",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Exterior width 78.3 in across grades. Onboard AC kW not stated as a vehicle peak on this specs release (only Level 2 miles-per-hour charge rate), so left blank."
   }
 ]

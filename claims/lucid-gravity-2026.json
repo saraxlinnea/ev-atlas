@@ -235,5 +235,41 @@
     "access_date": "2026-10-02",
     "confidence": "medium",
     "notes": "Tech specs sheet lists curb weight 5,670 / 5,794 lb for two rows / three rows. Value is the two-row figure, matching atlas Touring with 20in front / 21in rear wheels. Sheet hosted on Lucid Owners rather than lucidmotors.com; live Gravity page does not publish curb weight."
+  },
+  {
+    "vehicle_id": "lucid-gravity-2026",
+    "field": "powertrain.torque_lbft",
+    "value": 811,
+    "tier": "S",
+    "source_name": "Car and Driver 2027 Lucid Gravity Touring AWD specs: maximum torque",
+    "source_url": "https://www.caranddriver.com/lucid/gravity/specs/2027/lucid_gravity_lucid-gravity_2027",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Maximum torque 811 lb-ft for Touring AWD with 89 kWh pack. C/D page labeled 2027; atlas EPA row is MY2026 Gravity Touring. Grand Touring 909 lb-ft not applied.",
+    "model_year": 2027
+  },
+  {
+    "vehicle_id": "lucid-gravity-2026",
+    "field": "charging.onboard_ac_kw",
+    "value": 19.2,
+    "tier": "S",
+    "source_name": "Car and Driver 2027 Lucid Gravity Touring AWD specs: 19.2 kW onboard charger",
+    "source_url": "https://www.caranddriver.com/lucid/gravity/specs/2027/lucid_gravity_lucid-gravity_2027",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Lithium Ion traction battery w/19.2 kW Onboard Charger and 89 kWh capacity. Matches Gravity Touring pack. C/D page labeled 2027; atlas is MY2026 Touring.",
+    "model_year": 2027
+  },
+  {
+    "vehicle_id": "lucid-gravity-2026",
+    "field": "body.width_in",
+    "value": 78.9,
+    "tier": "S",
+    "source_name": "Car and Driver 2027 Lucid Gravity Touring AWD specs: width without mirrors",
+    "source_url": "https://www.caranddriver.com/lucid/gravity/specs/2027/lucid_gravity_lucid-gravity_2027",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Width, without mirrors 78.9 in for Touring AWD. C/D page labeled 2027; atlas is MY2026 Gravity Touring.",
+    "model_year": 2027
   }
 ]

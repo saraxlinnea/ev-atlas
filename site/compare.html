@@ -7,35 +7,38 @@
   <meta name="description" content="Side-by-side sourced fields for 26 EVs. Empty cells are —, not zero.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="page page-wide">
     <nav aria-label="Site">
+      <a class="nav-brand" href="index.html">EV Atlas</a>
       <ul class="site-nav">
-        <li><a href="index.html">Home</a></li>
         <li><a href="compare.html" aria-current="page">Compare</a></li>
-        <li><a href="charts.html">Charts</a></li>
+        <li><a href="figures.html">Figures</a></li>
         <li><a href="methodology.html">Methods</a></li>
       </ul>
     </nav>
 
-    <header class="hero">
-      <p class="brand">EV Atlas</p>
+    <header class="hero hero-thin">
       <h1>Compare</h1>
       <p class="lede">
-        Twenty-six vehicles, one row each. Values come from sourced claims.
-        Empty cells are —, not zero. Filter, group by make, or click a header
-        to sort.
+        The same side-by-side table as <a href="index.html">Home</a>. Filter,
+        group by make, or click a header to sort. — means not found, not zero.
       </p>
     </header>
 
     <section class="content-section compare-section" aria-labelledby="table-heading" data-compare-root data-src="data/compare.json">
-      <h2 id="table-heading">Key fields</h2>
+      <h2 id="table-heading" class="kicker">Key fields</h2>
       <p class="chart-note">
         Filled cells link to the claim source when a URL is recorded. Hover for
-        source tier. — means not found, not zero. Sourcing rules:
+        source tier. A † beside a value means sources disagree; activate it for
+        the other recorded claim. Drag a spec column header to reorder; order
+        is kept for this browser session. Market defaults to US. EPA columns are
+        US-cycle; CLTC columns are China-cycle; blank EPA on a CN row is expected,
+        not a missing US label. — means not found, not zero. Voltage and
+        chemistry are sparse. Sourcing rules:
         <a href="methodology.html">Methods</a>.
       </p>
 
@@ -43,24 +46,73 @@
         <div class="compare-toolbar-row">
           <label class="compare-field">
             <span class="compare-field-label">Search</span>
-            <input type="search" data-compare-search placeholder="Make, model, or trim" autocomplete="off">
+            <input type="search" data-compare-search placeholder="Make or model" autocomplete="off">
           </label>
-          <label class="compare-field">
-            <span class="compare-field-label">Make</span>
-            <select data-compare-filter-make></select>
-          </label>
-          <label class="compare-field">
-            <span class="compare-field-label">Year</span>
-            <select data-compare-filter-year></select>
-          </label>
-          <label class="compare-field">
-            <span class="compare-field-label">Drive</span>
-            <select data-compare-filter-drive></select>
-          </label>
-          <label class="compare-field">
-            <span class="compare-field-label">Port</span>
-            <select data-compare-filter-port></select>
-          </label>
+          <details class="compare-filter" data-compare-filter="market">
+            <summary>
+              <span class="compare-field-label">Market</span>
+              <span class="compare-filter-summary" data-filter-summary>1 selected</span>
+            </summary>
+            <div class="compare-filter-panel">
+              <div class="compare-filter-actions">
+                <button type="button" data-filter-all>All</button>
+                <button type="button" data-filter-none>None</button>
+              </div>
+              <div class="compare-filter-options" data-compare-filter-market></div>
+            </div>
+          </details>
+          <details class="compare-filter" data-compare-filter="make">
+            <summary>
+              <span class="compare-field-label">Make</span>
+              <span class="compare-filter-summary" data-filter-summary>All</span>
+            </summary>
+            <div class="compare-filter-panel">
+              <div class="compare-filter-actions">
+                <button type="button" data-filter-all>All</button>
+                <button type="button" data-filter-none>None</button>
+              </div>
+              <div class="compare-filter-options" data-compare-filter-make></div>
+            </div>
+          </details>
+          <details class="compare-filter" data-compare-filter="year">
+            <summary>
+              <span class="compare-field-label">Year</span>
+              <span class="compare-filter-summary" data-filter-summary>All</span>
+            </summary>
+            <div class="compare-filter-panel">
+              <div class="compare-filter-actions">
+                <button type="button" data-filter-all>All</button>
+                <button type="button" data-filter-none>None</button>
+              </div>
+              <div class="compare-filter-options" data-compare-filter-year></div>
+            </div>
+          </details>
+          <details class="compare-filter" data-compare-filter="drive">
+            <summary>
+              <span class="compare-field-label">Drive</span>
+              <span class="compare-filter-summary" data-filter-summary>All</span>
+            </summary>
+            <div class="compare-filter-panel">
+              <div class="compare-filter-actions">
+                <button type="button" data-filter-all>All</button>
+                <button type="button" data-filter-none>None</button>
+              </div>
+              <div class="compare-filter-options" data-compare-filter-drive></div>
+            </div>
+          </details>
+          <details class="compare-filter" data-compare-filter="port">
+            <summary>
+              <span class="compare-field-label">Port</span>
+              <span class="compare-filter-summary" data-filter-summary>All</span>
+            </summary>
+            <div class="compare-filter-panel">
+              <div class="compare-filter-actions">
+                <button type="button" data-filter-all>All</button>
+                <button type="button" data-filter-none>None</button>
+              </div>
+              <div class="compare-filter-options" data-compare-filter-port></div>
+            </div>
+          </details>
         </div>
         <div class="compare-toolbar-row compare-toolbar-meta">
           <label class="compare-check">
@@ -74,11 +126,27 @@
             <label class="compare-check"><input type="checkbox" data-preset="charging"> Charging</label>
             <label class="compare-check"><input type="checkbox" data-preset="chemistry"> Chemistry</label>
           </fieldset>
+          <details class="compare-filter compare-col-detail" data-compare-col-detail>
+            <summary>
+              <span class="compare-field-label">Spec columns</span>
+              <span class="compare-filter-summary" data-col-summary>All</span>
+            </summary>
+            <div class="compare-filter-panel">
+              <div class="compare-filter-actions">
+                <button type="button" data-col-all>All</button>
+                <button type="button" data-col-none>None</button>
+              </div>
+              <div class="compare-col-picker" data-compare-col-picker></div>
+            </div>
+          </details>
+          <button type="button" class="compare-reset-order" data-compare-reset-order aria-label="Reset spec column order to default">
+            Reset column order
+          </button>
           <p class="compare-count" data-compare-count aria-live="polite"></p>
         </div>
       </div>
 
-      <div class="compare-wrap">
+      <div class="compare-wrap" data-compare-wrap>
         <table class="compare-table" data-compare-table hidden>
           <thead>
             <tr data-compare-thead-row></tr>
@@ -86,6 +154,7 @@
           <tbody data-compare-body></tbody>
         </table>
       </div>
+      <div class="compare-resize" data-compare-resize role="separator" aria-orientation="horizontal" aria-label="Resize table height" tabindex="0"></div>
       <p data-compare-error class="error" hidden></p>
     </section>
 

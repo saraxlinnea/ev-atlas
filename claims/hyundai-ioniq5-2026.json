@@ -219,5 +219,28 @@
     "confidence": "high",
     "field": "body.wheelbase_in",
     "value": 118.1
+  },
+  {
+    "vehicle_id": "hyundai-ioniq5-2026",
+    "field": "powertrain.torque_lbft",
+    "value": 258,
+    "tier": "P",
+    "source_name": "Hyundai USA 2026 IONIQ 5 compare-specs (SE Standard Range RWD torque)",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/2026-ioniq-5/compare-specs",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Torque (lb.-ft.) RWD: 350 Nm (258 lb.-ft.) for SE Standard Range. AWD 446 lb-ft not applied."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq5-2026",
+    "field": "charging.onboard_ac_kw",
+    "value": 10.9,
+    "tier": "P",
+    "source_name": "Hyundai USA 2025 IONIQ 5 compare-specs (Level 2 on-board charger up to 10.9 kW)",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/2025-ioniq-5/compare-specs",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "2025 compare-specs states Level 2 on-board charger up to 10.9 kW supported. 2026 US compare-specs lists matching AC Level II charge times (5h40m for 63 kWh SE Standard Range) but does not reprint the 10.9 kW figure. Sibling Kia EV6 Light uses 10.9 kW OBC on the same E-GMP family.",
+    "model_year": 2025
   }
 ]

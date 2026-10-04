@@ -84,8 +84,8 @@
     "model_year": 2026,
     "lineage_id": "hyundai-ioniq5",
     "region": "US",
-    "status": "unverified_availability",
-    "status_checked_date": "2026-10-02"
+    "status": "current",
+    "status_checked_date": "2026-10-03"
   },
   {
     "vehicle_id": "hyundai-ioniq6-2025",
@@ -106,8 +106,8 @@
     "model_year": 2026,
     "lineage_id": "kia-ev6",
     "region": "US",
-    "status": "unverified_availability",
-    "status_checked_date": "2026-10-02"
+    "status": "current",
+    "status_checked_date": "2026-10-03"
   },
   {
     "vehicle_id": "porsche-taycan-2026",
@@ -150,8 +150,8 @@
     "model_year": 2026,
     "lineage_id": "ford-mach-e",
     "region": "US",
-    "status": "unverified_availability",
-    "status_checked_date": "2026-10-02"
+    "status": "current",
+    "status_checked_date": "2026-10-03"
   },
   {
     "vehicle_id": "vw-id4-2026",
@@ -194,8 +194,8 @@
     "model_year": 2026,
     "lineage_id": "nissan-leaf",
     "region": "US",
-    "status": "unverified_availability",
-    "status_checked_date": "2026-10-02"
+    "status": "current",
+    "status_checked_date": "2026-10-03"
   },
   {
     "vehicle_id": "chevrolet-bolt-2027",
@@ -206,7 +206,7 @@
     "lineage_id": "chevrolet-bolt",
     "region": "US",
     "status": "current",
-    "status_checked_date": "2026-10-02"
+    "status_checked_date": "2026-10-03"
   },
   {
     "vehicle_id": "volvo-ex30-2026",
@@ -249,8 +249,8 @@
     "model_year": 2026,
     "lineage_id": "honda-prologue",
     "region": "US",
-    "status": "unverified_availability",
-    "status_checked_date": "2026-10-02"
+    "status": "current",
+    "status_checked_date": "2026-10-03"
   },
   {
     "vehicle_id": "bmw-ix3-50-xdrive-2027",
@@ -284,5 +284,236 @@
     "region": "US",
     "status": "unverified_availability",
     "status_checked_date": "2026-10-02"
+  },
+  {
+    "vehicle_id": "subaru-solterra-awd-2026",
+    "make": "Subaru",
+    "model": "Solterra",
+    "trim": "Premium AWD",
+    "model_year": 2026,
+    "lineage_id": "subaru-solterra",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "jeep-wagoneer-s-awd-2026",
+    "make": "Jeep",
+    "model": "Wagoneer S",
+    "trim": "AWD (Falken tire)",
+    "model_year": 2026,
+    "lineage_id": "jeep-wagoneer-s",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "make": "Lexus",
+    "model": "RZ",
+    "trim": "350e FWD (18in wheels)",
+    "model_year": 2026,
+    "lineage_id": "lexus-rz",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "gmc-sierra-ev-std-range-2026",
+    "make": "GMC",
+    "model": "Sierra EV",
+    "trim": "Elevation Standard Range (11 kW charger)",
+    "model_year": 2026,
+    "lineage_id": "gmc-sierra-ev",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "mini-countryman-se-all4-2026",
+    "make": "MINI",
+    "model": "Countryman",
+    "trim": "SE ALL4 (18in wheels)",
+    "model_year": 2026,
+    "lineage_id": "mini-countryman-se",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "dodge-charger-daytona-rt-awd-2026",
+    "make": "Dodge",
+    "model": "Charger Daytona",
+    "trim": "R/T AWD (245/55ZR18)",
+    "model_year": 2026,
+    "lineage_id": "dodge-charger-daytona",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "acura-zdx-rwd-2026",
+    "make": "Acura",
+    "model": "ZDX",
+    "trim": "RWD",
+    "model_year": 2026,
+    "lineage_id": "acura-zdx",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "make": "Ford",
+    "model": "F-150 Lightning",
+    "trim": "4WD Standard Range",
+    "model_year": 2025,
+    "lineage_id": "ford-f150-lightning",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "kia-ev9-long-range-rwd-2026",
+    "make": "Kia",
+    "model": "EV9",
+    "trim": "Light Long Range RWD",
+    "model_year": 2026,
+    "lineage_id": "kia-ev9",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "nissan-ariya-fwd-63kwh-2026",
+    "make": "Nissan",
+    "model": "Ariya",
+    "trim": "FWD 63 kWh",
+    "model_year": 2026,
+    "lineage_id": "nissan-ariya",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "make": "Volkswagen",
+    "model": "ID. Buzz",
+    "trim": "Pro S RWD",
+    "model_year": 2025,
+    "lineage_id": "vw-id-buzz",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "cadillac-optiq-rwd-2026",
+    "make": "Cadillac",
+    "model": "OPTIQ",
+    "trim": "RWD (11 kW charger)",
+    "model_year": 2026,
+    "lineage_id": "cadillac-optiq",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "chevrolet-blazer-ev-fwd-2026",
+    "make": "Chevrolet",
+    "model": "Blazer EV",
+    "trim": "FWD",
+    "model_year": 2026,
+    "lineage_id": "chevrolet-blazer-ev",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "chevrolet-silverado-ev-std-range-2026",
+    "make": "Chevrolet",
+    "model": "Silverado EV",
+    "trim": "Work Truck / Custom Standard Range (11 kW charger)",
+    "model_year": 2026,
+    "lineage_id": "chevrolet-silverado-ev",
+    "region": "US",
+    "status": "current",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "make": "Cadillac",
+    "model": "VISTIQ",
+    "trim": "Luxury AWD (11 kW charger)",
+    "model_year": 2026,
+    "lineage_id": "cadillac-vistiq",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "hyundai-ioniq9-rwd-2026",
+    "make": "Hyundai",
+    "model": "Ioniq 9",
+    "trim": "S RWD",
+    "model_year": 2026,
+    "lineage_id": "hyundai-ioniq9",
+    "region": "US",
+    "status": "current",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "byd-seal-2025",
+    "make": "BYD",
+    "model": "Seal",
+    "trim": "entry (CN)",
+    "model_year": 2025,
+    "lineage_id": "byd-seal",
+    "region": "CN",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "zeekr-001-2025",
+    "make": "Zeekr",
+    "model": "001",
+    "trim": "entry (CN)",
+    "model_year": 2025,
+    "lineage_id": "zeekr-001",
+    "region": "CN",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "nio-et5-2025",
+    "make": "NIO",
+    "model": "ET5",
+    "trim": "entry (CN)",
+    "model_year": 2025,
+    "lineage_id": "nio-et5",
+    "region": "CN",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "xiaomi-su7-2025",
+    "make": "Xiaomi",
+    "model": "SU7",
+    "trim": "entry (CN)",
+    "model_year": 2025,
+    "lineage_id": "xiaomi-su7",
+    "region": "CN",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "xpeng-g6-2025",
+    "make": "XPeng",
+    "model": "G6",
+    "trim": "entry (CN)",
+    "model_year": 2025,
+    "lineage_id": "xpeng-g6",
+    "region": "CN",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-03"
   }
 ]

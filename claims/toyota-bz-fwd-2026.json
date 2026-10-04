@@ -151,5 +151,40 @@
     "access_date": "2026-10-02",
     "confidence": "medium",
     "notes": "Trim comparison lists curb weight 4,057 lbs for 2026 bZ XLE front-wheel drive (168 hp column; combined 130 MPGe). Matches atlas entry FWD / 57.7 kWh / EPA 236 mi row, not XLE Plus FWD (listed separately at 4,156 lbs)."
+  },
+  {
+    "vehicle_id": "toyota-bz-fwd-2026",
+    "field": "powertrain.power_hp",
+    "value": 221,
+    "tier": "P",
+    "source_name": "Toyota USA Newsroom, 2025-05-13: 2026 bZ FWD horsepower",
+    "source_url": "https://pressroom.toyota.com/toyota-bz-all-electric-suv-adds-range-charging-and-exterior-updates-for-2026/",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Front Wheel Drive models deliver up-to 221 hp (previously 201 hp). AWD 338 combined system net hp not applied to this FWD entry row (57.7 kWh XLE FWD)."
+  },
+  {
+    "vehicle_id": "toyota-bz-fwd-2026",
+    "field": "body.width_in",
+    "value": 73.2,
+    "tier": "P",
+    "source_name": "Toyota USA Newsroom, 2025-05-13: 2026 bZ overall width",
+    "source_url": "https://pressroom.toyota.com/toyota-bz-all-electric-suv-adds-range-charging-and-exterior-updates-for-2026/",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Overall width 73.2 inches. Same newsroom design dimensions paragraph as length/height/wheelbase."
+  },
+  {
+    "vehicle_id": "toyota-bz-fwd-2026",
+    "field": "powertrain.torque_lbft",
+    "value": 198,
+    "tier": "S",
+    "source_name": "Modern Toyota dealer page summarizing 2026 bZ FWD torque table",
+    "source_url": "https://www.moderntoyota.com/2026-toyota-bz-electric-suv-review-north-carolina/",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "XLE FWD / XLE FWD Plus / Limited FWD listed at 198 lb-ft. AWD 323 lb-ft not applied. Atlas EPA row is XLE FWD 57.7 kWh class. Toyota USA newsroom press release does not state torque in lb-ft."
   }
 ]

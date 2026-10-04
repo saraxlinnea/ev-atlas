@@ -57,7 +57,10 @@
     "access_date": "2026-09-29",
     "confidence": "low",
     "unit": "Nm",
-    "notes": "550 Nm is about 406 lb-ft. This is EV Database's European-market listing (Type 2 port, 22 kW AC), so it may not match the US car. Lucid doesn't publish torque on its US pages."
+    "notes": "550 Nm is about 406 lb-ft. This is EV Database's European-market listing (Type 2 port, 22 kW AC), so it may not match the US car. Lucid doesn't publish torque on its US pages.",
+    "conflicts_with": [
+      "lucid-air-pure-2026#powertrain.torque_lbft#Lucid Air Pure Technical Specifications PDF (2025): torque"
+    ]
   },
   {
     "vehicle_id": "lucid-air-pure-2026",
@@ -415,5 +418,32 @@
     "confidence": "medium",
     "model_year": 2025,
     "notes": "PDF lists 'Battery capacity kWh 84' without gross vs usable label."
+  },
+  {
+    "vehicle_id": "lucid-air-pure-2026",
+    "field": "powertrain.torque_lbft",
+    "value": 406,
+    "tier": "P",
+    "source_name": "Lucid Air Pure Technical Specifications PDF (2025): torque",
+    "source_url": "https://lucidmotors.com/media/document/lucid-air-pure-technical-specs-2025.pdf",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Torque (total) 406 lb-ft for single-motor RWD Pure. PDF labeled 2025; atlas vehicle is MY2026 Air Pure RWD with matching 84 kWh / 420 mi EPA configuration. Conflicts with EV Database 550 Nm European listing.",
+    "model_year": 2025,
+    "conflicts_with": [
+      "lucid-air-pure-2026#powertrain.torque_lbft#EV Database: Lucid Air Pure RWD (MY26), European-market listing"
+    ]
+  },
+  {
+    "vehicle_id": "lucid-air-pure-2026",
+    "field": "body.width_in",
+    "value": 76.2,
+    "tier": "P",
+    "source_name": "Lucid Air Pure Technical Specifications PDF (2025): width without mirrors",
+    "source_url": "https://lucidmotors.com/media/document/lucid-air-pure-technical-specs-2025.pdf",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Width (with/without mirrors) 86.4 / 76.2 in. Using without-mirrors figure. PDF labeled 2025; dimensions treated as carrying into MY2026 Pure RWD.",
+    "model_year": 2025
   }
 ]

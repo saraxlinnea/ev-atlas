@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Curb weight vs wall-side efficiency",
-    "subtitle": "Only vehicles with both a sourced curb weight and EPA wall-side kWh/100 mi. Wall-side includes charging losses. Blank values are omitted.",
+    "subtitle": "US-market rows with both a sourced curb weight and EPA wall-side kWh/100 mi. Wall-side includes charging losses. Blank and non-US rows are omitted.",
     "fontSize": 16,
     "subtitleFontSize": 11,
     "subtitleColor": "#666"
@@ -10,7 +10,7 @@
   "data": { "url": "../data/flattened.csv" },
   "transform": [
     {
-      "filter": "isValid(datum['body.curb_weight_lb']) && isValid(datum['efficiency.epa_kwh_per_100mi']) && datum['body.curb_weight_lb'] !== '' && datum['efficiency.epa_kwh_per_100mi'] !== ''"
+      "filter": "(datum.region === 'US' || datum.region === '' || datum.region === null) && isValid(datum['body.curb_weight_lb']) && isValid(datum['efficiency.epa_kwh_per_100mi']) && datum['body.curb_weight_lb'] !== '' && datum['efficiency.epa_kwh_per_100mi'] !== ''"
     },
     {
       "calculate": "datum.make + ' ' + datum.model",

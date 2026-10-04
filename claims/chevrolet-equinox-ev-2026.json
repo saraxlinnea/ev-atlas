@@ -174,5 +174,65 @@
     "confidence": "low",
     "model_year": 2024,
     "notes": "C/D measured curb weight 4,923 lb for a 2024 Equinox EV 3RS front-wheel-drive test car. Atlas row is MY2026 FWD entry; Chevrolet previous-year page does not publish curb weight. Confidence lowered for model-year and trim (3RS) mismatch."
+  },
+  {
+    "vehicle_id": "chevrolet-equinox-ev-2026",
+    "field": "powertrain.accel_0_60_s",
+    "value": 7.7,
+    "tier": "S",
+    "source_name": "Car and Driver instrumented test: 2024 Chevrolet Equinox EV 3RS FWD 0-60",
+    "source_url": "https://www.caranddriver.com/chevrolet/equinox-ev",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "model_year": 2024,
+    "notes": "C/D: front-wheel-drive Equinox EV 7.7 sec to 60 mph; specs block is 2024 Equinox EV 3RS FWD. Atlas row is MY2026 FWD entry; Chevrolet previous-year page does not publish 0-60."
+  },
+  {
+    "vehicle_id": "chevrolet-equinox-ev-2026",
+    "field": "powertrain.power_hp",
+    "value": 220,
+    "tier": "P",
+    "source_name": "GM Newsroom, 2026-08-10: 2026 Chevrolet Equinox EV FWD horsepower",
+    "source_url": "https://news.gm.com/home.detail.html/Pages/topic/us/en/2026/aug/0810-chevrolet-electric.html",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Front-drive models deliver 220 horsepower. AWD 300 hp not applied. Matches Car and Driver 2026 review prose for FWD; C/D 2024 instrumented FWD block lists 213 hp and is not used for this claim."
+  },
+  {
+    "vehicle_id": "chevrolet-equinox-ev-2026",
+    "field": "powertrain.torque_lbft",
+    "value": 243,
+    "tier": "P",
+    "source_name": "GM Newsroom, 2026-08-10: 2026 Chevrolet Equinox EV FWD torque",
+    "source_url": "https://news.gm.com/home.detail.html/Pages/topic/us/en/2026/aug/0810-chevrolet-electric.html",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Front-drive models deliver 243 pound-feet of torque. AWD 355 lb-ft not applied."
+  },
+  {
+    "vehicle_id": "chevrolet-equinox-ev-2026",
+    "field": "charging.onboard_ac_kw",
+    "value": 11.5,
+    "tier": "S",
+    "source_name": "Car and Driver instrumented specs: 2024 Chevrolet Equinox EV 3RS FWD onboard charger",
+    "source_url": "https://www.caranddriver.com/chevrolet/equinox-ev",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "model_year": 2024,
+    "notes": "C/D FWD instrumented powertrain block on the 2026 Equinox EV page lists Onboard Charger 11.5 kW (tested 2024 3RS FWD). Chevrolet previous-year page does not state onboard AC kW; FAQ mentions available 19 kW only in an AWD charge-rate bullet and is not used as the FWD vehicle peak."
+  },
+  {
+    "vehicle_id": "chevrolet-equinox-ev-2026",
+    "field": "body.width_in",
+    "value": 76.9,
+    "tier": "S",
+    "source_name": "Car and Driver instrumented specs: 2024 Chevrolet Equinox EV 3RS FWD width",
+    "source_url": "https://www.caranddriver.com/chevrolet/equinox-ev",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "model_year": 2024,
+    "notes": "C/D FWD dimensions: Width 76.9 in. Same FWD instrumented block as onboard charger. Chevrolet previous-year page does not publish width."
   }
 ]

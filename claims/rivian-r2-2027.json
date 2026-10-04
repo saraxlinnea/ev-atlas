@@ -238,5 +238,16 @@
     "access_date": "2026-10-02",
     "confidence": "medium",
     "notes": "C/D: 'Rivian claims a peak charging rate of 230 kilowatts' and measured 226 kW peak in their 10-90% test. Recorded as Rivian's stated peak via secondary report."
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "powertrain.torque_lbft",
+    "value": 609,
+    "tier": "P",
+    "source_name": "Rivian USA R2 product page (Performance torque)",
+    "source_url": "https://rivian.com/r2",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "R2 Performance: 609 lb-ft Torque (656 hp). Premium 537 lb-ft and Standard 355 lb-ft not applied. Matches EPA Performance AWD atlas row."
   }
 ]

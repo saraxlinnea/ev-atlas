@@ -1,0 +1,73 @@
+[
+  {
+    "vehicle_id": "nissan-ariya-fwd-63kwh-2026",
+    "field": "recalls.campaign_count",
+    "value": 0,
+    "tier": "P",
+    "source_name": "NHTSA recall flat file FLAT_RCL_POST_2010 (MY2026 search)",
+    "source_url": "https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "No MY2026 NISSAN ARIYA rows in NHTSA recall flat file (file dated 2026-10-03; searched MODELTXT containing ARIYA). recallsByVehicle for make=nissan&model=ARIYA&modelYear=2026 (and ARIYA BEV / ENGAGE / FWD variants) returned HTTP 400 / Count 0. Products issueType=r for NISSAN MY2026 does not list ARIYA (MY2025 products does). Nissan USA discontinued page states 2025 was the final US production year for ARIYA."
+  },
+  {
+    "vehicle_id": "nissan-ariya-fwd-63kwh-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50226 (2026 Nissan ARIYA FWD 63kWh)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50226",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_range_mi",
+    "value": 216,
+    "notes": "EPA id 50226, model string 'ARIYA FWD 63kWh', year 2026, range 216 mi. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: entry 63 kWh FWD; not 87 kWh / e-4ORCE. US nissanusa.com marks ARIYA discontinued after MY2025 (Engage FWD was 66 kWh in 2025 US pricing); no matching MY2026 US OEM MSRP/pack page was applied. Canadian/UK Ariya pages were not used for US buyer fields."
+  },
+  {
+    "vehicle_id": "nissan-ariya-fwd-63kwh-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50226 (2026 Nissan ARIYA FWD 63kWh)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50226",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 33.2574,
+    "notes": "Wall-side, combined (EPA combE). The label rounds this. EPA id 50226, 'ARIYA FWD 63kWh'."
+  },
+  {
+    "vehicle_id": "nissan-ariya-fwd-63kwh-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50226 (2026 Nissan ARIYA FWD 63kWh)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50226",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 101,
+    "notes": "EPA comb08. EPA id 50226, 'ARIYA FWD 63kWh'."
+  },
+  {
+    "vehicle_id": "nissan-ariya-fwd-63kwh-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50226 (2026 Nissan ARIYA FWD 63kWh)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50226",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.drive_layout",
+    "value": "FWD",
+    "notes": "EPA 'drive' field: 'Front-Wheel Drive'. EPA id 50226, 'ARIYA FWD 63kWh'."
+  },
+  {
+    "vehicle_id": "nissan-ariya-fwd-63kwh-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50226 (2026 Nissan ARIYA FWD 63kWh)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50226",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.epa_motor_description",
+    "value": "160 kW AC 3-phase",
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type. EPA id 50226, 'ARIYA FWD 63kWh'."
+  }
+]

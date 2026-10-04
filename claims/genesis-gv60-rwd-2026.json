@@ -155,5 +155,53 @@
     "access_date": "2026-10-02",
     "confidence": "medium",
     "notes": "KBB lists curb weight 4,515 lbs for 2026 GV60 Standard with RWD. Matches atlas RWD entry trim. Genesis USA page and the 2026 GV60 spec sheet opened in this pass did not expose a curb-weight figure in the readable text."
+  },
+  {
+    "vehicle_id": "genesis-gv60-rwd-2026",
+    "field": "powertrain.power_hp",
+    "value": 225,
+    "tier": "P",
+    "source_name": "Genesis 2026 GV60 US specification sheet PDF (RWD horsepower)",
+    "source_url": "https://s7d1.scene7.com/is/content/hyundai/2026-GV60-Spec-Sheetpdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "RWD: 168 kW / ~225 HP (rear 168 kW). AWD/Advanced/Performance horsepower not applied."
+  },
+  {
+    "vehicle_id": "genesis-gv60-rwd-2026",
+    "field": "powertrain.torque_lbft",
+    "value": 258,
+    "tier": "P",
+    "source_name": "Genesis 2026 GV60 US specification sheet PDF (RWD torque)",
+    "source_url": "https://s7d1.scene7.com/is/content/hyundai/2026-GV60-Spec-Sheetpdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "RWD: 350 Nm / 258 lb.-ft. AWD 446 lb-ft and Performance figures not applied."
+  },
+  {
+    "vehicle_id": "genesis-gv60-rwd-2026",
+    "field": "charging.onboard_ac_kw",
+    "value": 10.9,
+    "tier": "P",
+    "source_name": "Genesis 2026 GV60 US specification sheet PDF (on-board charger max capacity)",
+    "source_url": "https://s7d1.scene7.com/is/content/hyundai/2026-GV60-Spec-Sheetpdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "On-Board Charger (OBC) Max Capacity (kW): 10.9 (shown for Advanced AWD column in the OBC block; sheet presents OBC max capacity as a shared charger figure across models rather than an AWD-only option)."
+  },
+  {
+    "vehicle_id": "genesis-gv60-rwd-2026",
+    "field": "body.width_in",
+    "value": 74.4,
+    "tier": "P",
+    "source_name": "Genesis 2026 GV60 US specification sheet PDF (overall width)",
+    "source_url": "https://s7d1.scene7.com/is/content/hyundai/2026-GV60-Spec-Sheetpdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Exterior dimensions all models: Overall Width 74.4."
   }
 ]

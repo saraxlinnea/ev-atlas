@@ -1,17 +1,19 @@
 # EV Atlas
 
-EV Atlas is a sourced comparison of 26 battery-electric vehicles listed for
-the U.S. market. Each displayed value originates as a claim with a source
-tier, access date, and (for primary and secondary tiers) a URL. Fields
-without a qualifying source are left blank. Blank means not found, not zero.
+EV Atlas is a sourced comparison of battery-electric vehicles by spec market.
+Each displayed value originates as a claim with a source tier, access date,
+and (for primary and secondary tiers) a URL. Fields without a qualifying
+source are left blank. Blank means not found, not zero. Compare defaults to
+the US market; China-market rows are opt-in and sparse at first.
 
 The corpus is mostly model year 2026, with exceptions where that year is
-absent from EPA/NHTSA or OEM listings (Hyundai Ioniq 6 and Polestar 2,
-2025; Rivian R2, Chevrolet Bolt, and BMW iX3 50 xDrive, 2027). Rows
-generally follow the entry-level EPA configuration; claim notes record trim
-and wheel or charger choices.
+absent from EPA/NHTSA or OEM listings (Volkswagen ID. Buzz, Ford F-150
+Lightning Standard Range, Hyundai Ioniq 6, and Polestar 2, 2025; Rivian R2,
+Chevrolet Bolt, and BMW iX3 50 xDrive, 2027). Rows generally follow the
+entry-level EPA configuration; claim notes record trim and wheel or charger
+choices.
 
-This is not a ranking. It is not a complete OEM catalog. Compare and Charts
+This is not a ranking. It is not a complete OEM catalog. Compare and Figures
 read generated tables only; they do not contain hand-typed specifications.
 
 Methods, source tiers, and known limitations:
@@ -32,7 +34,7 @@ scripts/
   flatten.py       claims/*.json -> data/*.csv
   build_site.py    copies chart CSVs/specs into site/ for preview and Pages
 charts/            Vega-Lite specs; read only from data/*.csv
-site/              static pages (index, compare, charts, methodology + CSS);
+site/              static pages (index, compare, figures, methodology + CSS);
                    site/data/ and site/charts/ are generated (gitignored)
 docs/
   METHODOLOGY.md   sourcing rules and known gaps
@@ -40,37 +42,54 @@ AGENTS.md          instructions for AI coding agents
 LICENSE            MIT
 ```
 
-## Status (2026-10-02)
+## Status (2026-10-03)
 
 - Schema, validator, flattener, and static site build succeed on the current
-  claim set (on the order of 480+ claims across 26 vehicles).
-- 25 of 26 vehicles have NHTSA recall campaign-count claims for their model
-  year (API; flat-file cross-check was done for the original 20). BMW iX3
-  MY2027 recallsByVehicle returned HTTP 504 in this pass, so that row has
-  no recall count yet.
-- All 26 have EPA range, efficiency, MPGe, and drive layout from
-  fueleconomy.gov.
-- Makes include Tesla, Lucid, Rivian, Hyundai, Kia, Ford, GM, VW, BMW,
-  Mercedes, Nissan, Genesis, Polestar, Honda, Toyota, and Audi. OEM or
-  newsroom buyer fields exist for most vehicles. BMW i4 remains on the
-  atlas trim eDrive35, which BMW USA no longer lists for 2026. Newest rows:
-  BMW iX3 50 xDrive (MY2027 entry EPA; no iX3 40 EPA row), Toyota bZ FWD
-  (EPA energy capacity 200 Ah / 236 mi), Audi Q4 45 e-tron. All 26 rows
-  now have curb weight (several secondary). Model Y pack kWh is filled
-  from secondary sources that disagree (C/D 80 kWh unstated vs aggregator
-  usable 75). Polestar 2 single-motor MSRP stays blank (US 2025 retail
-  dropped that configuration). Peak DC and 0-60 remain sparse in places.
+  claim set (851 claims across 42 US-market vehicles plus a small
+  China-market stub set with empty claims; 833 winning flattened claims).
+  Compare has a Market filter (US / CN) that defaults to US. EPA Figures
+  exclude non-US rows. CN coverage is opt-in and sparse until CLTC claims
+  are sourced.
+- 41 of 42 US vehicles have NHTSA recall campaign-count claims for their model
+  year (API and/or flat-file). BMW iX3 MY2027 still has no recall count:
+  recallsByVehicle returned HTTP 400 / Count 0 for IX3, iX3, X3, and
+  related strings (unmatched model string, not a confirmed zero); the
+  flat file has no BMW MY2027 rows and no IX3 rows of any year; products
+  for BMW MY2027 lists only X6 XDRIVE40I M SPORT.
+- All 42 US-market rows have EPA range, efficiency, MPGe, and drive layout from
+  fueleconomy.gov. China-market stubs intentionally leave EPA and NHTSA blank.
+- Makes include Tesla, Lucid, Rivian, Hyundai, Kia, Ford, GM (Chevrolet,
+  Cadillac, GMC), VW, BMW, Mercedes, Nissan, Genesis, Polestar, Honda,
+  Toyota, Audi, Subaru, Jeep, Lexus, MINI, Dodge, and Acura. Newest lineage
+  rows: Chevrolet Silverado EV Std Range WT 11 kW (EPA 49642), Cadillac
+  VISTIQ 11 kW (EPA 49636), Hyundai Ioniq 9 S RWD (EPA 49661), plus prior
+  ID. Buzz / OPTIQ / Blazer and densify fills. Intentionally blank on the
+  new trio: Silverado pack kWh and curb; VISTIQ width (mirrors-only);
+  Ioniq 9 onboard AC and 0-60. Remaining blanks are in Methods.
 - Secondary-tier fills appear where primary OEM text was unavailable (notably
   some Tesla pack and dimension fields). Secondary ranks below primary.
-- Sale status: only the 2027 Chevrolet Bolt LT is marked `current`. The
-  other 25 remain `unverified_availability`.
-- Site pages: Home hosts the Compare table (group by make, year column,
-  search and facets, column presets, source tier and URL where present).
-  Compare is the same table standalone. Charts cover EPA efficiency,
-  battery-side vs wall-side, disclosure coverage, and range vs MSRP,
-  pack kWh, and curb weight. Methods documents sourcing. GitHub Pages deploys from `site/` after validate, flatten, and
-  build. Chemistry is an optional column; most cells stay blank until claims
-  exist.
+- Sale status (2026-10-03 confirmation pass): `current` for Bolt LT
+  (chevrolet.com/electric/bolt-ev), Leaf 75 kWh (nissanusa.com Leaf),
+  IONIQ 5 SE RWD Standard Range (hyundaiusa.com/2026-ioniq-5), Prologue
+  Single Motor FWD (automobiles.honda.com/prologue), Mach-E Select RWD
+  standard range (ford.com/.../mach-e/2026/models/select/), EV6 Light
+  RWD / atlas Standard Range RWD (kia.com/.../ev6/specs-compare),
+  Silverado EV Custom / Std Range (chevrolet.com/electric/silverado-ev),
+  and Ioniq 9 S RWD (hyundaiusa.com/.../ioniq-9/s).
+  `discontinued` for Ariya (nissanusa.com/.../discontinued/ariya.html) and
+  ZDX (acura.com/suvs/zdx, "no longer available"). The other US rows remain
+  `unverified_availability` (including Equinox MY2026 while live Chevy
+  pages emphasize 2027, Tesla trims, VISTIQ preceding-year, and iX3 retail
+  readiness).
+- Site pages: Home hosts the Compare table (Market filter defaulting to US,
+  group by make, year column, search and facets, column presets, EPA and
+  CLTC columns, source tier and URL where present). Compare is the same
+  table standalone. Spec headers can be dragged to reorder
+  (session-persisted). Figures cover EPA efficiency, battery-side vs
+  wall-side, disclosure coverage, and range vs MSRP, pack kWh, and curb
+  weight (US-market / EPA only). Methods documents sourcing and CLTC vs EPA.
+  GitHub Pages deploys from `site/` after validate, flatten, and build.
+  Chemistry and voltage stay sparse until claims exist.
 
 ## Running it
 

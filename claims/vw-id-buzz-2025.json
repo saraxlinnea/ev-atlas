@@ -1,0 +1,291 @@
+[
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "field": "recalls.campaign_count",
+    "value": 2,
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (VOLKSWAGEN ID. BUZZ, MY2025)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=volkswagen&model=ID.%20BUZZ&modelYear=2025",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Distinct NHTSA campaigns for MY2025. Matching model string is 'ID. BUZZ' (HTTP 200, Count 2). 'ID BUZZ' and 'BUZZ' returned HTTP 400 / Count 0. Products endpoint lists 'ID.BUZZ'."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "field": "recalls.campaign_25V233",
+    "value": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL: The brake system warning light on the instrument panel display may be the incorrect symbol and color.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (VOLKSWAGEN ID. BUZZ, MY2025)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=volkswagen&model=ID.%20BUZZ&modelYear=2025",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "NHTSA campaign 25V233000. Scope includes certain 2025 ID. Buzz vehicles. Listed for the MY2025 ID. Buzz nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "field": "recalls.campaign_25V269",
+    "value": "SEATS:MID/REAR ASSEMBLY: The third-row rear bench is wide enough for three passengers, but is designed for two passengers and equipped with two seat belts.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (VOLKSWAGEN ID. BUZZ, MY2025)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=volkswagen&model=ID.%20BUZZ&modelYear=2025",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "NHTSA campaign 25V269000. Scope includes certain 2025 ID. BUZZ vehicles. Listed for the MY2025 ID. Buzz nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 48444 (2025 Volkswagen ID. Buzz)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48444",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_range_mi",
+    "value": 234,
+    "notes": "EPA id 48444, model string 'ID. Buzz', year 2025, range 234 mi, Minivan 2WD. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: entry RWD; OEM Pro S RWD tech sheet lists the same 234 mi EPA range. Not 4MOTION (231 mi)."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 48444 (2025 Volkswagen ID. Buzz)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48444",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 40.7703,
+    "notes": "Wall-side, combined (EPA combE). The label rounds this. EPA id 48444, 'ID. Buzz'."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 48444 (2025 Volkswagen ID. Buzz)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48444",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 83,
+    "notes": "EPA comb08. EPA id 48444, 'ID. Buzz'."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 48444 (2025 Volkswagen ID. Buzz)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48444",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.drive_layout",
+    "value": "RWD",
+    "notes": "EPA 'drive' field: 'Rear-Wheel Drive'. EPA id 48444, 'ID. Buzz'."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 48444 (2025 Volkswagen ID. Buzz)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48444",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.epa_motor_description",
+    "value": "210 kW AC 3-Phase",
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type. EPA id 48444, 'ID. Buzz'."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "Volkswagen USA 2025 ID. Buzz Pro S Technical Data PDF",
+    "source_url": "https://www.vw.com/idhub/content/dam/onehub_pkw/importers/us/en/showrooms/id-buzz/2025/tech-specs/ID_Buzz_Pro_S_Technical_Data.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "identity.msrp_usd",
+    "value": 59995,
+    "notes": "MSRP for your build $59,995 for Pro S RWD entry trim. Destination $1,550 excluded. Matches starting MSRP on vw.com ID. Buzz model page."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "Volkswagen USA 2025 ID. Buzz Pro S Technical Data PDF",
+    "source_url": "https://www.vw.com/idhub/content/dam/onehub_pkw/importers/us/en/showrooms/id-buzz/2025/tech-specs/ID_Buzz_Pro_S_Technical_Data.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "battery.pack_kwh",
+    "value": 86,
+    "notes": "Battery Energy Content, net 86 kWh (gross listed separately as 91 kWh). Using net for pack_kwh."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "Volkswagen USA 2025 ID. Buzz Pro S Technical Data PDF",
+    "source_url": "https://www.vw.com/idhub/content/dam/onehub_pkw/importers/us/en/showrooms/id-buzz/2025/tech-specs/ID_Buzz_Pro_S_Technical_Data.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "battery.pack_kwh_basis",
+    "value": "usable",
+    "notes": "OEM labels Battery Energy Content, net 86 kWh (gross 91 kWh)."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "Volkswagen USA 2025 ID. Buzz Pro S Technical Data PDF",
+    "source_url": "https://www.vw.com/idhub/content/dam/onehub_pkw/importers/us/en/showrooms/id-buzz/2025/tech-specs/ID_Buzz_Pro_S_Technical_Data.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "charging.peak_dc_kw",
+    "value": 200,
+    "notes": "DC maximum acceptance rate 200 kW. Model page marketing also states 200 kW DC fast charging / 10-80% in 26 minutes."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "Volkswagen USA 2025 ID. Buzz Pro S Technical Data PDF",
+    "source_url": "https://www.vw.com/idhub/content/dam/onehub_pkw/importers/us/en/showrooms/id-buzz/2025/tech-specs/ID_Buzz_Pro_S_Technical_Data.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "charging.onboard_ac_kw",
+    "value": 11,
+    "notes": "AC onboard charger, maximum acceptance rate 11 kW."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "Volkswagen USA 2025 ID. Buzz model page (NACS adapter language)",
+    "source_url": "https://www.vw.com/en/models/id-buzz.html",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "charging.port_type",
+    "value": "CCS1",
+    "notes": "Page describes charging at a Tesla Supercharger with a NACS DC adapter, implying the vehicle port is CCS1 and NACS is via adapter."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "Volkswagen USA 2025 ID. Buzz Pro S Technical Data PDF",
+    "source_url": "https://www.vw.com/idhub/content/dam/onehub_pkw/importers/us/en/showrooms/id-buzz/2025/tech-specs/ID_Buzz_Pro_S_Technical_Data.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.power_hp",
+    "value": 282,
+    "notes": "Horsepower 282 HP; System Maximum Power 210 kW. Rear permanent magnet synchronous machine / RWD."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "Volkswagen USA 2025 ID. Buzz Pro S Technical Data PDF",
+    "source_url": "https://www.vw.com/idhub/content/dam/onehub_pkw/importers/us/en/showrooms/id-buzz/2025/tech-specs/ID_Buzz_Pro_S_Technical_Data.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.torque_lbft",
+    "value": 413,
+    "notes": "Rear maximum torque 413 lbf-ft."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "Volkswagen USA 2025 ID. Buzz Pro S Technical Data PDF",
+    "source_url": "https://www.vw.com/idhub/content/dam/onehub_pkw/importers/us/en/showrooms/id-buzz/2025/tech-specs/ID_Buzz_Pro_S_Technical_Data.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.accel_0_60_s",
+    "value": 7.4,
+    "notes": "Acceleration (0-60 MPH) 7.4 for Pro S RWD. Marketing page '0 to 60 in 6 seconds with available 4MOTION' is AWD-only and was not applied."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "Volkswagen USA 2025 ID. Buzz Pro S Technical Data PDF",
+    "source_url": "https://www.vw.com/idhub/content/dam/onehub_pkw/importers/us/en/showrooms/id-buzz/2025/tech-specs/ID_Buzz_Pro_S_Technical_Data.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.curb_weight_lb",
+    "value": 5988,
+    "notes": "Curb Weight NHTSA 5,988 lb."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "Volkswagen USA 2025 ID. Buzz Pro S Technical Data PDF",
+    "source_url": "https://www.vw.com/idhub/content/dam/onehub_pkw/importers/us/en/showrooms/id-buzz/2025/tech-specs/ID_Buzz_Pro_S_Technical_Data.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.length_in",
+    "value": 195.4
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "Volkswagen USA 2025 ID. Buzz Pro S Technical Data PDF",
+    "source_url": "https://www.vw.com/idhub/content/dam/onehub_pkw/importers/us/en/showrooms/id-buzz/2025/tech-specs/ID_Buzz_Pro_S_Technical_Data.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.width_in",
+    "value": 78.1,
+    "notes": "Vehicle width excluding mirrors 78.1 in (width with mirrors fully extended 87.0 in not used)."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "Volkswagen USA 2025 ID. Buzz Pro S Technical Data PDF",
+    "source_url": "https://www.vw.com/idhub/content/dam/onehub_pkw/importers/us/en/showrooms/id-buzz/2025/tech-specs/ID_Buzz_Pro_S_Technical_Data.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.height_in",
+    "value": 76.2
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "Volkswagen USA 2025 ID. Buzz Pro S Technical Data PDF",
+    "source_url": "https://www.vw.com/idhub/content/dam/onehub_pkw/importers/us/en/showrooms/id-buzz/2025/tech-specs/ID_Buzz_Pro_S_Technical_Data.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.wheelbase_in",
+    "value": 127.5
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "tier": "P",
+    "source_name": "Volkswagen USA 2025 ID. Buzz Pro S Technical Data PDF",
+    "source_url": "https://www.vw.com/idhub/content/dam/onehub_pkw/importers/us/en/showrooms/id-buzz/2025/tech-specs/ID_Buzz_Pro_S_Technical_Data.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.drag_coefficient",
+    "value": 0.29
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "field": "derived.kwh_per_100mi_battery_side",
+    "value": 36.75,
+    "unit": "kWh/100mi",
+    "tier": "D",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "derivation": {
+      "formula": "battery.pack_kwh / efficiency.epa_range_mi * 100",
+      "inputs": [
+        "battery.pack_kwh",
+        "battery.pack_kwh_basis",
+        "efficiency.epa_range_mi"
+      ],
+      "assumptions": [
+        "Uses OEM net/usable pack_kwh (86 kWh) and EPA range 234 mi; not the same as wall-side efficiency.epa_kwh_per_100mi."
+      ]
+    }
+  }
+]

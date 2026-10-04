@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Battery-side vs wall-side energy use",
-    "subtitle": "7 vehicles with sourced inputs (pack kWh with stated basis plus EPA range). Battery-side = pack_kwh / EPA range; wall-side EPA kWh/100mi includes charging losses.",
+    "text": "From pack vs from wall",
+    "subtitle": "US-market rows with sourced pack kWh (gross or usable) and EPA range. Pack extends left, wall right; axis is kWh/100 mi magnitude from center. Sorted by wall-side. Wall is usually higher (charging losses plus pack/range assumptions). Non-US rows omitted.",
     "fontSize": 16,
     "subtitleFontSize": 11,
     "subtitleColor": "#666"
@@ -10,7 +10,7 @@
   "data": { "url": "../data/flattened.csv" },
   "transform": [
     {
-      "filter": "isValid(datum['derived.kwh_per_100mi_battery_side']) && isValid(datum['efficiency.epa_kwh_per_100mi']) && datum['derived.kwh_per_100mi_battery_side'] !== '' && datum['efficiency.epa_kwh_per_100mi'] !== ''"
+      "filter": "(datum.region === 'US' || datum.region === '' || datum.region === null) && isValid(datum['derived.kwh_per_100mi_battery_side']) && isValid(datum['efficiency.epa_kwh_per_100mi']) && datum['derived.kwh_per_100mi_battery_side'] !== '' && datum['efficiency.epa_kwh_per_100mi'] !== ''"
     },
     {
       "calculate": "datum.make + ' ' + datum.model",
@@ -33,67 +33,155 @@
       "as": "pack_basis"
     },
     {
-      "fold": ["battery_side_kwh", "wall_side_kwh"],
-      "as": ["metric_key", "kwh_per_100mi"]
+      "calculate": "datum.wall_side_kwh - datum.battery_side_kwh",
+      "as": "gap_kwh"
     },
     {
-      "calculate": "datum.metric_key === 'battery_side_kwh' ? 'Battery-side (pack / EPA range)' : 'Wall-side (EPA label)'",
+      "calculate": "max(datum.battery_side_kwh, datum.wall_side_kwh)",
+      "as": "row_extent"
+    },
+    {
+      "joinaggregate": [
+        { "op": "max", "field": "row_extent", "as": "axis_max" }
+      ]
+    },
+    {
+      "calculate": "-datum.battery_side_kwh",
+      "as": "pack_signed"
+    },
+    {
+      "fold": ["pack_signed", "wall_side_kwh"],
+      "as": ["metric_key", "signed_kwh"]
+    },
+    {
+      "calculate": "datum.metric_key === 'pack_signed' ? 'From pack (derived)' : 'From wall (EPA label)'",
       "as": "metric"
+    },
+    {
+      "calculate": "abs(datum.signed_kwh)",
+      "as": "kwh_per_100mi"
     }
   ],
   "width": 640,
-  "height": 320,
-  "mark": { "type": "bar" },
-  "encoding": {
-    "y": {
-      "field": "label",
-      "type": "nominal",
-      "title": null,
-      "sort": "-x"
-    },
-    "x": {
-      "field": "kwh_per_100mi",
-      "type": "quantitative",
-      "title": "kWh per 100 mi",
-      "scale": { "zero": true }
-    },
-    "color": {
-      "field": "metric",
-      "type": "nominal",
-      "title": "Basis",
-      "scale": {
-        "domain": [
-          "Battery-side (pack / EPA range)",
-          "Wall-side (EPA label)"
-        ],
-        "range": ["#2a6f97", "#e76f51"]
+  "height": { "step": 28 },
+  "layer": [
+    {
+      "mark": { "type": "bar", "size": 16 },
+      "encoding": {
+        "y": {
+          "field": "label",
+          "type": "nominal",
+          "title": null,
+          "sort": {
+            "op": "max",
+            "field": "wall_side_kwh",
+            "order": "descending"
+          },
+          "axis": { "labelLimit": 160 }
+        },
+        "x": {
+          "field": "signed_kwh",
+          "type": "quantitative",
+          "title": "kWh per 100 mi",
+          "axis": {
+            "labelExpr": "format(abs(datum.value), '.0f')"
+          }
+        },
+        "color": {
+          "field": "metric",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "From pack (derived)",
+              "From wall (EPA label)"
+            ],
+            "range": ["#2a6f97", "#e76f51"]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "title": null
+          }
+        },
+        "tooltip": [
+          { "field": "label", "title": "Vehicle" },
+          { "field": "trim", "title": "Trim" },
+          { "field": "model_year", "title": "Model year" },
+          { "field": "metric", "title": "Basis" },
+          {
+            "field": "kwh_per_100mi",
+            "title": "kWh/100mi",
+            "type": "quantitative",
+            "format": ".2f"
+          },
+          {
+            "field": "battery_side_kwh",
+            "title": "From pack",
+            "type": "quantitative",
+            "format": ".2f"
+          },
+          {
+            "field": "wall_side_kwh",
+            "title": "From wall",
+            "type": "quantitative",
+            "format": ".2f"
+          },
+          {
+            "field": "gap_kwh",
+            "title": "Gap (wall - pack)",
+            "type": "quantitative",
+            "format": ".2f"
+          },
+          {
+            "field": "pack_kwh",
+            "title": "Pack kWh",
+            "type": "quantitative"
+          },
+          {
+            "field": "pack_basis",
+            "title": "Pack basis"
+          }
+        ]
       }
     },
-    "xOffset": { "field": "metric" },
-    "tooltip": [
-      { "field": "label", "title": "Vehicle" },
-      { "field": "trim", "title": "Trim" },
-      { "field": "model_year", "title": "Model year" },
-      { "field": "metric", "title": "Metric" },
-      {
-        "field": "kwh_per_100mi",
-        "title": "kWh/100mi",
-        "type": "quantitative",
-        "format": ".2f"
-      },
-      {
-        "field": "pack_kwh",
-        "title": "Pack kWh (flattened)",
-        "type": "quantitative"
-      },
-      {
-        "field": "pack_basis",
-        "title": "Pack basis"
+    {
+      "transform": [
+        {
+          "aggregate": [
+            { "op": "max", "field": "axis_max", "as": "lim" }
+          ]
+        },
+        {
+          "calculate": "-datum.lim",
+          "as": "x0"
+        },
+        {
+          "calculate": "datum.lim",
+          "as": "x1"
+        }
+      ],
+      "mark": { "type": "rule", "opacity": 0 },
+      "encoding": {
+        "x": { "field": "x0", "type": "quantitative" },
+        "x2": { "field": "x1" }
       }
-    ]
-  },
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#0a0a0a",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": { "datum": 0 }
+      }
+    }
+  ],
   "config": {
     "view": { "stroke": null },
-    "axis": { "labelFontSize": 11, "titleFontSize": 12 }
+    "axis": { "labelFontSize": 11, "titleFontSize": 12 },
+    "legend": { "labelFontSize": 11 },
+    "bar": { "binSpacing": 0 }
   }
 }

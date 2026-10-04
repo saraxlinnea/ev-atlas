@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Figures | EV Atlas</title>
+  <meta name="description" content="EPA efficiency, range relationships, and disclosure coverage from sourced claims. Figures read generated CSV only.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div class="page page-wide">
+    <nav aria-label="Site">
+      <a class="nav-brand" href="index.html">EV Atlas</a>
+      <ul class="site-nav">
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="figures.html" aria-current="page">Figures</a></li>
+        <li><a href="methodology.html">Methods</a></li>
+      </ul>
+    </nav>
+
+    <header class="hero hero-thin">
+      <h1>Figures</h1>
+      <p class="lede">
+        Plots read generated CSV only. Vehicles missing a plotted field are
+        omitted; blanks are not zero. Side-by-side table:
+        <a href="compare.html">Compare</a>.
+      </p>
+      <nav aria-label="Figure index">
+        <ul class="figure-toc">
+          <li><a href="#efficiency">Efficiency</a></li>
+          <li><a href="#range">Range</a></li>
+          <li><a href="#coverage">Coverage</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="figure-group" id="efficiency">
+      <p class="figure-group-title">Efficiency</p>
+
+      <section class="chart-section" aria-labelledby="epa-heading">
+        <h2 id="epa-heading"><span class="figure-num">Figure 1</span>: EPA efficiency</h2>
+        <p class="chart-note">
+          EPA range versus wall-side kWh/100 mi for US-market rows only.
+          Wall-side includes charging losses. Non-US rows and vehicles without
+          EPA values are omitted; CLTC is not converted to EPA.
+        </p>
+        <div id="vis-epa" class="chart-vis" role="img" aria-label="Scatter of EPA range versus wall-side kWh per 100 miles"></div>
+        <p id="chart-error-epa" class="error" hidden></p>
+      </section>
+
+      <section class="chart-section" aria-labelledby="battery-side-heading">
+        <h2 id="battery-side-heading"><span class="figure-num">Figure 2</span>: Battery-side vs wall-side</h2>
+        <p class="chart-note">
+          Diverging bars from center zero: left is from pack (pack energy
+          divided by EPA range), right is from wall (EPA label kWh/100 mi).
+          Axis labels are magnitude. Wall is usually higher because of charging
+          losses and pack/range assumptions. US-market rows with a sourced pack
+          kWh (gross or usable) and EPA range only; non-US rows omitted.
+        </p>
+        <details class="figure-filter" id="battery-side-filter">
+          <summary>
+            <span class="figure-filter-label">Vehicles</span>
+            <span class="figure-filter-summary" id="battery-side-filter-summary">All</span>
+          </summary>
+          <div class="figure-filter-panel">
+            <div class="figure-filter-actions">
+              <button type="button" id="battery-side-filter-all">All</button>
+              <button type="button" id="battery-side-filter-none">None</button>
+            </div>
+            <div class="figure-filter-options" id="battery-side-filter-options"></div>
+          </div>
+        </details>
+        <p id="battery-side-filter-empty" class="chart-note" hidden>
+          Select at least one vehicle.
+        </p>
+        <div id="vis-battery-side" class="chart-vis" role="img" aria-label="Diverging bars comparing pack-derived and wall-side EPA kWh per 100 miles"></div>
+        <p id="chart-error-battery-side" class="error" hidden></p>
+      </section>
+    </div>
+
+    <div class="figure-group" id="range">
+      <p class="figure-group-title">Range relationships</p>
+
+      <section class="chart-section" aria-labelledby="range-msrp-heading">
+        <h2 id="range-msrp-heading"><span class="figure-num">Figure 3</span>: EPA range vs MSRP</h2>
+        <p class="chart-note">
+          EPA range versus sourced USD MSRP for US-market rows. Vehicles missing
+          either value or non-US rows are omitted; blanks are not plotted as
+          zero. No CNY→USD conversion.
+        </p>
+        <div id="vis-range-msrp" class="chart-vis" role="img" aria-label="Scatter of EPA range versus MSRP"></div>
+        <p id="chart-error-range-msrp" class="error" hidden></p>
+      </section>
+
+      <section class="chart-section" aria-labelledby="range-pack-heading">
+        <h2 id="range-pack-heading"><span class="figure-num">Figure 4</span>: EPA range vs pack energy</h2>
+        <p class="chart-note">
+          EPA range versus pack kWh for US-market rows. Pack basis may be gross,
+          usable, or unstated. Vehicles missing either value or non-US rows are
+          omitted.
+        </p>
+        <div id="vis-range-pack" class="chart-vis" role="img" aria-label="Scatter of EPA range versus pack energy, colored by drive layout"></div>
+        <p id="chart-error-range-pack" class="error" hidden></p>
+      </section>
+
+      <section class="chart-section" aria-labelledby="weight-eff-heading">
+        <h2 id="weight-eff-heading"><span class="figure-num">Figure 5</span>: Curb weight vs wall-side efficiency</h2>
+        <p class="chart-note">
+          Curb weight versus EPA wall-side kWh/100 mi for US-market rows.
+          Wall-side includes charging losses. Vehicles missing either value or
+          non-US rows are omitted.
+        </p>
+        <div id="vis-weight-eff" class="chart-vis" role="img" aria-label="Scatter of curb weight versus wall-side EPA kWh per 100 miles"></div>
+        <p id="chart-error-weight-eff" class="error" hidden></p>
+      </section>
+    </div>
+
+    <div class="figure-group" id="coverage">
+      <p class="figure-group-title">Coverage</p>
+
+      <section class="chart-section" aria-labelledby="disclosure-heading">
+        <h2 id="disclosure-heading"><span class="figure-num">Figure 6</span>: Disclosure coverage</h2>
+        <p class="chart-note">
+          Fields with a sourced claim, by vehicle. Gaps indicate no claim
+          found, not a value of zero.
+        </p>
+        <div id="vis" class="chart-vis" role="img" aria-label="Disclosure heatmap of source tiers by vehicle and field"></div>
+        <p id="chart-error" class="error" hidden></p>
+      </section>
+    </div>
+
+    <footer>
+      <p>
+        Specs in <code>charts/</code>. Rebuild with
+        <code>python scripts/build_site.py</code>.
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    function chartFail(id, err) {
+      var el = document.getElementById(id);
+      el.hidden = false;
+      el.textContent =
+        "Figure failed to load. Run python scripts/build_site.py so site/charts and site/data exist, then refresh. (" +
+        err.message +
+        ")";
+    }
+
+    var embedOpts = {
+      actions: { export: true, source: false, compiled: false, editor: false },
+      renderer: "svg"
+    };
+
+    var FIG2_FILTER_KEY = "ev-atlas-fig2-vehicles";
+
+    function isQualifyingFig2Row(row) {
+      var region = row.region;
+      if (region !== undefined && region !== null && String(region).trim() !== "" && String(region) !== "US") {
+        return false;
+      }
+      var packSide = row["derived.kwh_per_100mi_battery_side"];
+      var wallSide = row["efficiency.epa_kwh_per_100mi"];
+      return (
+        packSide !== undefined &&
+        packSide !== null &&
+        String(packSide).trim() !== "" &&
+        wallSide !== undefined &&
+        wallSide !== null &&
+        String(wallSide).trim() !== ""
+      );
+    }
+
+    function loadFig2Selection(allIds) {
+      try {
+        var raw = sessionStorage.getItem(FIG2_FILTER_KEY);
+        if (raw === null) {
+          return allIds.slice();
+        }
+        var saved = JSON.parse(raw);
+        if (!Array.isArray(saved)) {
+          return allIds.slice();
+        }
+        var allowed = {};
+        allIds.forEach(function (id) {
+          allowed[id] = true;
+        });
+        var picked = saved.filter(function (id) {
+          return allowed[id];
+        });
+        if (saved.length > 0 && picked.length === 0) {
+          return allIds.slice();
+        }
+        return picked;
+      } catch (err) {
+        return allIds.slice();
+      }
+    }
+
+    function saveFig2Selection(ids) {
+      try {
+        sessionStorage.setItem(FIG2_FILTER_KEY, JSON.stringify(ids));
+      } catch (err) {
+        /* ignore quota / private mode */
+      }
+    }
+
+    function updateFig2FilterSummary(selectedCount, totalCount) {
+      var summary = document.getElementById("battery-side-filter-summary");
+      if (!summary) {
+        return;
+      }
+      if (selectedCount === totalCount) {
+        summary.textContent = "All (" + totalCount + ")";
+      } else if (selectedCount === 0) {
+        summary.textContent = "None";
+      } else {
+        summary.textContent = selectedCount + " of " + totalCount;
+      }
+    }
+
+    function renderFig2(spec, rows) {
+      var view = document.getElementById("vis-battery-side");
+      var emptyNote = document.getElementById("battery-side-filter-empty");
+      if (!rows.length) {
+        view.innerHTML = "";
+        view.hidden = true;
+        emptyNote.hidden = false;
+        return Promise.resolve();
+      }
+      emptyNote.hidden = true;
+      view.hidden = false;
+      var next = JSON.parse(JSON.stringify(spec));
+      next.data = { values: rows };
+      if (next.title && typeof next.title === "object") {
+        next.title.subtitle =
+          rows.length +
+          " vehicle" +
+          (rows.length === 1 ? "" : "s") +
+          " with sourced pack kWh (gross or usable) and EPA range. Pack extends left, wall right; axis is kWh/100 mi magnitude from center. Sorted by wall-side. Wall is usually higher (charging losses plus pack/range assumptions).";
+      }
+      return vegaEmbed("#vis-battery-side", next, embedOpts);
+    }
+
+    function initFig2() {
+      var optionsEl = document.getElementById("battery-side-filter-options");
+      var allBtn = document.getElementById("battery-side-filter-all");
+      var noneBtn = document.getElementById("battery-side-filter-none");
+
+      return Promise.all([
+        fetch("charts/battery_side_efficiency.vl.json").then(function (res) {
+          if (!res.ok) {
+            throw new Error("HTTP " + res.status + " loading figure 2 spec");
+          }
+          return res.json();
+        }),
+        vega
+          .loader()
+          .load("data/flattened.csv")
+          .then(function (text) {
+            return vega.read(text, { type: "csv", parse: "auto" });
+          })
+      ]).then(function (parts) {
+        var spec = parts[0];
+        var allRows = parts[1].filter(isQualifyingFig2Row);
+        allRows.sort(function (a, b) {
+          return (
+            Number(b["efficiency.epa_kwh_per_100mi"]) -
+            Number(a["efficiency.epa_kwh_per_100mi"])
+          );
+        });
+
+        var allIds = allRows.map(function (row) {
+          return row.vehicle_id;
+        });
+        var selected = loadFig2Selection(allIds);
+        var selectedSet = {};
+        selected.forEach(function (id) {
+          selectedSet[id] = true;
+        });
+
+        optionsEl.innerHTML = "";
+        allRows.forEach(function (row) {
+          var id = row.vehicle_id;
+          var label = row.make + " " + row.model;
+          var wrap = document.createElement("label");
+          wrap.className = "figure-filter-check";
+          var input = document.createElement("input");
+          input.type = "checkbox";
+          input.value = id;
+          input.checked = !!selectedSet[id];
+          var text = document.createElement("span");
+          text.textContent = label;
+          wrap.appendChild(input);
+          wrap.appendChild(text);
+          optionsEl.appendChild(wrap);
+        });
+
+        function currentSelection() {
+          var ids = [];
+          optionsEl.querySelectorAll("input[type='checkbox']").forEach(function (input) {
+            if (input.checked) {
+              ids.push(input.value);
+            }
+          });
+          return ids;
+        }
+
+        function applyFilter() {
+          var ids = currentSelection();
+          saveFig2Selection(ids);
+          updateFig2FilterSummary(ids.length, allIds.length);
+          var allow = {};
+          ids.forEach(function (id) {
+            allow[id] = true;
+          });
+          var rows = allRows.filter(function (row) {
+            return allow[row.vehicle_id];
+          });
+          return renderFig2(spec, rows).catch(function (err) {
+            chartFail("chart-error-battery-side", err);
+          });
+        }
+
+        optionsEl.addEventListener("change", function () {
+          applyFilter();
+        });
+        allBtn.addEventListener("click", function () {
+          optionsEl.querySelectorAll("input[type='checkbox']").forEach(function (input) {
+            input.checked = true;
+          });
+          applyFilter();
+        });
+        noneBtn.addEventListener("click", function () {
+          optionsEl.querySelectorAll("input[type='checkbox']").forEach(function (input) {
+            input.checked = false;
+          });
+          applyFilter();
+        });
+
+        return applyFilter();
+      });
+    }
+
+    vegaEmbed("#vis-epa", "charts/epa_efficiency.vl.json", embedOpts).catch(function (err) {
+      chartFail("chart-error-epa", err);
+    });
+
+    initFig2().catch(function (err) {
+      chartFail("chart-error-battery-side", err);
+    });
+
+    vegaEmbed("#vis-range-msrp", "charts/range_vs_msrp.vl.json", embedOpts).catch(function (err) {
+      chartFail("chart-error-range-msrp", err);
+    });
+
+    vegaEmbed("#vis-range-pack", "charts/range_vs_pack.vl.json", embedOpts).catch(function (err) {
+      chartFail("chart-error-range-pack", err);
+    });
+
+    vegaEmbed("#vis-weight-eff", "charts/weight_vs_efficiency.vl.json", embedOpts).catch(function (err) {
+      chartFail("chart-error-weight-eff", err);
+    });
+
+    vegaEmbed("#vis", "charts/disclosure_heatmap.vl.json", embedOpts).catch(function (err) {
+      chartFail("chart-error", err);
+    });
+  </script>
+</body>
+</html>

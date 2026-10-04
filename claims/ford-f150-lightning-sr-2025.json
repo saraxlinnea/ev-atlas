@@ -1,0 +1,244 @@
+[
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "field": "recalls.campaign_count",
+    "value": 3,
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (FORD F-150 LIGHTNING BEV, MY2025)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=F-150%20LIGHTNING%20BEV&modelYear=2025",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Distinct NHTSA campaigns for MY2025. Matching model string is 'F-150 LIGHTNING BEV' (HTTP 200, Count 3). Bare 'F-150 LIGHTNING' and 'LIGHTNING' returned HTTP 400 / Count 0. Do not use make=ford&model=F-150 for this row: that query returns ICE F-150 campaigns that are not Lightning-specific. Flat file also lists the same three MY2025 F-150 LIGHTNING BEV campaigns. Products endpoint lists 'F-150 (SUPER CREW) LIGHTNING BEV'."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "field": "recalls.campaign_25V341",
+    "value": "SUSPENSION:FRONT:CONTROL ARM:UPPER BALL JOINT: The front upper control arm ball joint nut may not have been tightened properly, allowing the front upper control arm to detach from the knuckle assembly.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (FORD F-150 LIGHTNING BEV, MY2025)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=F-150%20LIGHTNING%20BEV&modelYear=2025",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "NHTSA campaign 25V341000. Scope includes certain 2024-2025 F-150 Lightning BEV vehicles. Listed for the MY2025 Lightning nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "field": "recalls.campaign_25V438",
+    "value": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:HOSES, LINES/PIPING, AND FITTINGS: The front brake jounce hose bracket screws may loosen and detach, which can allow the jounce hose to contact the tire and result in a brake fluid leak.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (FORD F-150 LIGHTNING BEV, MY2025)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=F-150%20LIGHTNING%20BEV&modelYear=2025",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "NHTSA campaign 25V438000. Scope includes certain 2025 F-150 Lightning BEV vehicles. Listed for the MY2025 Lightning nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "field": "recalls.campaign_25V863",
+    "value": "POWER TRAIN:AUTOMATIC TRANSMISSION:INTERNAL:PARK PAWL: The integrated park module may fail to lock into the park position when the driver shifts into park.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (FORD F-150 LIGHTNING BEV, MY2025)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=F-150%20LIGHTNING%20BEV&modelYear=2025",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "NHTSA campaign 25V863000. Scope includes certain 2022-2026 F-150 Lightning BEV (and other Ford EVs). Listed for the MY2025 Lightning nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 48707 (2025 Ford F-150 Lightning 4WD SR)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48707",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_range_mi",
+    "value": 240,
+    "notes": "EPA id 48707, model string 'F-150 Lightning 4WD SR', year 2025, range 240 mi. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: entry Standard Range; not ER1/ER2/Platinum. No MY2026 Lightning EPA row was used; Ford.com states the current Lightning form is no longer available to order."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 48707 (2025 Ford F-150 Lightning 4WD SR)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48707",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 49.3643,
+    "notes": "Wall-side, combined (EPA combE). The label rounds this. EPA id 48707, 'F-150 Lightning 4WD SR'."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 48707 (2025 Ford F-150 Lightning 4WD SR)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48707",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 68,
+    "notes": "EPA comb08. EPA id 48707, 'F-150 Lightning 4WD SR'."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 48707 (2025 Ford F-150 Lightning 4WD SR)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48707",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.drive_layout",
+    "value": "AWD",
+    "notes": "EPA 'drive' field: 'All-Wheel Drive'. Mapped to AWD. EPA id 48707, 'F-150 Lightning 4WD SR'."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 48707 (2025 Ford F-150 Lightning 4WD SR)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/48707",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.epa_motor_description",
+    "value": "358 and 358 kW AC PMSM",
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type. EPA id 48707, 'F-150 Lightning 4WD SR'."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "field": "battery.pack_kwh",
+    "value": 98,
+    "tier": "P",
+    "source_name": "Ford support FAQ: F-150 Lightning usable battery capacity",
+    "source_url": "https://www.ford.com/support/how-tos/electric-vehicles/f-150-lightning/f-150-lightning-product-frequently-asked-questions/",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "FAQ: 98 kWh standard-range battery (and separate 123 / 131 kWh extended-range options). Matches 2025 F-150 Lightning order guide Dual eMotor Standard Battery 98 kWh usable on XLT. Not ER packs."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "field": "battery.pack_kwh_basis",
+    "value": "usable",
+    "tier": "P",
+    "source_name": "Ford support FAQ: F-150 Lightning usable battery capacity",
+    "source_url": "https://www.ford.com/support/how-tos/electric-vehicles/f-150-lightning/f-150-lightning-product-frequently-asked-questions/",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "FAQ and 2025 order guide both label the 98 kWh Standard Range figure as usable capacity."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "field": "charging.port_type",
+    "value": "CCS1",
+    "tier": "P",
+    "source_name": "2025 Ford F-150 Lightning Order Guide (SAE J1772 CCS charge port)",
+    "source_url": "https://www.fromtheroad.ford.com/content/dam/fordmediasite/us/en/library/2025/order-guides/2025_F-150_Lightning_Order_Guide.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Order guide standard equipment: SAE J1772 CCS (Combo Connector System) charge port. Fast Charging Adapter (NACS) is listed as included on several series; vehicle port remains CCS."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "field": "charging.nacs_adapter_included",
+    "value": true,
+    "tier": "P",
+    "source_name": "2025 Ford F-150 Lightning Order Guide (NACS Fast Charging Adapter included)",
+    "source_url": "https://www.fromtheroad.ford.com/content/dam/fordmediasite/us/en/library/2025/order-guides/2025_F-150_Lightning_Order_Guide.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Order guide notes Fast Charging Adapter (NACS) included (option code 66A) across compared series pages reviewed for MY2025."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "field": "charging.onboard_ac_kw",
+    "value": 11.2,
+    "tier": "P",
+    "source_name": "2025 Ford F-150 Lightning Order Guide (Level 2 peak charging rate, standard battery)",
+    "source_url": "https://www.fromtheroad.ford.com/content/dam/fordmediasite/us/en/library/2025/order-guides/2025_F-150_Lightning_Order_Guide.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "medium",
+    "notes": "Pro series standard equipment lists single onboard charging with Level 2 peak charging rate of 11.2 kW alongside the Standard Range battery configuration. Extended-range rows list 11.5 kW or 19.2 kW; those were not applied to this SR row. Peak DC kW left blank: charging FAQ cites a Level 3 150+ kW station for 15-80% times, not a vehicle peak. MSRP and SR 0-60 left blank (live Ford Lightning pages no longer show retail MSRP; FAQ 0-60 figures are for extended-range packs only)."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "field": "derived.kwh_per_100mi_battery_side",
+    "value": 40.83,
+    "unit": "kWh/100mi",
+    "tier": "D",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "derivation": {
+      "formula": "battery.pack_kwh / efficiency.epa_range_mi * 100",
+      "inputs": [
+        "battery.pack_kwh",
+        "battery.pack_kwh_basis",
+        "efficiency.epa_range_mi"
+      ],
+      "assumptions": [
+        "Uses OEM usable pack_kwh (98 kWh) and EPA range 240 mi; not the same as wall-side efficiency.epa_kwh_per_100mi."
+      ]
+    }
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "field": "powertrain.power_hp",
+    "value": 452,
+    "tier": "P",
+    "source_name": "2025 Ford F-150 Lightning Order Guide: Dual eMotor Standard Range horsepower",
+    "source_url": "https://www.fromtheroad.ford.com/content/dam/fordmediasite/us/en/library/2025/order-guides/2025_F-150_Lightning_Order_Guide.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Order guide engine ratings table: 4x4 98 kWh Usable Capacity Standard Range Battery, Single-Speed, 452 hp (preliminary). Not the 580 hp Extended Range rows."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "field": "powertrain.torque_lbft",
+    "value": 775,
+    "tier": "P",
+    "source_name": "2025 Ford F-150 Lightning Order Guide: Dual eMotor Standard Range torque",
+    "source_url": "https://www.fromtheroad.ford.com/content/dam/fordmediasite/us/en/library/2025/order-guides/2025_F-150_Lightning_Order_Guide.pdf",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Order guide engine ratings table: Standard Range 98 kWh usable, 775 lb-ft (preliminary). Same torque listed for Extended Range rows; horsepower differs."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "field": "powertrain.motor_count",
+    "value": 2,
+    "tier": "P",
+    "source_name": "Ford support FAQ: F-150 Lightning dual electric motors",
+    "source_url": "https://www.ford.com/support/how-tos/electric-vehicles/f-150-lightning/f-150-lightning-product-frequently-asked-questions/",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "FAQ: the F-150 Lightning features dual electric motors. Matches Dual eMotor language on the 2025 order guide for Standard Range."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "field": "body.curb_weight_lb",
+    "value": 6015,
+    "tier": "S",
+    "source_name": "Green Cars Compare PDF: Ford F-150 Lightning Standard Range (USA) curb weight",
+    "source_url": "https://greencarscompare.com/assets/pdf/specs/us/250962.pdf",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Aggregator PDF updated 2026-09-27 lists curb weight 6,015 lb for F-150 Lightning Standard Range with EPA range 240 mi and usable pack 98 kWh, matching this SR atlas row. Not an Extended Range curb figure. Ford 2025 order guide used for powertrain does not publish curb weight."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "field": "body.width_in",
+    "value": 80.0,
+    "tier": "S",
+    "source_name": "Green Cars Compare PDF: Ford F-150 Lightning Standard Range (USA) width without mirrors",
+    "source_url": "https://greencarscompare.com/assets/pdf/specs/us/250962.pdf",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Width without mirrors 80 in (with mirrors 96 in). Same SR PDF as curb weight. Not ICE F-150 dimensions."
+  }
+]

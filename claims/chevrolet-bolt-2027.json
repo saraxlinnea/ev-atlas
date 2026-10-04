@@ -224,5 +224,27 @@
     "disclosed_by_oem": true,
     "confidence": "high",
     "notes": "LT entry trim; newsroom specs table is for the 2027 Bolt (EPA does not split LT/RS)."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-2027",
+    "field": "powertrain.accel_0_60_s",
+    "value": 6.7,
+    "tier": "S",
+    "source_name": "Car and Driver instrumented test: 2027 Chevrolet Bolt RS 0-60",
+    "source_url": "https://www.caranddriver.com/chevrolet/bolt",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "C/D: 6.7 sec to 60 mph for a 2027 Bolt RS with the shared 210-hp front motor. Atlas trim is LT; Chevrolet newsroom specs checked here do not state 0-60. Same single-motor FWD powertrain rating across LT/RS per newsroom and C/D."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-2027",
+    "field": "powertrain.torque_lbft",
+    "value": 169,
+    "tier": "P",
+    "source_name": "Chevrolet newsroom, 2025-10-09: 2027 Chevrolet Bolt torque",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2025/oct/1009-2027-Chevrolet-Bolt.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Final specs table: Torque 169 lb-ft for single permanent-magnetic drive motor."
   }
 ]

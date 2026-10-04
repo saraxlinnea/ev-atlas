@@ -1,0 +1,293 @@
+[
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49636 (2026 Cadillac VISTIQ (11 kW Charger))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49636",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_range_mi",
+    "value": 305,
+    "notes": "EPA id 49636, model string 'VISTIQ (11 kW Charger)', year 2026, range 305 mi. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: base VISTIQ with 11 kW charger (OEM standard 11.5 kW OCM); not the 19 kW / 300 mi EPA row. Not a V-Series sibling."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49636 (2026 Cadillac VISTIQ (11 kW Charger))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49636",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 39.3469,
+    "notes": "Wall-side, combined (EPA combE). The label rounds this. EPA id 49636, 'VISTIQ (11 kW Charger)'."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49636 (2026 Cadillac VISTIQ (11 kW Charger))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49636",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 86,
+    "notes": "EPA comb08. EPA id 49636, 'VISTIQ (11 kW Charger)'."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49636 (2026 Cadillac VISTIQ (11 kW Charger))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49636",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.drive_layout",
+    "value": "AWD",
+    "notes": "EPA 'drive' field: 'All-Wheel Drive'. EPA id 49636. OEM preceding-year page also describes dual motor AWD."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49636 (2026 Cadillac VISTIQ (11 kW Charger))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49636",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.epa_motor_description",
+    "value": "155 and 220 kW AC Induction",
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type. EPA id 49636."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "field": "recalls.campaign_count",
+    "value": 4,
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CADILLAC VISTIQ, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CADILLAC&model=VISTIQ&modelYear=2026",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Distinct NHTSA campaigns returned for MY2026 (make/model/year query; not filtered by trim). Bare model VISTIQ matched."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "field": "recalls.campaign_25V483",
+    "value": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY: The bolts attaching the high voltage battery to the interior floor may be missing or loose.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CADILLAC VISTIQ, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CADILLAC&model=VISTIQ&modelYear=2026",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "NHTSA campaign 25V483000. Scope includes certain 2026 Cadillac VISTIQ vehicles (and 2025 LYRIQ). Not trim-filtered."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "field": "recalls.campaign_25V819",
+    "value": "EQUIPMENT:OTHER:OWNERS/SERVICE/OTHER MANUAL: The radio may not have been set to the correct status to download the electronic owner's manual during production.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CADILLAC VISTIQ, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CADILLAC&model=VISTIQ&modelYear=2026",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "NHTSA campaign 25V819000. Scope includes certain 2026 Cadillac Vistiq electric vehicles. Not trim-filtered."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "field": "recalls.campaign_26V114",
+    "value": "EQUIPMENT:OTHER:OWNERS/SERVICE/OTHER MANUAL: The radio may not have been set to the correct status to download the electronic owner's manual during production.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CADILLAC VISTIQ, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CADILLAC&model=VISTIQ&modelYear=2026",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "NHTSA campaign 26V114000. Broad GM campaign that includes VISTIQ among many models. Not trim-filtered."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "field": "recalls.campaign_26V394",
+    "value": "SEATS:MID/REAR ASSEMBLY:POWER ADJUST: When the power fold feature is activated, the third-row power seatback may fail to reverse when encountering a person.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CADILLAC VISTIQ, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CADILLAC&model=VISTIQ&modelYear=2026",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "NHTSA campaign 26V394000. Scope includes certain 2026-2027 Cadillac Vistiq vehicles. Not trim-filtered."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 VISTIQ preceding-year page",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/vistiq",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "identity.msrp_usd",
+    "value": 77395,
+    "notes": "FROM: $77,395 for 2026 VISTIQ entry (Luxury). Matches EPA 305 mi / 11 kW charger mapping on the same preceding-year page."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 VISTIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/vistiq/specs",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "battery.pack_kwh",
+    "value": 102,
+    "notes": "Specs: battery capacity of 102 kWh Battery Rated Energy. Same pack language as LYRIQ; not a V-Series-only figure."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 VISTIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/vistiq/specs",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "battery.pack_kwh_basis",
+    "value": "usable",
+    "notes": "OEM wording is 'Battery Rated Energy', treated as usable rather than unstated gross (same atlas treatment as LYRIQ 'rated energy capacity')."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "field": "derived.kwh_per_100mi_battery_side",
+    "value": 33.44,
+    "unit": "kWh/100mi",
+    "tier": "D",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "derivation": {
+      "formula": "battery.pack_kwh / efficiency.epa_range_mi * 100",
+      "inputs": [
+        "battery.pack_kwh",
+        "battery.pack_kwh_basis",
+        "efficiency.epa_range_mi"
+      ],
+      "assumptions": [
+        "Uses OEM usable pack_kwh (102) and EPA range 305 mi for the 11 kW charger row; not the same as wall-side efficiency.epa_kwh_per_100mi."
+      ]
+    }
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 VISTIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/vistiq/specs",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "charging.port_type",
+    "value": "CCS1",
+    "notes": "Specs: Combined Charging System Type 1 (CCS1) port. NACS DC adapter sold separately / available."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 VISTIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/vistiq/specs",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "charging.peak_dc_kw",
+    "value": 190,
+    "notes": "Specs: 190 kW maximum charge speed."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 VISTIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/vistiq/specs",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "charging.onboard_ac_kw",
+    "value": 11.5,
+    "notes": "Standard 11.5 kW Level 2 AC charging. Matches this atlas trim (EPA 11 kW charger row / 305 mi). Available 19.2 kW module (Premium Luxury/Platinum standard; optional elsewhere) maps to the 300 mi EPA row and is not used here."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 VISTIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/vistiq/specs",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.power_hp",
+    "value": 615,
+    "notes": "615 HP Cadillac-estimated in Velocity Max. Dual motor AWD; not a V-Series sibling."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 VISTIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/vistiq/specs",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.torque_lbft",
+    "value": 650,
+    "notes": "650 lb.-ft. Cadillac-estimated in Velocity Max."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 VISTIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/vistiq/specs",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.accel_0_60_s",
+    "value": 3.7,
+    "notes": "0-60 in 3.7 sec Cadillac-estimated in Velocity Max. Non-Velocity Max 0-60 not stated on the pages used here."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 VISTIQ preceding-year page: dual motor AWD",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/vistiq",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.motor_count",
+    "value": 2,
+    "notes": "Dual motor all-wheel drive. Matches EPA two-motor description."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 VISTIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/vistiq/specs",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.length_in",
+    "value": 205.59,
+    "notes": "LENGTH 205.59 in."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 VISTIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/vistiq/specs",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.wheelbase_in",
+    "value": 122,
+    "notes": "WHEELBASE 122 in."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 VISTIQ preceding-year specifications",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/vistiq/specs",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "body.height_in",
+    "value": 71.02,
+    "notes": "HEIGHT 71.02 in. Width listed only as WIDTH WITH MIRRORS 86.73 in; that with-mirrors figure is not used for body.width_in. Curb weight not stated on the preceding-year specs page used here."
+  }
+]

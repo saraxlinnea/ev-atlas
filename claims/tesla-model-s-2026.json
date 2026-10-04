@@ -94,9 +94,9 @@
     "tier": "P",
     "source_name": "EPA/DOE fueleconomy.gov Find.do side-by-side for vehicle 49741 (2026 Tesla Model S)",
     "source_url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=49741",
-    "access_date": "2026-10-02",
+    "access_date": "2026-10-03",
     "confidence": "medium",
-    "notes": "MSRP shown on the EPA side-by-side page for the non-Plaid Model S row. EPA footnote: MSRP data provided by Edmunds.com, Inc. Tesla product page (live 403; Wayback snapshot) had no static starts-at price in the fetched HTML.",
+    "notes": "MSRP shown on the EPA side-by-side page for the non-Plaid Model S row. EPA footnote: MSRP data provided by Edmunds.com, Inc. Re-checked 2026-10-03: still $94,990. Tesla product page (live 403; Wayback snapshot) had no static starts-at price for this mapping.",
     "conflicts_with": [
       "tesla-model-s-2026#identity.msrp_usd#Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)"
     ]
@@ -108,9 +108,9 @@
     "tier": "S",
     "source_name": "Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)",
     "source_url": "https://www.kbb.com/tesla/model-s/2026/specs/",
-    "access_date": "2026-10-02",
+    "access_date": "2026-10-03",
     "confidence": "medium",
-    "notes": "KBB MSRP for the non-Plaid Model S column. Differs from the EPA/Edmunds MSRP on fueleconomy.gov ($94,990).",
+    "notes": "KBB MSRP for the non-Plaid Model S column. Re-checked 2026-10-03: still $96,630. Differs from the EPA/Edmunds MSRP on fueleconomy.gov ($94,990).",
     "conflicts_with": [
       "tesla-model-s-2026#identity.msrp_usd#EPA/DOE fueleconomy.gov Find.do side-by-side for vehicle 49741 (2026 Tesla Model S)"
     ]
@@ -156,10 +156,10 @@
     "tier": "P",
     "source_name": "Tesla Model S page, Model S (non-Plaid) specs (Wayback Machine snapshot 2026-01-22)",
     "source_url": "https://web.archive.org/web/20260122131939/https://www.tesla.com/models",
-    "access_date": "2026-10-02",
+    "access_date": "2026-10-03",
     "disclosed_by_oem": true,
     "confidence": "high",
-    "notes": "Tesla label: Weight (Curb Mass), Model S Dual Motor (non-Plaid). Differs by 1 lb from KBB's 4,560 pounds.",
+    "notes": "Tesla label: Weight (Curb Mass), Model S Dual Motor (non-Plaid). Re-checked 2026-10-03 on Wayback snapshot 2026-01-22: still 4,561 lbs. Differs by 1 lb from KBB's 4,560 pounds.",
     "conflicts_with": [
       "tesla-model-s-2026#body.curb_weight_lb#Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)"
     ]
@@ -171,9 +171,9 @@
     "tier": "S",
     "source_name": "Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)",
     "source_url": "https://www.kbb.com/tesla/model-s/2026/specs/",
-    "access_date": "2026-10-02",
+    "access_date": "2026-10-03",
     "confidence": "medium",
-    "notes": "KBB curb weight for non-Plaid Model S (4,560 pounds). Differs by 1 lb from Tesla Wayback (4,561 lbs).",
+    "notes": "KBB curb weight for non-Plaid Model S (4,560 pounds). Re-checked 2026-10-03: still listed. Differs by 1 lb from Tesla Wayback (4,561 lbs).",
     "conflicts_with": [
       "tesla-model-s-2026#body.curb_weight_lb#Tesla Model S page, Model S (non-Plaid) specs (Wayback Machine snapshot 2026-01-22)"
     ]
@@ -212,17 +212,6 @@
     "access_date": "2026-10-02",
     "confidence": "medium",
     "notes": "KBB overall length. Tesla product page (live and Wayback) specs tables do not list exterior dimensions."
-  },
-  {
-    "vehicle_id": "tesla-model-s-2026",
-    "field": "body.width_in",
-    "value": 86.2,
-    "tier": "S",
-    "source_name": "Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)",
-    "source_url": "https://www.kbb.com/tesla/model-s/2026/specs/",
-    "access_date": "2026-10-02",
-    "confidence": "medium",
-    "notes": "KBB Width with mirrors 86.2 inches (no without-mirrors figure on the page)."
   },
   {
     "vehicle_id": "tesla-model-s-2026",

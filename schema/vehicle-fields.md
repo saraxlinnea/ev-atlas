@@ -7,7 +7,8 @@ accept weaker sources for it.
 
 | field path | unit | typical tier | notes |
 |---|---|---|---|
-| identity.msrp_usd | USD | P | base trim as configured; confirm trim exactly |
+| identity.msrp_usd | USD | P | base trim as configured; confirm trim exactly; US-market rows |
+| identity.msrp_cny | CNY | P | China-market list price; never invent FX into msrp_usd |
 | powertrain.motor_count | count | P | |
 | powertrain.motor_type | enum: PM_synchronous / induction / synchronous_reluctance / unknown | S | rarely stated per-motor by OEM |
 | powertrain.drive_layout | enum: RWD / AWD / FWD | P | |
@@ -30,9 +31,11 @@ accept weaker sources for it.
 | charging.range_added_mi | mi | P | pair with .range_added_time_min; put the OEM's test conditions in notes |
 | charging.range_added_time_min | min | P | time for range_added_mi |
 | charging.nacs_adapter_included | boolean | P | for CCS1-port cars: whether a NACS adapter comes with the car |
-| efficiency.epa_range_mi | mi | P | fueleconomy.gov |
-| efficiency.epa_kwh_per_100mi | kWh/100mi | P | includes charging losses (label basis) |
+| efficiency.epa_range_mi | mi | P | fueleconomy.gov; US-market rows only; never store CLTC here |
+| efficiency.epa_kwh_per_100mi | kWh/100mi | P | includes charging losses (label basis); never store CLTC here |
 | efficiency.epa_mpge_combined | MPGe | P | |
+| efficiency.cltc_range_km | km | P | China Light-Duty Vehicle Test Cycle range; CN-market rows; never convert to epa_range_mi |
+| efficiency.cltc_kwh_per_100km | kWh/100km | P | CLTC energy use as stated; never convert into epa_kwh_per_100mi |
 | body.curb_weight_lb | lb | P | |
 | body.drag_coefficient | Cd | P/S | OEM sometimes omits |
 | body.length_in / width_in / height_in / wheelbase_in | in | P | |
@@ -53,6 +56,13 @@ accept weaker sources for it.
 - `efficiency.epa_kwh_per_100mi` is wall-side (includes charging losses);
   `derived.kwh_per_100mi_battery_side` is battery-side. Label which one when
   plotting them together.
+- CLTC and EPA are different cycles. Never put CLTC values into
+  `efficiency.epa_*`, never invent a CLTC↔EPA conversion, and do not rank
+  across cycles.
+- China-market prices use `identity.msrp_cny`. Do not invent a CNY→USD FX
+  rate into `identity.msrp_usd`.
+- NHTSA recall fields apply to US-market rows. Leave them absent on
+  China-only rows (blank means not applied, not zero recalls).
 - If `battery.pack_kwh_basis` is unset, display `pack_kwh` but don't compute
   anything from it.
 - EPA label range for an EV is a 5-cycle value. Under 40 CFR

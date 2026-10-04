@@ -152,5 +152,49 @@
     "disclosed_by_oem": true,
     "confidence": "medium",
     "notes": "Sheet lists unladen weight without driver 2,070 kg (4,563.6 lb); recorded as 4,564 lb after rounding. Germany program sheet; EU unladen-without-driver definition, not a US curb-weight label. Audi USA model page does not publish curb weight."
+  },
+  {
+    "vehicle_id": "audi-q4-45-etron-2026",
+    "field": "powertrain.accel_0_60_s",
+    "value": 6.3,
+    "tier": "S",
+    "source_name": "MotorTrend 2026 Audi Q4 e-tron review: Audi-estimated 0-60 for 45 RWD",
+    "source_url": "https://www.motortrend.com/cars/audi/q4-e-tron/2026",
+    "access_date": "2026-10-02",
+    "confidence": "medium",
+    "notes": "MotorTrend: 'Audi estimates a 0\u201360 time of 6.3 seconds' for the base 45 RWD powertrain. Audi USA model page and the Media Center technical sheet checked here state 0-100 km/h (6.7 s) rather than 0-60 mph."
+  },
+  {
+    "vehicle_id": "audi-q4-45-etron-2026",
+    "field": "powertrain.torque_lbft",
+    "value": 402,
+    "tier": "P",
+    "source_name": "Audi Media Center technical data sheet: Q4 45 e-tron 210 kW (rear torque)",
+    "source_url": "https://uploads.audi-mediacenter.com/system/production/car_motorizations/1291/file_en/79dcd74609ee0c0b2592beef7d7634cff7527888/eTD-Audi-Q4-45-e-tron-210kW_260202.pdf?1770134088=&disposition=attachment",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Electrical torque output rear 545 Nm (402.0 lb-ft). Rear-wheel drive; quattro columns not applied. Program status 02/02/26."
+  },
+  {
+    "vehicle_id": "audi-q4-45-etron-2026",
+    "field": "charging.onboard_ac_kw",
+    "value": 11,
+    "tier": "P",
+    "source_name": "Audi Media Center technical data sheet: Q4 45 e-tron 210 kW (max AC charging)",
+    "source_url": "https://uploads.audi-mediacenter.com/system/production/car_motorizations/1291/file_en/79dcd74609ee0c0b2592beef7d7634cff7527888/eTD-Audi-Q4-45-e-tron-210kW_260202.pdf?1770134088=&disposition=attachment",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Max. charging capacity AC / DC in kW: 11 / 175."
+  },
+  {
+    "vehicle_id": "audi-q4-45-etron-2026",
+    "field": "body.width_in",
+    "value": 73.4,
+    "tier": "P",
+    "source_name": "Audi Media Center technical data sheet: Q4 45 e-tron 210 kW (width without mirrors)",
+    "source_url": "https://uploads.audi-mediacenter.com/system/production/car_motorizations/1291/file_en/79dcd74609ee0c0b2592beef7d7634cff7527888/eTD-Audi-Q4-45-e-tron-210kW_260202.pdf?1770134088=&disposition=attachment",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Vehicle width without mirrors 1865 mm (6.1 ft) = 73.4 in. Width including mirrors 2108 mm not used."
   }
 ]

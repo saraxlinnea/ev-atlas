@@ -6,7 +6,8 @@ so charts can filter or color by source tier without re-reading JSON.
 
 When a field has more than one claim for the same vehicle, the
 highest-tier claim wins for the flattened value (P > S > D > unverified).
-The *__conflict column is true only when the claims disagree on value;
+Equal tiers break ties by confidence (high > medium > low). The
+*__conflict column is true only when the claims disagree on value;
 a better source confirming the same value doesn't count. Losing claims
 stay in claims/; this file is disposable and regenerated, and claims/
 is the source of truth.
@@ -27,6 +28,7 @@ DATA_DIR = ROOT / "data"
 CLAIMS_DIR = ROOT / "claims"
 
 TIER_RANK = {"P": 3, "S": 2, "D": 1, "unverified": 0}
+CONFIDENCE_RANK = {"high": 3, "medium": 2, "low": 1}
 
 # Fields we expect to track for the disclosure heatmap. Kept in sync
 # by hand with schema/vehicle-fields.md; not auto-derived, so update
@@ -42,6 +44,8 @@ TRACKED_FIELDS = [
     "charging.port_type", "charging.peak_dc_kw", "charging.onboard_ac_kw",
     "charging.range_added_mi", "charging.range_added_time_min",
     "efficiency.epa_range_mi", "efficiency.epa_kwh_per_100mi", "efficiency.epa_mpge_combined",
+    # CLTC fields: tracked so CN-market disclosure gaps show; do not treat as EPA.
+    "efficiency.cltc_range_km", "efficiency.cltc_kwh_per_100km",
     "body.curb_weight_lb", "body.drag_coefficient", "body.length_in",
     "body.width_in", "body.height_in", "body.wheelbase_in",
     "chassis.front_suspension", "chassis.rear_suspension",
@@ -66,12 +70,20 @@ def main():
             if len(seen_values[vid][field]) > 1:
                 conflicts[vid].add(field)
             cur = winners[vid].get(field)
-            if cur is None or TIER_RANK[c["tier"]] > TIER_RANK[cur["tier"]]:
+            if cur is None:
                 winners[vid][field] = c
+            else:
+                tier_delta = TIER_RANK[c["tier"]] - TIER_RANK[cur["tier"]]
+                conf_delta = (
+                    CONFIDENCE_RANK.get(c.get("confidence"), 0)
+                    - CONFIDENCE_RANK.get(cur.get("confidence"), 0)
+                )
+                if tier_delta > 0 or (tier_delta == 0 and conf_delta > 0):
+                    winners[vid][field] = c
 
     # --- flattened.csv ---
     all_fields = sorted({f for v in winners.values() for f in v.keys()})
-    header = ["vehicle_id", "make", "model", "trim", "model_year", "lineage_id"]
+    header = ["vehicle_id", "make", "model", "trim", "model_year", "lineage_id", "region"]
     for f in all_fields:
         header += [f, f + "__unit", f + "__tier", f + "__conflict", f + "__source_url", f + "__access_date"]
 
@@ -81,7 +93,7 @@ def main():
         for v in vehicles:
             vid = v["vehicle_id"]
             row = [vid, v["make"], v["model"], v["trim"], v["model_year"],
-                   v.get("lineage_id", "")]
+                   v.get("lineage_id", ""), v.get("region", "US")]
             for f in all_fields:
                 c = winners.get(vid, {}).get(f)
                 if c is None:

@@ -229,5 +229,27 @@
     "access_date": "2026-10-02",
     "confidence": "medium",
     "notes": "KBB lists curb weight 5,606 lbs for 2026 LYRIQ Luxury (RWD). Cadillac preceding-year specs page opened in this pass does not publish curb weight."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "field": "powertrain.torque_lbft",
+    "value": 325,
+    "tier": "P",
+    "source_name": "Cadillac USA 2026 LYRIQ preceding-year specifications (single motor RWD torque)",
+    "source_url": "https://www.cadillac.com/electric/preceding-year/lyriq/specs",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Single motor RWD: 325 lb.-ft. Dual motor AWD 450 lb-ft and LYRIQ-V 650 lb-ft not applied."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "field": "body.width_in",
+    "value": 77.8,
+    "tier": "S",
+    "source_name": "U.S. News 2026 Cadillac LYRIQ 4dr Sport specs: width max w/o mirrors",
+    "source_url": "https://cars.usnews.com/cars-trucks/cadillac/lyriq/specs/lyriq-4dr-sport-468071",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Width, Max w/o mirrors 77.8 in. Not the with-mirrors 86.9 in figure. Sport page used for dimensions; LYRIQ-V not applied for powertrain."
   }
 ]

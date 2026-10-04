@@ -1,0 +1,259 @@
+[
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50291 (2026 Lexus RZ 350e FWD (18 inch wheels))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50291",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_range_mi",
+    "value": 301,
+    "notes": "EPA id 50291, model string 'RZ 350e FWD (18 inch wheels)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: entry FWD 18in row (301 mi); not 20in FWD or RZ 450e/550e AWD rows."
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50291 (2026 Lexus RZ 350e FWD (18 inch wheels))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50291",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 26.5957,
+    "notes": "Wall-side, combined (EPA combE). The label rounds this. EPA id 50291, model string 'RZ 350e FWD (18 inch wheels)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: entry FWD 18in row (301 mi); not 20in FWD or RZ 450e/550e AWD rows."
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50291 (2026 Lexus RZ 350e FWD (18 inch wheels))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50291",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 126,
+    "notes": "EPA id 50291, model string 'RZ 350e FWD (18 inch wheels)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: entry FWD 18in row (301 mi); not 20in FWD or RZ 450e/550e AWD rows."
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50291 (2026 Lexus RZ 350e FWD (18 inch wheels))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50291",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.drive_layout",
+    "value": "FWD",
+    "notes": "EPA 'drive' field: 'Front-Wheel Drive'. EPA id 50291, model string 'RZ 350e FWD (18 inch wheels)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip)."
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50291 (2026 Lexus RZ 350e FWD (18 inch wheels))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50291",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.epa_motor_description",
+    "value": "167 kW AC Synchronous",
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type. EPA id 50291."
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "field": "recalls.campaign_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (LEXUS RZ, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LEXUS&model=RZ&modelYear=2026",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Distinct NHTSA campaigns returned for MY2026 (make/model/year query; not filtered by trim). Bare model RZ matched; RZ 350e and RZ 350E BEV returned HTTP 400 / Count 0."
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "field": "recalls.campaign_26V393",
+    "value": "ELECTRICAL SYSTEM:PROPULSION SYSTEM: The electronic control unit (ECU) that controls the high voltage battery may experience a fault, resulting in a loss of drive power.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (LEXUS RZ, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LEXUS&model=RZ&modelYear=2026",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "NHTSA campaign 26V393000. Scope includes certain 2026 Toyota BZ, Lexus RZ, and Subaru Solterra BEVs. Not trim-filtered."
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "field": "identity.msrp_usd",
+    "value": 47395,
+    "tier": "P",
+    "source_name": "Lexus USA Newsroom, 2025-05-19: 2026 Lexus RZ pricing chart (RZ 350e)",
+    "source_url": "https://pressroom.lexus.com/2026-lexus-rz-adds-more-power-and-performance-2/",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "RZ 350e MSRP + DPH $47,395. Page footnote: includes Delivery, Processing and Handling fee of $1,395. Entry FWD grade paired with EPA 18in 301 mi row; not Premium / AWD grades."
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "field": "battery.pack_kwh",
+    "value": 74.69,
+    "tier": "P",
+    "source_name": "Lexus USA Newsroom, 2025-05-19: 2026 Lexus RZ battery capacity (RZ 350e)",
+    "source_url": "https://pressroom.lexus.com/2026-lexus-rz-adds-more-power-and-performance-2/",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Battery capacity increased to 74.69 kW for the RZ 350e and RZ 450e AWD (OEM unit printed as kW; treated as kWh pack energy). Not the 76.96 figure for RZ 550e F SPORT AWD."
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "P",
+    "source_name": "Lexus USA Newsroom, 2025-05-19: 2026 Lexus RZ battery capacity (RZ 350e)",
+    "source_url": "https://pressroom.lexus.com/2026-lexus-rz-adds-more-power-and-performance-2/",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "medium",
+    "notes": "OEM says battery capacity without gross vs usable label."
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "field": "charging.port_type",
+    "value": "NACS",
+    "tier": "P",
+    "source_name": "Lexus USA Newsroom, 2025-05-19: 2026 Lexus RZ NACS port",
+    "source_url": "https://pressroom.lexus.com/2026-lexus-rz-adds-more-power-and-performance-2/",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Adopts the North American Charging System (NACS) charging port (SAE J3400) on the passenger side."
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "field": "charging.onboard_ac_kw",
+    "value": 11,
+    "tier": "P",
+    "source_name": "Lexus USA Newsroom, 2025-05-19: 2026 Lexus RZ 11-kW onboard AC charger",
+    "source_url": "https://pressroom.lexus.com/2026-lexus-rz-adds-more-power-and-performance-2/",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Higher capacity 11-kW on-board AC charger (up from 7-kW prior model year)."
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "field": "powertrain.power_hp",
+    "value": 221,
+    "tier": "P",
+    "source_name": "Lexus USA Newsroom, 2025-05-19: 2026 Lexus RZ total system horsepower (RZ 350e FWD)",
+    "source_url": "https://pressroom.lexus.com/2026-lexus-rz-adds-more-power-and-performance-2/",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "medium",
+    "conflicts_with": [
+      "lexus-rz-350e-fwd-2026#powertrain.power_hp#Lexus USA Newsroom: Five Things To Know About the Thoroughly Enhanced 2026 Lexus RZ (224 hp RZ 350e FWD)"
+    ],
+    "notes": "States 221 total system horsepower for RZ 350e FWD. Re-checked 2026-10-03: still present on the May 19, 2025 newsroom release. Conflicts with another Lexus newsroom page stating 224 hp for the same grade."
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "field": "powertrain.power_hp",
+    "value": 224,
+    "tier": "P",
+    "source_name": "Lexus USA Newsroom: Five Things To Know About the Thoroughly Enhanced 2026 Lexus RZ (224 hp RZ 350e FWD)",
+    "source_url": "https://pressroom.lexus.com/five-things-to-know-about-the-thoroughly-enhanced-2026-lexus-rz/",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "medium",
+    "conflicts_with": [
+      "lexus-rz-350e-fwd-2026#powertrain.power_hp#Lexus USA Newsroom, 2025-05-19: 2026 Lexus RZ total system horsepower (RZ 350e FWD)"
+    ],
+    "notes": "States 224 total system horsepower for RZ 350e FWD. Re-checked 2026-10-03: still present on the Five Things newsroom page (originally published August 1, 2025). Conflicts with the May 19, 2025 newsroom release stating 221 hp for the same grade. Both retained."
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "field": "charging.peak_dc_kw",
+    "value": 150,
+    "tier": "S",
+    "source_name": "Car and Driver 2026 Lexus RZ review: peak DC charge rate",
+    "source_url": "https://www.caranddriver.com/lexus/rz",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "C/D instrumented specs block on the 2026 RZ page lists Peak Charge Rate, AC/DC: 11/150 kW (tested RZ 550e F Sport). Same page states the 11 kW onboard AC charger for all 2026 RZs, matching Lexus newsroom. US Lexus newsroom pages used here state only 10-80% in about 30 minutes without a vehicle peak kW, so this secondary figure fills peak DC. Not an instrumented 350e charge curve."
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Lexus USA Newsroom, 2025-05-19: 2026 Lexus RZ 350e FWD eAxle",
+    "source_url": "https://pressroom.lexus.com/2026-lexus-rz-adds-more-power-and-performance-2/",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Newsroom: eAxle drives the front wheel set; rear wheel set is for RZ 450e and RZ 550e F SPORT AWD. Matches EPA single-motor '167 kW AC Synchronous' string for this FWD row."
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "field": "powertrain.accel_0_60_s",
+    "value": 7.2,
+    "tier": "S",
+    "source_name": "Car and Driver 2026 Lexus RZ review: claimed RZ350e 0-60",
+    "source_url": "https://www.caranddriver.com/lexus/rz",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "C/D lists claimed 60-mph time 7.2 seconds for RZ350e (not a C/D instrumented FWD test; instrumented 4.0 s on the page is RZ550e). Lexus newsroom pages checked here do not publish a 350e 0-60."
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "field": "body.curb_weight_lb",
+    "value": 4277,
+    "tier": "S",
+    "source_name": "Car and Driver 2026 Lexus RZ 350e FWD specs: base curb weight",
+    "source_url": "https://www.caranddriver.com/lexus/rz/specs",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "C/D specs for 2026 RZ 350e FWD: base curb weight 4,277 lb. Also lists Lithium Ion traction battery w/11 kW onboard charger and 74.69 kWh capacity, matching Lexus newsroom pack/AC. Torque not published on this FWD specs page."
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "field": "body.width_in",
+    "value": 74.6,
+    "tier": "S",
+    "source_name": "Car and Driver 2026 Lexus RZ 350e FWD specs: width without mirrors",
+    "source_url": "https://www.caranddriver.com/lexus/rz/specs",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Width without mirrors 74.6 in for 2026 RZ 350e FWD.",
+    "conflicts_with": [
+      "lexus-rz-350e-fwd-2026#body.width_in#2026 Lexus RZ Product Information (Canada TCI): overall width"
+    ]
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "field": "powertrain.torque_lbft",
+    "value": 269,
+    "tier": "P",
+    "source_name": "2026 Lexus RZ Product Information (Canada TCI): RZ 350e front motor torque",
+    "source_url": "https://toyotacanada.scene7.com/is/content/toyotacanada/2026%20Lexus%20RZ%20specifications%20TCI%20ENpdf?%24%3Fcdh=attachment&bfc=off",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Max torque Front Nm: 269 for RZ 350e; rear N/A (FWD). Unit set to Nm (not converted to lb-ft). AWD 450e/550e dual-motor figures not applied.",
+    "unit": "Nm"
+  },
+  {
+    "vehicle_id": "lexus-rz-350e-fwd-2026",
+    "field": "body.width_in",
+    "value": 74.6,
+    "tier": "P",
+    "source_name": "2026 Lexus RZ Product Information (Canada TCI): overall width",
+    "source_url": "https://toyotacanada.scene7.com/is/content/toyotacanada/2026%20Lexus%20RZ%20specifications%20TCI%20ENpdf?%24%3Fcdh=attachment&bfc=off",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Overall Width 1895 mm (74.61 in) for RZ 350e. Upgrades prior Car and Driver without-mirrors figure of 74.6 in.",
+    "conflicts_with": [
+      "lexus-rz-350e-fwd-2026#body.width_in#Car and Driver 2026 Lexus RZ 350e FWD specs: width without mirrors"
+    ]
+  }
+]

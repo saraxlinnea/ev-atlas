@@ -1,0 +1,73 @@
+[
+  {
+    "vehicle_id": "acura-zdx-rwd-2026",
+    "field": "recalls.campaign_count",
+    "value": 0,
+    "tier": "P",
+    "source_name": "NHTSA recall flat file FLAT_RCL_POST_2010 (MY2026 search)",
+    "source_url": "https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "No MY2026 ACURA ZDX rows in NHTSA recall flat file (file dated 2026-10-03; searched MODELTXT containing ZDX). recallsByVehicle for make=acura&model=ZDX&modelYear=2026 returned HTTP 400 / Count 0 (unmatched-string response). MY2024 ZDX has campaigns; not applied to this MY2026 EPA row. Acura.com ZDX page states the model is no longer available."
+  },
+  {
+    "vehicle_id": "acura-zdx-rwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50023 (2026 Acura ZDX RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50023",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_range_mi",
+    "value": 327,
+    "notes": "EPA id 50023, model string 'ZDX RWD', year 2026, range 327 mi. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: entry RWD; not AWD or Type S. Live Acura ZDX page marks the nameplate discontinued; no MY2026 OEM buyer-spec page was used."
+  },
+  {
+    "vehicle_id": "acura-zdx-rwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50023 (2026 Acura ZDX RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50023",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 36.8622,
+    "notes": "Wall-side, combined (EPA combE). The label rounds this. EPA id 50023, 'ZDX RWD'."
+  },
+  {
+    "vehicle_id": "acura-zdx-rwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50023 (2026 Acura ZDX RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50023",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 91,
+    "notes": "EPA comb08. EPA id 50023, 'ZDX RWD'."
+  },
+  {
+    "vehicle_id": "acura-zdx-rwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50023 (2026 Acura ZDX RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50023",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.drive_layout",
+    "value": "RWD",
+    "notes": "EPA 'drive' field: 'Rear-Wheel Drive'. EPA id 50023, 'ZDX RWD'."
+  },
+  {
+    "vehicle_id": "acura-zdx-rwd-2026",
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 50023 (2026 Acura ZDX RWD)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/50023",
+    "access_date": "2026-10-03",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "field": "powertrain.epa_motor_description",
+    "value": "255 kW ACPM",
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type. EPA id 50023, 'ZDX RWD'."
+  }
+]

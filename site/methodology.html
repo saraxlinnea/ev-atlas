@@ -7,22 +7,21 @@
   <meta name="description" content="How EV Atlas sources specifications: claims, tiers, EPA and NHTSA, and known limitations.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="page">
     <nav aria-label="Site">
+      <a class="nav-brand" href="index.html">EV Atlas</a>
       <ul class="site-nav">
-        <li><a href="index.html">Home</a></li>
         <li><a href="compare.html">Compare</a></li>
-        <li><a href="charts.html">Charts</a></li>
+        <li><a href="figures.html">Figures</a></li>
         <li><a href="methodology.html" aria-current="page">Methods</a></li>
       </ul>
     </nav>
 
-    <header class="hero">
-      <p class="brand">EV Atlas</p>
+    <header class="hero hero-thin">
       <h1>Methods</h1>
       <p class="lede">
         How values enter the table, and where coverage remains incomplete. The
@@ -31,10 +30,10 @@
     </header>
 
     <section class="content-section" aria-labelledby="claims-heading">
-      <h2 id="claims-heading">Claims</h2>
+      <h2 id="claims-heading" class="kicker">Claims</h2>
       <p>
         Each value begins as a claim: field, value, source, access date, and
-        tier. Compare and Charts read a file generated from those claims. A
+        tier. Compare and Figures read a file generated from those claims. A
         wrong number is corrected in the claim, then regenerated. The CSV is
         not edited by hand.
       </p>
@@ -46,7 +45,7 @@
     </section>
 
     <section class="content-section" aria-labelledby="tiers-heading">
-      <h2 id="tiers-heading">Source tiers</h2>
+      <h2 id="tiers-heading" class="kicker">Source tiers</h2>
       <ul>
         <li><strong>P (primary):</strong> OEM page or press kit, EPA, NHTSA, or other government source.</li>
         <li><strong>S (secondary):</strong> Outlet, teardown, or aggregator. Ranked below P even when the figure looks solid.</li>
@@ -55,12 +54,15 @@
       </ul>
       <p>
         When sources disagree, both claims remain and are marked as conflicts.
-        The table shows the higher tier and keeps the conflict flagged.
+        Compare shows the winning value only (higher tier, then higher
+        confidence). A quiet † marker flags the cell; activating it reveals the
+        other recorded value and both sources. Equal tier and confidence keep
+        the earlier claim as the shown value.
       </p>
     </section>
 
     <section class="content-section" aria-labelledby="sources-heading">
-      <h2 id="sources-heading">EPA and NHTSA</h2>
+      <h2 id="sources-heading" class="kicker">EPA and NHTSA</h2>
       <p>
         <strong>EPA:</strong> Per-vehicle records from fueleconomy.gov, checked
         against the bulk download. The EPA vehicle id appears in each claim's
@@ -79,44 +81,49 @@
     </section>
 
     <section class="content-section" aria-labelledby="limits-heading">
-      <h2 id="limits-heading">Known limitations</h2>
-      <p>As of 2026-10-02. Coverage is incomplete; this is not a ranking and not full OEM disclosure for all vehicles.</p>
+      <h2 id="limits-heading" class="kicker">Known limitations</h2>
+      <p>As of 2026-10-03. Coverage is incomplete; this is not a ranking and not full OEM disclosure for all vehicles.</p>
 
       <h3>Reading the table</h3>
       <ul>
         <li>Rows are trim-specific. Sister trims can differ on range, pack, and price.</li>
+        <li><code>region</code> is the spec market (US or CN), not brand HQ. Compare Market defaults to US. EPA columns are US-cycle; CLTC columns are China-cycle; blank EPA on a CN row is expected.</li>
+        <li>CLTC values are never stored in EPA fields, and the atlas does not invent a CLTC↔EPA conversion or cross-cycle ranking. EPA Figures omit non-US rows.</li>
+        <li>China list prices use CNY when sourced; no invented CNY→USD FX. NHTSA recall fields stay blank on China-only rows (not applied, not zero).</li>
         <li>Secondary sources may appear where primary OEM text was unavailable; they rank below primary.</li>
         <li>Pack-based derived metrics require a gross or usable pack basis, not unstated.</li>
         <li>OEM peak DC kW and 0-60 times are manufacturer claims under conditions that are often underspecified.</li>
         <li>MSRP is the stated base for the configured trim; destination, tax, and options vary.</li>
+        <li><code>body.width_in</code> is without-mirrors / body width only. With-mirrors-only figures are withheld.</li>
       </ul>
 
       <h3>Tesla and Lucid</h3>
       <ul>
         <li>Live tesla.com often blocks scripted fetch. Model 3 and Model S OEM figures commonly use Wayback snapshots, which can lag the live page.</li>
-        <li>Recorded conflicts include Model 3 MSRP and width, and Model S MSRP and curb weight. Some pack, port, and dimension fields remain secondary-only or missing.</li>
-        <li>Lucid live pages advance model years early. MY2026 Air Pure claims draw on press and Wayback; some specs carry a later model year on the claim.</li>
+        <li>Recorded conflicts include Model 3 MSRP and Model S MSRP and curb weight. Tesla torque and most Tesla onboard AC stay blank (OEM silent). Model 3 width uses a without-mirrors secondary figure; Model S width stays blank when only with-mirrors figures exist.</li>
+        <li>Lucid live pages advance model years early. MY2026 Air Pure claims draw on press and technical PDFs; some Gravity specs cite 2027-labeled pages with lowered confidence.</li>
       </ul>
 
       <h3>OEM coverage</h3>
       <ul>
-        <li>Most vehicles have at least partial OEM or newsroom buyer fields from fetchable pages.</li>
+        <li>Most vehicles have at least partial OEM or newsroom buyer fields from fetchable pages. Compare-column densify leaves torque on 34/39, onboard AC on 31/39, and body width on 34/39.</li>
         <li>BMW i4 eDrive35 is the atlas trim, but BMW USA no longer lists eDrive35 for 2026 (eDrive40 and above). No remapping was invented.</li>
-        <li>Genesis GV60 MY2026 MSRP uses the offers page; pack and NACS claims may cite the live product page after it advances to 2027 labeling.</li>
-        <li>Honda Prologue Supercharger access is described via a NACS-CCS adapter; the vehicle port is recorded as CCS.</li>
+        <li>Ariya FWD 63 kWh and ZDX RWD stay EPA/NHTSA-thin (discontinued US pages; wrong-year or wrong-drive buyer figures not applied).</li>
+        <li>Honda Prologue Supercharger access is described via a NACS-CCS adapter; the vehicle port is recorded as CCS. Prologue onboard AC kW still blank on fetchable Honda pages.</li>
         <li>Leaf and Bolt 0-60 were not stated on the fetchable OEM pages used here.</li>
       </ul>
 
       <h3>Model years and availability</h3>
       <ul>
-        <li>Most entries are MY2026. Rivian R2 and Chevrolet Bolt are MY2027; Hyundai Ioniq 6 and Polestar 2 are MY2025.</li>
-        <li>Only <code>chevrolet-bolt-2027</code> is marked <code>current</code>. The other vehicles remain <code>unverified_availability</code>.</li>
+        <li>Most entries are MY2026. Rivian R2, Chevrolet Bolt, and BMW iX3 are MY2027; Hyundai Ioniq 6, Polestar 2, VW ID. Buzz, and F-150 Lightning SR are MY2025.</li>
+        <li>Sale status (2026-10-03): <code>current</code> for Bolt LT, Leaf 75 kWh, IONIQ 5 SE RWD Standard Range, Prologue Single Motor FWD, Mach-E Select RWD standard range, and EV6 Light RWD (atlas Standard Range RWD). <code>discontinued</code> for Ariya and ZDX. The other 31 remain <code>unverified_availability</code>. Confirmation URLs are listed in <code>docs/METHODOLOGY.md</code>.</li>
+        <li>BMW iX3 MY2027 has no recall campaign count yet: API unmatched-string HTTP 400, flat file has no BMW MY2027 or IX3 rows, and products lists no iX3 for MY2027. Blank, not a fake zero.</li>
         <li>NHTSA products vs campaign conflicts are recorded for some MY2026 nameplates; both views are kept.</li>
       </ul>
     </section>
 
     <section class="content-section" aria-labelledby="pipeline-heading">
-      <h2 id="pipeline-heading">Regenerate data</h2>
+      <h2 id="pipeline-heading" class="kicker">Regenerate data</h2>
       <pre class="code-block"><code>pip install -r requirements.txt
 python scripts/validate.py
 python scripts/flatten.py

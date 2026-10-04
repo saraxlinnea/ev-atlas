@@ -210,5 +210,16 @@
     "confidence": "high",
     "field": "body.wheelbase_in",
     "value": 114.2
+  },
+  {
+    "vehicle_id": "kia-ev6-2026",
+    "field": "powertrain.torque_lbft",
+    "value": 258,
+    "tier": "P",
+    "source_name": "Kia Media 2026 EV6 specifications (Light RWD torque)",
+    "source_url": "https://www.kiamedia.com/us/en/models/ev6/2026/specifications",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Torque (lb.-ft.) - RWD: 258 lb.-ft. for Light. AWD 446 lb-ft not applied."
   }
 ]
