@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Figures | EV Atlas</title>
-  <meta name="description" content="EPA efficiency, range relationships, and disclosure coverage from sourced claims. Figures read generated CSV only.">
+  <meta name="description" content="EPA and CLTC range relationships, efficiency, and disclosure coverage from sourced claims. Figures read generated CSV only; cycles stay separate.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
@@ -19,6 +19,7 @@
       <a class="nav-brand" href="index.html">EV Atlas</a>
       <ul class="site-nav">
         <li><a href="compare.html">Compare</a></li>
+        <li><a href="makes.html">Makes</a></li>
         <li><a href="figures.html" aria-current="page">Figures</a></li>
         <li><a href="methodology.html">Methods</a></li>
       </ul>
@@ -28,8 +29,14 @@
       <h1>Figures</h1>
       <p class="lede">
         Plots read generated CSV only. Vehicles missing a plotted field are
-        omitted; blanks are not zero. Side-by-side table:
-        <a href="compare.html">Compare</a>.
+        omitted; blanks are not zero. EPA and CLTC stay on separate figures.
+        Side-by-side table: <a href="compare.html">Compare</a>.
+      </p>
+      <p class="chart-note figure-download-note">
+        <a href="data/flattened.csv" download="ev-atlas-flattened.csv" id="figures-flattened-download">Download full flattened table (CSV)</a>.
+        Empty cells mean not found, not zero. US and CN stay separate; wall-side
+        and battery-side stay labeled separately. Filtered compare export lives
+        on <a href="compare.html">Compare</a>.
       </p>
       <nav aria-label="Figure index">
         <ul class="figure-toc">
@@ -92,7 +99,7 @@
         <p class="chart-note">
           EPA range versus sourced USD MSRP for US-market rows. Vehicles missing
           either value or non-US rows are omitted; blanks are not plotted as
-          zero. No CNY→USD conversion.
+          zero. FX-converted China list prices are excluded from this figure.
         </p>
         <div id="vis-range-msrp" class="chart-vis" role="img" aria-label="Scatter of EPA range versus MSRP"></div>
         <p id="chart-error-range-msrp" class="error" hidden></p>
@@ -109,8 +116,20 @@
         <p id="chart-error-range-pack" class="error" hidden></p>
       </section>
 
+      <section class="chart-section" aria-labelledby="cltc-range-pack-heading">
+        <h2 id="cltc-range-pack-heading"><span class="figure-num">Figure 5</span>: CLTC range vs pack energy</h2>
+        <p class="chart-note">
+          CLTC range (km) versus pack kWh for China-market (CN) rows only.
+          Pack basis may be gross, usable, or unstated. Non-CN rows and vehicles
+          missing either value are omitted. CLTC is not converted to EPA; this
+          figure is not a ranking against US EPA plots.
+        </p>
+        <div id="vis-cltc-range-pack" class="chart-vis" role="img" aria-label="Scatter of CLTC range versus pack energy for China-market rows"></div>
+        <p id="chart-error-cltc-range-pack" class="error" hidden></p>
+      </section>
+
       <section class="chart-section" aria-labelledby="weight-eff-heading">
-        <h2 id="weight-eff-heading"><span class="figure-num">Figure 5</span>: Curb weight vs wall-side efficiency</h2>
+        <h2 id="weight-eff-heading"><span class="figure-num">Figure 6</span>: Curb weight vs wall-side efficiency</h2>
         <p class="chart-note">
           Curb weight versus EPA wall-side kWh/100 mi for US-market rows.
           Wall-side includes charging losses. Vehicles missing either value or
@@ -125,7 +144,7 @@
       <p class="figure-group-title">Coverage</p>
 
       <section class="chart-section" aria-labelledby="disclosure-heading">
-        <h2 id="disclosure-heading"><span class="figure-num">Figure 6</span>: Disclosure coverage</h2>
+        <h2 id="disclosure-heading"><span class="figure-num">Figure 7</span>: Disclosure coverage</h2>
         <p class="chart-note">
           Fields with a sourced claim, by vehicle. Gaps indicate no claim
           found, not a value of zero.
@@ -144,6 +163,26 @@
   </div>
 
   <script>
+    (function () {
+      var link = document.getElementById("figures-flattened-download");
+      if (!link) {
+        return;
+      }
+      var d = new Date();
+      var m = String(d.getMonth() + 1);
+      var day = String(d.getDate());
+      if (m.length < 2) {
+        m = "0" + m;
+      }
+      if (day.length < 2) {
+        day = "0" + day;
+      }
+      link.setAttribute(
+        "download",
+        "ev-atlas-flattened-" + d.getFullYear() + "-" + m + "-" + day + ".csv"
+      );
+    })();
+
     function chartFail(id, err) {
       var el = document.getElementById(id);
       el.hidden = false;
@@ -364,6 +403,10 @@
       chartFail("chart-error-range-pack", err);
     });
 
+    vegaEmbed("#vis-cltc-range-pack", "charts/cltc_range_vs_pack.vl.json", embedOpts).catch(function (err) {
+      chartFail("chart-error-cltc-range-pack", err);
+    });
+
     vegaEmbed("#vis-weight-eff", "charts/weight_vs_efficiency.vl.json", embedOpts).catch(function (err) {
       chartFail("chart-error-weight-eff", err);
     });
@@ -372,5 +415,6 @@
       chartFail("chart-error", err);
     });
   </script>
+  <script src="sheet.js"></script>
 </body>
 </html>

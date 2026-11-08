@@ -1,0 +1,98 @@
+[
+  {
+    "make": "Lucid",
+    "field": "org.hq_city",
+    "value": "Newark",
+    "tier": "P",
+    "source_name": "Lucid Motors Lucid Headquarters page",
+    "source_url": "https://lucidmotors.com/locations/studios/lucid-headquarters",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Page lists Lucid Headquarters at 7373 Gateway Blvd, Newark, CA 94560."
+  },
+  {
+    "make": "Lucid",
+    "field": "org.hq_country",
+    "value": "United States",
+    "tier": "P",
+    "source_name": "Lucid Motors Lucid Headquarters page",
+    "source_url": "https://lucidmotors.com/locations/studios/lucid-headquarters",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "US address on Lucid Headquarters page (Newark, CA)."
+  },
+  {
+    "make": "Lucid",
+    "field": "org.brand_type",
+    "value": "standalone",
+    "tier": "P",
+    "source_name": "Lucid Group, Inc. Form 10-K filed 2026-02-24",
+    "source_url": "https://ir.lucidmotors.com/static-files/e84f1f4e-4624-4cdb-b5ea-54d2f9fbf064",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Lucid Group, Inc. is the Nasdaq-listed issuer for the Lucid make."
+  },
+  {
+    "make": "Lucid",
+    "field": "org.ev_focus",
+    "value": "bev_only",
+    "tier": "P",
+    "source_name": "Lucid Motors Company page",
+    "source_url": "https://lucidmotors.com/company",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Company page frames proprietary electric vehicle technology and a purpose-built EV factory; no ICE line stated."
+  },
+  {
+    "make": "Lucid",
+    "field": "org.home_market",
+    "value": "US",
+    "tier": "P",
+    "source_name": "Lucid Motors Company page",
+    "source_url": "https://lucidmotors.com/company",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Silicon Valley headquarters language and Arizona factory on Company page."
+  },
+  {
+    "make": "Lucid",
+    "field": "org.listing_status",
+    "value": "public",
+    "tier": "P",
+    "source_name": "Lucid Group, Inc. Form 10-K filed 2026-02-24",
+    "source_url": "https://ir.lucidmotors.com/static-files/e84f1f4e-4624-4cdb-b5ea-54d2f9fbf064",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Cover page lists Class A common stock on The Nasdaq Stock Market LLC under ticker LCID."
+  },
+  {
+    "make": "Lucid",
+    "field": "org.ticker",
+    "value": "LCID",
+    "tier": "P",
+    "source_name": "Lucid Group, Inc. Form 10-K filed 2026-02-24",
+    "source_url": "https://ir.lucidmotors.com/static-files/e84f1f4e-4624-4cdb-b5ea-54d2f9fbf064",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Trading symbol LCID on Nasdaq per Form 10-K cover page."
+  },
+  {
+    "make": "Lucid",
+    "field": "org.summary",
+    "value": "Lucid is a publicly listed electric vehicle maker with US headquarters. Company materials frame proprietary electric vehicle technology and a purpose-built EV factory. In EV Atlas it is keyed as a make, not a company-group hub.",
+    "tier": "P",
+    "source_name": "Lucid Motors Company page; Lucid Group Form 10-K filed 2026-02-24",
+    "source_url": "https://lucidmotors.com/company",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb from OEM Company page and Form 10-K listing facts."
+  }
+]

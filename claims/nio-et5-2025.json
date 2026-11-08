@@ -1,1 +1,167 @@
-[]
+[
+  {
+    "vehicle_id": "nio-et5-2025",
+    "field": "efficiency.cltc_range_km",
+    "value": 585,
+    "tier": "P",
+    "source_name": "NIO China ET5 mileage calculator: New ET5 standard range 75 kWh at 25 C",
+    "source_url": "https://www.nio.cn/vehicle/mileage-calculator/et5",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Trim choice: New ET5 with 标准续航电池包 (75 kWh), full-purchase entry configuration. Calculator kWh75 at 25 C returns 585 km (AC off) / 543 km (AC on); used 585. Disclaimer: CLTC combined figure with long-range wheels; simulated estimate. Not converted to EPA miles."
+  },
+  {
+    "vehicle_id": "nio-et5-2025",
+    "field": "battery.pack_kwh",
+    "value": 75,
+    "tier": "P",
+    "source_name": "NIO China ET5 mileage calculator: 标准续航电池包 (75kWh)",
+    "source_url": "https://www.nio.cn/vehicle/mileage-calculator/et5",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Label 标准续航电池包 (75kWh). Calculator also lists 长续航电池包 (100kWh); entry row uses 75. Gross vs usable not stated."
+  },
+  {
+    "vehicle_id": "nio-et5-2025",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "P",
+    "source_name": "NIO China ET5 mileage calculator: 标准续航电池包 (75kWh)",
+    "source_url": "https://www.nio.cn/vehicle/mileage-calculator/et5",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Required companion to pack_kwh. OEM label does not say gross or usable."
+  },
+  {
+    "vehicle_id": "nio-et5-2025",
+    "field": "identity.msrp_cny",
+    "value": 298000,
+    "tier": "P",
+    "source_name": "NIO news: New ET5 and ET5T launch, starting at RMB 298,000",
+    "source_url": "https://www.nio.com/news/20250525001",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Full-vehicle purchase starting price RMB 298,000 for New ET5 / ET5T. BaaS starting price RMB 228,000 is not used for identity.msrp_cny. Same 29.8万元起 figure on nio.cn news 20250525001."
+  },
+  {
+    "vehicle_id": "nio-et5-2025",
+    "field": "identity.msrp_usd",
+    "value": 43677,
+    "tier": "D",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "China list price converted to USD; not a US MSRP. Original CNY: 298000 (full-purchase start). FX: Federal Reserve H.10 / FRED DEXCHUS (CNY per USD), simple mean of 185 daily noon buying rates 2026-01-02 through 2026-09-25 (latest published H.10 day as of 2026-10-03; not a full-year 2026 average) = 6.8228. USD = 298000 / 6.8228, rounded to nearest dollar. Series: https://fred.stlouisfed.org/series/DEXCHUS.",
+    "derivation": {
+      "formula": "identity.msrp_cny / 6.8228",
+      "inputs": ["identity.msrp_cny"],
+      "assumptions": [
+        "FX rate 6.8228 CNY per USD is the simple mean of Federal Reserve H.10 / FRED DEXCHUS daily noon buying rates for 2026-01-02 through 2026-09-25 (185 observations; YTD through latest published day as of 2026-10-03 access, not a calendar-year 2026 average).",
+        "Result rounded to nearest USD. China list price converted for Compare; not a US MSRP."
+      ]
+    }
+  },
+  {
+    "vehicle_id": "nio-et5-2025",
+    "field": "powertrain.drive_layout",
+    "value": "AWD",
+    "tier": "P",
+    "source_name": "NIO China ET5 product page (Wayback 2024-05-16): 双电机智能四驱",
+    "source_url": "https://web.archive.org/web/20240516032019/https://www.nio.cn/et5",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Wayback snapshot of nio.cn/et5 states 双电机智能四驱 (front 150 kW induction, rear 210 kW PM). Live nio.cn product and New ET5 launch pages were intermittently blocked to scripted fetch; May 2025 English launch news does not restate drive layout. Confidence medium pending a live New ET5 page re-check."
+  },
+  {
+    "vehicle_id": "nio-et5-2025",
+    "field": "powertrain.power_hp",
+    "value": 480,
+    "tier": "P",
+    "source_name": "NIO China ET5 product page (Wayback 2024-05-16): 最大马力 480PS",
+    "source_url": "https://web.archive.org/web/20240516032019/https://www.nio.cn/et5",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Page states 最大功率 360kW, 最大马力 480PS. Used the PS figure for power_hp. Same dual-motor system as the AWD note; medium confidence for the New ET5 refresh."
+  },
+  {
+    "vehicle_id": "nio-et5-2025",
+    "field": "powertrain.torque_lbft",
+    "value": 700,
+    "unit": "Nm",
+    "tier": "P",
+    "source_name": "NIO China ET5 product page (Wayback 2024-05-16): 峰值扭矩 700N·m",
+    "source_url": "https://web.archive.org/web/20240516032019/https://www.nio.cn/et5",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "峰值扭矩 700N·m as stated. Stored in Nm; not converted to lb-ft. Medium confidence for the New ET5 refresh."
+  },
+  {
+    "vehicle_id": "nio-et5-2025",
+    "field": "battery.system_voltage_v",
+    "value": "367–386 (75 kWh pack variants)",
+    "tier": "P",
+    "source_name": "NIO New ET5 user manual: 75 kWh pack system rated voltage",
+    "source_url": "https://cdn-public.nio.com/www-nio-cn/user-instructions/ET5/index.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "高压动力电池参数 table: 75kWh type A system 额定电压 386 V (三元锂离子/磷酸铁锂 cells); type B system 367 V (磷酸铁锂). Entry row uses 75 kWh standard pack; exact type A vs B not selected on the mileage calculator."
+  },
+  {
+    "vehicle_id": "nio-et5-2025",
+    "field": "battery.structural_pack",
+    "value": true,
+    "tier": "P",
+    "source_name": "NIO China: 三元铁锂标准续航电池包（75kWh）CTP",
+    "source_url": "https://www.nio.cn/smart-technology/20250319006",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "NIO states new-generation CTP (Cell to Pack) on the 75 kWh 三元铁锂 standard-range pack. Mapped to structural_pack true."
+  },
+  {
+    "vehicle_id": "nio-et5-2025",
+    "field": "powertrain.motor_count",
+    "value": 2,
+    "tier": "P",
+    "source_name": "NIO China ET5 product page (Wayback 2024-05-16): dual motor",
+    "source_url": "https://web.archive.org/web/20240516032019/https://www.nio.cn/et5",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "notes": "双电机智能四驱. Medium confidence for New ET5 refresh."
+  },
+  {
+    "vehicle_id": "nio-et5-2025",
+    "field": "powertrain.accel_0_60_s",
+    "value": 4,
+    "unit": "s",
+    "tier": "S",
+    "source_name": "ZOL: 蔚来ET5 2025款 75kWh 0-100 km/h",
+    "source_url": "https://detail.zol.com.cn/2129/2128813/param.shtml",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "官方0-100km/h加速(s) 4 for 2025款 75kWh. Stored as stated 0-100 km/h; not converted to 0-60 mph. BitAuto Global 2025 585km AWD lists the same 4 s. New ET5 English launch news does not restate accel."
+  },
+  {
+    "vehicle_id": "nio-et5-2025",
+    "field": "charging.peak_dc_kw",
+    "value": 180,
+    "tier": "S",
+    "source_name": "汽车网评 (qcwp): 蔚来ET5 最大快充功率",
+    "source_url": "https://qcwp.com/series/6146/parameter",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "最大快充功率(kw) 180 on ET5 parameter columns that include recent 75 kWh rows. Aggregator; New ET5 user manual describes AC/DC charging but does not state peak kW. charging.port_type left blank: manual says 符合当地标准 and describes AC adapter use, but does not name GB/T or 国标充电口."
+  },
+  {
+    "vehicle_id": "nio-et5-2025",
+    "field": "efficiency.cltc_kwh_per_100km",
+    "value": 14,
+    "tier": "S",
+    "source_name": "BitAuto Global: 蔚来ET5 2025 585km 四驱版 energy use",
+    "source_url": "https://www.bitauto.com/zh-global/nio/et5/config/",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "百公里耗电量[kWh/100km] 14 for 2025 585km 四驱版 (75 kWh). Not an EPA wall-side figure. Not found on opened NIO OEM pages for this pass."
+  }
+]

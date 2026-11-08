@@ -2,30 +2,35 @@
   {
     "vehicle_id": "ford-mustang-mach-e-2026",
     "field": "recalls.campaign_count",
-    "value": 0,
+    "value": 2,
     "tier": "P",
-    "source_name": "NHTSA recall flat file FLAT_RCL_POST_2010 (MY2026 search)",
-    "source_url": "https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip",
-    "access_date": "2026-09-29",
-    "confidence": "medium",
-    "notes": "No MY2026 records for this nameplate in NHTSA's recall flat file (file dated 2026-09-29; searched MODELTXT by regex, not exact string). The recallsByVehicle API returned HTTP 400 / Count 0 for every model string tried ('MUSTANG MACH-E'), which is how it responds to an unmatched string, so the API alone can't confirm zero.",
-    "conflicts_with": [
-      "ford-mustang-mach-e-2026#recalls.listed_as_having_recalls#NHTSA products API model list (issueType=r, FORD MY2026)"
-    ]
+    "source_name": "NHTSA Recalls API recallsByVehicle (FORD MUSTANG MACH E, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=MUSTANG%20MACH%20E&modelYear=2026",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "notes": "Distinct NHTSA campaigns for MY2026. Matching model string is 'MUSTANG MACH E' (HTTP 200, Count 2). Hyphenated 'MUSTANG MACH-E' returned HTTP 400 / Count 0 on re-check. Flat file FLAT_RCL_POST_2010 (downloaded 2026-10-04) also lists the same two MY2026 MUSTANG MACH E campaigns. Prior atlas row had campaign_count 0 conflicting with products-list listed_as_having_recalls; that contradiction is closed now that campaigns are present in the API and flat file."
   },
   {
     "vehicle_id": "ford-mustang-mach-e-2026",
-    "field": "recalls.listed_as_having_recalls",
-    "value": true,
+    "field": "recalls.campaign_25V863",
+    "value": "POWER TRAIN:AUTOMATIC TRANSMISSION:INTERNAL:PARK PAWL: The integrated park module may fail to lock into the park position when the driver shifts into park.",
     "tier": "P",
-    "source_name": "NHTSA products API model list (issueType=r, FORD MY2026)",
-    "source_url": "https://api.nhtsa.gov/products/vehicle/models?modelYear=2026&make=ford&issueType=r",
-    "access_date": "2026-09-29",
-    "confidence": "low",
-    "conflicts_with": [
-      "ford-mustang-mach-e-2026#recalls.campaign_count#NHTSA recall flat file FLAT_RCL_POST_2010 (MY2026 search)"
-    ],
-    "notes": "NHTSA's products endpoint lists 'MUSTANG MACH-E BEV BEV' among MY2026 models with recalls, but neither recallsByVehicle nor the flat file returns any MY2026 campaign for it. Unresolved discrepancy between two NHTSA sources."
+    "source_name": "NHTSA Recalls API recallsByVehicle (FORD MUSTANG MACH E, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=MUSTANG%20MACH%20E&modelYear=2026",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "notes": "NHTSA campaign 25V863000. Scope includes certain 2024-2026 Mustang Mach-E (and other Ford EVs). Listed for the MY2026 Mach-E nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "field": "recalls.campaign_25V885",
+    "value": "EXTERIOR LIGHTING:LIGHTING CONTROL MODULE: The Light Driver Control Module B (LDCMB) may fail, preventing the turn signals, daytime running lights, low beam, and high beam headlights from illuminating.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (FORD MUSTANG MACH E, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=ford&model=MUSTANG%20MACH%20E&modelYear=2026",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "notes": "NHTSA campaign 25V885000. Scope includes certain 2025-2026 Mustang Mach-E vehicles. Listed for the MY2026 Mach-E nameplate; not filtered by trim, so check VIN-level applicability."
   },
   {
     "vehicle_id": "ford-mustang-mach-e-2026",
@@ -269,5 +274,17 @@
     "access_date": "2026-10-03",
     "confidence": "medium",
     "notes": "Width, Max w/o mirrors 74.1 in. Ford.com lists vehicle width with mirrors 82.6 in only; that with-mirrors figure not used."
+  },
+  {
+    "vehicle_id": "ford-mustang-mach-e-2026",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Ford.com 2026 Mustang Mach-E Select: RWD Rear eMotor / Primary eMotor (Rear)",
+    "source_url": "https://www.ford.com/suvs/mach-e/models/select/",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Power Standard: RWD (Rear eMotor). Specs table Electric motor(s) for Select: Primary eMotor (Rear); Dual eMotor listed only as available eAWD. Atlas entry is Select RWD Standard-Range."
   }
 ]

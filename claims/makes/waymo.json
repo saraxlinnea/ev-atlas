@@ -1,0 +1,62 @@
+[
+  {
+    "make": "Waymo",
+    "field": "org.parent",
+    "value": "Alphabet",
+    "tier": "P",
+    "source_name": "Waymo About timeline: established under Alphabet (2016)",
+    "source_url": "https://blog.waymo.com/about/",
+    "access_date": "2026-10-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "About timeline: Waymo was established under Alphabet as a self-driving technology company. Listing ticker not copied onto Waymo."
+  },
+  {
+    "make": "Waymo",
+    "field": "org.brand_type",
+    "value": "division",
+    "tier": "P",
+    "source_name": "Waymo About timeline: independent company under Alphabet",
+    "source_url": "https://blog.waymo.com/about/",
+    "access_date": "2026-10-05",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "notes": "Established under Alphabet as an independent self-driving technology company; not its own listed equity issuer. Mapped to division under Alphabet parent."
+  },
+  {
+    "make": "Waymo",
+    "field": "org.ev_focus",
+    "value": "bev_only",
+    "tier": "P",
+    "source_name": "Waymo FAQ: Which cars will I ride in?",
+    "source_url": "https://waymo.com/faq/",
+    "access_date": "2026-10-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Fleet described as all-electric Jaguar I-PACE and the Ojai; no ICE fleet stated."
+  },
+  {
+    "make": "Waymo",
+    "field": "org.home_market",
+    "value": "US",
+    "tier": "P",
+    "source_name": "Waymo FAQ: Where does Waymo operate?",
+    "source_url": "https://waymo.com/faq/",
+    "access_date": "2026-10-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Ride-hailing city list is US metros (plus Uber partner cities)."
+  },
+  {
+    "make": "Waymo",
+    "field": "org.summary",
+    "value": "Waymo is an autonomous ride-hailing operator built around the Waymo Driver. In EV Atlas it appears as sparse fleet and robotaxi stubs rather than retail buyer-spec rows. The Ojai is a purpose-built platform for fully autonomous trips.",
+    "tier": "P",
+    "source_name": "Waymo FAQ + Ojai rider blog (summary synthesis)",
+    "source_url": "https://waymo.com/faq/",
+    "access_date": "2026-10-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity summary from opened Waymo FAQ and Ojai blog. No HQ city claim without an opened OEM page stating it."
+  }
+]

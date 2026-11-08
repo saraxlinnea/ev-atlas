@@ -271,5 +271,44 @@
     "confidence": "medium",
     "notes": "Width, without mirrors 78.9 in for Touring AWD. C/D page labeled 2027; atlas is MY2026 Gravity Touring.",
     "model_year": 2027
+  },
+  {
+    "vehicle_id": "lucid-gravity-2026",
+    "field": "battery.system_voltage_v",
+    "value": "900V architecture",
+    "tier": "P",
+    "source_name": "Lucid Motors: Introducing the Lucid Gravity (900V electrical architecture)",
+    "source_url": "https://lucidmotors.com/fr-ca/stories/introducing-lucid-gravity",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "notes": "OEM: evolution of its 900V electrical architecture / over 900V architecture. Reveal-era language; confidence medium.",
+    "model_year": 2024
+  },
+  {
+    "vehicle_id": "lucid-gravity-2026",
+    "field": "body.drag_coefficient",
+    "value": 0.24,
+    "tier": "P",
+    "source_name": "Lucid Gravity product page: Cd",
+    "source_url": "https://lucidmotors.com/gravity",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Specs block lists 0.24 Cd. Live page shows Model Year 2027 in trim table; applied with medium confidence to atlas MY2026 Touring row.",
+    "disclosed_by_oem": true,
+    "model_year": 2027
+  },
+  {
+    "vehicle_id": "lucid-gravity-2026",
+    "field": "powertrain.motor_count",
+    "value": 2,
+    "tier": "P",
+    "source_name": "Lucid Gravity product page: AWD",
+    "source_url": "https://lucidmotors.com/gravity",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Drive Type AWD for Touring/GT/GT-S. Treated as dual-motor AWD.",
+    "disclosed_by_oem": true,
+    "model_year": 2027
   }
 ]

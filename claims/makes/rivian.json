@@ -1,0 +1,110 @@
+[
+  {
+    "make": "Rivian",
+    "field": "org.hq_city",
+    "value": "Irvine",
+    "tier": "P",
+    "source_name": "Rivian Automotive, Inc. Form 10-K for year ended 2025-12-31",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1874178/000187417826000008/rivn-20251231.htm",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Principal executive offices: 14600 Myford Road, Irvine, California 92606."
+  },
+  {
+    "make": "Rivian",
+    "field": "org.hq_country",
+    "value": "United States",
+    "tier": "P",
+    "source_name": "Rivian Automotive, Inc. Form 10-K for year ended 2025-12-31",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1874178/000187417826000008/rivn-20251231.htm",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "US principal executive offices (Irvine, California)."
+  },
+  {
+    "make": "Rivian",
+    "field": "org.brand_type",
+    "value": "standalone",
+    "tier": "P",
+    "source_name": "Rivian Investors FAQ",
+    "source_url": "https://rivian.com/investors",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Rivian Automotive is the Nasdaq-listed issuer (RIVN); not framed as a division brand."
+  },
+  {
+    "make": "Rivian",
+    "field": "org.ev_focus",
+    "value": "bev_only",
+    "tier": "P",
+    "source_name": "Rivian Investors FAQ",
+    "source_url": "https://rivian.com/investors",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Investors page describes producing electric vehicles (R1T, R1S, commercial vans); no ICE lineup stated."
+  },
+  {
+    "make": "Rivian",
+    "field": "org.home_market",
+    "value": "US",
+    "tier": "P",
+    "source_name": "Rivian Investors FAQ",
+    "source_url": "https://rivian.com/investors",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "FAQ: based in Southern California with US manufacturing in Normal, Illinois."
+  },
+  {
+    "make": "Rivian",
+    "field": "org.listing_status",
+    "value": "public",
+    "tier": "P",
+    "source_name": "Rivian Investors FAQ",
+    "source_url": "https://rivian.com/investors",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "FAQ: traded on Nasdaq Global Select Market under symbol RIVN."
+  },
+  {
+    "make": "Rivian",
+    "field": "org.ticker",
+    "value": "RIVN",
+    "tier": "P",
+    "source_name": "Rivian Investors FAQ",
+    "source_url": "https://rivian.com/investors",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Ticker RIVN per Rivian investors FAQ."
+  },
+  {
+    "make": "Rivian",
+    "field": "org.founded_year",
+    "value": 2015,
+    "tier": "P",
+    "source_name": "Rivian Investors FAQ",
+    "source_url": "https://rivian.com/investors",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "FAQ: incorporated March 26, 2015 in Delaware. Stored as calendar year only."
+  },
+  {
+    "make": "Rivian",
+    "field": "org.summary",
+    "value": "Rivian is a publicly listed electric vehicle maker with US headquarters. Investor materials describe electric vehicle production for consumer and commercial models. In EV Atlas it is keyed as a make, not a company-group hub.",
+    "tier": "P",
+    "source_name": "Rivian Investors FAQ; Rivian Automotive Form 10-K year ended 2025-12-31",
+    "source_url": "https://rivian.com/investors",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb from Rivian investors FAQ and Form 10-K HQ."
+  }
+]

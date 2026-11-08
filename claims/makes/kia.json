@@ -1,0 +1,38 @@
+[
+  {
+    "make": "Kia",
+    "field": "org.brand_type",
+    "value": "standalone",
+    "tier": "P",
+    "source_name": "Kia Global Brand company overview",
+    "source_url": "https://www.kia.com/worldwide/company-overview.do",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Kia Global Brand Site presents Kia as the brand/company; parent left blank without an opened Hyundai Motor Group ownership page."
+  },
+  {
+    "make": "Kia",
+    "field": "org.ev_focus",
+    "value": "multi_powertrain",
+    "tier": "P",
+    "source_name": "Kia Global Brand company overview",
+    "source_url": "https://www.kia.com/worldwide/company-overview.do",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Vehicle section lists EV, Hybrid, and PBV side by side."
+  },
+  {
+    "make": "Kia",
+    "field": "org.summary",
+    "value": "Kia presents EV and hybrid vehicle lines on its global brand site. In EV Atlas it is keyed separately from Hyundai and Genesis.",
+    "tier": "P",
+    "source_name": "Kia Global Brand company overview",
+    "source_url": "https://www.kia.com/worldwide/company-overview.do",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb."
+  }
+]

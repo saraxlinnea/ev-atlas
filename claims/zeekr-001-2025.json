@@ -1,1 +1,218 @@
-[]
+[
+  {
+    "vehicle_id": "zeekr-001-2025",
+    "field": "efficiency.cltc_range_km",
+    "value": 675,
+    "tier": "P",
+    "source_name": "Zeekr Global press: The All-new Zeekr 001 Is Now Coming (Shenxing CLTC)",
+    "source_url": "https://www.zeekrlife.com/global/posts/the-all-new-zeekr-001-is-now-coming",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "model_year": 2024,
+    "notes": "Press states 675 km CLTC for CATL Shenxing on the 2024-02-27 China launch. Conflicts with 2025 WE 95 kWh RWD aggregator CLTC 722 km. Flatten may keep this higher-tier figure; Methods flags the trim mismatch. Re-checked 2026-10-04: Zeekr global press still states 675 km CLTC for CATL Shenxing.",
+    "conflicts_with": [
+      "zeekr-001-2025#efficiency.cltc_range_km#ZOL: 极氪001 2025款 WE版 95kWh 后驱 CLTC"
+    ]
+  },
+  {
+    "vehicle_id": "zeekr-001-2025",
+    "field": "efficiency.cltc_range_km",
+    "value": 722,
+    "tier": "S",
+    "source_name": "ZOL: 极氪001 2025款 WE版 95kWh 后驱 CLTC",
+    "source_url": "https://detail.zol.com.cn/2103/2102388/param.shtml",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "CLTC纯电续航里程 722 km for 2025 WE 95 kWh RWD. Tier S aggregator; conflicts with Zeekr global press 675 km Shenxing launch figure. Re-checked 2026-10-04: ZOL WE 95 kWh RWD page still lists CLTC纯电续航里程 722 km.",
+    "conflicts_with": [
+      "zeekr-001-2025#efficiency.cltc_range_km#Zeekr Global press: The All-new Zeekr 001 Is Now Coming (Shenxing CLTC)"
+    ]
+  },
+  {
+    "vehicle_id": "zeekr-001-2025",
+    "field": "efficiency.cltc_kwh_per_100km",
+    "value": 15.2,
+    "tier": "S",
+    "source_name": "PCauto: 极氪001 2025款 WE版 95kWh 后驱 energy use",
+    "source_url": "https://price.pcauto.com.cn/choose.jsp?mid=130060",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "百公里耗电量 15.2 kWh/100km for WE 95 kWh RWD on PCauto config. Not an EPA wall-side figure. Not found on opened Zeekr OEM pages."
+  },
+  {
+    "vehicle_id": "zeekr-001-2025",
+    "field": "identity.msrp_cny",
+    "value": 269000,
+    "tier": "P",
+    "source_name": "Zeekr Global press: The All-new Zeekr 001 Is Now Coming (China starting price)",
+    "source_url": "https://www.zeekrlife.com/global/posts/the-all-new-zeekr-001-is-now-coming",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "model_year": 2024,
+    "notes": "Starting price RMB 269,000 for the all-new Zeekr 001 China market (2024-02-27 press). Conflicts with 2025 MY WE entry 259,000 CNY from Xinhua launch coverage. Re-checked 2026-10-04: Zeekr global press still states starting price RMB 269,000.",
+    "conflicts_with": [
+      "zeekr-001-2025#identity.msrp_cny#Xinhua: 2025款极氪001 official starting price"
+    ]
+  },
+  {
+    "vehicle_id": "zeekr-001-2025",
+    "field": "identity.msrp_cny",
+    "value": 259000,
+    "tier": "P",
+    "source_name": "Xinhua: 2025款极氪001 official starting price",
+    "source_url": "http://www.xinhuanet.com/auto/20240814/4631c99f161347858bb2b1159f86c200/c.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "notes": "Xinhua report of Zeekr 2025 MY launch: official starting price 25.90万元 for 2025款极氪001 (WE 95 kWh RWD entry in concurrent outlet trim tables). Conflicts with 269,000 CNY from the earlier 2024-02-27 Zeekr global press. Re-checked 2026-10-04: Xinhua article still states 2025款极氪001 official starting price 25.90万元.",
+    "conflicts_with": [
+      "zeekr-001-2025#identity.msrp_cny#Zeekr Global press: The All-new Zeekr 001 Is Now Coming (China starting price)"
+    ]
+  },
+  {
+    "vehicle_id": "zeekr-001-2025",
+    "field": "identity.msrp_usd",
+    "value": 37961,
+    "tier": "D",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "China list price converted to USD; not a US MSRP. Original CNY: 259000 (winning 2025 MY start from Xinhua). FX: Federal Reserve H.10 / FRED DEXCHUS (CNY per USD), simple mean of 185 daily noon buying rates 2026-01-02 through 2026-09-25 (latest published H.10 day as of 2026-10-03; not a full-year 2026 average) = 6.8228. USD = 259000 / 6.8228, rounded to nearest dollar. Series: https://fred.stlouisfed.org/series/DEXCHUS.",
+    "derivation": {
+      "formula": "identity.msrp_cny / 6.8228",
+      "inputs": [
+        "identity.msrp_cny"
+      ],
+      "assumptions": [
+        "Uses winning identity.msrp_cny 259000 (Xinhua 2025 MY start).",
+        "FX rate 6.8228 CNY per USD is the simple mean of Federal Reserve H.10 / FRED DEXCHUS daily noon buying rates for 2026-01-02 through 2026-09-25 (185 observations; YTD through latest published day as of 2026-10-03 access, not a calendar-year 2026 average).",
+        "Result rounded to nearest USD. China list price converted for Compare; not a US MSRP."
+      ]
+    }
+  },
+  {
+    "vehicle_id": "zeekr-001-2025",
+    "field": "battery.pack_kwh",
+    "value": 95,
+    "tier": "S",
+    "source_name": "ZOL: 极氪001 2025款 WE版 95kWh 后驱 battery energy",
+    "source_url": "https://detail.zol.com.cn/2103/2102388/param.shtml",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "电池能量 95 kWh for 2025 WE 95 kWh RWD. Zeekr global launch press names Shenxing but does not state kWh; live zeekrlife.com/global/vehicles/001 fetch showed Qilin 100 kWh only. Gross vs usable not stated."
+  },
+  {
+    "vehicle_id": "zeekr-001-2025",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "S",
+    "source_name": "ZOL: 极氪001 2025款 WE版 95kWh 后驱 battery energy",
+    "source_url": "https://detail.zol.com.cn/2103/2102388/param.shtml",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Required companion to pack_kwh."
+  },
+  {
+    "vehicle_id": "zeekr-001-2025",
+    "field": "powertrain.drive_layout",
+    "value": "RWD",
+    "tier": "S",
+    "source_name": "ZOL: 极氪001 2025款 WE版 95kWh 后驱 drive",
+    "source_url": "https://detail.zol.com.cn/2103/2102388/param.shtml",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Trim name and motor layout: 后驱 / 单电机后置 for WE 95 kWh RWD. Not restated on opened Zeekr OEM HTML for this pass."
+  },
+  {
+    "vehicle_id": "zeekr-001-2025",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "S",
+    "source_name": "ZOL: 极氪001 2025款 WE版 95kWh 后驱 motor count",
+    "source_url": "https://detail.zol.com.cn/2103/2102388/param.shtml",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "驱动电机数 单电机."
+  },
+  {
+    "vehicle_id": "zeekr-001-2025",
+    "field": "powertrain.motor_type",
+    "value": "PM_synchronous",
+    "tier": "S",
+    "source_name": "ZOL: 极氪001 2025款 WE版 95kWh 后驱 motor type",
+    "source_url": "https://detail.zol.com.cn/2103/2102388/param.shtml",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "电机类型 永磁/同步. Mapped to PM_synchronous."
+  },
+  {
+    "vehicle_id": "zeekr-001-2025",
+    "field": "battery.system_voltage_v",
+    "value": "800V electrical system",
+    "tier": "P",
+    "source_name": "Zeekr Global press: The All-new Zeekr 001 Is Now Coming (800V)",
+    "source_url": "https://www.zeekrlife.com/global/posts/the-all-new-zeekr-001-is-now-coming",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "notes": "Press: Enhanced 800V electrical system.",
+    "model_year": 2024
+  },
+  {
+    "vehicle_id": "zeekr-001-2025",
+    "field": "powertrain.inverter_semiconductor",
+    "value": "SiC_MOSFET",
+    "tier": "P",
+    "source_name": "Zeekr Global press: The All-new Zeekr 001 Is Now Coming (silicon carbide e-motors)",
+    "source_url": "https://www.zeekrlife.com/global/posts/the-all-new-zeekr-001-is-now-coming",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "notes": "Press: silicon carbide-powered e-motors. Mapped to SiC_MOSFET.",
+    "model_year": 2024
+  },
+  {
+    "vehicle_id": "zeekr-001-2025",
+    "field": "powertrain.power_hp",
+    "value": 310,
+    "unit": "kW",
+    "tier": "S",
+    "source_name": "ZOL: 极氪001 2025款 WE版 95kWh 后驱 motor power",
+    "source_url": "https://detail.zol.com.cn/2103/2102388/param.shtml",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "电动机总功率(kW) 310; table also lists 422 Ps. Stored in kW as stated. PCauto WE 95 RWD lists 310 kW / 421 Ps. Launch outlet coverage (PCauto via Tencent) states single-motor 310 kW for 2025 MY."
+  },
+  {
+    "vehicle_id": "zeekr-001-2025",
+    "field": "powertrain.accel_0_60_s",
+    "value": 6.3,
+    "unit": "s",
+    "tier": "S",
+    "source_name": "ZOL: 极氪001 2025款 WE版 95kWh 后驱 0-100 km/h",
+    "source_url": "https://detail.zol.com.cn/2103/2102388/param.shtml",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "官方0-100km/h加速(s) 6.3 for WE 95 kWh RWD. Stored as stated 0-100 km/h; not converted to 0-60 mph. PCauto same trim also lists 6.3. Launch outlet coverage often states single-motor 5.9 s without trim split; trim-specific aggregator 6.3 kept here."
+  },
+  {
+    "vehicle_id": "zeekr-001-2025",
+    "field": "charging.peak_dc_kw",
+    "value": 420,
+    "tier": "S",
+    "source_name": "天极车讯 via Tencent: 2025款极氪001 5C peak charge power",
+    "source_url": "https://news.qq.com/rain/a/20250923A06SZU00",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Outlet states 25款极氪001全系标配准800V and 5C超充, 峰值功率可达420kW (article comparing to later 焕新款). Not a Zeekr OEM HTML page. Launch coverage states Shenxing 5C and 10%-80% in 11.5 min without a kW figure. charging.port_type left blank: no opened page stated GB/T or 国标充电口."
+  },
+  {
+    "vehicle_id": "zeekr-001-2025",
+    "field": "battery.cell_chemistry",
+    "value": "LFP",
+    "tier": "S",
+    "source_name": "PCauto via Tencent: 2025款极氪001 95 kWh Shenxing LFP",
+    "source_url": "https://news.qq.com/rain/a/20240813A09N9400",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Launch coverage: 95千瓦时磷酸铁锂神行电池 for 2025 MY. Mapped to LFP. Not restated as 磷酸铁锂 on opened Zeekr OEM HTML for this pass."
+  }
+]

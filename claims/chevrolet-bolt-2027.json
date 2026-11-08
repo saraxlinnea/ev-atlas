@@ -246,5 +246,65 @@
     "access_date": "2026-10-03",
     "confidence": "high",
     "notes": "Final specs table: Torque 169 lb-ft for single permanent-magnetic drive motor."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-2027",
+    "field": "battery.cell_chemistry",
+    "value": "LFP",
+    "tier": "P",
+    "source_name": "Chevrolet Newsroom, 2025-10-09: 2027 Bolt battery chemistry",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2025/oct/1009-2027-Chevrolet-Bolt.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Battery Chemistry: Lithium Iron Phosphate in prismatic can cells.",
+    "disclosed_by_oem": true
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-2027",
+    "field": "battery.cell_format",
+    "value": "prismatic",
+    "tier": "P",
+    "source_name": "Chevrolet Newsroom, 2025-10-09: 2027 Bolt prismatic can cells",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2025/oct/1009-2027-Chevrolet-Bolt.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "OEM: Lithium Iron Phosphate in prismatic can cells.",
+    "disclosed_by_oem": true
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-2027",
+    "field": "powertrain.inverter_semiconductor",
+    "value": "SiC_MOSFET",
+    "tier": "P",
+    "source_name": "Chevrolet Newsroom, 2025-10-09: 2027 Bolt silicon carbide inverter",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2025/oct/1009-2027-Chevrolet-Bolt.html",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "OEM: silicon carbide inverter materials minimize energy loss between the battery and drive unit. Mapped to SiC_MOSFET.",
+    "disclosed_by_oem": true
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-2027",
+    "field": "powertrain.motor_type",
+    "value": "PM_synchronous",
+    "tier": "P",
+    "source_name": "Chevrolet Newsroom, 2025-10-09: 2027 Bolt permanent-magnet motor",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2025/oct/1009-2027-Chevrolet-Bolt.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "OEM: permanent-magnet motor / Single motor and gearset.",
+    "disclosed_by_oem": true
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-2027",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Chevrolet Newsroom, 2025-10-09: 2027 Bolt single motor",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2025/oct/1009-2027-Chevrolet-Bolt.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Type: Single motor and gearset.",
+    "disclosed_by_oem": true
   }
 ]

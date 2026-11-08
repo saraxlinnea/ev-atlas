@@ -6,9 +6,9 @@
     "tier": "P",
     "source_name": "NHTSA recall flat file FLAT_RCL_POST_2010 (MY2026 search)",
     "source_url": "https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip",
-    "access_date": "2026-09-29",
+    "access_date": "2026-10-04",
     "confidence": "medium",
-    "notes": "No MY2026 records for this nameplate in NHTSA's recall flat file (file dated 2026-09-29; searched MODELTXT by regex, not exact string). The recallsByVehicle API returned HTTP 400 / Count 0 for every model string tried ('MODEL S'), which is how it responds to an unmatched string, so the API alone can't confirm zero.",
+    "notes": "No MY2026 records for this nameplate in NHTSA's recall flat file (file dated 2026-10-04; searched MODELTXT by regex, not exact string). The recallsByVehicle API returned HTTP 400 / Count 0 for every model string tried ('MODEL S'), which is how it responds to an unmatched string, so the API alone can't confirm zero. Re-checked 2026-10-04: flat file (downloaded today) still has no TESLA MY2026 MODEL S campaign rows; recallsByVehicle for MODEL S still HTTP 400.",
     "conflicts_with": [
       "tesla-model-s-2026#recalls.listed_as_having_recalls#NHTSA products API model list (issueType=r, TESLA MY2026)"
     ]
@@ -20,12 +20,12 @@
     "tier": "P",
     "source_name": "NHTSA products API model list (issueType=r, TESLA MY2026)",
     "source_url": "https://api.nhtsa.gov/products/vehicle/models?modelYear=2026&make=tesla&issueType=r",
-    "access_date": "2026-09-29",
+    "access_date": "2026-10-04",
     "confidence": "low",
     "conflicts_with": [
       "tesla-model-s-2026#recalls.campaign_count#NHTSA recall flat file FLAT_RCL_POST_2010 (MY2026 search)"
     ],
-    "notes": "NHTSA's products endpoint lists 'MODEL S BEV' among MY2026 models with recalls, but neither recallsByVehicle nor the flat file returns any MY2026 campaign for it. Unresolved discrepancy between two NHTSA sources."
+    "notes": "NHTSA's products endpoint lists 'MODEL S BEV' among MY2026 models with recalls, but neither recallsByVehicle nor the flat file returns any MY2026 campaign for it. Unresolved discrepancy between two NHTSA sources. Re-checked 2026-10-04: products issueType=r for TESLA MY2026 still lists MODEL S BEV."
   },
   {
     "vehicle_id": "tesla-model-s-2026",
@@ -94,9 +94,9 @@
     "tier": "P",
     "source_name": "EPA/DOE fueleconomy.gov Find.do side-by-side for vehicle 49741 (2026 Tesla Model S)",
     "source_url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=49741",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "confidence": "medium",
-    "notes": "MSRP shown on the EPA side-by-side page for the non-Plaid Model S row. EPA footnote: MSRP data provided by Edmunds.com, Inc. Re-checked 2026-10-03: still $94,990. Tesla product page (live 403; Wayback snapshot) had no static starts-at price for this mapping.",
+    "notes": "MSRP shown on the EPA side-by-side page for the non-Plaid Model S row. EPA footnote: MSRP data provided by Edmunds.com, Inc. Re-checked 2026-10-04: EPA Find.do id 49741 still shows MSRP $94,990.",
     "conflicts_with": [
       "tesla-model-s-2026#identity.msrp_usd#Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)"
     ]
@@ -108,9 +108,9 @@
     "tier": "S",
     "source_name": "Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)",
     "source_url": "https://www.kbb.com/tesla/model-s/2026/specs/",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "confidence": "medium",
-    "notes": "KBB MSRP for the non-Plaid Model S column. Re-checked 2026-10-03: still $96,630. Differs from the EPA/Edmunds MSRP on fueleconomy.gov ($94,990).",
+    "notes": "KBB MSRP for the non-Plaid Model S column. Re-checked 2026-10-04: KBB specs table still lists non-Plaid Model S MSRP $96,630.",
     "conflicts_with": [
       "tesla-model-s-2026#identity.msrp_usd#EPA/DOE fueleconomy.gov Find.do side-by-side for vehicle 49741 (2026 Tesla Model S)"
     ]
@@ -156,10 +156,10 @@
     "tier": "P",
     "source_name": "Tesla Model S page, Model S (non-Plaid) specs (Wayback Machine snapshot 2026-01-22)",
     "source_url": "https://web.archive.org/web/20260122131939/https://www.tesla.com/models",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "disclosed_by_oem": true,
     "confidence": "high",
-    "notes": "Tesla label: Weight (Curb Mass), Model S Dual Motor (non-Plaid). Re-checked 2026-10-03 on Wayback snapshot 2026-01-22: still 4,561 lbs. Differs by 1 lb from KBB's 4,560 pounds.",
+    "notes": "Tesla label: Weight (Curb Mass), Model S Dual Motor (non-Plaid). Re-checked 2026-10-04: Wayback 2026-01-22 Model S snapshot still shows Weight (Curb Mass) 4,561 lbs for Dual Motor.",
     "conflicts_with": [
       "tesla-model-s-2026#body.curb_weight_lb#Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)"
     ]
@@ -171,9 +171,9 @@
     "tier": "S",
     "source_name": "Kelley Blue Book: 2026 Tesla Model S specs (non-Plaid vs Plaid table)",
     "source_url": "https://www.kbb.com/tesla/model-s/2026/specs/",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "confidence": "medium",
-    "notes": "KBB curb weight for non-Plaid Model S (4,560 pounds). Re-checked 2026-10-03: still listed. Differs by 1 lb from Tesla Wayback (4,561 lbs).",
+    "notes": "KBB curb weight for non-Plaid Model S (4,560 pounds). Re-checked 2026-10-04: KBB specs table still lists non-Plaid curb weight 4,560 pounds.",
     "conflicts_with": [
       "tesla-model-s-2026#body.curb_weight_lb#Tesla Model S page, Model S (non-Plaid) specs (Wayback Machine snapshot 2026-01-22)"
     ]
@@ -246,5 +246,17 @@
     "confidence": "high",
     "notes": "Tesla states its vehicles use the Tesla connector now called NACS. Applied to US Model S / Model Y as native port type; not a measured peak rate.",
     "vehicle_id": "tesla-model-s-2026"
+  },
+  {
+    "vehicle_id": "tesla-model-s-2026",
+    "field": "powertrain.motor_count",
+    "value": 2,
+    "tier": "P",
+    "source_name": "Tesla Model S page, Model S (non-Plaid) specs (Wayback Machine snapshot 2026-01-22)",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_url": "https://web.archive.org/web/20260122131939/https://www.tesla.com/models",
+    "disclosed_by_oem": true,
+    "notes": "Tesla Powertrain label: Dual Motor for non-Plaid Model S. Plaid on the same page is Tri Motor (not this atlas row)."
   }
 ]

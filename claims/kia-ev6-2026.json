@@ -221,5 +221,66 @@
     "access_date": "2026-10-03",
     "confidence": "high",
     "notes": "Torque (lb.-ft.) - RWD: 258 lb.-ft. for Light. AWD 446 lb-ft not applied."
+  },
+  {
+    "vehicle_id": "kia-ev6-2026",
+    "field": "battery.system_voltage_v",
+    "value": 523,
+    "tier": "P",
+    "source_name": "Kia Media 2026 EV6 specifications: Light battery voltage",
+    "source_url": "https://www.kiamedia.com/us/en/models/ev6/2026/specifications",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Battery Voltage (V) 523 V for Light trim (63.0 kWh / 237 mi RWD), matching atlas Standard Range RWD. Long Range trims list 697 V and are not used."
+  },
+  {
+    "vehicle_id": "kia-ev6-2026",
+    "field": "powertrain.motor_type",
+    "value": "PM_synchronous",
+    "tier": "P",
+    "source_name": "Kia Media 2026 EV6 specifications: motor type",
+    "source_url": "https://www.kiamedia.com/us/en/models/ev6/2026/specifications",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Motor Type: AC Synchronous Permanent Magnet Motor. Mapped to PM_synchronous."
+  },
+  {
+    "vehicle_id": "kia-ev6-2026",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Kia Media 2026 EV6 specifications: Light RWD",
+    "source_url": "https://www.kiamedia.com/us/en/models/ev6/2026/specifications",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Light trim is RWD-only (single motor). AWD dual-motor figures not applied."
+  },
+  {
+    "vehicle_id": "kia-ev6-2026",
+    "field": "battery.cell_chemistry",
+    "value": "NMC",
+    "tier": "P",
+    "source_name": "Kia Media, 2022-01-25: EV6 Nickel-Cobalt-Manganese (80/10/10) battery pack",
+    "source_url": "https://www.kiamedia.com/us/en/models/ev6/2022",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "model_year": 2022,
+    "notes": "Launch overview: energy-dense Nickel-Cobalt-Manganese (80/10/10) battery pack in 58.0 and 77.4 kWh sizes. Mapped to NMC. Atlas MY2026 Light Standard Range is 63.0 kWh / 523 V (newer pack size); chemistry carried with medium confidence and claim model_year 2022. 2026 Kia Media specs pages opened for voltage do not restate cathode chemistry."
+  },
+  {
+    "vehicle_id": "kia-ev6-2026",
+    "field": "charging.peak_dc_kw",
+    "value": 180,
+    "tier": "P",
+    "source_name": "Kia Media 2026 EV6 specifications: Light Maximum Charging Input Power (DC Fast Charge)",
+    "source_url": "https://www.kiamedia.com/us/en/models/ev6/2026/specifications",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Maximum Charging Input Power (DC Fast Charge) 180 kW for Light (63.0 kWh / 523 V), matching atlas Standard Range RWD. Light Long Range / Wind / GT-Line list 240 kW and were not applied. Separate rows for 50 / 150 / 350 kW EVSE charge times are station conditions, not used as the vehicle peak."
   }
 ]

@@ -16,6 +16,7 @@
       <a class="nav-brand" href="index.html">EV Atlas</a>
       <ul class="site-nav">
         <li><a href="compare.html">Compare</a></li>
+        <li><a href="makes.html">Makes</a></li>
         <li><a href="figures.html">Figures</a></li>
         <li><a href="methodology.html">Methods</a></li>
       </ul>
@@ -32,13 +33,14 @@
     <section class="content-section compare-section" aria-labelledby="compare-heading" data-compare-root data-src="data/compare.json">
       <h2 id="compare-heading" class="kicker">Compare</h2>
       <p class="chart-note">
-        Filled cells link to the claim source when a URL is recorded. Hover for
-        source tier. A † beside a value means sources disagree; activate it for
-        the other recorded claim. Drag a spec column header to reorder; order
-        is kept for this browser session. Market defaults to US. EPA columns are
-        US-cycle; CLTC columns are China-cycle; blank EPA on a CN row is expected,
-        not a missing US label. — means not found, not zero. Voltage and
-        chemistry are sparse. Sourcing rules:
+        Filled cells link to the claim source when a URL is recorded. Hover a
+        value for its source tier. A † beside a value means sources disagree;
+        activate it for the other recorded claim. Market defaults to US. EPA
+        columns are US-cycle; CLTC columns are China-cycle; blank EPA on a CN
+        row is expected. Presets choose which spec columns show; any catalog
+        column can be toggled after. Drag a spec column header to reorder.
+        Pack (kWh) shows basis when known. — means not found, not zero.
+        Sourcing rules:
         <a href="methodology.html">Methods</a>.
       </p>
 
@@ -120,7 +122,7 @@
             <span>Group by make</span>
           </label>
           <fieldset class="compare-presets" data-compare-presets>
-            <legend class="compare-field-label">Columns</legend>
+            <legend class="compare-field-label">Presets</legend>
             <label class="compare-check"><input type="checkbox" data-preset="buyer"> Buyer</label>
             <label class="compare-check"><input type="checkbox" data-preset="efficiency"> Efficiency</label>
             <label class="compare-check"><input type="checkbox" data-preset="charging"> Charging</label>
@@ -139,10 +141,27 @@
               <div class="compare-col-picker" data-compare-col-picker></div>
             </div>
           </details>
-          <button type="button" class="compare-reset-order" data-compare-reset-order aria-label="Reset spec column order to default">
-            Reset column order
+          <button type="button" class="compare-reset-order" data-compare-reset-order aria-label="Reset spec columns to Buyer defaults and default order">
+            Reset columns
           </button>
           <p class="compare-count" data-compare-count aria-live="polite"></p>
+        </div>
+        <div class="compare-toolbar-row compare-toolbar-export">
+          <button type="button" class="compare-download" data-compare-download>
+            Download CSV
+          </button>
+          <a
+            class="compare-download-full"
+            href="data/flattened.csv"
+            data-compare-download-full
+          >Full flattened table</a>
+          <p class="compare-download-note">
+            Download CSV exports the current filters and visible columns
+            (winning values only). Empty cells mean not found, not zero. US and
+            CN are separate markets; EPA columns are wall-side; battery-side is
+            labeled separately. Full flattened table is every field with tier
+            and source columns from the same flatten pass.
+          </p>
         </div>
       </div>
 
@@ -172,6 +191,7 @@
       <p>Claims live in the repository. Empty cells stay empty.</p>
     </footer>
   </div>
+  <script src="sheet.js"></script>
   <script src="compare.js"></script>
 </body>
 </html>

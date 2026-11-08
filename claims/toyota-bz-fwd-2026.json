@@ -186,5 +186,29 @@
     "access_date": "2026-10-03",
     "confidence": "medium",
     "notes": "XLE FWD / XLE FWD Plus / Limited FWD listed at 198 lb-ft. AWD 323 lb-ft not applied. Atlas EPA row is XLE FWD 57.7 kWh class. Toyota USA newsroom press release does not state torque in lb-ft."
+  },
+  {
+    "vehicle_id": "toyota-bz-fwd-2026",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Toyota 2026 bZ ebrochure: Front-wheel-drive models use one electric motor",
+    "source_url": "https://www.toyota.com/content/dam/toyota/brochures/pdf/2026/bz_ebrochure.pdf",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Brochure PERFORMANCE: Front-wheel-drive models use one electric motor to produce up to 221 hp; AWD uses two. Atlas row is XLE FWD 57.7 kWh entry, not FWD Plus."
+  },
+  {
+    "vehicle_id": "toyota-bz-fwd-2026",
+    "field": "powertrain.inverter_semiconductor",
+    "value": "SiC_MOSFET",
+    "tier": "P",
+    "source_name": "Toyota USA Newsroom, 2025-05-13: 2026 bZ eAxles silicon carbide semiconductors",
+    "source_url": "https://pressroom.toyota.com/toyota-bz-all-electric-suv-adds-range-charging-and-exterior-updates-for-2026/",
+    "access_date": "2026-11-05",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "notes": "Newsroom: upgraded eAxles now use silicon carbide (SIC) semiconductors. Mapped to SiC_MOSFET. Applies to the 2026 bZ eAxle family including FWD."
   }
 ]

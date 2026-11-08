@@ -1,0 +1,82 @@
+[
+  {
+    "vehicle_id": "zoox-robotaxi-2026",
+    "field": "battery.pack_kwh",
+    "value": 133,
+    "tier": "S",
+    "source_name": "TechCrunch, 2022-07-26: Zoox robotaxi battery capacity",
+    "source_url": "https://techcrunch.com/2022/07/26/zoox-robotaxi-with-supercar-dna-rolls-towards-sf-vegas-seattle-streets/",
+    "access_date": "2026-10-05",
+    "confidence": "medium",
+    "notes": "TechCrunch citing Zoox: each drive unit has a 66.5 kWh pack; total 133 kWh. Prototype-era reporting (2022). Model year for production robotaxis is not a consumer OEM MY; atlas uses 2026 as the service/production scaling year. Gross vs usable not stated."
+  },
+  {
+    "vehicle_id": "zoox-robotaxi-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "S",
+    "source_name": "TechCrunch, 2022-07-26: Zoox robotaxi battery capacity",
+    "source_url": "https://techcrunch.com/2022/07/26/zoox-robotaxi-with-supercar-dna-rolls-towards-sf-vegas-seattle-streets/",
+    "access_date": "2026-10-05",
+    "confidence": "medium",
+    "notes": "Capacity stated without gross vs usable label."
+  },
+  {
+    "vehicle_id": "zoox-robotaxi-2026",
+    "field": "battery.system_voltage_v",
+    "value": 400,
+    "tier": "S",
+    "source_name": "TechCrunch, 2022-07-26: Zoox robotaxi 400-volt system",
+    "source_url": "https://techcrunch.com/2022/07/26/zoox-robotaxi-with-supercar-dna-rolls-towards-sf-vegas-seattle-streets/",
+    "access_date": "2026-10-05",
+    "confidence": "medium",
+    "notes": "TechCrunch: vehicles based on a 400-volt system. Not a measured pack minimum voltage table."
+  },
+  {
+    "vehicle_id": "zoox-robotaxi-2026",
+    "field": "charging.peak_dc_kw",
+    "value": 100,
+    "tier": "S",
+    "source_name": "TechCrunch, 2022-07-26: Zoox robotaxi DC fast charging",
+    "source_url": "https://techcrunch.com/2022/07/26/zoox-robotaxi-with-supercar-dna-rolls-towards-sf-vegas-seattle-streets/",
+    "access_date": "2026-10-05",
+    "confidence": "medium",
+    "notes": "Supports DC fast charging up to 100 kW."
+  },
+  {
+    "vehicle_id": "zoox-robotaxi-2026",
+    "field": "battery.cell_format",
+    "value": "cylindrical_2170",
+    "tier": "P",
+    "source_name": "Panasonic Energy press, 2025-11-25: Zoox 2170 cylindrical cells",
+    "source_url": "https://news.panasonic.com/global/press/en251125-2",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "medium",
+    "notes": "Panasonic Energy will deliver its latest 2170 batteries beginning in early 2026 for Zoox robotaxi fleet deployments. Chemistry (NCA/NMC/LFP) not stated; left blank. Cell format mapped to cylindrical_2170."
+  },
+  {
+    "vehicle_id": "zoox-robotaxi-2026",
+    "field": "battery.cell_supplier",
+    "value": "Panasonic Energy",
+    "tier": "P",
+    "source_name": "Panasonic Energy press, 2025-11-25: supply agreement with Zoox",
+    "source_url": "https://news.panasonic.com/global/press/en251125-2",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Multi-year agreement for Panasonic Energy cylindrical lithium-ion cells for Zoox robotaxis. Does not name cathode chemistry."
+  },
+  {
+    "vehicle_id": "zoox-robotaxi-2026",
+    "field": "adas.system_name",
+    "value": "Zoox autonomous driving system",
+    "tier": "P",
+    "source_name": "Panasonic Energy press, 2025-11-25: Zoox purpose-built robotaxi",
+    "source_url": "https://news.panasonic.com/global/press/en251125-2",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "medium",
+    "notes": "Panasonic describes Zoox purpose-built robotaxi and fully driverless ride-hailing service. Sparse fleet/AV stub: no consumer MSRP, no EPA row, chemistry blank."
+  }
+]

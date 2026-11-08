@@ -1,0 +1,108 @@
+[
+  {
+    "vehicle_id": "lucid-gravity-gt-2025",
+    "field": "efficiency.epa_range_mi",
+    "value": 450,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49110 (2025 Lucid Gravity GT w/20F21R wheels (2R))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49110",
+    "disclosed_by_oem": true,
+    "notes": "EPA id 49110, 'Gravity GT w/20F21R wheels (2R)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry Gravity configuration for MY2025 (EPA lists GT only; no Touring row that year). 2-row 20F21R."
+  },
+  {
+    "vehicle_id": "lucid-gravity-gt-2025",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 31.0845,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49110 (2025 Lucid Gravity GT w/20F21R wheels (2R))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49110",
+    "disclosed_by_oem": true,
+    "notes": "Wall-side, combined (EPA combE). The label and the printable page (https://www.fueleconomy.gov/feg/noframes/49110.shtml) round this. EPA id 49110, 'Gravity GT w/20F21R wheels (2R)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry Gravity configuration for MY2025 (EPA lists GT only; no Touring row that year). 2-row 20F21R."
+  },
+  {
+    "vehicle_id": "lucid-gravity-gt-2025",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 108,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49110 (2025 Lucid Gravity GT w/20F21R wheels (2R))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49110",
+    "disclosed_by_oem": true,
+    "notes": "EPA id 49110, 'Gravity GT w/20F21R wheels (2R)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry Gravity configuration for MY2025 (EPA lists GT only; no Touring row that year). 2-row 20F21R."
+  },
+  {
+    "vehicle_id": "lucid-gravity-gt-2025",
+    "field": "powertrain.drive_layout",
+    "value": "AWD",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49110 (2025 Lucid Gravity GT w/20F21R wheels (2R))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49110",
+    "disclosed_by_oem": true,
+    "notes": "EPA 'drive' field: 'All-Wheel Drive'. EPA id 49110, 'Gravity GT w/20F21R wheels (2R)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry Gravity configuration for MY2025 (EPA lists GT only; no Touring row that year). 2-row 20F21R."
+  },
+  {
+    "vehicle_id": "lucid-gravity-gt-2025",
+    "field": "powertrain.epa_motor_description",
+    "value": "170 and 448 kW ACPM",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49110 (2025 Lucid Gravity GT w/20F21R wheels (2R))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49110",
+    "disclosed_by_oem": true,
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type: the EPA text isn't consistent enough for that (e.g. motor counts don't always match the drive layout). EPA id 49110, 'Gravity GT w/20F21R wheels (2R)'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Entry Gravity configuration for MY2025 (EPA lists GT only; no Touring row that year). 2-row 20F21R."
+  },
+  {
+    "vehicle_id": "lucid-gravity-gt-2025",
+    "field": "recalls.campaign_count",
+    "value": 2,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (LUCID GRAVITY, MY2025)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LUCID&model=GRAVITY&modelYear=2025",
+    "notes": "Distinct NHTSA campaigns returned for MY2025 (make/model/year query; not filtered by trim). Model string queried: 'GRAVITY'. API message: Results returned successfully."
+  },
+  {
+    "vehicle_id": "lucid-gravity-gt-2025",
+    "field": "recalls.campaign_26V018",
+    "value": "BACK OVER PREVENTION:SOFTWARE: Lucid USA, Inc.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (LUCID GRAVITY, MY2025)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LUCID&model=GRAVITY&modelYear=2025",
+    "notes": "NHTSA campaign 26V018000; Part 573 report received 17/01/2026. Listed for the MY2025 GRAVITY nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "lucid-gravity-gt-2025",
+    "field": "recalls.campaign_26V192",
+    "value": "SEATS: The lap belt anchor brackets on the second row seats may have insufficient welds, which can cause bracket failure.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (LUCID GRAVITY, MY2025)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=LUCID&model=GRAVITY&modelYear=2025",
+    "notes": "NHTSA campaign 26V192000; Part 573 report received 27/03/2026. Listed for the MY2025 GRAVITY nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "lucid-gravity-gt-2025",
+    "field": "powertrain.motor_count",
+    "value": 2,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "medium",
+    "source_name": "Lucid Gravity product page: AWD",
+    "source_url": "https://lucidmotors.com/gravity",
+    "disclosed_by_oem": true,
+    "notes": "Drive Type AWD for Touring/GT/GT-S on live page. Applied to MY2025 GT EPA row with medium confidence; not a MY2025-dated OEM sheet.",
+    "model_year": 2027
+  }
+]

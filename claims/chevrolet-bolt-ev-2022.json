@@ -1,0 +1,379 @@
+[
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "efficiency.epa_range_mi",
+    "value": 259,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 43955 (2022 Chevrolet Bolt EV)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/43955",
+    "disclosed_by_oem": true,
+    "notes": "EPA id 43955, 'Bolt EV'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: EPA single Bolt EV row (no LT/Premier split in this EPA id)."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 28.1083,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 43955 (2022 Chevrolet Bolt EV)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/43955",
+    "disclosed_by_oem": true,
+    "notes": "Wall-side, combined (EPA combE). The label and the printable page (https://www.fueleconomy.gov/feg/noframes/43955.shtml) round this. EPA id 43955, 'Bolt EV'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: EPA single Bolt EV row (no LT/Premier split in this EPA id)."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 120,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 43955 (2022 Chevrolet Bolt EV)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/43955",
+    "disclosed_by_oem": true,
+    "notes": "EPA id 43955, 'Bolt EV'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: EPA single Bolt EV row (no LT/Premier split in this EPA id)."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "powertrain.drive_layout",
+    "value": "FWD",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 43955 (2022 Chevrolet Bolt EV)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/43955",
+    "disclosed_by_oem": true,
+    "notes": "EPA 'drive' field: 'Front-Wheel Drive'. EPA id 43955, 'Bolt EV'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: EPA single Bolt EV row (no LT/Premier split in this EPA id)."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "powertrain.epa_motor_description",
+    "value": "150 kW ACPM",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 43955 (2022 Chevrolet Bolt EV)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/43955",
+    "disclosed_by_oem": true,
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type: the EPA text isn't consistent enough for that (e.g. motor counts don't always match the drive layout). EPA id 43955, 'Bolt EV'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: EPA single Bolt EV row (no LT/Premier split in this EPA id)."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "recalls.campaign_count",
+    "value": 7,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CHEVROLET BOLT EV, MY2022)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CHEVROLET&model=BOLT+EV&modelYear=2022",
+    "notes": "Distinct NHTSA campaigns returned for MY2022 (make/model/year query; not filtered by trim). Model string queried: 'BOLT EV'. API message: Results returned successfully."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "recalls.campaign_21V517",
+    "value": "AIR BAGS:FRONTAL: One of the two fasteners that secure the driver's frontal air bag to the steering wheel may be missing or improperly tightened.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CHEVROLET BOLT EV, MY2022)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CHEVROLET&model=BOLT+EV&modelYear=2022",
+    "notes": "NHTSA campaign 21V517000; Part 573 report received 08/07/2021. Listed for the MY2022 BOLT EV nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "recalls.campaign_21V650",
+    "value": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY: The high voltage battery could catch fire when charged to full or nearly full capacity.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CHEVROLET BOLT EV, MY2022)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CHEVROLET&model=BOLT+EV&modelYear=2022",
+    "notes": "NHTSA campaign 21V650000; Part 573 report received 20/08/2021. Listed for the MY2022 BOLT EV nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "recalls.campaign_22V930",
+    "value": "STRUCTURE:BODY:ROOF AND PILLARS: After a crash with seat belt pretensioner deployment, the pretensioner exhaust may ignite carpet fibers near the B-pillar, causing a fire.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CHEVROLET BOLT EV, MY2022)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CHEVROLET&model=BOLT+EV&modelYear=2022",
+    "notes": "NHTSA campaign 22V930000; Part 573 report received 15/12/2022. Listed for the MY2022 BOLT EV nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "recalls.campaign_23V567",
+    "value": "AIR BAGS:FRONTAL: The instrument panel may be missing the perforation on the underside of the panel cover that allows the passenger-side air bag to deploy properly.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CHEVROLET BOLT EV, MY2022)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CHEVROLET&model=BOLT+EV&modelYear=2022",
+    "notes": "NHTSA campaign 23V567000; Part 573 report received 10/08/2023. Listed for the MY2022 BOLT EV nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "recalls.campaign_23V845",
+    "value": "STRUCTURE:BODY:ROOF AND PILLARS: This recall includes certain vehicles previously repaired incorrectly under NHTSA recall number 22V-930.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CHEVROLET BOLT EV, MY2022)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CHEVROLET&model=BOLT+EV&modelYear=2022",
+    "notes": "NHTSA campaign 23V845000; Part 573 report received 14/12/2023. Listed for the MY2022 BOLT EV nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "recalls.campaign_24V481",
+    "value": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY: The advanced diagnostic software may have been incorrectly installed and fail to detect defective battery modules, possibly resulting in a battery fire.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CHEVROLET BOLT EV, MY2022)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CHEVROLET&model=BOLT+EV&modelYear=2022",
+    "notes": "NHTSA campaign 24V481000; Part 573 report received 27/06/2024. Listed for the MY2022 BOLT EV nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "recalls.campaign_24V812",
+    "value": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY: The installation of advanced diagnostic software may have failed.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CHEVROLET BOLT EV, MY2022)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CHEVROLET&model=BOLT+EV&modelYear=2022",
+    "notes": "NHTSA campaign 24V812000; Part 573 report received 31/10/2024. Listed for the MY2022 BOLT EV nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "Chevrolet Newsroom, 2021-02-14 (EPA update 2021-05-11): 2022 Bolt EV single motor",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/feb/0214-boltev-bolteuv-specifications.html",
+    "disclosed_by_oem": true,
+    "notes": "ELECTRIC DRIVE: Single motor and gearset."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "powertrain.motor_type",
+    "value": "PM_synchronous",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "Chevrolet Newsroom, 2021-02-14: 2022 Bolt EV permanent magnetic motor",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/feb/0214-boltev-bolteuv-specifications.html",
+    "disclosed_by_oem": true,
+    "notes": "Permanent magnetic drive motor."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "powertrain.power_hp",
+    "value": 200,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "Chevrolet Newsroom, 2021-02-14: 2022 Bolt EV power",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/feb/0214-boltev-bolteuv-specifications.html",
+    "disclosed_by_oem": true,
+    "notes": "Power 200 hp / 150 kW."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "powertrain.torque_lbft",
+    "value": 266,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "Chevrolet Newsroom, 2021-02-14: 2022 Bolt EV torque",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/feb/0214-boltev-bolteuv-specifications.html",
+    "disclosed_by_oem": true,
+    "notes": "Torque 266 lb-ft."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "battery.pack_kwh",
+    "value": 65,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "Chevrolet Newsroom, 2021-02-14: 2022 Bolt EV battery energy",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/feb/0214-boltev-bolteuv-specifications.html",
+    "disclosed_by_oem": true,
+    "notes": "Battery Energy 65 kWh. Gross vs usable not labeled."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "Chevrolet Newsroom, 2021-02-14: 2022 Bolt EV battery energy",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/feb/0214-boltev-bolteuv-specifications.html",
+    "disclosed_by_oem": true,
+    "notes": "Energy listed without gross vs usable label."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "charging.range_added_mi",
+    "value": 100,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "Chevrolet Newsroom, 2021-02-14: 2022 Bolt EV DC fast charge",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/feb/0214-boltev-bolteuv-specifications.html",
+    "disclosed_by_oem": true,
+    "notes": "DC Fast Charge: Up to 100 miles in 30 mins."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "charging.range_added_time_min",
+    "value": 30,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "Chevrolet Newsroom, 2021-02-14: 2022 Bolt EV DC fast charge",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/feb/0214-boltev-bolteuv-specifications.html",
+    "disclosed_by_oem": true,
+    "notes": "Paired with up to 100 miles added."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "derived.miles_per_min_dc",
+    "value": 3.33,
+    "tier": "D",
+    "access_date": "2026-11-05",
+    "confidence": "medium",
+    "notes": "range_added_mi / range_added_time_min.",
+    "unit": "mi/min",
+    "derivation": {
+      "formula": "charging.range_added_mi / charging.range_added_time_min",
+      "inputs": [
+        "charging.range_added_mi",
+        "charging.range_added_time_min"
+      ]
+    }
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "derived.kwh_per_100mi_battery_side",
+    "value": 25.1,
+    "tier": "D",
+    "access_date": "2026-11-05",
+    "confidence": "medium",
+    "notes": "pack_kwh / epa_range_mi * 100; battery-side, not wall-side EPA combE.",
+    "derivation": {
+      "formula": "battery.pack_kwh / efficiency.epa_range_mi * 100",
+      "inputs": [
+        "battery.pack_kwh",
+        "efficiency.epa_range_mi"
+      ]
+    }
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "body.wheelbase_in",
+    "value": 102.4,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "Chevrolet Newsroom, 2021-02-14: 2022 Bolt EV dimensions",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/feb/0214-boltev-bolteuv-specifications.html",
+    "disclosed_by_oem": true,
+    "notes": "From 2022 Bolt EV newsroom specs table."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "body.length_in",
+    "value": 163.2,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "Chevrolet Newsroom, 2021-02-14: 2022 Bolt EV dimensions",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/feb/0214-boltev-bolteuv-specifications.html",
+    "disclosed_by_oem": true,
+    "notes": "From 2022 Bolt EV newsroom specs table."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "body.width_in",
+    "value": 69.5,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "Chevrolet Newsroom, 2021-02-14: 2022 Bolt EV dimensions",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/feb/0214-boltev-bolteuv-specifications.html",
+    "disclosed_by_oem": true,
+    "notes": "From 2022 Bolt EV newsroom specs table."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "body.height_in",
+    "value": 63.4,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "Chevrolet Newsroom, 2021-02-14: 2022 Bolt EV dimensions",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/feb/0214-boltev-bolteuv-specifications.html",
+    "disclosed_by_oem": true,
+    "notes": "From 2022 Bolt EV newsroom specs table."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "body.curb_weight_lb",
+    "value": 3589,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "Chevrolet Newsroom, 2021-02-14: 2022 Bolt EV dimensions",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/feb/0214-boltev-bolteuv-specifications.html",
+    "disclosed_by_oem": true,
+    "notes": "Curb Weight (Min) 3,589 lb. From 2022 Bolt EV newsroom specs table."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "derived.wh_per_lb",
+    "value": 18.11,
+    "tier": "D",
+    "access_date": "2026-11-05",
+    "confidence": "medium",
+    "notes": "pack_kwh*1000 / curb_weight_lb (pack_kwh_basis unstated).",
+    "derivation": {
+      "formula": "battery.pack_kwh * 1000 / body.curb_weight_lb",
+      "inputs": [
+        "battery.pack_kwh",
+        "body.curb_weight_lb"
+      ]
+    }
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "chassis.front_suspension",
+    "value": "Independent MacPherson strut-type with direct-acting solid stabilizer bar",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "Chevrolet Newsroom, 2021-02-14: 2022 Bolt EV dimensions",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/feb/0214-boltev-bolteuv-specifications.html",
+    "disclosed_by_oem": true,
+    "notes": "From 2022 Bolt EV newsroom specs table."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "field": "chassis.rear_suspension",
+    "value": "Compound crank (torsion beam) with coil springs",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "Chevrolet Newsroom, 2021-02-14: 2022 Bolt EV dimensions",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/feb/0214-boltev-bolteuv-specifications.html",
+    "disclosed_by_oem": true,
+    "notes": "From 2022 Bolt EV newsroom specs table."
+  }
+]

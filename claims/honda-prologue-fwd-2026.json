@@ -109,14 +109,14 @@
   {
     "vehicle_id": "honda-prologue-fwd-2026",
     "field": "charging.port_type",
-    "value": "CCS",
+    "value": "CCS1",
     "tier": "P",
     "source_name": "Honda automobiles Prologue page: NACS-CCS adapter required for Superchargers",
     "source_url": "https://automobiles.honda.com/prologue",
     "access_date": "2026-10-02",
     "disclosed_by_oem": true,
     "confidence": "high",
-    "notes": "Page describes Tesla Supercharger / NACS network access with purchase of the Honda NACS-CCS adapter, implying the vehicle port is CCS and NACS is via adapter."
+    "notes": "Page describes Tesla Supercharger / NACS network access with purchase of the Honda NACS-CCS adapter, implying the vehicle port is CCS and NACS is via adapter. Mapped to CCS1 for US market (schema enum)."
   },
   {
     "vehicle_id": "honda-prologue-fwd-2026",
@@ -176,5 +176,29 @@
     "disclosed_by_oem": true,
     "confidence": "high",
     "notes": "Exterior width 78.3 in across grades. Onboard AC kW not stated as a vehicle peak on this specs release (only Level 2 miles-per-hour charge rate), so left blank."
+  },
+  {
+    "vehicle_id": "honda-prologue-fwd-2026",
+    "field": "charging.onboard_ac_kw",
+    "value": 11.5,
+    "tier": "P",
+    "source_name": "Honda EV Charger Guide: Prologue with Home Charging Station 48 (11.5 kW)",
+    "source_url": "https://dreamshop.honda.com/resource/1712288706000/EV_Charger_Guide",
+    "access_date": "2026-10-04",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "OEM charger guide pairs the Prologue with Honda Home Charging Station 48 at 11.5 kW / 48A (8.9 hours 0-100% for 85 kWh; 34.1 miles per hour). Matches automobiles.honda.com Prologue Level 2 miles/hour marketing. Not a DC peak figure."
+  },
+  {
+    "vehicle_id": "honda-prologue-fwd-2026",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Honda News, 2025-10-28: 2026 Prologue Specifications & Features (Single Motor FWD)",
+    "source_url": "https://hondanews.com/en-US/honda-automobiles/releases/2026-honda-prologue-specifications-features",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Spec table: Single Motor Front-Wheel Drive standard on EX (FWD) and Touring (FWD). Dual Motor AWD columns not applied. Matches atlas FWD entry."
   }
 ]

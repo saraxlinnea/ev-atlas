@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Makes | EV Atlas</title>
+  <meta name="description" content="Makes present in EV Atlas, with vehicle counts and disclosure fill from sourced claims. Not a full OEM catalog.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page page-wide">
+    <nav aria-label="Site">
+      <a class="nav-brand" href="index.html">EV Atlas</a>
+      <ul class="site-nav">
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="makes.html" aria-current="page">Makes</a></li>
+        <li><a href="figures.html">Figures</a></li>
+        <li><a href="methodology.html">Methods</a></li>
+      </ul>
+    </nav>
+
+    <header class="hero hero-thin">
+      <h1>Makes</h1>
+      <p class="lede">
+        Makes keyed as recorded on vehicle rows in EV Atlas. Counts and fill
+        rates come from generated claim winners only. Not a company index and
+        not a complete OEM catalog.
+      </p>
+    </header>
+
+    <section class="content-section" aria-labelledby="makes-index-heading" data-makes-index data-src="data/makes.json">
+      <h2 id="makes-index-heading" class="kicker">In this atlas</h2>
+      <p class="chart-note">
+        Each make page summarizes vehicles already claimed here, plus a
+        claim-backed org background layer when sourced. Chevrolet and Cadillac
+        stay separate. Disclosure fill uses tracked heatmap fields.
+        Identity is blank or partial until make claims exist. — means not found.
+      </p>
+      <p class="compare-count" data-makes-count aria-live="polite"></p>
+      <div class="makes-wrap">
+        <table class="compare-table makes-table" data-makes-table hidden>
+          <thead>
+            <tr>
+              <th scope="col">Make</th>
+              <th scope="col" class="num">Vehicles</th>
+              <th scope="col">Markets</th>
+              <th scope="col">Identity</th>
+              <th scope="col" class="num">Disclosure fill</th>
+            </tr>
+          </thead>
+          <tbody data-makes-body></tbody>
+        </table>
+      </div>
+      <p data-makes-error class="error" hidden></p>
+    </section>
+  </div>
+  <script src="sheet.js"></script>
+  <script src="makes.js"></script>
+</body>
+</html>

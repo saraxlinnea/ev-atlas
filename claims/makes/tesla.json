@@ -1,0 +1,98 @@
+[
+  {
+    "make": "Tesla",
+    "field": "org.hq_city",
+    "value": "Austin",
+    "tier": "P",
+    "source_name": "Tesla Investor Relations Contact Us",
+    "source_url": "https://ir.tesla.com/contact-us",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "FAQ states corporate headquarters at 1 Tesla Road, Austin, TX 78725."
+  },
+  {
+    "make": "Tesla",
+    "field": "org.hq_country",
+    "value": "United States",
+    "tier": "P",
+    "source_name": "Tesla Investor Relations Contact Us",
+    "source_url": "https://ir.tesla.com/contact-us",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Corporate Secretary address lists United States."
+  },
+  {
+    "make": "Tesla",
+    "field": "org.brand_type",
+    "value": "standalone",
+    "tier": "P",
+    "source_name": "Tesla Investor Relations Contact Us",
+    "source_url": "https://ir.tesla.com/contact-us",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Tesla, Inc. is the listed issuer (NASDAQ TSLA); not framed as a division brand."
+  },
+  {
+    "make": "Tesla",
+    "field": "org.home_market",
+    "value": "US",
+    "tier": "P",
+    "source_name": "Tesla Investor Relations Contact Us",
+    "source_url": "https://ir.tesla.com/contact-us",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Corporate headquarters and IR framing are United States."
+  },
+  {
+    "make": "Tesla",
+    "field": "org.listing_status",
+    "value": "public",
+    "tier": "P",
+    "source_name": "Tesla Investor Relations Contact Us",
+    "source_url": "https://ir.tesla.com/contact-us",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "FAQ: shares trade on NASDAQ under ticker TSLA."
+  },
+  {
+    "make": "Tesla",
+    "field": "org.ticker",
+    "value": "TSLA",
+    "tier": "P",
+    "source_name": "Tesla Investor Relations Contact Us",
+    "source_url": "https://ir.tesla.com/contact-us",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Ticker TSLA per Tesla IR FAQ."
+  },
+  {
+    "make": "Tesla",
+    "field": "org.founded_year",
+    "value": 2003,
+    "tier": "P",
+    "source_name": "Tesla Investor Relations Contact Us",
+    "source_url": "https://ir.tesla.com/contact-us",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "FAQ: Tesla was incorporated on July 1, 2003. Stored as calendar year only."
+  },
+  {
+    "make": "Tesla",
+    "field": "org.summary",
+    "value": "Tesla is a publicly listed vehicle maker headquartered in the United States. In EV Atlas it is keyed as a standalone make, and China-market rows are separate vehicle records when present.",
+    "tier": "P",
+    "source_name": "Tesla Investor Relations Contact Us",
+    "source_url": "https://ir.tesla.com/contact-us",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb from Tesla IR Contact Us. org.ev_focus omitted: this IR page does not state BEV-only."
+  }
+]

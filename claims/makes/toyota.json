@@ -1,0 +1,74 @@
+[
+  {
+    "make": "Toyota",
+    "field": "org.hq_city",
+    "value": "Toyota City",
+    "tier": "P",
+    "source_name": "Toyota Motor Corporation company overview",
+    "source_url": "https://global.toyota/en/company/profile/overview/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Head Office (Honsha) address: 1 Toyota-Cho, Toyota City, Aichi Prefecture, Japan."
+  },
+  {
+    "make": "Toyota",
+    "field": "org.hq_country",
+    "value": "Japan",
+    "tier": "P",
+    "source_name": "Toyota Motor Corporation company overview",
+    "source_url": "https://global.toyota/en/company/profile/overview/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Head Office listed in Aichi Prefecture, Japan."
+  },
+  {
+    "make": "Toyota",
+    "field": "org.brand_type",
+    "value": "standalone",
+    "tier": "P",
+    "source_name": "Toyota Motor Corporation company overview",
+    "source_url": "https://global.toyota/en/company/profile/overview/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Company name Toyota Motor Corporation; make keyed as Toyota in EV Atlas."
+  },
+  {
+    "make": "Toyota",
+    "field": "org.home_market",
+    "value": "JP",
+    "tier": "P",
+    "source_name": "Toyota Motor Corporation company overview",
+    "source_url": "https://global.toyota/en/company/profile/overview/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Head Office in Toyota City, Japan."
+  },
+  {
+    "make": "Toyota",
+    "field": "org.founded_year",
+    "value": 1937,
+    "tier": "P",
+    "source_name": "Toyota Motor Corporation company overview",
+    "source_url": "https://global.toyota/en/company/profile/overview/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Date founded August 28, 1937. Stored as calendar year only."
+  },
+  {
+    "make": "Toyota",
+    "field": "org.summary",
+    "value": "Toyota is the Toyota Motor Corporation make with head office in Toyota City, Japan. In EV Atlas it is keyed separately from Lexus.",
+    "tier": "P",
+    "source_name": "Toyota Motor Corporation company overview",
+    "source_url": "https://global.toyota/en/company/profile/overview/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb from opened company overview."
+  }
+]

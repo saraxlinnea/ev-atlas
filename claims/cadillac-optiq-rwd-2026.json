@@ -256,5 +256,18 @@
     "field": "powertrain.motor_count",
     "value": 1,
     "notes": "Base configuration is rear-wheel drive with a single motor (315 hp / 332 lb-ft Cadillac-estimated). Dual-motor AWD / OPTIQ-V not this row. EPA evMotor string still recorded separately and not parsed."
+  },
+  {
+    "vehicle_id": "cadillac-optiq-rwd-2026",
+    "field": "battery.cell_chemistry",
+    "value": "NCMA",
+    "tier": "P",
+    "source_name": "Cadillac Newsroom, 2024-05-29: 2025 OPTIQ Battery chemistry NCMA cathode",
+    "source_url": "https://news.cadillac.com/newsroom.detail.html/Pages/news/us/en/2024/may/0529-optiq.html",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "model_year": 2025,
+    "notes": "BATTERY SYSTEM: Lithium-ion NCMA cathode, blended graphite anode; 85 kWh usable; 10 modules. Launch page describes dual-motor AWD; chemistry applied to atlas MY2026 RWD row with medium confidence. NCMA is not NMC."
   }
 ]

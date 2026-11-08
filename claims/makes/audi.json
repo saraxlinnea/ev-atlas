@@ -1,0 +1,62 @@
+[
+  {
+    "make": "Audi",
+    "field": "org.parent",
+    "value": "Volkswagen Group",
+    "tier": "P",
+    "source_name": "Volkswagen Group about page",
+    "source_url": "https://www.volkswagenag.com/en/group.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Group page lists Audi among Volkswagen Group brands."
+  },
+  {
+    "make": "Audi",
+    "field": "org.brand_type",
+    "value": "division",
+    "tier": "P",
+    "source_name": "Volkswagen Group about page",
+    "source_url": "https://www.volkswagenag.com/en/group.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Audi listed as a Volkswagen Group brand."
+  },
+  {
+    "make": "Audi",
+    "field": "org.ev_focus",
+    "value": "multi_powertrain",
+    "tier": "P",
+    "source_name": "Audi company page",
+    "source_url": "https://www.audi.com/en/company/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Audi company technology navigation lists Electric Mobility, Plug-in-hybrid, and Internal combustion engines (ICE)."
+  },
+  {
+    "make": "Audi",
+    "field": "org.home_market",
+    "value": "EU",
+    "tier": "P",
+    "source_name": "Audi company page",
+    "source_url": "https://www.audi.com/en/company/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "AUDI AG company page; European premium brand framing."
+  },
+  {
+    "make": "Audi",
+    "field": "org.summary",
+    "value": "Audi is AUDI AG, a Volkswagen Group brand that publishes electric, plug-in hybrid, and combustion technology on its company site. In EV Atlas it is keyed separately from Volkswagen and Porsche.",
+    "tier": "P",
+    "source_name": "Audi company page; Volkswagen Group about page",
+    "source_url": "https://www.audi.com/en/company/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb. Parent from VW Group brand list; EV posture from Audi company technology labels."
+  }
+]

@@ -1,0 +1,213 @@
+[
+  {
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49708 (2026 Rivian R1T Dual Large (20in))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49708",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "vehicle_id": "rivian-r1t-dual-large-2026",
+    "field": "efficiency.epa_range_mi",
+    "value": 300,
+    "notes": "EPA id 49708, 'R1T Dual Large (20in)'. Trim choice: Dual Large on 20in entry wheel; not All-Terrain / Performance Dual Large variants."
+  },
+  {
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49708 (2026 Rivian R1T Dual Large (20in))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49708",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "vehicle_id": "rivian-r1t-dual-large-2026",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 42.8711,
+    "notes": "Wall-side, combined (EPA combE). Label rounds to 43. EPA id 49708."
+  },
+  {
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49708 (2026 Rivian R1T Dual Large (20in))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49708",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "vehicle_id": "rivian-r1t-dual-large-2026",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 79,
+    "notes": "EPA comb08. EPA id 49708."
+  },
+  {
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49708 (2026 Rivian R1T Dual Large (20in))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49708",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "vehicle_id": "rivian-r1t-dual-large-2026",
+    "field": "powertrain.drive_layout",
+    "value": "AWD",
+    "notes": "EPA 'drive' field: '4-Wheel Drive'. Mapped to AWD. EPA id 49708."
+  },
+  {
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49708 (2026 Rivian R1T Dual Large (20in))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49708",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "vehicle_id": "rivian-r1t-dual-large-2026",
+    "field": "powertrain.epa_motor_description",
+    "value": "264 kW ACPM",
+    "notes": "EPA 'evMotor' free text, verbatim. EPA id 49708."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2026",
+    "field": "recalls.campaign_count",
+    "value": 2,
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1T, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1T&modelYear=2026",
+    "access_date": "2026-10-05",
+    "confidence": "high",
+    "notes": "Distinct NHTSA campaigns for MY2026 R1T nameplate (make/model/year; not trim-specific). Same query used for atlas Dual Standard R1T."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2026",
+    "field": "recalls.campaign_26V508",
+    "value": "EXTERIOR LIGHTING:TURN SIGNAL: One or both front turn signals may fail to illuminate and flash.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1T, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1T&modelYear=2026",
+    "access_date": "2026-10-05",
+    "confidence": "high",
+    "notes": "NHTSA campaign 26V508000. Listed for MY2026 R1T; not filtered by trim."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2026",
+    "field": "recalls.campaign_26V597",
+    "value": "BACK OVER PREVENTION:SOFTWARE: The rearview camera image may be obstructed by a notification when in reverse.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1T, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1T&modelYear=2026",
+    "access_date": "2026-10-05",
+    "confidence": "high",
+    "notes": "NHTSA campaign 26V597000. Listed for MY2026 R1T; not filtered by trim."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2026",
+    "field": "battery.pack_kwh",
+    "value": 109.8,
+    "tier": "P",
+    "source_name": "Rivian Support: battery specifications on Rivian vehicles",
+    "source_url": "https://rivian.com/support/article/what-are-the-battery-specifications-on-rivian-vehicles",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "conflicts_with": [
+      "rivian-r1t-dual-large-2026#battery.pack_kwh#Rivian Support: usable kWh capacity of your batteries"
+    ],
+    "notes": "R1 Dual Large Rated Capacity/Energy 109.8 kWh on Rivian battery specifications page."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "P",
+    "source_name": "Rivian Support: battery specifications on Rivian vehicles",
+    "source_url": "https://rivian.com/support/article/what-are-the-battery-specifications-on-rivian-vehicles",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "conflicts_with": [
+      "rivian-r1t-dual-large-2026#battery.pack_kwh_basis#Rivian Support: usable kWh capacity of your batteries"
+    ],
+    "notes": "OEM labels Dual Large 109.8 kWh as Rated Capacity/Energy without saying gross or usable."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2026",
+    "field": "battery.pack_kwh",
+    "value": 108,
+    "tier": "P",
+    "source_name": "Rivian Support: usable kWh capacity of your batteries",
+    "source_url": "https://rivian.com/support/article/what-is-the-usable-kwh-capacity-of-your-batteries",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "conflicts_with": [
+      "rivian-r1t-dual-large-2026#battery.pack_kwh#Rivian Support: battery specifications on Rivian vehicles"
+    ],
+    "notes": "R1 Gen 2 Dual Large usable capacity 108 kWh."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "usable",
+    "tier": "P",
+    "source_name": "Rivian Support: usable kWh capacity of your batteries",
+    "source_url": "https://rivian.com/support/article/what-is-the-usable-kwh-capacity-of-your-batteries",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "conflicts_with": [
+      "rivian-r1t-dual-large-2026#battery.pack_kwh_basis#Rivian Support: battery specifications on Rivian vehicles"
+    ],
+    "notes": "Paired with the 108 kWh Dual Large usable-capacity claim."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2026",
+    "field": "battery.cell_chemistry",
+    "value": "NCA",
+    "tier": "P",
+    "source_name": "Rivian Support: battery specifications on Rivian vehicles",
+    "source_url": "https://rivian.com/support/article/what-are-the-battery-specifications-on-rivian-vehicles",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "R1 Dual Large Pack Chemistry: Li MM (NCA). Not Dual Standard LFP."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2026",
+    "field": "battery.system_voltage_v",
+    "value": 282.5,
+    "tier": "P",
+    "source_name": "Rivian Support: battery specifications on Rivian vehicles",
+    "source_url": "https://rivian.com/support/article/what-are-the-battery-specifications-on-rivian-vehicles",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "R1 Dual Large Minimum Pack Voltage 282.5V. Minimum pack V, not architecture marketing."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2026",
+    "field": "charging.port_type",
+    "value": "NACS",
+    "tier": "P",
+    "source_name": "Rivian Support: charging network compatibility (MY2026+ NACS)",
+    "source_url": "https://rivian.com/support/article/what-charging-networks-are-rivian-vehicles-compatible-with",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Starting with model year 2026, Rivian vehicles use a NACS charge port."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2026",
+    "field": "powertrain.motor_count",
+    "value": 2,
+    "tier": "P",
+    "source_name": "Rivian: Rivian Drive Systems, Decoded (Dual-Motor AWD)",
+    "source_url": "https://rivian.com/stories/difference-between-r1-drive-systems",
+    "access_date": "2026-10-05",
+    "confidence": "medium",
+    "notes": "Dual Large is Dual-Motor AWD. Tri/Quad not applied."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2026",
+    "field": "powertrain.torque_lbft",
+    "value": 610,
+    "tier": "P",
+    "source_name": "Rivian: Rivian Drive Systems, Decoded (Dual-Motor AWD torque)",
+    "source_url": "https://rivian.com/stories/difference-between-r1-drive-systems",
+    "access_date": "2026-10-05",
+    "confidence": "medium",
+    "notes": "Dual-Motor AWD: 610 lb-ft. Performance Dual-Motor 829 lb-ft not applied to non-Performance Dual Large."
+  }
+]

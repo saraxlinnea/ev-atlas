@@ -175,5 +175,53 @@
     "access_date": "2026-10-03",
     "confidence": "medium",
     "notes": "Car width 1,859 mm (73.2 in). Width including folded-out door mirrors 1,985 mm not used for this field."
+  },
+  {
+    "vehicle_id": "polestar-2-single-motor-2025",
+    "field": "charging.port_type",
+    "value": "CCS1",
+    "tier": "P",
+    "source_name": "Polestar 2 US owner's manual 2025: CCS Combined Charging System",
+    "source_url": "https://www.polestar.com/us/manual/polestar-2/2025/article/3370a859e4e797ecc0a8015122dd0a07/",
+    "access_date": "2026-10-04",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "US manual: vehicle supports rapid DC charging at stations supporting the CCS (Combined Charging System) standard. Mapped to CCS1 for US. Polestar US FAQ separately notes NACS Supercharger access via adapter (native port remains CCS)."
+  },
+  {
+    "vehicle_id": "polestar-2-single-motor-2025",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Polestar 2 2025 owner manual: Electric motor specifications (Long range Single motor)",
+    "source_url": "https://www.polestar.com/us/manual/polestar-2/2025/article/4fa6060e68531365c0a8015104582226/",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Manual: Long range Single motor is powered by one electric motor (rear). Matches atlas Single Motor row; Dual motor columns not applied."
+  },
+  {
+    "vehicle_id": "polestar-2-single-motor-2025",
+    "field": "powertrain.motor_type",
+    "value": "PM_synchronous",
+    "tier": "P",
+    "source_name": "Polestar 2 2025 owner manual: Electric motor specifications (rear Synchronous motor with permanent magnet)",
+    "source_url": "https://www.polestar.com/us/manual/polestar-2/2025/article/4fa6060e68531365c0a8015104582226/",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Rear motor for Long range Single motor: Synchronous motor with permanent magnet. Mapped to PM_synchronous."
+  },
+  {
+    "vehicle_id": "polestar-2-single-motor-2025",
+    "field": "battery.system_voltage_v",
+    "value": 400,
+    "tier": "P",
+    "source_name": "Polestar 2 global configure specifications: Long range Single motor 400 V battery",
+    "source_url": "https://www.polestar.com/global/configure/polestar-2/specifications",
+    "access_date": "2026-11-05",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "notes": "Battery row for Long range Single motor: 400 V Lithium-ion battery, 82 kWh capacity. Global/WLTP configure page; applied to US atlas Single Motor row with medium confidence."
   }
 ]

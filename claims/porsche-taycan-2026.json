@@ -120,27 +120,15 @@
   },
   {
     "vehicle_id": "porsche-taycan-2026",
-    "field": "charging.peak_dc_kw",
-    "value": 320,
-    "tier": "P",
-    "source_name": "Porsche Newsroom USA technical data PDF, 2026-01-06: MY26 Taycan Tech Specs",
-    "source_url": "https://newsroom.porsche.com/dam/jcr:d4c6c8d5-14cc-46be-9707-3dae22d89e60/20260106_TaycanTechSpecs.pdf",
-    "access_date": "2026-10-02",
-    "disclosed_by_oem": true,
-    "confidence": "high",
-    "notes": "Sheet lists Charge Time 10%-80% SoC @ 320 kW for this column. Column for base Taycan with Performance Battery (not Plus); matches EPA Performance Battery RWD trim."
-  },
-  {
-    "vehicle_id": "porsche-taycan-2026",
     "field": "charging.onboard_ac_kw",
     "value": 9.6,
     "tier": "P",
     "source_name": "Porsche Newsroom USA technical data PDF, 2026-01-06: MY26 Taycan Tech Specs",
     "source_url": "https://newsroom.porsche.com/dam/jcr:d4c6c8d5-14cc-46be-9707-3dae22d89e60/20260106_TaycanTechSpecs.pdf",
-    "access_date": "2026-10-02",
+    "access_date": "2026-10-04",
     "disclosed_by_oem": true,
     "confidence": "high",
-    "notes": "Sheet lists Charge Time 0%-100% SoC @ 9.6 kW. Column for base Taycan with Performance Battery (not Plus); matches EPA Performance Battery RWD trim."
+    "notes": "Sheet lists Charge Time 0%-100% SoC @ 9.6 kW. Column for base Taycan with Performance Battery (not Plus); matches EPA Performance Battery RWD trim. Peak DC vehicle maximum left blank; sheet only lists Charge Time 10%-80% SoC @ 150 / 270 / 320 kW station conditions, not a stated vehicle peak (same rule as EV9 / Daytona)."
   },
   {
     "vehicle_id": "porsche-taycan-2026",
@@ -256,5 +244,53 @@
     "access_date": "2026-10-03",
     "confidence": "high",
     "notes": "Base Taycan with Performance Battery (89.0/82.3 kWh): total maximum torque 272 lb-ft, 302 lb-ft with launch control. Value is the launch-control peak. Performance Battery Plus column (309 lb-ft with LC) not applied."
+  },
+  {
+    "vehicle_id": "porsche-taycan-2026",
+    "field": "battery.system_voltage_v",
+    "value": 800,
+    "tier": "P",
+    "source_name": "Porsche Newsroom: Taycan battery 800-volt system voltage",
+    "source_url": "https://newsroom.porsche.com/en/products/taycan/battery-18557.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "OEM: first production vehicle with a system voltage of 800 volts. Article focuses on Performance Battery Plus cell count; 800 V architecture applies to Taycan generally."
+  },
+  {
+    "vehicle_id": "porsche-taycan-2026",
+    "field": "battery.cell_format",
+    "value": "pouch",
+    "tier": "P",
+    "source_name": "Porsche Newsroom: Taycan battery pouch cells",
+    "source_url": "https://newsroom.porsche.com/en/products/taycan/battery-18557.html",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "notes": "OEM describes pouch cells for the Performance Battery Plus pack. Base Performance Battery cell format is not separately detailed on this page; confidence lowered."
+  },
+  {
+    "vehicle_id": "porsche-taycan-2026",
+    "field": "battery.structural_pack",
+    "value": true,
+    "tier": "P",
+    "source_name": "Porsche Newsroom: Taycan battery housing load-bearing body structure",
+    "source_url": "https://newsroom.porsche.com/en/products/taycan/battery-18557.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "OEM: battery housing is a load-bearing component of the body structure."
+  },
+  {
+    "vehicle_id": "porsche-taycan-2026",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Porsche Newsroom USA technical data PDF, 2026-01-06: MY26 Taycan Rear Motor RWD",
+    "source_url": "https://newsroom.porsche.com/dam/jcr:d4c6c8d5-14cc-46be-9707-3dae22d89e60/20260106_TaycanTechSpecs.pdf",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Base Taycan / Performance Battery columns: Drivetrain Rear Motor, Rear Wheel Drive; Motor type front/rear --/PSM. Dual Motor AWD columns not applied."
   }
 ]

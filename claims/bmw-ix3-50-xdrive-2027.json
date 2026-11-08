@@ -223,5 +223,65 @@
     "access_date": "2026-10-02",
     "disclosed_by_oem": true,
     "confidence": "high"
+  },
+  {
+    "vehicle_id": "bmw-ix3-50-xdrive-2027",
+    "field": "battery.system_voltage_v",
+    "value": "800V architecture",
+    "tier": "P",
+    "source_name": "BMW USA iX3 page: sixth-generation 800-volt drive and battery",
+    "source_url": "https://www.bmwusa.com/vehicles/x-series/ix3/bmw-ix3.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "OEM: system voltage of 800V / sixth-generation 800-volt drive and battery technology. US press also states 800V architecture."
+  },
+  {
+    "vehicle_id": "bmw-ix3-50-xdrive-2027",
+    "field": "powertrain.inverter_semiconductor",
+    "value": "SiC_MOSFET",
+    "tier": "P",
+    "source_name": "BMW Group press: Gen6 eDrive SiC inverter for Neue Klasse",
+    "source_url": "https://www.press.bmwgroup.com/global/article/detail/T0448099EN/charge-faster-drive-further:-bmw-group-reveals-revolutionary-electric-drive-concept-with-800v-technology-for-the-neue-klasse?language=en",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "notes": "OEM: inverter features 800V technology along with silicon carbide (SiC) semiconductors. Gen6 debuts on Neue Klasse / iX3."
+  },
+  {
+    "vehicle_id": "bmw-ix3-50-xdrive-2027",
+    "field": "battery.structural_pack",
+    "value": true,
+    "tier": "P",
+    "source_name": "BMW Group press: Gen6 high-voltage battery as structural component",
+    "source_url": "https://www.press.bmwgroup.com/global/article/detail/T0448099EN/charge-faster-drive-further:-bmw-group-reveals-revolutionary-electric-drive-concept-with-800v-technology-for-the-neue-klasse?language=en",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "notes": "OEM: The high-voltage battery takes on the role of a structural component in the bodies of the Neue Klasse models."
+  },
+  {
+    "vehicle_id": "bmw-ix3-50-xdrive-2027",
+    "field": "powertrain.motor_count",
+    "value": 2,
+    "tier": "P",
+    "source_name": "BMW USA iX3 page: two 800V electric motors",
+    "source_url": "https://www.bmwusa.com/vehicles/x-series/ix3/bmw-ix3.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "OEM: powered by two specially designed 800V electric motors at front and rear axles."
+  },
+  {
+    "vehicle_id": "bmw-ix3-50-xdrive-2027",
+    "field": "body.drag_coefficient",
+    "value": 0.24,
+    "tier": "P",
+    "source_name": "BMW Group press: new BMW iX3 drag coefficient",
+    "source_url": "https://www.press.bmwgroup.com/global/article/detail/T0451998EN/the-start-of-a-new-era-the-new-bmw-ix3?language=en",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "OEM: drag coefficient (Cd) of 0.24.",
+    "disclosed_by_oem": true
   }
 ]

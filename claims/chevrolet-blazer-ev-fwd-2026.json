@@ -86,7 +86,7 @@
     "tier": "P",
     "source_name": "Chevrolet USA 2026 Blazer EV previous-year page",
     "source_url": "https://www.chevrolet.com/electric/previous-year/blazer-ev",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "disclosed_by_oem": true,
     "confidence": "high",
     "field": "identity.msrp_usd",
@@ -94,7 +94,7 @@
     "conflicts_with": [
       "chevrolet-blazer-ev-fwd-2026#identity.msrp_usd#GM Newsroom, 2026-08-10: 2026 Chevrolet Blazer EV LT FWD MSRP"
     ],
-    "notes": "Starting at $44,700 with EPA-est. 312 miles FWD on the previous-year page labeled for 2026 Blazer EV. Re-checked 2026-10-03: LT Starting at $44,700 still shown. Live chevrolet.com/electric/blazer-ev was labeled 2027 at prior access; MY2026 buyer fields use this previous-year URL. Conflicts with GM Newsroom LT starting MSRP $46,495."
+    "notes": "Starting at $44,700 with EPA-est. 312 miles FWD on the previous-year page labeled for 2026 Blazer EV. Re-checked 2026-10-04: previous-year page still shows LT Starting at $44,700."
   },
   {
     "vehicle_id": "chevrolet-blazer-ev-fwd-2026",
@@ -151,13 +151,13 @@
     "tier": "P",
     "source_name": "GM Newsroom, 2026-08-10: 2026 Chevrolet Blazer EV LT FWD MSRP",
     "source_url": "https://news.gm.com/home.detail.html/Pages/topic/us/en/2026/aug/0810-chevrolet-electric.html",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "disclosed_by_oem": true,
     "confidence": "high",
     "conflicts_with": [
       "chevrolet-blazer-ev-fwd-2026#identity.msrp_usd#Chevrolet USA 2026 Blazer EV previous-year page"
     ],
-    "notes": "Base LT model MSRP starts at $46,495. Re-checked 2026-10-03: still stated on GM Newsroom 2026-08-10 Chevrolet EV lineup article. Conflicts with the Chevrolet previous-year Blazer EV page starting-at $44,700 for the same MY2026 FWD entry mapping. Both retained."
+    "notes": "Base LT model MSRP starts at $46,495. Re-checked 2026-10-04: GM Newsroom 2026-08-10 article still states base LT MSRP starts at $46,495."
   },
   {
     "vehicle_id": "chevrolet-blazer-ev-fwd-2026",
@@ -260,5 +260,17 @@
     "access_date": "2026-10-03",
     "confidence": "medium",
     "notes": "C/D exterior dimensions: wheelbase 121.8 in for 2026 Blazer EV FWD LT."
+  },
+  {
+    "vehicle_id": "chevrolet-blazer-ev-fwd-2026",
+    "field": "battery.cell_chemistry",
+    "value": "NCMA",
+    "tier": "S",
+    "source_name": "GM Authority: 2024 Chevrolet Blazer EV specifications (NCMA cathode)",
+    "source_url": "https://gmauthority.com/blog/gm/chevrolet/blazer-ev-electric/2024-chevrolet-blazer-ev/2024-chevrolet-blazer-ev-specifications/",
+    "access_date": "2026-10-05",
+    "confidence": "medium",
+    "model_year": 2024,
+    "notes": "Table Battery Chemistry: Lithium-ion NCMA cathode for both listed Ultium columns (RWD 102 kWh and AWD 85 kWh). Atlas FWD row uses OEM 85 kWh pack (same energy as the AWD NCMA column); not inferred from Ultium brand alone. NCMA is not NMC. Medium confidence for FWD vs AWD column mapping and MY2024 sheet on MY2026 row."
   }
 ]

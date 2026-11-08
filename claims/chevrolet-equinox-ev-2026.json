@@ -234,5 +234,44 @@
     "confidence": "medium",
     "model_year": 2024,
     "notes": "C/D FWD dimensions: Width 76.9 in. Same FWD instrumented block as onboard charger. Chevrolet previous-year page does not publish width."
+  },
+  {
+    "vehicle_id": "chevrolet-equinox-ev-2026",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Chevrolet Newsroom, 2024-05-14: Equinox EV Single Motor FWD",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2024/may/0514-equinoxev.html",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "ELECTRIC DRIVE: Single Motor Front-Wheel Drive. Specs table on 2024 launch page; applied to atlas MY2026 FWD with medium confidence.",
+    "disclosed_by_oem": true,
+    "model_year": 2024
+  },
+  {
+    "vehicle_id": "chevrolet-equinox-ev-2026",
+    "field": "powertrain.motor_type",
+    "value": "PM_synchronous",
+    "tier": "P",
+    "source_name": "Chevrolet Newsroom, 2024-05-14: Equinox EV permanent magnet front motor",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2024/may/0514-equinoxev.html",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Permanent magnet, bar wound (front). FWD row uses front motor only.",
+    "disclosed_by_oem": true,
+    "model_year": 2024
+  },
+  {
+    "vehicle_id": "chevrolet-equinox-ev-2026",
+    "field": "battery.cell_chemistry",
+    "value": "NCMA",
+    "tier": "P",
+    "source_name": "Chevrolet Newsroom, 2024-05-14: Equinox EV Battery Chemistry NCMA cathode",
+    "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2024/may/0514-equinoxev.html",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "model_year": 2024,
+    "notes": "BATTERY SYSTEM table: Battery Chemistry Lithium-ion NCMA cathode, blended graphite anode. Specs on 2024 launch page; applied to atlas MY2026 FWD with medium confidence. NCMA is not NMC."
   }
 ]

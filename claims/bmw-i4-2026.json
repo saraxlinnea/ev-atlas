@@ -6,9 +6,9 @@
     "tier": "P",
     "source_name": "NHTSA recall flat file FLAT_RCL_POST_2010 (MY2026 search)",
     "source_url": "https://static.nhtsa.gov/odi/ffdd/rcl/FLAT_RCL_POST_2010.zip",
-    "access_date": "2026-09-29",
+    "access_date": "2026-10-04",
     "confidence": "medium",
-    "notes": "No MY2026 records for this nameplate in NHTSA's recall flat file (file dated 2026-09-29; searched MODELTXT by regex, not exact string). The recallsByVehicle API returned HTTP 400 / Count 0 for every model string tried ('I4 GRAN COUPE', 'I4'), which is how it responds to an unmatched string, so the API alone can't confirm zero.",
+    "notes": "No MY2026 records for this nameplate in NHTSA's recall flat file (file dated 2026-10-04; searched MODELTXT by regex, not exact string). The recallsByVehicle API returned HTTP 400 / Count 0 for every model string tried ('I4 GRAN COUPE', 'I4'), which is how it responds to an unmatched string, so the API alone can't confirm zero. Re-checked 2026-10-04: flat file (downloaded today) still has no BMW MY2026 I4 campaign rows; recallsByVehicle for I4 / I4 GRAN COUPE still HTTP 400.",
     "conflicts_with": [
       "bmw-i4-2026#recalls.listed_as_having_recalls#NHTSA products API model list (issueType=r, BMW MY2026)"
     ]
@@ -20,12 +20,12 @@
     "tier": "P",
     "source_name": "NHTSA products API model list (issueType=r, BMW MY2026)",
     "source_url": "https://api.nhtsa.gov/products/vehicle/models?modelYear=2026&make=bmw&issueType=r",
-    "access_date": "2026-09-29",
+    "access_date": "2026-10-04",
     "confidence": "low",
     "conflicts_with": [
       "bmw-i4-2026#recalls.campaign_count#NHTSA recall flat file FLAT_RCL_POST_2010 (MY2026 search)"
     ],
-    "notes": "NHTSA's products endpoint lists 'I4 GRAN COUPE BEV' among MY2026 models with recalls, but neither recallsByVehicle nor the flat file returns any MY2026 campaign for it. Unresolved discrepancy between two NHTSA sources."
+    "notes": "NHTSA's products endpoint lists 'I4 GRAN COUPE BEV' among MY2026 models with recalls, but neither recallsByVehicle nor the flat file returns any MY2026 campaign for it. Unresolved discrepancy between two NHTSA sources. Re-checked 2026-10-04: products issueType=r for BMW MY2026 still lists I4 GRAN COUPE BEV."
   },
   {
     "vehicle_id": "bmw-i4-2026",
@@ -211,5 +211,31 @@
     "confidence": "medium",
     "notes": "Overall width without mirrors 72.9 in (with mirrors 81.6 in). eDrive35 page; body shell shared with refreshed MY2026 eDrive35. model_year 2024 on claim.",
     "model_year": 2024
+  },
+  {
+    "vehicle_id": "bmw-i4-2026",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "BMW Group Canada press, 2022-08: i4 eDrive35 single electrically excited synchronous motor",
+    "source_url": "https://www.press.bmwgroup.com/canada/article/detail/T0402633EN/bmw-group-canada-announces-the-new-2023-bmw-i4-edrive35;-orders-now-open?language=en",
+    "access_date": "2026-11-05",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "model_year": 2023,
+    "notes": "Press: equipped with a single, electrically excited synchronous motor in a rear-drive configuration. Used for atlas MY2026 eDrive35 RWD; xDrive dual-motor variants not applied. Lower confidence for model-year gap."
+  },
+  {
+    "vehicle_id": "bmw-i4-2026",
+    "field": "battery.system_voltage_v",
+    "value": "400V architecture",
+    "tier": "P",
+    "source_name": "BMW Group Canada press, 2022-08: i4 400V architecture",
+    "source_url": "https://www.press.bmwgroup.com/canada/article/detail/T0402633EN/bmw-group-canada-announces-the-new-2023-bmw-i4-edrive35;-orders-now-open?language=en",
+    "access_date": "2026-11-05",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "model_year": 2023,
+    "notes": "Press: All versions of the i4 operate on the same 400V architecture. Applied to atlas MY2026 eDrive35 with medium confidence for model-year gap."
   }
 ]

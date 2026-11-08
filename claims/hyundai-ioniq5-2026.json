@@ -133,24 +133,12 @@
     "tier": "P",
     "source_name": "Hyundai USA 2026 IONIQ 5 compare-specs (SE Standard Range)",
     "source_url": "https://www.hyundaiusa.com/us/en/vehicles/2026-ioniq-5/compare-specs",
-    "access_date": "2026-10-02",
+    "access_date": "2026-10-04",
     "disclosed_by_oem": true,
     "confidence": "high",
     "field": "charging.port_type",
     "value": "NACS",
-    "notes": "Specs list 'DC Fast Charging (10~80%) NACS 150 kW (400V)'. CCS adapter used for 800V ultra-fast charging."
-  },
-  {
-    "vehicle_id": "hyundai-ioniq5-2026",
-    "tier": "P",
-    "source_name": "Hyundai USA 2026 IONIQ 5 compare-specs (SE Standard Range)",
-    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/2026-ioniq-5/compare-specs",
-    "access_date": "2026-10-02",
-    "disclosed_by_oem": true,
-    "confidence": "high",
-    "field": "charging.peak_dc_kw",
-    "value": 350,
-    "notes": "Hyundai associates 800V/350 kW DC ultra-fast charging with CCS adapter; row labeled 'DC Fast Charging (10~80%) w/CCS Adapter >250 kW (800V)' at 20 minutes. Native NACS DC is listed at 150 kW (400V)."
+    "notes": "Specs list 'DC Fast Charging (10~80%) NACS 150 kW (400V)'. CCS adapter used for 800V ultra-fast charging. Peak DC vehicle maximum left blank; compare-specs kW figures are charger-class labels on charge-time and miles-after-15-min rows (NACS 150 kW / CCS >250 kW / CCS Adapter 350 kW), not a stated vehicle peak (same rule as EV9 / Daytona)."
   },
   {
     "vehicle_id": "hyundai-ioniq5-2026",
@@ -242,5 +230,65 @@
     "confidence": "medium",
     "notes": "2025 compare-specs states Level 2 on-board charger up to 10.9 kW supported. 2026 US compare-specs lists matching AC Level II charge times (5h40m for 63 kWh SE Standard Range) but does not reprint the 10.9 kW figure. Sibling Kia EV6 Light uses 10.9 kW OBC on the same E-GMP family.",
     "model_year": 2025
+  },
+  {
+    "vehicle_id": "hyundai-ioniq5-2026",
+    "field": "battery.system_voltage_v",
+    "value": 523,
+    "tier": "P",
+    "source_name": "Hyundai USA 2026 IONIQ 5 compare-specs (SE Standard Range): battery voltage",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/2026-ioniq-5/compare-specs",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "OEM Voltage 523 Volts for 63 kWh SE Standard Range. Compare-specs also lists 800V ultra-fast DC via CCS adapter; pack nominal stored here."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq5-2026",
+    "field": "body.drag_coefficient",
+    "value": 0.282,
+    "tier": "P",
+    "source_name": "Hyundai USA 2026 IONIQ 5 compare-specs: Coefficient of drag",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/2026-ioniq-5/compare-specs",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Coefficient of drag (Cd) 0.282 for listed trims including SE Standard Range.",
+    "disclosed_by_oem": true
+  },
+  {
+    "vehicle_id": "hyundai-ioniq5-2026",
+    "field": "powertrain.motor_type",
+    "value": "PM_synchronous",
+    "tier": "P",
+    "source_name": "Hyundai USA 2026 IONIQ 5 compare-specs: PMSM",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/2026-ioniq-5/compare-specs",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Permanent Magnet Synchronous Motor. Mapped to PM_synchronous.",
+    "disclosed_by_oem": true
+  },
+  {
+    "vehicle_id": "hyundai-ioniq5-2026",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Hyundai USA 2026 IONIQ 5 compare-specs: SE Standard Range RWD",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/2026-ioniq-5/compare-specs",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "SE Standard Range RWD single-motor; AWD dual-motor rows not applied.",
+    "disclosed_by_oem": true
+  },
+  {
+    "vehicle_id": "hyundai-ioniq5-2026",
+    "field": "battery.cell_chemistry",
+    "value": "NMC",
+    "tier": "P",
+    "source_name": "Hyundai Motor Korea EV battery cell information PDF (2025-08): Ioniq 5 Standard 2WD NCM",
+    "source_url": "https://www.hyundai.com/content/dam/hyundai/kr/ko/data/ev/hyundai-battery-cell-info-2508.pdf",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Buyer disclosure table: \uc544\uc774\uc624\ub2c9 5 \uc2a4\ud0e0\ub2e4\ub4dc 2WD, 63.0 kWh, 523 V, SK ON pouch, \uc8fc\uc694 \uc6d0\ub8cc NCM. Matches atlas SE Standard Range RWD pack (63 kWh) and voltage (523 V). NCM mapped to enum NMC."
   }
 ]

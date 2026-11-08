@@ -1,0 +1,74 @@
+[
+  {
+    "make": "MINI",
+    "field": "org.parent",
+    "value": "BMW Group",
+    "tier": "P",
+    "source_name": "BMW Group company page",
+    "source_url": "https://www.bmwgroup.com/en/company.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "BMW Group Brands & Services section: home of the BMW, MINI, Rolls-Royce and BMW Motorrad brands."
+  },
+  {
+    "make": "MINI",
+    "field": "org.brand_type",
+    "value": "division",
+    "tier": "P",
+    "source_name": "BMW Group company page",
+    "source_url": "https://www.bmwgroup.com/en/company.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "MINI listed as a BMW Group brand alongside BMW and Rolls-Royce."
+  },
+  {
+    "make": "MINI",
+    "field": "org.hq_city",
+    "value": "Munich",
+    "tier": "P",
+    "source_name": "BMW Group company page",
+    "source_url": "https://www.bmwgroup.com/en/company.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Parent-group HQ cues in Munich used for brand identity when no separate MINI HQ page was opened; notes scope is BMW Group."
+  },
+  {
+    "make": "MINI",
+    "field": "org.hq_country",
+    "value": "Germany",
+    "tier": "P",
+    "source_name": "BMW Group company page",
+    "source_url": "https://www.bmwgroup.com/en/company.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Parent-group HQ country from BMW Group company page."
+  },
+  {
+    "make": "MINI",
+    "field": "org.home_market",
+    "value": "EU",
+    "tier": "P",
+    "source_name": "BMW Group company page",
+    "source_url": "https://www.bmwgroup.com/en/company.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "BMW Group brand family framed from European premium group materials."
+  },
+  {
+    "make": "MINI",
+    "field": "org.summary",
+    "value": "MINI is a BMW Group vehicle brand. In EV Atlas it is keyed separately from BMW. Identity HQ fields follow opened BMW Group company materials when a separate MINI HQ page was not opened.",
+    "tier": "P",
+    "source_name": "BMW Group company page",
+    "source_url": "https://www.bmwgroup.com/en/company.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb. Listing left blank: issuer is BMW Group, not MINI as a separate ticker."
+  }
+]

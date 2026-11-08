@@ -1,0 +1,152 @@
+[
+  {
+    "vehicle_id": "zeekr-7x-2025",
+    "field": "efficiency.cltc_range_km",
+    "value": 605,
+    "tier": "P",
+    "source_name": "Zeekr Global press: The Zeekr 7X Is a Spacious, Fast, and Safe SUV (75 kWh LFP CLTC)",
+    "source_url": "https://www.zeekrlife.com/global/posts/the-zeekr-7x-is-a-spacious-fast-and-safe-suv-for-global-families",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "model_year": 2024,
+    "notes": "Trim choice: 后驱智驾版 75 kWh (China entry / standard-range LFP). Press: 75kWh lithium-iron-phosphate (LFP) battery for a driving range of 605 kilometers (CLTC). Same 605 km CLTC on Zeekr Chengdu debut press. Later 2025-10 refresh aggregator tables list 620 km for a newer 75 kWh RWD; this row keeps the launch press figure for the 2025 vehicle_id."
+  },
+  {
+    "vehicle_id": "zeekr-7x-2025",
+    "field": "battery.pack_kwh",
+    "value": 75,
+    "tier": "P",
+    "source_name": "Zeekr Global press: The Zeekr 7X Is a Spacious, Fast, and Safe SUV (75 kWh LFP)",
+    "source_url": "https://www.zeekrlife.com/global/posts/the-zeekr-7x-is-a-spacious-fast-and-safe-suv-for-global-families",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "model_year": 2024,
+    "notes": "Press: 75kWh lithium-iron-phosphate (LFP) battery (standard-range). Gross vs usable not stated. PCauto 2025 后驱智驾版 75kWh column also lists 75 kWh."
+  },
+  {
+    "vehicle_id": "zeekr-7x-2025",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "P",
+    "source_name": "Zeekr Global press: The Zeekr 7X Is a Spacious, Fast, and Safe SUV (75 kWh LFP)",
+    "source_url": "https://www.zeekrlife.com/global/posts/the-zeekr-7x-is-a-spacious-fast-and-safe-suv-for-global-families",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "model_year": 2024,
+    "notes": "Required companion to pack_kwh. Press states capacity only."
+  },
+  {
+    "vehicle_id": "zeekr-7x-2025",
+    "field": "powertrain.drive_layout",
+    "value": "RWD",
+    "tier": "S",
+    "source_name": "PCauto: 极氪7X 2025款 后驱智驾版 75kWh drive",
+    "source_url": "http://price.pcauto.com.cn/m129553/config.html",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "Trim column 后驱智驾版 75kWh; 驱动电机数 单电机; rear motor only on that column. Zeekr global press states 75 kWh LFP and 605 km CLTC but does not label RWD on the opened HTML."
+  },
+  {
+    "vehicle_id": "zeekr-7x-2025",
+    "field": "identity.msrp_cny",
+    "value": 229900,
+    "tier": "P",
+    "source_name": "Zeekr Global press: The Zeekr 7X Is a Spacious, Fast, and Safe SUV (China starting price)",
+    "source_url": "https://www.zeekrlife.com/global/posts/the-zeekr-7x-is-a-spacious-fast-and-safe-suv-for-global-families",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "model_year": 2024,
+    "notes": "Press: starting price of the Zeekr 7X in China is RMB 229,900. Matches PCauto 2025 后驱智驾版 75kWh 指导价 22.99万. Later refresh list prices not applied to this row."
+  },
+  {
+    "vehicle_id": "zeekr-7x-2025",
+    "field": "identity.msrp_usd",
+    "value": 33696,
+    "tier": "D",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "notes": "China list price converted to USD; not a US MSRP. Original CNY: 229900 (Zeekr press start). FX: Federal Reserve H.10 / FRED DEXCHUS (CNY per USD), simple mean of 185 daily noon buying rates 2026-01-02 through 2026-09-25 (latest published H.10 day; FRED series re-accessed 2026-10-04 still shows latest obs 2026-09-25; same documented CN-pass mean, not a new rate) = 6.8228. USD = 229900 / 6.8228, rounded to nearest dollar. Series: https://fred.stlouisfed.org/series/DEXCHUS.",
+    "derivation": {
+      "formula": "identity.msrp_cny / 6.8228",
+      "inputs": ["identity.msrp_cny"],
+      "assumptions": [
+        "FX rate 6.8228 CNY per USD is the simple mean of Federal Reserve H.10 / FRED DEXCHUS daily noon buying rates for 2026-01-02 through 2026-09-25 (185 observations; YTD through latest published day; FRED re-accessed 2026-10-04, same documented CN-pass mean, not a calendar-year 2026 average).",
+        "Result rounded to nearest USD. China list price converted for Compare; not a US MSRP."
+      ]
+    }
+  },
+  {
+    "vehicle_id": "zeekr-7x-2025",
+    "field": "battery.cell_chemistry",
+    "value": "LFP",
+    "tier": "P",
+    "source_name": "Zeekr Global press: The Zeekr 7X Is a Spacious, Fast, and Safe SUV (LFP)",
+    "source_url": "https://www.zeekrlife.com/global/posts/the-zeekr-7x-is-a-spacious-fast-and-safe-suv-for-global-families",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "model_year": 2024,
+    "notes": "Press: 75kWh lithium-iron-phosphate (LFP) battery. Mapped to LFP. 100 kWh NMC long-range pack is a different column and is not applied."
+  },
+  {
+    "vehicle_id": "zeekr-7x-2025",
+    "field": "battery.system_voltage_v",
+    "value": "800V electrical system",
+    "tier": "P",
+    "source_name": "Zeekr Global press: The Zeekr 7X Is a Spacious, Fast, and Safe SUV (800V)",
+    "source_url": "https://www.zeekrlife.com/global/posts/the-zeekr-7x-is-a-spacious-fast-and-safe-suv-for-global-families",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "model_year": 2024,
+    "notes": "Press: Enhanced 800V electrical system."
+  },
+  {
+    "vehicle_id": "zeekr-7x-2025",
+    "field": "powertrain.inverter_semiconductor",
+    "value": "SiC_MOSFET",
+    "tier": "P",
+    "source_name": "Zeekr Global press: The Zeekr 7X Is a Spacious, Fast, and Safe SUV (silicon carbide e-motors)",
+    "source_url": "https://www.zeekrlife.com/global/posts/the-zeekr-7x-is-a-spacious-fast-and-safe-suv-for-global-families",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "model_year": 2024,
+    "notes": "Press: silicon carbide-powered e-motors. Mapped to SiC_MOSFET. Not trim-split on the opened page."
+  },
+  {
+    "vehicle_id": "zeekr-7x-2025",
+    "field": "powertrain.power_hp",
+    "value": 310,
+    "unit": "kW",
+    "tier": "S",
+    "source_name": "PCauto: 极氪7X 2025款 后驱智驾版 75kWh motor power",
+    "source_url": "http://price.pcauto.com.cn/m129553/config.html",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "电动机总功率(kW) 310 for 后驱智驾版 75kWh; table also lists 422 Ps. Stored in kW as stated. Zeekr press headline 645 hp / 3.8 s is the dual-motor performance figure and is not applied to this RWD entry row."
+  },
+  {
+    "vehicle_id": "zeekr-7x-2025",
+    "field": "powertrain.accel_0_60_s",
+    "value": 5.8,
+    "unit": "s",
+    "tier": "S",
+    "source_name": "PCauto: 极氪7X 2025款 后驱智驾版 75kWh 0-100 km/h",
+    "source_url": "http://price.pcauto.com.cn/m129553/config.html",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "官方0-100km/h加速(s) 5.8 for 后驱智驾版 75kWh. Stored as stated 0-100 km/h; not converted to 0-60 mph. Zeekr press 3.8 s is dual-motor performance and is not applied here."
+  },
+  {
+    "vehicle_id": "zeekr-7x-2025",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "S",
+    "source_name": "PCauto: 极氪7X 2025款 后驱智驾版 75kWh motor count",
+    "source_url": "http://price.pcauto.com.cn/m129553/config.html",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "驱动电机数 单电机 for 后驱智驾版 75kWh."
+  }
+]

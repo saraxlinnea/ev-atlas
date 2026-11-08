@@ -1,0 +1,128 @@
+[
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2021",
+    "field": "efficiency.epa_range_mi",
+    "value": 259,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 43663 (2021 Chevrolet Bolt EV)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/43663",
+    "disclosed_by_oem": true,
+    "notes": "EPA id 43663, 'Bolt EV'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: EPA single Bolt EV row (no LT/Premier split in this EPA id)."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2021",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 28.6629,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 43663 (2021 Chevrolet Bolt EV)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/43663",
+    "disclosed_by_oem": true,
+    "notes": "Wall-side, combined (EPA combE). The label and the printable page (https://www.fueleconomy.gov/feg/noframes/43663.shtml) round this. EPA id 43663, 'Bolt EV'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: EPA single Bolt EV row (no LT/Premier split in this EPA id)."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2021",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 118,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 43663 (2021 Chevrolet Bolt EV)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/43663",
+    "disclosed_by_oem": true,
+    "notes": "EPA id 43663, 'Bolt EV'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: EPA single Bolt EV row (no LT/Premier split in this EPA id)."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2021",
+    "field": "powertrain.drive_layout",
+    "value": "FWD",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 43663 (2021 Chevrolet Bolt EV)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/43663",
+    "disclosed_by_oem": true,
+    "notes": "EPA 'drive' field: 'Front-Wheel Drive'. EPA id 43663, 'Bolt EV'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: EPA single Bolt EV row (no LT/Premier split in this EPA id)."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2021",
+    "field": "powertrain.epa_motor_description",
+    "value": "150 kW ACPM",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 43663 (2021 Chevrolet Bolt EV)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/43663",
+    "disclosed_by_oem": true,
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type: the EPA text isn't consistent enough for that (e.g. motor counts don't always match the drive layout). EPA id 43663, 'Bolt EV'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: EPA single Bolt EV row (no LT/Premier split in this EPA id)."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2021",
+    "field": "recalls.campaign_count",
+    "value": 5,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CHEVROLET BOLT EV, MY2021)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CHEVROLET&model=BOLT+EV&modelYear=2021",
+    "notes": "Distinct NHTSA campaigns returned for MY2021 (make/model/year query; not filtered by trim). Model string queried: 'BOLT EV'. API message: Results returned successfully."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2021",
+    "field": "recalls.campaign_21V650",
+    "value": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY: The high voltage battery could catch fire when charged to full or nearly full capacity.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CHEVROLET BOLT EV, MY2021)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CHEVROLET&model=BOLT+EV&modelYear=2021",
+    "notes": "NHTSA campaign 21V650000; Part 573 report received 20/08/2021. Listed for the MY2021 BOLT EV nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2021",
+    "field": "recalls.campaign_22V930",
+    "value": "STRUCTURE:BODY:ROOF AND PILLARS: After a crash with seat belt pretensioner deployment, the pretensioner exhaust may ignite carpet fibers near the B-pillar, causing a fire.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CHEVROLET BOLT EV, MY2021)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CHEVROLET&model=BOLT+EV&modelYear=2021",
+    "notes": "NHTSA campaign 22V930000; Part 573 report received 15/12/2022. Listed for the MY2021 BOLT EV nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2021",
+    "field": "recalls.campaign_23V845",
+    "value": "STRUCTURE:BODY:ROOF AND PILLARS: This recall includes certain vehicles previously repaired incorrectly under NHTSA recall number 22V-930.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CHEVROLET BOLT EV, MY2021)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CHEVROLET&model=BOLT+EV&modelYear=2021",
+    "notes": "NHTSA campaign 23V845000; Part 573 report received 14/12/2023. Listed for the MY2021 BOLT EV nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2021",
+    "field": "recalls.campaign_24V481",
+    "value": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY: The advanced diagnostic software may have been incorrectly installed and fail to detect defective battery modules, possibly resulting in a battery fire.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CHEVROLET BOLT EV, MY2021)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CHEVROLET&model=BOLT+EV&modelYear=2021",
+    "notes": "NHTSA campaign 24V481000; Part 573 report received 27/06/2024. Listed for the MY2021 BOLT EV nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2021",
+    "field": "recalls.campaign_24V812",
+    "value": "ELECTRICAL SYSTEM:PROPULSION SYSTEM:TRACTION BATTERY: The installation of advanced diagnostic software may have failed.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (CHEVROLET BOLT EV, MY2021)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CHEVROLET&model=BOLT+EV&modelYear=2021",
+    "notes": "NHTSA campaign 24V812000; Part 573 report received 31/10/2024. Listed for the MY2021 BOLT EV nameplate; not filtered by trim, so check VIN-level applicability."
+  }
+]

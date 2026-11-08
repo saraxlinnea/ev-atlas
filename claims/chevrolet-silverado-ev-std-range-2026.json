@@ -121,13 +121,13 @@
     "tier": "P",
     "source_name": "Chevrolet Newsroom, 2025-05-21: 2026 Silverado EV Work Truck Standard Range MSRP",
     "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2025/may/0521-Trail-Boss-joins-2026-Chevrolet-Silverado-EV.html",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "disclosed_by_oem": true,
     "confidence": "high",
     "conflicts_with": [
       "chevrolet-silverado-ev-std-range-2026#identity.msrp_usd#Chevrolet USA 2026 Silverado EV Custom starting MSRP"
     ],
-    "notes": "Lineup table: Work Truck Standard battery pack, EPA-estimated 286 miles, starting MSRP $54,895 (includes $2,095 DFC). Matches EPA Std Range WT 286 mi mapping. Conflicts with live chevrolet.com Custom starting-at $55,895 for the renamed entry trim. Ext/Max and LT prices not applied."
+    "notes": "Lineup table: Work Truck Standard battery pack, EPA-estimated 286 miles, starting MSRP $54,895 (includes $2,095 DFC). Matches EPA Std Range WT 286 mi mapping. Conflicts with live chevrolet.com Custom starting-at $55,895 for the renamed entry trim. Ext/Max and LT prices not applied. Re-checked 2026-10-04: Newsroom lineup table still lists Work Truck Standard pack starting MSRP $54,895."
   },
   {
     "vehicle_id": "chevrolet-silverado-ev-std-range-2026",
@@ -136,13 +136,13 @@
     "tier": "P",
     "source_name": "Chevrolet USA 2026 Silverado EV Custom starting MSRP",
     "source_url": "https://www.chevrolet.com/electric/silverado-ev",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "disclosed_by_oem": true,
     "confidence": "medium",
     "conflicts_with": [
       "chevrolet-silverado-ev-std-range-2026#identity.msrp_usd#Chevrolet Newsroom, 2025-05-21: 2026 Silverado EV Work Truck Standard Range MSRP"
     ],
-    "notes": "Custom trim Starting at $55,895 (page also shows overall Starting at $55,895). Live site uses Custom for the former Work Truck entry; does not restate Standard vs Extended pack on that price line. Mapped to this EPA Std Range WT 286 mi row; conflicts with newsroom WT Standard $54,895. LT/Trail Boss prices not applied."
+    "notes": "Custom trim Starting at $55,895 (page also shows overall Starting at $55,895). Live site uses Custom for the former Work Truck entry; does not restate Standard vs Extended pack on that price line. Mapped to this EPA Std Range WT 286 mi row; conflicts with newsroom WT Standard $54,895. LT/Trail Boss prices not applied. Re-checked 2026-10-04: live Silverado EV page still shows Custom Starting at $55,895."
   },
   {
     "vehicle_id": "chevrolet-silverado-ev-std-range-2026",
@@ -190,7 +190,7 @@
     "access_date": "2026-10-03",
     "disclosed_by_oem": true,
     "confidence": "high",
-    "notes": "Electric drive table: Power (hp) 510 (WT – all battery packs). LT/Trail Boss and Wide Open Watts figures not applied."
+    "notes": "Electric drive table: Power (hp) 510 (WT \u2013 all battery packs). LT/Trail Boss and Wide Open Watts figures not applied."
   },
   {
     "vehicle_id": "chevrolet-silverado-ev-std-range-2026",
@@ -262,6 +262,39 @@
     "access_date": "2026-10-03",
     "disclosed_by_oem": true,
     "confidence": "high",
-    "notes": "Overall height 78.0 in / 1982 mm (WT). LT/Trail Boss heights differ. Pack kWh, curb weight, and 0-60 left blank: newsroom names Standard pack without kWh; FAQ curb is a 7,403–8,464 lb range; live 0-60 under 4.5 s is Wide Open Watts, not Std Range WT."
+    "notes": "Overall height 78.0 in / 1982 mm (WT). LT/Trail Boss heights differ. Pack kWh, curb weight, and 0-60 left blank: newsroom names Standard pack without kWh; FAQ curb is a 7,403\u20138,464 lb range; live 0-60 under 4.5 s is Wide Open Watts, not Std Range WT."
+  },
+  {
+    "vehicle_id": "chevrolet-silverado-ev-std-range-2026",
+    "field": "battery.pack_kwh",
+    "value": 119,
+    "tier": "S",
+    "source_name": "Edmunds: 2026 Chevrolet Silverado EV Work Truck Standard Range battery capacity",
+    "source_url": "https://www.edmunds.com/chevrolet/silverado-ev/2026/st-402065207/features-specs/",
+    "access_date": "2026-11-05",
+    "confidence": "medium",
+    "notes": "Battery capacity 119 kWh for Work Truck Standard Range with EPA electricity range 286 mi matching atlas Std Range WT mapping. Chevrolet newsroom names Standard pack without kWh. Gross vs usable not labeled."
+  },
+  {
+    "vehicle_id": "chevrolet-silverado-ev-std-range-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "S",
+    "source_name": "Edmunds: 2026 Chevrolet Silverado EV Work Truck Standard Range battery capacity",
+    "source_url": "https://www.edmunds.com/chevrolet/silverado-ev/2026/st-402065207/features-specs/",
+    "access_date": "2026-11-05",
+    "confidence": "medium",
+    "notes": "Required companion to pack_kwh. Edmunds does not say gross or usable."
+  },
+  {
+    "vehicle_id": "chevrolet-silverado-ev-std-range-2026",
+    "field": "body.curb_weight_lb",
+    "value": 7403,
+    "tier": "S",
+    "source_name": "Edmunds: 2026 Chevrolet Silverado EV Work Truck Standard Range curb weight",
+    "source_url": "https://www.edmunds.com/chevrolet/silverado-ev/2026/st-402065207/features-specs/",
+    "access_date": "2026-11-05",
+    "confidence": "medium",
+    "notes": "Curb weight 7,403 lbs for Work Truck Standard Range."
   }
 ]

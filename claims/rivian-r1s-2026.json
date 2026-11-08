@@ -1,0 +1,224 @@
+[
+  {
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49717 (2026 Rivian R1S Dual Standard (20in))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49717",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "vehicle_id": "rivian-r1s-2026",
+    "field": "efficiency.epa_range_mi",
+    "value": 258,
+    "notes": "EPA id 49717, 'R1S Dual Standard (20in)'. Trim choice: entry Dual Standard on 20in (258 mi) rather than 22in (270 mi), matching the R1T Dual Standard wheel choice in the atlas."
+  },
+  {
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49717 (2026 Rivian R1S Dual Standard (20in))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49717",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "vehicle_id": "rivian-r1s-2026",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 42.8683,
+    "notes": "Wall-side, combined (EPA combE). Label/printable page round to 43. EPA id 49717."
+  },
+  {
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49717 (2026 Rivian R1S Dual Standard (20in))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49717",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "vehicle_id": "rivian-r1s-2026",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 79,
+    "notes": "EPA comb08. EPA id 49717."
+  },
+  {
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49717 (2026 Rivian R1S Dual Standard (20in))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49717",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "vehicle_id": "rivian-r1s-2026",
+    "field": "powertrain.drive_layout",
+    "value": "AWD",
+    "notes": "EPA 'drive' field: 'Part-time 4-Wheel Drive'. Mapped to AWD. EPA id 49717."
+  },
+  {
+    "tier": "P",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 49717 (2026 Rivian R1S Dual Standard (20in))",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/49717",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "vehicle_id": "rivian-r1s-2026",
+    "field": "powertrain.epa_motor_description",
+    "value": "208 kW ACPM",
+    "notes": "EPA 'evMotor' free text, verbatim. EPA id 49717."
+  },
+  {
+    "vehicle_id": "rivian-r1s-2026",
+    "field": "recalls.campaign_count",
+    "value": 3,
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1S, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1S&modelYear=2026",
+    "access_date": "2026-10-05",
+    "confidence": "high",
+    "notes": "Distinct NHTSA campaigns returned for MY2026 (make/model/year query; not filtered by trim). Model string 'R1S'."
+  },
+  {
+    "vehicle_id": "rivian-r1s-2026",
+    "field": "recalls.campaign_26V009",
+    "value": "SEAT BELTS:CRITICAL FASTENERS: The bolts that secure the second-row driver and passenger side seat belt retractor assemblies may be improperly tightened.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1S, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1S&modelYear=2026",
+    "access_date": "2026-10-05",
+    "confidence": "high",
+    "notes": "NHTSA campaign 26V009000. Listed for the MY2026 R1S nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "rivian-r1s-2026",
+    "field": "recalls.campaign_26V508",
+    "value": "EXTERIOR LIGHTING:TURN SIGNAL: One or both front turn signals may fail to illuminate and flash.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1S, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1S&modelYear=2026",
+    "access_date": "2026-10-05",
+    "confidence": "high",
+    "notes": "NHTSA campaign 26V508000. Listed for the MY2026 R1S nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "rivian-r1s-2026",
+    "field": "recalls.campaign_26V597",
+    "value": "BACK OVER PREVENTION:SOFTWARE: The rearview camera image may be obstructed by a notification when in reverse.",
+    "tier": "P",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1S, MY2026)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1S&modelYear=2026",
+    "access_date": "2026-10-05",
+    "confidence": "high",
+    "notes": "NHTSA campaign 26V597000. Listed for the MY2026 R1S nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "rivian-r1s-2026",
+    "field": "battery.pack_kwh",
+    "value": 95.6,
+    "tier": "P",
+    "source_name": "Rivian Support: battery specifications on Rivian vehicles",
+    "source_url": "https://rivian.com/support/article/what-are-the-battery-specifications-on-rivian-vehicles",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "conflicts_with": [
+      "rivian-r1s-2026#battery.pack_kwh#Rivian Support: usable kWh capacity of your batteries"
+    ],
+    "notes": "R1 Dual Standard Rated Capacity/Energy 95.6 kWh on Rivian battery specifications page (shared R1 Dual Standard pack language; applies to Dual Standard R1S as well as R1T)."
+  },
+  {
+    "vehicle_id": "rivian-r1s-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "P",
+    "source_name": "Rivian Support: battery specifications on Rivian vehicles",
+    "source_url": "https://rivian.com/support/article/what-are-the-battery-specifications-on-rivian-vehicles",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "conflicts_with": [
+      "rivian-r1s-2026#battery.pack_kwh_basis#Rivian Support: usable kWh capacity of your batteries"
+    ],
+    "notes": "OEM labels Dual Standard 95.6 kWh as Rated Capacity/Energy without saying gross or usable."
+  },
+  {
+    "vehicle_id": "rivian-r1s-2026",
+    "field": "battery.pack_kwh",
+    "value": 92.5,
+    "tier": "P",
+    "source_name": "Rivian Support: usable kWh capacity of your batteries",
+    "source_url": "https://rivian.com/support/article/what-is-the-usable-kwh-capacity-of-your-batteries",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "conflicts_with": [
+      "rivian-r1s-2026#battery.pack_kwh#Rivian Support: battery specifications on Rivian vehicles"
+    ],
+    "notes": "R1 Gen 2 Dual Standard usable capacity 92.5 kWh. Shared Dual Standard figure for R1 platforms."
+  },
+  {
+    "vehicle_id": "rivian-r1s-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "usable",
+    "tier": "P",
+    "source_name": "Rivian Support: usable kWh capacity of your batteries",
+    "source_url": "https://rivian.com/support/article/what-is-the-usable-kwh-capacity-of-your-batteries",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "conflicts_with": [
+      "rivian-r1s-2026#battery.pack_kwh_basis#Rivian Support: battery specifications on Rivian vehicles"
+    ],
+    "notes": "Paired with the 92.5 kWh usable-capacity Dual Standard claim."
+  },
+  {
+    "vehicle_id": "rivian-r1s-2026",
+    "field": "battery.cell_chemistry",
+    "value": "LFP",
+    "tier": "P",
+    "source_name": "Rivian Support: battery specifications on Rivian vehicles",
+    "source_url": "https://rivian.com/support/article/what-are-the-battery-specifications-on-rivian-vehicles",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "R1 Dual Standard Pack Chemistry: Li Fe (LFP). Same Dual Standard pack chemistry as atlas R1T Dual Standard."
+  },
+  {
+    "vehicle_id": "rivian-r1s-2026",
+    "field": "battery.system_voltage_v",
+    "value": 315,
+    "tier": "P",
+    "source_name": "Rivian Support: battery specifications on Rivian vehicles",
+    "source_url": "https://rivian.com/support/article/what-are-the-battery-specifications-on-rivian-vehicles",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "R1 Dual Standard Minimum Pack Voltage 315V. Minimum pack V, not architecture marketing."
+  },
+  {
+    "vehicle_id": "rivian-r1s-2026",
+    "field": "charging.port_type",
+    "value": "NACS",
+    "tier": "P",
+    "source_name": "Rivian Support: charging network compatibility (MY2026+ NACS)",
+    "source_url": "https://rivian.com/support/article/what-charging-networks-are-rivian-vehicles-compatible-with",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Starting with model year 2026, Rivian vehicles use a NACS charge port. Atlas R1S is MY2026 Dual Standard."
+  },
+  {
+    "vehicle_id": "rivian-r1s-2026",
+    "field": "powertrain.motor_count",
+    "value": 2,
+    "tier": "P",
+    "source_name": "Rivian: Rivian Drive Systems, Decoded (Dual-Motor AWD)",
+    "source_url": "https://rivian.com/stories/difference-between-r1-drive-systems",
+    "access_date": "2026-10-05",
+    "confidence": "medium",
+    "notes": "Dual Standard is Dual-Motor AWD. Tri/Quad motor figures not applied."
+  },
+  {
+    "vehicle_id": "rivian-r1s-2026",
+    "field": "powertrain.torque_lbft",
+    "value": 610,
+    "tier": "P",
+    "source_name": "Rivian: Rivian Drive Systems, Decoded (Dual-Motor AWD torque)",
+    "source_url": "https://rivian.com/stories/difference-between-r1-drive-systems",
+    "access_date": "2026-10-05",
+    "confidence": "medium",
+    "notes": "Dual-Motor AWD: 610 lb-ft of torque (533 hp). Performance Dual-Motor and Quad-Motor figures not applied."
+  }
+]

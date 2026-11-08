@@ -16,6 +16,7 @@
       <a class="nav-brand" href="index.html">EV Atlas</a>
       <ul class="site-nav">
         <li><a href="compare.html">Compare</a></li>
+        <li><a href="makes.html">Makes</a></li>
         <li><a href="figures.html">Figures</a></li>
         <li><a href="methodology.html" aria-current="page">Methods</a></li>
       </ul>
@@ -33,9 +34,9 @@
       <h2 id="claims-heading" class="kicker">Claims</h2>
       <p>
         Each value begins as a claim: field, value, source, access date, and
-        tier. Compare and Figures read a file generated from those claims. A
-        wrong number is corrected in the claim, then regenerated. The CSV is
-        not edited by hand.
+        tier. Compare, Makes, and Figures read files generated from those
+        claims. A wrong number is corrected in the claim, then regenerated.
+        The CSV is not edited by hand.
       </p>
       <p>
         When no qualifying source is found, the cell stays empty. Blank means
@@ -82,14 +83,18 @@
 
     <section class="content-section" aria-labelledby="limits-heading">
       <h2 id="limits-heading" class="kicker">Known limitations</h2>
-      <p>As of 2026-10-03. Coverage is incomplete; this is not a ranking and not full OEM disclosure for all vehicles.</p>
+      <p>As of 2026-10-05. Coverage is incomplete; this is not a ranking and not full OEM disclosure for all vehicles.</p>
 
       <h3>Reading the table</h3>
       <ul>
         <li>Rows are trim-specific. Sister trims can differ on range, pack, and price.</li>
+        <li>Make dossiers list only vehicles already in EV Atlas, keyed by make (Chevrolet ≠ Cadillac). Spec summaries use filled winners only (min–max or stated on N of M). A make-identity Background layer (<code>claims/makes/</code>) adds HQ, optional parent, brand type, EV focus, home market, listing when the make is the issuer, and a number-free summary from opened OEM/IR pages; blank means not found. Not company encyclopedias, rankings, or full OEM catalogs.</li>
         <li><code>region</code> is the spec market (US or CN), not brand HQ. Compare Market defaults to US. EPA columns are US-cycle; CLTC columns are China-cycle; blank EPA on a CN row is expected.</li>
-        <li>CLTC values are never stored in EPA fields, and the atlas does not invent a CLTC↔EPA conversion or cross-cycle ranking. EPA Figures omit non-US rows.</li>
-        <li>China list prices use CNY when sourced; no invented CNY→USD FX. NHTSA recall fields stay blank on China-only rows (not applied, not zero).</li>
+        <li>CLTC values are never stored in EPA fields, and the atlas does not invent a CLTC↔EPA conversion or cross-cycle ranking. EPA Figures omit non-US rows; a separate CLTC range vs pack figure covers China-market rows only. Neither is a ranking.</li>
+        <li>China list prices are sourced in CNY, then Compare shows USD via a documented Federal Reserve H.10 / FRED DEXCHUS YTD average (not a full-year average; not a US MSRP). NHTSA recall fields stay blank on China-only rows (not applied, not zero).</li>
+        <li>China-market densification (2026-10-03) plus CN add (2026-10-04): Compare shows USD MSRP only (<code>msrp_cny</code> remains the FX input; same Fed H.10 / FRED DEXCHUS 6.8228 mean). Eight CN rows when Market includes CN. BYD Seal buyer fields remain aggregator S (byd.com / MIIT still non-extractable). New entry rows: BYD Han EV 506KM 尊贵型, Zeekr 7X 后驱智驾版 75 kWh, NIO New ES6 75 kWh. Port still blank where no page named GB/T or 国标充电口. Full per-vehicle notes in <code>docs/METHODOLOGY.md</code>.</li>
+        <li>US critical buyer densify (2026-10-04): Ariya FWD 63 kWh and ZDX RWD pack/MSRP/charging from adjacent-year OEM press; Wagoneer S Launch Edition MSRP; CCS1 for i4, Countryman, IONIQ 6, Sierra EV.</li>
+        <li>US buyer densify + accel display honesty (2026-10-04): onboard AC filled for R1T 11.5 kW, R2 11 kW, Ioniq 9 11 kW, Prologue 11.5 kW, ZDX 11.5 kW; Polestar 2 port CCS1; Prologue port corrected to CCS1. Blank counts among 42 US rows: MSRP 3→3, port 3→2, peak DC 6→6, onboard AC 8→3, pack 1→1, accel 16 blank unchanged (no new OEM 0-60 mph). Accel column subtitle is <code>cycle in cell</code>; cells label <code>(0–100 km/h)</code> from claim basis (no mph conversion). Still blank: Polestar/Daytona/Lightning MSRP; several peak DC and port gaps; Wagoneer/Model S/Model Y onboard AC; Silverado pack; sixteen US 0-60 blanks.</li>
         <li>Secondary sources may appear where primary OEM text was unavailable; they rank below primary.</li>
         <li>Pack-based derived metrics require a gross or usable pack basis, not unstated.</li>
         <li>OEM peak DC kW and 0-60 times are manufacturer claims under conditions that are often underspecified.</li>
@@ -97,18 +102,25 @@
         <li><code>body.width_in</code> is without-mirrors / body width only. With-mirrors-only figures are withheld.</li>
       </ul>
 
-      <h3>Tesla and Lucid</h3>
+      <h3>Tesla, Lucid, and Rivian</h3>
       <ul>
         <li>Live tesla.com often blocks scripted fetch. Model 3 and Model S OEM figures commonly use Wayback snapshots, which can lag the live page.</li>
-        <li>Recorded conflicts include Model 3 MSRP and Model S MSRP and curb weight. Tesla torque and most Tesla onboard AC stay blank (OEM silent). Model 3 width uses a without-mirrors secondary figure; Model S width stays blank when only with-mirrors figures exist.</li>
-        <li>Lucid live pages advance model years early. MY2026 Air Pure claims draw on press and technical PDFs; some Gravity specs cite 2027-labeled pages with lowered confidence.</li>
+        <li>Recorded conflicts include Model 3 MSRP and Model S MSRP and curb weight. Tesla torque and most Tesla onboard AC stay blank (OEM silent). Model 3 width uses a without-mirrors secondary figure; Model S width stays blank when only with-mirrors figures exist. Tesla chemistry stays blank.</li>
+        <li>Lucid live pages advance model years early. MY2026 Air Pure and Grand Touring claims draw on press and technical PDFs; chemistry stays blank (900V architecture is not chemistry). Some Gravity specs cite 2027-labeled pages with lowered confidence.</li>
+        <li>Rivian Support battery specifications (re-opened 2026-10-05) restore Dual Standard LFP and 315 V minimum pack, and add Dual Large NCA / 282.5 V on the Dual Large row. R2 chemistry and voltage stay blank.</li>
+      </ul>
+
+      <h3>Chemistry, voltage, and robotaxi stubs</h3>
+      <ul>
+        <li>Heatmap after the 2026-10-05 densify: chemistry 24/55 and system voltage 24/55 (was 18/50 each on the pre-pass flatten). Fills only from opened sources; blanks mean not found.</li>
+        <li>Waymo Ojai and Zoox Robotaxi are sparse fleet / AV stubs, not retail MSRP or EPA Compare peers. EPA, NHTSA, and MSRP stay blank unless a matching retail or government record is opened. Full notes in <code>docs/METHODOLOGY.md</code>.</li>
       </ul>
 
       <h3>OEM coverage</h3>
       <ul>
         <li>Most vehicles have at least partial OEM or newsroom buyer fields from fetchable pages. Compare-column densify leaves torque on 34/39, onboard AC on 31/39, and body width on 34/39.</li>
         <li>BMW i4 eDrive35 is the atlas trim, but BMW USA no longer lists eDrive35 for 2026 (eDrive40 and above). No remapping was invented.</li>
-        <li>Ariya FWD 63 kWh and ZDX RWD stay EPA/NHTSA-thin (discontinued US pages; wrong-year or wrong-drive buyer figures not applied).</li>
+        <li>Ariya FWD 63 kWh and ZDX RWD now carry adjacent-year OEM buyer fills (<code>model_year</code> 2025 / 2024); onboard AC and 0-60 on ZDX, and Ariya 0-60, stay blank where OEM text did not support the atlas trim.</li>
         <li>Honda Prologue Supercharger access is described via a NACS-CCS adapter; the vehicle port is recorded as CCS. Prologue onboard AC kW still blank on fetchable Honda pages.</li>
         <li>Leaf and Bolt 0-60 were not stated on the fetchable OEM pages used here.</li>
       </ul>
@@ -116,8 +128,8 @@
       <h3>Model years and availability</h3>
       <ul>
         <li>Most entries are MY2026. Rivian R2, Chevrolet Bolt, and BMW iX3 are MY2027; Hyundai Ioniq 6, Polestar 2, VW ID. Buzz, and F-150 Lightning SR are MY2025.</li>
-        <li>Sale status (2026-10-03): <code>current</code> for Bolt LT, Leaf 75 kWh, IONIQ 5 SE RWD Standard Range, Prologue Single Motor FWD, Mach-E Select RWD standard range, and EV6 Light RWD (atlas Standard Range RWD). <code>discontinued</code> for Ariya and ZDX. The other 31 remain <code>unverified_availability</code>. Confirmation URLs are listed in <code>docs/METHODOLOGY.md</code>.</li>
-        <li>BMW iX3 MY2027 has no recall campaign count yet: API unmatched-string HTTP 400, flat file has no BMW MY2027 or IX3 rows, and products lists no iX3 for MY2027. Blank, not a fake zero.</li>
+        <li>Sale status (2026-10-03; two passes): <code>current</code> adds IONIQ 6 SE Standard Range, ID.4 Pro RWD, EV9 Light Long Range RWD, RZ 350e FWD, ID. Buzz Pro S, and Solterra Premium AWD alongside the earlier Bolt / Leaf / IONIQ 5 / Prologue / Mach-E / EV6 / Silverado / Ioniq 9 confirmations (plus CN XPeng G6 and NIO ET5). <code>discontinued</code> adds BMW i4 eDrive35 and Polestar 2 Single Motor alongside Ariya and ZDX. New Rivian R1S / R1T Dual Large, Lucid Air Grand Touring, Waymo Ojai, and Zoox Robotaxi rows stay <code>unverified_availability</code> with other unconfirmed trims. Confirmation URLs are listed in <code>docs/METHODOLOGY.md</code>.</li>
+        <li>BMW iX3 MY2027 still has no recall campaign count after a second 2026-10-03 retry: API unmatched-string HTTP 400 for IX3 / iX3 / X3 and related strings, flat file has no BMW MY2027 or IX3 rows, and products lists only X6 XDRIVE40I M SPORT for BMW MY2027. Blank, not a fake zero.</li>
         <li>NHTSA products vs campaign conflicts are recorded for some MY2026 nameplates; both views are kept.</li>
       </ul>
     </section>

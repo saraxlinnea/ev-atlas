@@ -1,0 +1,62 @@
+[
+  {
+    "make": "Zoox",
+    "field": "org.parent",
+    "value": "Amazon",
+    "tier": "P",
+    "source_name": "Panasonic Energy press, 2025-11-25: Zoox Amazon-owned robotaxi company",
+    "source_url": "https://news.panasonic.com/global/press/en251125-2",
+    "access_date": "2026-10-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Panasonic: Zoox, the Amazon owned autonomous ride-hailing company. Parent recorded; Amazon ticker not copied onto Zoox."
+  },
+  {
+    "make": "Zoox",
+    "field": "org.brand_type",
+    "value": "division",
+    "tier": "P",
+    "source_name": "Panasonic Energy press, 2025-11-25: Zoox under Amazon",
+    "source_url": "https://news.panasonic.com/global/press/en251125-2",
+    "access_date": "2026-10-05",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "notes": "Amazon-owned robotaxi company; not framed as its own listed equity issuer."
+  },
+  {
+    "make": "Zoox",
+    "field": "org.ev_focus",
+    "value": "bev_only",
+    "tier": "P",
+    "source_name": "Panasonic Energy press, 2025-11-25: Zoox electric robotaxi fleet",
+    "source_url": "https://news.panasonic.com/global/press/en251125-2",
+    "access_date": "2026-10-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Purpose-built electric robotaxi fleet; lithium-ion cells for propulsion."
+  },
+  {
+    "make": "Zoox",
+    "field": "org.home_market",
+    "value": "US",
+    "tier": "P",
+    "source_name": "Panasonic Energy press, 2025-11-25: Zoox Hayward CA production / Las Vegas service",
+    "source_url": "https://news.panasonic.com/global/press/en251125-2",
+    "access_date": "2026-10-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Serial production facility in Hayward, CA; ride-hailing service launched in Las Vegas."
+  },
+  {
+    "make": "Zoox",
+    "field": "org.summary",
+    "value": "Zoox builds a purpose-built autonomous robotaxi rather than a conventional consumer EV. In EV Atlas it is a sparse fleet stub with limited opened pack and voltage figures. It is not a retail MSRP or EPA Compare peer.",
+    "tier": "P",
+    "source_name": "Panasonic Energy press, 2025-11-25: Zoox robotaxi identity summary",
+    "source_url": "https://news.panasonic.com/global/press/en251125-2",
+    "access_date": "2026-10-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity summary from opened Panasonic Energy Zoox partnership press. Chemistry left blank on vehicle claims."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "make": "NIO",
+    "field": "org.brand_type",
+    "value": "standalone",
+    "tier": "P",
+    "source_name": "NIO About page",
+    "source_url": "https://www.nio.com/about",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "About page presents NIO as the company with brands NIO, ONVO, and firefly under its umbrella; make keyed as NIO."
+  },
+  {
+    "make": "NIO",
+    "field": "org.ev_focus",
+    "value": "bev_only",
+    "tier": "P",
+    "source_name": "NIO About page",
+    "source_url": "https://www.nio.com/about",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "NIO brand described as providing high-performance smart electric vehicles; battery swap and EV charging language throughout."
+  },
+  {
+    "make": "NIO",
+    "field": "org.home_market",
+    "value": "CN",
+    "tier": "P",
+    "source_name": "NIO About page",
+    "source_url": "https://www.nio.com/about",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Founded framing and global network listing China among primary markets; HQ city left blank because the page lists multiple R&D cities without a single HQ label."
+  },
+  {
+    "make": "NIO",
+    "field": "org.founded_year",
+    "value": 2014,
+    "tier": "P",
+    "source_name": "NIO About page",
+    "source_url": "https://www.nio.com/about",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "In November 2014, NIO was founded. Stored as calendar year only."
+  },
+  {
+    "make": "NIO",
+    "field": "org.listing_status",
+    "value": "public",
+    "tier": "P",
+    "source_name": "NIO About page",
+    "source_url": "https://www.nio.com/about",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Page states NIO was listed on HKEX and later on SGX; ticker symbol not copied without a clear make-issuer ticker string on this page."
+  },
+  {
+    "make": "NIO",
+    "field": "org.summary",
+    "value": "NIO is a smart electric vehicle company that also names ONVO and firefly as brands under its umbrella. In EV Atlas the make is keyed as NIO only. China-market rows use CLTC fields; EPA and NHTSA stay blank on those rows.",
+    "tier": "P",
+    "source_name": "NIO About page",
+    "source_url": "https://www.nio.com/about",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb. HQ city blank: multi-city network without a single HQ label on the opened page."
+  }
+]

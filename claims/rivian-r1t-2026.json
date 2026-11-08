@@ -99,13 +99,13 @@
     "tier": "P",
     "source_name": "Rivian Support: battery specifications on Rivian vehicles",
     "source_url": "https://rivian.com/support/article/what-are-the-battery-specifications-on-rivian-vehicles",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "disclosed_by_oem": true,
     "confidence": "high",
     "conflicts_with": [
       "rivian-r1t-2026#battery.pack_kwh#Rivian Support: usable kWh capacity of your batteries"
     ],
-    "notes": "R1 Dual Standard 'Rated Capacity/Energy' 95.6 kWh. Re-checked 2026-10-03: still listed on battery specifications article. Conflicts with the usable-capacity article's 92.5 kWh for Dual Standard."
+    "notes": "R1 Dual Standard 'Rated Capacity/Energy' 95.6 kWh. Re-checked 2026-10-04: battery specifications support page still lists R1 Dual Standard Rated Capacity/Energy 95.6 kWh."
   },
   {
     "vehicle_id": "rivian-r1t-2026",
@@ -114,10 +114,10 @@
     "tier": "P",
     "source_name": "Rivian Support: battery specifications on Rivian vehicles",
     "source_url": "https://rivian.com/support/article/what-are-the-battery-specifications-on-rivian-vehicles",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "disclosed_by_oem": true,
     "confidence": "high",
-    "notes": "Paired with the 95.6 kWh rated-energy claim. OEM labels it 'Rated Capacity/Energy' without saying gross or usable. Re-checked 2026-10-03. Conflicts with the usable-capacity article's usable basis.",
+    "notes": "Paired with the 95.6 kWh rated-energy claim. OEM labels it 'Rated Capacity/Energy' without saying gross or usable. Re-checked 2026-10-04: Rivian battery specifications page still omits gross vs usable on the 95.6 kWh rating.",
     "conflicts_with": [
       "rivian-r1t-2026#battery.pack_kwh_basis#Rivian Support: usable kWh capacity of your batteries"
     ]
@@ -129,13 +129,13 @@
     "tier": "P",
     "source_name": "Rivian Support: usable kWh capacity of your batteries",
     "source_url": "https://rivian.com/support/article/what-is-the-usable-kwh-capacity-of-your-batteries",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "disclosed_by_oem": true,
     "confidence": "high",
     "conflicts_with": [
       "rivian-r1t-2026#battery.pack_kwh#Rivian Support: battery specifications on Rivian vehicles"
     ],
-    "notes": "R1 Gen 2 Dual Standard usable capacity 92.5 kWh. Re-checked 2026-10-03: still listed. Conflicts with the battery-specifications article's 95.6 kWh rated energy."
+    "notes": "R1 Gen 2 Dual Standard usable capacity 92.5 kWh. Re-checked 2026-10-04: usable capacity support page still lists R1 Gen 2 Dual Standard 92.5 kWh."
   },
   {
     "vehicle_id": "rivian-r1t-2026",
@@ -144,10 +144,10 @@
     "tier": "P",
     "source_name": "Rivian Support: usable kWh capacity of your batteries",
     "source_url": "https://rivian.com/support/article/what-is-the-usable-kwh-capacity-of-your-batteries",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "disclosed_by_oem": true,
     "confidence": "high",
-    "notes": "Paired with the 92.5 kWh usable-capacity claim. Re-checked 2026-10-03. Conflicts with the battery-specifications article's unstated (rated-energy) basis.",
+    "notes": "Paired with the 92.5 kWh usable-capacity claim. Re-checked 2026-10-04: paired usable-capacity page still frames Dual Standard as usable kWh.",
     "conflicts_with": [
       "rivian-r1t-2026#battery.pack_kwh_basis#Rivian Support: battery specifications on Rivian vehicles"
     ]
@@ -265,5 +265,41 @@
     "access_date": "2026-10-03",
     "confidence": "medium",
     "notes": "Dual-Motor AWD: 610 lb-ft of torque (533 hp). Performance Dual-Motor 829 lb-ft and Quad-Motor figures not applied. Matches Dual Standard atlas trim. Article originally 2022; page states updated with final production figures."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "battery.cell_chemistry",
+    "value": "LFP",
+    "tier": "P",
+    "source_name": "Rivian Support: battery specifications on Rivian vehicles",
+    "source_url": "https://rivian.com/support/article/what-are-the-battery-specifications-on-rivian-vehicles",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "R1 Dual Standard Pack Chemistry: Li Fe (LFP). Re-opened 2026-10-05; still stated for Dual Standard. Not applied to Dual Large/Max packs on the same page (those list Li MM (NCA))."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "battery.system_voltage_v",
+    "value": 315,
+    "tier": "P",
+    "source_name": "Rivian Support: battery specifications on Rivian vehicles",
+    "source_url": "https://rivian.com/support/article/what-are-the-battery-specifications-on-rivian-vehicles",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "R1 Dual Standard Minimum Pack Voltage 315V as stated on the battery specifications support page. This is the OEM minimum pack voltage, not an architecture marketing figure (e.g. 800V). Re-opened 2026-10-05."
+  },
+  {
+    "vehicle_id": "rivian-r1t-2026",
+    "field": "powertrain.motor_count",
+    "value": 2,
+    "tier": "P",
+    "source_name": "Rivian: Rivian Drive Systems, Decoded (Dual-Motor AWD)",
+    "source_url": "https://rivian.com/stories/difference-between-r1-drive-systems",
+    "access_date": "2026-11-05",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "notes": "Dual-Motor AWD features two single-motor drive units (front and rear). Atlas Dual Standard row; Tri/Quad not applied."
   }
 ]

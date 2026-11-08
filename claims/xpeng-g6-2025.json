@@ -1,1 +1,206 @@
-[]
+[
+  {
+    "vehicle_id": "xpeng-g6-2025",
+    "field": "efficiency.cltc_range_km",
+    "value": 625,
+    "tier": "P",
+    "source_name": "XPeng 2025 G6 configuration table: 625长续航 Max 科技版",
+    "source_url": "https://www.xiaopeng.com/g62025/configuration.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Trim choice: 625长续航 Max 科技版 (entry of three 2025 G6 trims; MSRP 176,800 CNY). CLTC combined-cycle range with standard 18 in wheels; footnote says optional 20 in wheels reduce long-range trims to 600 km."
+  },
+  {
+    "vehicle_id": "xpeng-g6-2025",
+    "field": "efficiency.cltc_kwh_per_100km",
+    "value": 12.5,
+    "tier": "P",
+    "source_name": "XPeng 2025 G6 configuration table: 625长续航 Max 科技版",
+    "source_url": "https://www.xiaopeng.com/g62025/configuration.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "综合工况电能消耗量 for 625长续航 Max 科技版 / 旗舰版 (12.5); 超长续航 Max 旗舰版 is 12.8. Not an EPA wall-side figure."
+  },
+  {
+    "vehicle_id": "xpeng-g6-2025",
+    "field": "identity.msrp_cny",
+    "value": 176800,
+    "tier": "P",
+    "source_name": "XPeng 2025 G6 configuration table: 625长续航 Max 科技版 national suggested retail price",
+    "source_url": "https://www.xiaopeng.com/g62025/configuration.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "全国建议零售价 176,800 for 625长续航 Max 科技版. Same figure on XPeng company news 2025-03-13 (17.68万元起)."
+  },
+  {
+    "vehicle_id": "xpeng-g6-2025",
+    "field": "identity.msrp_usd",
+    "value": 25913,
+    "tier": "D",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "China list price converted to USD; not a US MSRP. Original CNY: 176800. FX: Federal Reserve H.10 / FRED DEXCHUS (CNY per USD), simple mean of 185 daily noon buying rates 2026-01-02 through 2026-09-25 (latest published H.10 day as of 2026-10-03; not a full-year 2026 average) = 6.8228. USD = 176800 / 6.8228, rounded to nearest dollar. Series: https://fred.stlouisfed.org/series/DEXCHUS.",
+    "derivation": {
+      "formula": "identity.msrp_cny / 6.8228",
+      "inputs": ["identity.msrp_cny"],
+      "assumptions": [
+        "FX rate 6.8228 CNY per USD is the simple mean of Federal Reserve H.10 / FRED DEXCHUS daily noon buying rates for 2026-01-02 through 2026-09-25 (185 observations; YTD through latest published day as of 2026-10-03 access, not a calendar-year 2026 average).",
+        "Result rounded to nearest USD. China list price converted for Compare; not a US MSRP."
+      ]
+    }
+  },
+  {
+    "vehicle_id": "xpeng-g6-2025",
+    "field": "battery.pack_kwh",
+    "value": 68.5,
+    "tier": "P",
+    "source_name": "XPENG Goodwood press: 2025 G6 Standard Range LFP pack kWh",
+    "source_url": "https://www.xpeng.com/news/0197f776723197e8d9368a02811e0074",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "XPENG official Europe/Goodwood press (2025-07-10): LFP battery 68.5 kWh for Standard Range (80.8 kWh Long Range / Performance). Mapped to CN entry trim 625长续航 Max 科技版; xiaopeng.com CN configuration table still omits pack kWh. Gross vs usable not stated. Medium confidence because the announcement is Europe-facing."
+  },
+  {
+    "vehicle_id": "xpeng-g6-2025",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "P",
+    "source_name": "XPENG Goodwood press: 2025 G6 Standard Range LFP pack kWh",
+    "source_url": "https://www.xpeng.com/news/0197f776723197e8d9368a02811e0074",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Required companion to pack_kwh. Press does not label gross or usable."
+  },
+  {
+    "vehicle_id": "xpeng-g6-2025",
+    "field": "powertrain.drive_layout",
+    "value": "RWD",
+    "tier": "P",
+    "source_name": "XPeng 2025 G6 configuration table: 625长续航 Max 科技版",
+    "source_url": "https://www.xiaopeng.com/g62025/configuration.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "驱动形式: 单电机后驱 for all three 2025 G6 trims on the configuration table."
+  },
+  {
+    "vehicle_id": "xpeng-g6-2025",
+    "field": "powertrain.power_hp",
+    "value": 218,
+    "unit": "kW",
+    "tier": "P",
+    "source_name": "XPeng 2025 G6 configuration table: 625长续航 Max 科技版",
+    "source_url": "https://www.xiaopeng.com/g62025/configuration.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "电机最大功率/最大扭矩（kW/N∙m）: 218/450. Stored in kW as stated; not converted to hp."
+  },
+  {
+    "vehicle_id": "xpeng-g6-2025",
+    "field": "powertrain.torque_lbft",
+    "value": 450,
+    "unit": "Nm",
+    "tier": "P",
+    "source_name": "XPeng 2025 G6 configuration table: 625长续航 Max 科技版",
+    "source_url": "https://www.xiaopeng.com/g62025/configuration.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "电机最大功率/最大扭矩（kW/N∙m）: 218/450. Stored in Nm as stated; not converted to lb-ft."
+  },
+  {
+    "vehicle_id": "xpeng-g6-2025",
+    "field": "battery.cell_chemistry",
+    "value": "LFP",
+    "tier": "P",
+    "source_name": "XPeng 2025 G6 configuration table: battery type",
+    "source_url": "https://www.xiaopeng.com/g62025/configuration.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "电池类型: 液冷恒温无热蔓延磷酸铁锂电池包."
+  },
+  {
+    "vehicle_id": "xpeng-g6-2025",
+    "field": "battery.system_voltage_v",
+    "value": "800V architecture",
+    "tier": "P",
+    "source_name": "XPeng 2025 G6 configuration table: 全域800V高压SiC平台",
+    "source_url": "https://www.xiaopeng.com/g62025/configuration.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "OEM row: 全域800V高压SiC平台 / 800V XPower电驱系统."
+  },
+  {
+    "vehicle_id": "xpeng-g6-2025",
+    "field": "powertrain.inverter_semiconductor",
+    "value": "SiC_MOSFET",
+    "tier": "P",
+    "source_name": "XPeng 2025 G6 configuration table: SiC rear motor",
+    "source_url": "https://www.xiaopeng.com/g62025/configuration.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "SiC碳化硅技术（后电机）. Mapped to SiC_MOSFET."
+  },
+  {
+    "vehicle_id": "xpeng-g6-2025",
+    "field": "battery.structural_pack",
+    "value": true,
+    "tier": "P",
+    "source_name": "XPeng 2025 G6 configuration table: CIB cell-to-body",
+    "source_url": "https://www.xiaopeng.com/g62025/configuration.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "CIB电池车身一体化技术 stated on the configuration table."
+  },
+  {
+    "vehicle_id": "xpeng-g6-2025",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "XPeng 2025 G6 configuration table: single motor RWD",
+    "source_url": "https://www.xiaopeng.com/g62025/configuration.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "驱动形式: 单电机后驱."
+  },
+  {
+    "vehicle_id": "xpeng-g6-2025",
+    "field": "powertrain.motor_type",
+    "value": "PM_synchronous",
+    "tier": "P",
+    "source_name": "XPeng 2025 G6 configuration table: motor type",
+    "source_url": "https://www.xiaopeng.com/g62025/configuration.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "电机类型: 永磁同步电机. Mapped to PM_synchronous."
+  },
+  {
+    "vehicle_id": "xpeng-g6-2025",
+    "field": "powertrain.accel_0_60_s",
+    "value": 6.4,
+    "unit": "s",
+    "tier": "P",
+    "source_name": "XPeng 2025 G6 configuration table: 625长续航 Max 科技版 0-100 km/h",
+    "source_url": "https://www.xiaopeng.com/g62025/configuration.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "0-100km/h加速时间（s）6.4 for 625长续航 Max 科技版 / 旗舰版; 超长续航 Max 旗舰版 is 6.3. Stored as stated 0-100 km/h; not converted to 0-60 mph."
+  },
+  {
+    "vehicle_id": "xpeng-g6-2025",
+    "field": "charging.peak_dc_kw",
+    "value": 451,
+    "tier": "S",
+    "source_name": "IT之家: 2025款小鹏G6 official preheat charge-power table",
+    "source_url": "https://www.ithome.com/0/836/977.htm",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "notes": "Outlet reports official preheat table: 最高可达功率 451kW on 小鹏 S4/S5 and third-party 1000V liquid-cooled piles (also lists lower pile-limited peaks). OEM configuration table states SOC 10%-80% ≥12 min on S5 liquid-cooled ultra-fast charge but does not print a peak kW number. charging.port_type left blank: opened OEM config/news do not state GB/T or 国标充电口. Onboard AC kW still unstated on opened pages."
+  }
+]

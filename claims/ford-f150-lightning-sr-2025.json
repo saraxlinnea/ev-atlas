@@ -240,5 +240,17 @@
     "access_date": "2026-10-03",
     "confidence": "medium",
     "notes": "Width without mirrors 80 in (with mirrors 96 in). Same SR PDF as curb weight. Not ICE F-150 dimensions."
+  },
+  {
+    "vehicle_id": "ford-f150-lightning-sr-2025",
+    "field": "battery.cell_chemistry",
+    "value": "NMC",
+    "tier": "P",
+    "source_name": "Ford Support: F-150 Lightning standard and extended-range batteries are Nickel Cobalt Manganese (NCM)",
+    "source_url": "https://www.ford.com/support/how-tos/electric-vehicles/electric-vehicle-maintenance/how-do-i-maintain-my-electric-vehicle-battery/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "OEM support: F-150 Lightning standard and extended-range batteries are Nickel Cobalt Manganese (NCM). Applied to atlas Standard Range. NCM mapped to enum NMC."
   }
 ]

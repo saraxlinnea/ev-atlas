@@ -1,0 +1,86 @@
+[
+  {
+    "make": "Cadillac",
+    "field": "org.parent",
+    "value": "General Motors",
+    "tier": "P",
+    "source_name": "General Motors Our Brands page",
+    "source_url": "https://www.gm.com/our-brands",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "GM states its family of vehicle brands includes Chevrolet, Buick, GMC, and Cadillac."
+  },
+  {
+    "make": "Cadillac",
+    "field": "org.hq_city",
+    "value": "Detroit",
+    "tier": "P",
+    "source_name": "General Motors U.S. Operations page",
+    "source_url": "https://www.gm.com/company/us-operations",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Page lists GM global headquarters at 1240 Woodward Avenue, Detroit, MI. Used for Cadillac, Chevrolet, and GMC brand identity HQ; not a separate brand HQ page."
+  },
+  {
+    "make": "Cadillac",
+    "field": "org.hq_country",
+    "value": "United States",
+    "tier": "P",
+    "source_name": "General Motors U.S. Operations page",
+    "source_url": "https://www.gm.com/company/us-operations",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Page lists GM global headquarters at 1240 Woodward Avenue, Detroit, MI. Used for Cadillac, Chevrolet, and GMC brand identity HQ; not a separate brand HQ page."
+  },
+  {
+    "make": "Cadillac",
+    "field": "org.brand_type",
+    "value": "division",
+    "tier": "P",
+    "source_name": "General Motors Our Brands page",
+    "source_url": "https://www.gm.com/our-brands",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Our Brands treats Cadillac/Chevrolet/GMC as GM family brands, not separate listed issuers."
+  },
+  {
+    "make": "Cadillac",
+    "field": "org.ev_focus",
+    "value": "multi_powertrain",
+    "tier": "P",
+    "source_name": "General Motors Our Brands page",
+    "source_url": "https://www.gm.com/our-brands",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "GM FAQ on Our Brands states it builds electric, gas-powered, and ADAS vehicles."
+  },
+  {
+    "make": "Cadillac",
+    "field": "org.home_market",
+    "value": "US",
+    "tier": "P",
+    "source_name": "General Motors U.S. Operations page",
+    "source_url": "https://www.gm.com/company/us-operations",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "GM U.S. Operations frames Detroit roots and US manufacturing footprint for the brand family."
+  },
+  {
+    "make": "Cadillac",
+    "field": "org.summary",
+    "value": "Cadillac is a General Motors luxury vehicle brand. It sits as a division under GM alongside Chevrolet and GMC. In EV Atlas it is keyed separately from those sister brands, with US-market rows using EPA fields.",
+    "tier": "P",
+    "source_name": "General Motors Our Brands page",
+    "source_url": "https://www.gm.com/our-brands",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb. Listing ticker left blank: GM trades publicly, but brand makes are not separate listed issuers in this layer."
+  }
+]

@@ -1,0 +1,173 @@
+[
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2023",
+    "field": "efficiency.epa_range_mi",
+    "value": 352,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 47000 (2023 Rivian R1T 21 inch Dual Large)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/47000",
+    "disclosed_by_oem": true,
+    "notes": "EPA id 47000, 'R1T 21 inch Dual Large'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Dual Large 21in (entry Dual EPA configuration for MY2023; Dual Standard not listed)."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2023",
+    "field": "efficiency.epa_kwh_per_100mi",
+    "value": 43.2259,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 47000 (2023 Rivian R1T 21 inch Dual Large)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/47000",
+    "disclosed_by_oem": true,
+    "notes": "Wall-side, combined (EPA combE). The label and the printable page (https://www.fueleconomy.gov/feg/noframes/47000.shtml) round this. EPA id 47000, 'R1T 21 inch Dual Large'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Dual Large 21in (entry Dual EPA configuration for MY2023; Dual Standard not listed)."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2023",
+    "field": "efficiency.epa_mpge_combined",
+    "value": 78,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 47000 (2023 Rivian R1T 21 inch Dual Large)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/47000",
+    "disclosed_by_oem": true,
+    "notes": "EPA id 47000, 'R1T 21 inch Dual Large'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Dual Large 21in (entry Dual EPA configuration for MY2023; Dual Standard not listed)."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2023",
+    "field": "powertrain.drive_layout",
+    "value": "AWD",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 47000 (2023 Rivian R1T 21 inch Dual Large)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/47000",
+    "disclosed_by_oem": true,
+    "notes": "EPA 'drive' field: 'Part-time 4-Wheel Drive'. EPA id 47000, 'R1T 21 inch Dual Large'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Dual Large 21in (entry Dual EPA configuration for MY2023; Dual Standard not listed)."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2023",
+    "field": "powertrain.epa_motor_description",
+    "value": "418 kW ACPM",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "EPA/DOE fueleconomy.gov vehicle record 47000 (2023 Rivian R1T 21 inch Dual Large)",
+    "source_url": "https://www.fueleconomy.gov/ws/rest/vehicle/47000",
+    "disclosed_by_oem": true,
+    "notes": "EPA 'evMotor' free text, verbatim. Not parsed into motor_count/motor_type: the EPA text isn't consistent enough for that (e.g. motor counts don't always match the drive layout). EPA id 47000, 'R1T 21 inch Dual Large'. Matches the EPA bulk file (https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip). Trim choice: Dual Large 21in (entry Dual EPA configuration for MY2023; Dual Standard not listed)."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2023",
+    "field": "recalls.campaign_count",
+    "value": 8,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1T, MY2023)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1T&modelYear=2023",
+    "notes": "Distinct NHTSA campaigns returned for MY2023 (make/model/year query; not filtered by trim). Model string queried: 'R1T'. API message: Results returned successfully."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2023",
+    "field": "recalls.campaign_23V783",
+    "value": "VISIBILITY:DEFROSTER/DEFOGGER/HVAC SYSTEM: A software update may have deactivated the defroster and defogger system controls.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1T, MY2023)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1T&modelYear=2023",
+    "notes": "NHTSA campaign 23V783000; Part 573 report received 21/11/2023. Listed for the MY2023 R1T nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2023",
+    "field": "recalls.campaign_24V367",
+    "value": "EXTERIOR LIGHTING:HEADLIGHTS: The headlights may be improperly aimed.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1T, MY2023)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1T&modelYear=2023",
+    "notes": "NHTSA campaign 24V367000; Part 573 report received 23/05/2024. Listed for the MY2023 R1T nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2023",
+    "field": "recalls.campaign_24V408",
+    "value": "AIR BAGS:CRITICAL FASTENERS: The attachment clips on the upper B-pillar and/or C-pillar trim panels may have been damaged during a service procedure.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1T, MY2023)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1T&modelYear=2023",
+    "notes": "NHTSA campaign 24V408000; Part 573 report received 05/06/2024. Listed for the MY2023 R1T nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2023",
+    "field": "recalls.campaign_24V458",
+    "value": "EQUIPMENT:OTHER:LABELS: The maximum vehicle capacity weight value on the tire placard label is incorrect.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1T, MY2023)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1T&modelYear=2023",
+    "notes": "NHTSA campaign 24V458000; Part 573 report received 20/06/2024. Listed for the MY2023 R1T nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2023",
+    "field": "recalls.campaign_25V370",
+    "value": "SEAT BELTS:FRONT:ANCHORAGE: The D-ring bolts for one or both front seat belt anchorage assemblies may not have been properly installed.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1T, MY2023)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1T&modelYear=2023",
+    "notes": "NHTSA campaign 25V370000; Part 573 report received 03/06/2025. Listed for the MY2023 R1T nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2023",
+    "field": "recalls.campaign_26V003",
+    "value": "SUSPENSION:CRITICAL FASTENERS: The toe link may have been reassembled incorrectly during service procedures performed before March 10, 2025.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1T, MY2023)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1T&modelYear=2023",
+    "notes": "NHTSA campaign 26V003000; Part 573 report received 05/01/2026. Listed for the MY2023 R1T nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2023",
+    "field": "recalls.campaign_26V009",
+    "value": "SEAT BELTS:CRITICAL FASTENERS: The bolts that secure the second-row driver and passenger side seat belt retractor assemblies may be improperly tightened.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1T, MY2023)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1T&modelYear=2023",
+    "notes": "NHTSA campaign 26V009000; Part 573 report received 16/01/2026. Listed for the MY2023 R1T nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2023",
+    "field": "recalls.campaign_26V597",
+    "value": "BACK OVER PREVENTION:SOFTWARE: The rearview camera image may be obstructed by a notification when in reverse.",
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "source_name": "NHTSA Recalls API recallsByVehicle (RIVIAN R1T, MY2023)",
+    "source_url": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RIVIAN&model=R1T&modelYear=2023",
+    "notes": "NHTSA campaign 26V597000; Part 573 report received 16/09/2026. Listed for the MY2023 R1T nameplate; not filtered by trim, so check VIN-level applicability."
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2023",
+    "field": "powertrain.motor_count",
+    "value": 2,
+    "tier": "P",
+    "access_date": "2026-11-05",
+    "confidence": "medium",
+    "source_name": "Rivian: Rivian Drive Systems, Decoded (Dual-Motor AWD)",
+    "source_url": "https://rivian.com/stories/difference-between-r1-drive-systems",
+    "disclosed_by_oem": true,
+    "notes": "Dual-Motor AWD features two single-motor drive units (front and rear). Applied to atlas Dual Large (21in wheels) row; Tri/Quad not applied."
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "CLTC range vs pack energy",
+    "subtitle": "China-market (CN) rows with both a sourced pack kWh and CLTC range. CLTC only; non-CN and blanks omitted. No EPA conversion or cross-cycle ranking.",
+    "fontSize": 16,
+    "subtitleFontSize": 11,
+    "subtitleColor": "#666"
+  },
+  "data": { "url": "../data/flattened.csv" },
+  "transform": [
+    {
+      "filter": "datum.region === 'CN' && isValid(datum['battery.pack_kwh']) && isValid(datum['efficiency.cltc_range_km']) && datum['battery.pack_kwh'] !== '' && datum['efficiency.cltc_range_km'] !== ''"
+    },
+    {
+      "calculate": "datum.make + ' ' + datum.model",
+      "as": "label"
+    },
+    {
+      "calculate": "toNumber(datum['battery.pack_kwh'])",
+      "as": "pack_kwh"
+    },
+    {
+      "calculate": "toNumber(datum['efficiency.cltc_range_km'])",
+      "as": "cltc_range_km"
+    },
+    {
+      "calculate": "datum['battery.pack_kwh_basis']",
+      "as": "pack_basis"
+    },
+    {
+      "calculate": "datum['battery.pack_kwh__tier']",
+      "as": "pack_tier"
+    },
+    {
+      "calculate": "datum['efficiency.cltc_range_km__tier']",
+      "as": "range_tier"
+    },
+    {
+      "calculate": "toNumber(datum['identity.msrp_usd'])",
+      "as": "msrp_usd"
+    }
+  ],
+  "width": 640,
+  "height": 420,
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 90,
+    "opacity": 0.85
+  },
+  "encoding": {
+    "x": {
+      "field": "pack_kwh",
+      "type": "quantitative",
+      "title": "Pack energy (kWh)",
+      "scale": { "zero": false }
+    },
+    "y": {
+      "field": "cltc_range_km",
+      "type": "quantitative",
+      "title": "CLTC range (km)",
+      "scale": { "zero": false }
+    },
+    "color": {
+      "field": "make",
+      "type": "nominal",
+      "title": "Make"
+    },
+    "tooltip": [
+      { "field": "label", "title": "Vehicle" },
+      { "field": "trim", "title": "Trim" },
+      { "field": "model_year", "title": "Model year" },
+      { "field": "pack_kwh", "title": "Pack kWh", "type": "quantitative" },
+      { "field": "pack_basis", "title": "Pack basis" },
+      { "field": "pack_tier", "title": "Pack tier" },
+      { "field": "cltc_range_km", "title": "CLTC range (km)", "type": "quantitative" },
+      { "field": "range_tier", "title": "Range tier" },
+      { "field": "msrp_usd", "title": "MSRP (USD)", "type": "quantitative", "format": "," }
+    ]
+  },
+  "config": {
+    "view": { "stroke": null },
+    "axis": { "labelFontSize": 11, "titleFontSize": 12 }
+  }
+}

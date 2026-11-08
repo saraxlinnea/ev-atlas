@@ -180,7 +180,7 @@
     "tier": "P",
     "source_name": "Hyundai USA 2025 IONIQ 6 compare-specs (SE Standard Range)",
     "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-6/compare-specs",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "disclosed_by_oem": true,
     "confidence": "low",
     "field": "body.curb_weight_lb",
@@ -188,14 +188,14 @@
     "conflicts_with": [
       "hyundai-ioniq6-2025#body.curb_weight_lb#Hyundai News 2025 IONIQ 6 Specs & Features PDF (2025-01-15)"
     ],
-    "notes": "Compare-specs table lists 3,395 under 'Curb weight (lbs.) (RWD) Long Range' in the SE Standard Range column. Re-checked 2026-10-03: value and Long Range label under the Standard Range column still present; likely a transposed typo for 3,935. Conflicts with the Hyundai News PDF lightest curb weight of 3,935 lb for RWD Standard Range. Confidence lowered on re-check."
+    "notes": "Compare-specs table lists 3,395 under 'Curb weight (lbs.) (RWD) Long Range' in the SE Standard Range column. Re-checked 2026-10-04: compare-specs still lists 3,395 under Curb weight (lbs.) (RWD) Long Range in the SE Standard Range column."
   },
   {
     "vehicle_id": "hyundai-ioniq6-2025",
     "tier": "P",
     "source_name": "Hyundai News 2025 IONIQ 6 Specs & Features PDF (2025-01-15)",
     "source_url": "https://www.hyundainews.com/assets/documents/original/64772-2025IONIQ6SpecsFeatures011525.pdf",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "disclosed_by_oem": true,
     "confidence": "high",
     "field": "body.curb_weight_lb",
@@ -203,7 +203,7 @@
     "conflicts_with": [
       "hyundai-ioniq6-2025#body.curb_weight_lb#Hyundai USA 2025 IONIQ 6 compare-specs (SE Standard Range)"
     ],
-    "notes": "PDF: Curb Weight Lightest for RWD (Standard Range) is 3,935 lb. Re-checked 2026-10-03: still 3,935. Conflicts with the compare-specs page value of 3,395 lb under a mislabeled Long Range row in the SE Standard Range column."
+    "notes": "PDF: Curb Weight Lightest for RWD (Standard Range) is 3,935 lb. Re-checked 2026-10-04: Hyundai News PDF still lists Curb Weight Lightest RWD (Standard Range) 3,935 lb."
   },
   {
     "vehicle_id": "hyundai-ioniq6-2025",
@@ -259,5 +259,65 @@
     "access_date": "2026-10-03",
     "confidence": "high",
     "notes": "Torque (lb.-ft.) RWD: 350 Nm (258 lb.-ft.) for SE Standard Range. AWD dual-motor 446 lb-ft not applied."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "field": "battery.cell_chemistry",
+    "value": "NMC",
+    "tier": "P",
+    "source_name": "Hyundai Motor Korea EV battery cell information PDF (2025-08): Ioniq 6 Standard 2WD NCM",
+    "source_url": "https://www.hyundai.com/content/dam/hyundai/kr/ko/data/ev/hyundai-battery-cell-info-2508.pdf",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Buyer disclosure table: \uc544\uc774\uc624\ub2c9 6 \uc2a4\ud0e0\ub2e4\ub4dc 2WD, 53.0 kWh, 480 V, LG Energy Solution pouch, \uc8fc\uc694 \uc6d0\ub8cc NCM. Matches atlas SE Standard Range RWD pack (53.0 kWh). NCM mapped to enum NMC."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "field": "battery.system_voltage_v",
+    "value": 480,
+    "tier": "P",
+    "source_name": "Hyundai Motor Korea EV battery cell information PDF (2025-08): Ioniq 6 Standard 2WD pack V",
+    "source_url": "https://www.hyundai.com/content/dam/hyundai/kr/ko/data/ev/hyundai-battery-cell-info-2508.pdf",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "\uc544\uc774\uc624\ub2c9 6 \uc2a4\ud0e0\ub2e4\ub4dc 2WD rated pack voltage 480 V with 53.0 kWh. Matches atlas Standard Range pack."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Hyundai USA 2025 IONIQ 6 compare-specs: SE Standard Range RWD motor",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-6/compare-specs",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "SE Standard Range column lists Power output RWD 111 kW (149 hp) and labels AWD as Dual Motor separately (Not Available on SE SR). Treated as single-motor RWD for this atlas row."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "field": "powertrain.motor_type",
+    "value": "PM_synchronous",
+    "tier": "P",
+    "source_name": "Hyundai USA 2025 IONIQ 6 compare-specs: Permanent Magnet Synchronous Motor",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-6/compare-specs",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Electric Motor table: Permanent Magnet Synchronous Motor (PMSM) standard. Mapped to PM_synchronous."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq6-2025",
+    "field": "body.drag_coefficient",
+    "value": 0.22,
+    "tier": "P",
+    "source_name": "Hyundai USA 2025 IONIQ 6 compare-specs: Coefficient of drag",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-6/compare-specs",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Exterior Dimensions table: Coefficient of drag (Cd) .22 for SE Standard Range and other listed trims."
   }
 ]

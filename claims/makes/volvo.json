@@ -1,0 +1,74 @@
+[
+  {
+    "make": "Volvo",
+    "field": "org.hq_city",
+    "value": "Gothenburg",
+    "tier": "P",
+    "source_name": "Volvo Cars Investor Relations overview",
+    "source_url": "https://investors.volvocars.com/en/overview",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Footer contact: Volvo Car Group, Gothenburg, Sweden."
+  },
+  {
+    "make": "Volvo",
+    "field": "org.hq_country",
+    "value": "Sweden",
+    "tier": "P",
+    "source_name": "Volvo Cars Investor Relations overview",
+    "source_url": "https://investors.volvocars.com/en/overview",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Gothenburg, Sweden address on IR site."
+  },
+  {
+    "make": "Volvo",
+    "field": "org.brand_type",
+    "value": "standalone",
+    "tier": "P",
+    "source_name": "Volvo Cars Investor Relations overview",
+    "source_url": "https://investors.volvocars.com/en/overview",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Volvo Cars IR site for Volvo Car Group; make keyed as Volvo."
+  },
+  {
+    "make": "Volvo",
+    "field": "org.ev_focus",
+    "value": "multi_powertrain",
+    "tier": "P",
+    "source_name": "Volvo Cars Investor Relations overview",
+    "source_url": "https://investors.volvocars.com/en/overview",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Site navigation Electrification lists Electric, Hybrids, and Mild hybrids."
+  },
+  {
+    "make": "Volvo",
+    "field": "org.home_market",
+    "value": "EU",
+    "tier": "P",
+    "source_name": "Volvo Cars Investor Relations overview",
+    "source_url": "https://investors.volvocars.com/en/overview",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "HQ contact in Gothenburg, Sweden."
+  },
+  {
+    "make": "Volvo",
+    "field": "org.summary",
+    "value": "Volvo is Volvo Cars, with investor-relations contact details in Gothenburg, Sweden. Electrification navigation lists electric and hybrid options. In EV Atlas it is keyed separately from Polestar.",
+    "tier": "P",
+    "source_name": "Volvo Cars Investor Relations overview",
+    "source_url": "https://investors.volvocars.com/en/overview",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb. Parent/Geely not stated on the opened IR landing text; left blank."
+  }
+]

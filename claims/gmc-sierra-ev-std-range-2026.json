@@ -240,12 +240,12 @@
     "tier": "S",
     "source_name": "Autoblog via AOL: 2026 GMC Sierra EV Elevation Standard Range battery",
     "source_url": "https://www.aol.com/articles/2026-gmc-sierra-ev-114758000.html",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "confidence": "medium",
     "conflicts_with": [
       "gmc-sierra-ev-std-range-2026#battery.pack_kwh#The Car Guide: 2026 GMC Sierra EV Elevation Standard Range battery energy"
     ],
-    "notes": "States smaller 120-kWh Standard Range battery pack with 283 miles range; table repeats 120 kWh for Elevation/Denali Standard Range. Conflicts with The Car Guide 119.0 kWh for Elevation Standard Range. Not Ext 170 / Max 205 figures. GMC newsroom names Standard Range without a kWh number."
+    "notes": "States smaller 120-kWh Standard Range battery pack with 283 miles range; table repeats 120 kWh for Elevation/Denali Standard Range. Conflicts with The Car Guide 119.0 kWh for Elevation Standard Range. Not Ext 170 / Max 205 figures. GMC newsroom names Standard Range without a kWh number. Re-checked 2026-10-04: Autoblog/AOL article still states 120-kWh Standard Range pack."
   },
   {
     "vehicle_id": "gmc-sierra-ev-std-range-2026",
@@ -254,12 +254,12 @@
     "tier": "S",
     "source_name": "Autoblog via AOL: 2026 GMC Sierra EV Elevation Standard Range battery",
     "source_url": "https://www.aol.com/articles/2026-gmc-sierra-ev-114758000.html",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "confidence": "medium",
     "conflicts_with": [
       "gmc-sierra-ev-std-range-2026#battery.pack_kwh_basis#The Car Guide: 2026 GMC Sierra EV Elevation Standard Range battery energy"
     ],
-    "notes": "Paired with 120 kWh claim. Article does not say gross or usable. Conflicts with The Car Guide basis claim on its 119.0 kWh figure."
+    "notes": "Paired with 120 kWh claim. Article does not say gross or usable. Conflicts with The Car Guide basis claim on its 119.0 kWh figure. Re-checked 2026-10-04: Autoblog/AOL article still omits gross vs usable on the 120 kWh figure."
   },
   {
     "vehicle_id": "gmc-sierra-ev-std-range-2026",
@@ -268,12 +268,12 @@
     "tier": "S",
     "source_name": "The Car Guide: 2026 GMC Sierra EV Elevation Standard Range battery energy",
     "source_url": "https://www.guideautoweb.com/en/makes/gmc/sierra-ev/2026/specifications/elevation-standard-range/",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "confidence": "medium",
     "conflicts_with": [
       "gmc-sierra-ev-std-range-2026#battery.pack_kwh#Autoblog via AOL: 2026 GMC Sierra EV Elevation Standard Range battery"
     ],
-    "notes": "Elevation Standard Range specs list battery energy 119.0 kWh. Conflicts with Autoblog/AOL 120 kWh for the same Standard Range mapping. Not Ext/Max packs."
+    "notes": "Elevation Standard Range specs list battery energy 119.0 kWh. Conflicts with Autoblog/AOL 120 kWh for the same Standard Range mapping. Not Ext/Max packs. Re-checked 2026-10-04: Car Guide Elevation Standard Range page still lists battery energy 119.0 kWh."
   },
   {
     "vehicle_id": "gmc-sierra-ev-std-range-2026",
@@ -282,12 +282,12 @@
     "tier": "S",
     "source_name": "The Car Guide: 2026 GMC Sierra EV Elevation Standard Range battery energy",
     "source_url": "https://www.guideautoweb.com/en/makes/gmc/sierra-ev/2026/specifications/elevation-standard-range/",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "confidence": "medium",
     "conflicts_with": [
       "gmc-sierra-ev-std-range-2026#battery.pack_kwh_basis#Autoblog via AOL: 2026 GMC Sierra EV Elevation Standard Range battery"
     ],
-    "notes": "Paired with 119.0 kWh claim. Page does not label gross vs usable. Conflicts with Autoblog/AOL unstated basis on 120 kWh."
+    "notes": "Paired with 119.0 kWh claim. Page does not label gross vs usable. Conflicts with Autoblog/AOL unstated basis on 120 kWh. Re-checked 2026-10-04: Car Guide page still omits gross vs usable on the 119.0 kWh figure."
   },
   {
     "vehicle_id": "gmc-sierra-ev-std-range-2026",

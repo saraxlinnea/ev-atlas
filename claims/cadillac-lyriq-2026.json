@@ -251,5 +251,31 @@
     "access_date": "2026-10-03",
     "confidence": "medium",
     "notes": "Width, Max w/o mirrors 77.8 in. Not the with-mirrors 86.9 in figure. Sport page used for dimensions; LYRIQ-V not applied for powertrain."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "field": "battery.cell_chemistry",
+    "value": "NCMA",
+    "tier": "P",
+    "source_name": "Cadillac Newsroom, 2021-04-21: 2023 LYRIQ Battery chemistry NCMA cathode",
+    "source_url": "https://news.cadillac.com/newsroom.detail.html/Pages/news/us/en/2021/apr/0421-lyriq.html",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "model_year": 2023,
+    "notes": "BATTERY SYSTEM: Lithium-ion NCMA cathode, blended graphite anode; 12 modules; preliminary energy 100 kWh. Chemistry applied to atlas MY2026 RWD (102 kWh usable elsewhere); not inferred from Ultium alone. NCMA is not NMC."
+  },
+  {
+    "vehicle_id": "cadillac-lyriq-2026",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Cadillac LYRIQ specifications page: SINGLE MOTOR RWD",
+    "source_url": "https://www.cadillac.com/electric/lyriq/specs",
+    "access_date": "2026-11-05",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "model_year": 2027,
+    "notes": "Live specs page labeled 2027 LYRIQ lists SINGLE MOTOR RWD with 326-mile EPA-estimated range and 365 hp, matching this atlas MY2026 RWD entry. Dual Motor AWD column not applied. Cadillac newsroom 2026-09-23 also contrasts rear-wheel drive with dual-motor all-wheel drive for MY2026 LYRIQ."
   }
 ]

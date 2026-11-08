@@ -234,5 +234,69 @@
     "confidence": "medium",
     "model_year": 2024,
     "notes": "Drag coefficient (Cd) 0.29."
+  },
+  {
+    "vehicle_id": "jeep-wagoneer-s-awd-2026",
+    "field": "battery.system_voltage_v",
+    "value": 400,
+    "tier": "P",
+    "source_name": "Stellantis Media, 2025 Jeep Wagoneer S Limited: 400-volt battery pack",
+    "source_url": "https://media.stellantisnorthamerica.com/newsrelease.do?id=26584",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Press: efficient 400-volt, 100-kilowatt-hour battery pack. Applied to atlas MY2026 AWD with medium confidence; press is 2025 Limited launch language.",
+    "disclosed_by_oem": true,
+    "model_year": 2025
+  },
+  {
+    "vehicle_id": "jeep-wagoneer-s-awd-2026",
+    "field": "battery.cell_chemistry",
+    "value": "NMC",
+    "tier": "P",
+    "source_name": "Stellantis Media product information: Wagoneer S Launch Edition NMC battery",
+    "source_url": "https://www.media.stellantisnorthamerica.com/download.do?id=25908",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Product sheet: 400-volt, 100.5kWh ... lithium-ion, nickel manganese cobalt battery pack. Mapped to NMC. Launch Edition / 2024-dated sheet; confidence medium for MY2026 atlas row.",
+    "disclosed_by_oem": true,
+    "model_year": 2024
+  },
+  {
+    "vehicle_id": "jeep-wagoneer-s-awd-2026",
+    "field": "powertrain.motor_count",
+    "value": 2,
+    "tier": "P",
+    "source_name": "Stellantis Media product information: Wagoneer S front and rear EDMs",
+    "source_url": "https://www.media.stellantisnorthamerica.com/download.do?id=25908",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Front and rear 250 kW / 400V EDMs. Matches AWD atlas row.",
+    "disclosed_by_oem": true,
+    "model_year": 2024
+  },
+  {
+    "vehicle_id": "jeep-wagoneer-s-awd-2026",
+    "field": "identity.msrp_usd",
+    "value": 71995,
+    "tier": "P",
+    "source_name": "Stellantis Media, 2024-05-30: Wagoneer S Launch Edition starting U.S. MSRP",
+    "source_url": "https://media.stellantisnorthamerica.com/newsrelease.do?id=25896&mid=1540",
+    "access_date": "2026-10-04",
+    "disclosed_by_oem": true,
+    "confidence": "medium",
+    "model_year": 2024,
+    "notes": "Launch Edition starting U.S. MSRP of $71,995 (including destination). Matches this atlas row's Launch Edition / Falken-tire mapping (600 hp / 3.4 s 0-60). Limited $66,995 starting MSRP not applied. Peak DC / onboard AC left blank: Launch Edition PDF and press state 20-80% in 23 minutes without vehicle peak kW."
+  },
+  {
+    "vehicle_id": "jeep-wagoneer-s-awd-2026",
+    "field": "charging.port_type",
+    "value": "CCS1",
+    "tier": "P",
+    "source_name": "Stellantis Media, 2026-03-19: Free2move Charge NACS-CCS1 DC adapter (Wagoneer S)",
+    "source_url": "https://media.stellantisnorthamerica.com/print.do?id=27584",
+    "access_date": "2026-10-04",
+    "disclosed_by_oem": true,
+    "confidence": "medium",
+    "notes": "Press: Tesla Supercharger access uses a Free2move Charge NACS-CCS1 DC adapter; 2027 Charger Daytona is the first Stellantis model with a native NACS port. Compatible list names Jeep Wagoneer S model years 2024 and 2025 (MY2026 not listed). Mapped to CCS1 for this Launch Edition / Falken-tire atlas row with medium confidence. Peak DC still blank (20-80% time only)."
   }
 ]

@@ -54,10 +54,10 @@
     "tier": "S",
     "source_name": "EV Database: Lucid Air Pure RWD (MY26), European-market listing",
     "source_url": "https://ev-database.org/car/3271/Lucid-Air-Pure-RWD",
-    "access_date": "2026-09-29",
+    "access_date": "2026-10-04",
     "confidence": "low",
     "unit": "Nm",
-    "notes": "550 Nm is about 406 lb-ft. This is EV Database's European-market listing (Type 2 port, 22 kW AC), so it may not match the US car. Lucid doesn't publish torque on its US pages.",
+    "notes": "550 Nm is about 406 lb-ft. This is EV Database's European-market listing (Type 2 port, 22 kW AC), so it may not match the US car. Lucid doesn't publish torque on its US pages. Re-checked 2026-10-04: EV Database still lists Total Torque 550 Nm.",
     "conflicts_with": [
       "lucid-air-pure-2026#powertrain.torque_lbft#Lucid Air Pure Technical Specifications PDF (2025): torque"
     ]
@@ -80,9 +80,12 @@
     "tier": "S",
     "source_name": "EV Database: Lucid Air Pure RWD (MY26), European-market listing",
     "source_url": "https://ev-database.org/car/3271/Lucid-Air-Pure-RWD",
-    "access_date": "2026-09-29",
+    "access_date": "2026-10-04",
     "confidence": "low",
-    "notes": "EV Database lists 'Architecture 800 V' on its European-market listing. Lucid US pages do not state pack voltage."
+    "notes": "EV Database lists 'Architecture 800 V' on its European-market listing. Lucid US pages do not state pack voltage. Re-checked 2026-10-04: EV Database still lists Architecture 800 V.",
+    "conflicts_with": [
+      "lucid-air-pure-2026#battery.system_voltage_v#Lucid Motors Public Charging Guide: Lucid Air 900+-volt capacity"
+    ]
   },
   {
     "vehicle_id": "lucid-air-pure-2026",
@@ -426,9 +429,9 @@
     "tier": "P",
     "source_name": "Lucid Air Pure Technical Specifications PDF (2025): torque",
     "source_url": "https://lucidmotors.com/media/document/lucid-air-pure-technical-specs-2025.pdf",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "confidence": "medium",
-    "notes": "Torque (total) 406 lb-ft for single-motor RWD Pure. PDF labeled 2025; atlas vehicle is MY2026 Air Pure RWD with matching 84 kWh / 420 mi EPA configuration. Conflicts with EV Database 550 Nm European listing.",
+    "notes": "Torque (total) 406 lb-ft for single-motor RWD Pure. PDF labeled 2025; atlas vehicle is MY2026 Air Pure RWD with matching 84 kWh / 420 mi EPA configuration. Conflicts with EV Database 550 Nm European listing. Re-checked 2026-10-04: 2025 technical specs PDF still lists Torque (total) lb-ft 406.",
     "model_year": 2025,
     "conflicts_with": [
       "lucid-air-pure-2026#powertrain.torque_lbft#EV Database: Lucid Air Pure RWD (MY26), European-market listing"
@@ -445,5 +448,20 @@
     "confidence": "medium",
     "notes": "Width (with/without mirrors) 86.4 / 76.2 in. Using without-mirrors figure. PDF labeled 2025; dimensions treated as carrying into MY2026 Pure RWD.",
     "model_year": 2025
+  },
+  {
+    "vehicle_id": "lucid-air-pure-2026",
+    "field": "battery.system_voltage_v",
+    "value": "900V+",
+    "tier": "P",
+    "source_name": "Lucid Motors Public Charging Guide: Lucid Air 900+-volt capacity",
+    "source_url": "https://lucidmotors.com/knowledge/ownership/charging/public-charging",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "OEM FAQ: Lucid Air 900+-volt capacity vs ~400 V Superchargers. Replaces weaker EV-Database 800 V architecture claim on flatten (higher tier). Re-checked 2026-10-04: Public Charging Guide FAQ still states Lucid Air 900+-volt capacity.",
+    "conflicts_with": [
+      "lucid-air-pure-2026#battery.system_voltage_v#EV Database: Lucid Air Pure RWD (MY26), European-market listing"
+    ]
   }
 ]

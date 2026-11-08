@@ -287,5 +287,41 @@
         "Uses OEM net/usable pack_kwh (86 kWh) and EPA range 234 mi; not the same as wall-side efficiency.epa_kwh_per_100mi."
       ]
     }
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Volkswagen Media 2025 ID. Buzz At a Glance: RWD Motor Front/Rear -/PSM",
+    "source_url": "https://media.vw.com/assets/documents/original/18286-2025IDBuzzAtaGlance.pdf",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Key Specifications RWD: Motor (Front / Rear) -/ PSM permanent magnet synchronous. 4Motion dual-motor column not applied."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "field": "powertrain.motor_type",
+    "value": "PM_synchronous",
+    "tier": "P",
+    "source_name": "Volkswagen USA ID. Buzz Pro S Technical Data: Engine Type rear permanent magnet synchronous",
+    "source_url": "https://www.vw.com/idhub/content/dam/onehub_pkw/importers/us/en/showrooms/id-buzz/2025/tech-specs/ID_Buzz_Pro_S_Technical_Data.pdf",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Engine Type rear: permanent magnet synchronous machine. Mapped to PM_synchronous."
+  },
+  {
+    "vehicle_id": "vw-id-buzz-2025",
+    "field": "battery.cell_format",
+    "value": "prismatic",
+    "tier": "P",
+    "source_name": "Volkswagen USA ID. Buzz Pro S Technical Data: Cell type Prismatic",
+    "source_url": "https://www.vw.com/idhub/content/dam/onehub_pkw/importers/us/en/showrooms/id-buzz/2025/tech-specs/ID_Buzz_Pro_S_Technical_Data.pdf",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Cell type Prismatic; Number of Cells 208."
   }
 ]

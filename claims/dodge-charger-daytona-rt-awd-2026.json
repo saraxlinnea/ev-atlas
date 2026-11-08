@@ -176,7 +176,20 @@
     "disclosed_by_oem": true,
     "confidence": "medium",
     "model_year": 2024,
-    "notes": "2024 Daytona R/T with factory Direct Connection Stage 1: 496 hp and 404 lb-ft. Current dodge.com EV FAQ still states R/T 496 maximum horsepower, so the Stage 1 torque figure is retained with lowered confidence and model_year 2024. Scat Pack 627 lb-ft not applied. Live 2026 FAQ/pricing pages do not publish a Daytona R/T MSRP or 0-60 (Scat Pack-only figures omitted); peak DC left blank where pages quote 350/175 kW station examples."
+    "notes": "2024 Daytona R/T with factory Direct Connection Stage 1: 496 hp and 404 lb-ft. Current dodge.com EV FAQ still states R/T 496 maximum horsepower, so the Stage 1 torque figure is retained with lowered confidence and model_year 2024. Scat Pack 627 lb-ft not applied. Live 2026 FAQ/pricing pages do not publish a Daytona R/T 0-60 (Scat Pack-only figures omitted); peak DC left blank where pages quote 350/175 kW station examples."
+  },
+  {
+    "vehicle_id": "dodge-charger-daytona-rt-awd-2026",
+    "field": "identity.msrp_usd",
+    "value": 59595,
+    "tier": "P",
+    "source_name": "Stellantis Media, 2024-08-07: 2024 Dodge Charger Daytona R/T starting U.S. MSRP",
+    "source_url": "https://media.stellantisnorthamerica.com/newsrelease.do?id=26052",
+    "access_date": "2026-10-04",
+    "disclosed_by_oem": true,
+    "confidence": "medium",
+    "model_year": 2024,
+    "notes": "2024 Daytona R/T two-door starting U.S. MSRP $59,595 (excludes $1,995 destination). Matches atlas R/T AWD trim; Scat Pack $73,190 not applied. Live 2026 OEM pricing pages quote Daytona Scat Pack only, so this adjacent-year R/T figure is retained with model_year 2024 and medium confidence."
   },
   {
     "vehicle_id": "dodge-charger-daytona-rt-awd-2026",
@@ -211,5 +224,18 @@
     "access_date": "2026-10-03",
     "confidence": "medium",
     "notes": "Width, without mirrors 79.8 in. Page defaults to Scat Pack; exterior width treated as shared with R/T AWD sedan/coupe body. Not Scat Pack power figures."
+  },
+  {
+    "vehicle_id": "dodge-charger-daytona-rt-awd-2026",
+    "field": "battery.system_voltage_v",
+    "value": 400,
+    "tier": "P",
+    "source_name": "Stellantis Media, 2024-08-07: Charger Daytona 400-volt dual motor system",
+    "source_url": "https://media.stellantisnorthamerica.com/newsrelease.do?id=26052",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "notes": "Press: all-electric 400-volt dual motor system with standard all-wheel drive.",
+    "model_year": 2024
   }
 ]

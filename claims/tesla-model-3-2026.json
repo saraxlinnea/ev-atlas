@@ -88,10 +88,10 @@
     "tier": "P",
     "source_name": "Tesla Model 3 page, Standard / Rear-Wheel Drive specs (Wayback Machine snapshot 2026-04-13)",
     "source_url": "https://web.archive.org/web/20260413083357/https://www.tesla.com/model3",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "disclosed_by_oem": true,
     "confidence": "high",
-    "notes": "Tesla: 'Model 3 starts at $38,630. Price includes Destination and Order Fees but excludes taxes and other fees.' Re-checked 2026-10-03 on Wayback snapshot 2026-04-13: figure still present. Differs from the EPA side-by-side MSRP ($36,990, Edmunds-sourced).",
+    "notes": "Tesla: 'Model 3 starts at $38,630. Price includes Destination and Order Fees but excludes taxes and other fees.'. Re-checked 2026-10-04: Wayback 2026-04-13 Model 3 snapshot still shows Starting at $38,630.",
     "conflicts_with": [
       "tesla-model-3-2026#identity.msrp_usd#EPA/DOE fueleconomy.gov Find.do side-by-side for vehicle 50251 (2026 Tesla Model 3 Standard RWD)"
     ]
@@ -103,9 +103,9 @@
     "tier": "P",
     "source_name": "EPA/DOE fueleconomy.gov Find.do side-by-side for vehicle 50251 (2026 Tesla Model 3 Standard RWD)",
     "source_url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=50251",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "confidence": "medium",
-    "notes": "MSRP shown on the EPA side-by-side page. EPA footnote: MSRP data provided by Edmunds.com, Inc. Re-checked 2026-10-03: still $36,990. Differs from Tesla's Wayback page figure that includes Destination and Order Fees ($38,630).",
+    "notes": "MSRP shown on the EPA side-by-side page. EPA footnote: MSRP data provided by Edmunds.com, Inc. Re-checked 2026-10-04: EPA Find.do id 50251 still shows MSRP $36,990.",
     "conflicts_with": [
       "tesla-model-3-2026#identity.msrp_usd#Tesla Model 3 page, Standard / Rear-Wheel Drive specs (Wayback Machine snapshot 2026-04-13)"
     ]
@@ -286,5 +286,16 @@
     "access_date": "2026-10-02",
     "confidence": "low",
     "notes": "Aggregator wheelbase. Tesla product page specs tables on the Wayback snapshot do not list wheelbase."
+  },
+  {
+    "vehicle_id": "tesla-model-3-2026",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "S",
+    "source_name": "Edmunds: 2026 Tesla Model 3 pricing guide (Standard trim)",
+    "access_date": "2026-11-05",
+    "confidence": "medium",
+    "source_url": "https://www.edmunds.com/car-news/2026-tesla-model-3-pricing-guide.html",
+    "notes": "Edmunds: Model 3 Standard is 'Outfitted with a single motor in the rear'. Atlas row is Standard RWD."
   }
 ]

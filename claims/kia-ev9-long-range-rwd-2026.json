@@ -245,5 +245,66 @@
     "confidence": "high",
     "field": "body.wheelbase_in",
     "value": 122.0
+  },
+  {
+    "vehicle_id": "kia-ev9-long-range-rwd-2026",
+    "field": "battery.system_voltage_v",
+    "value": 552,
+    "tier": "P",
+    "source_name": "Kia Media 2026 EV9 specifications: Light Long Range battery voltage",
+    "source_url": "https://www.kiamedia.com/us/en/models/ev9/2026/specifications",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Battery Voltage (V) 552 V for Light Long Range (99.8 kWh RWD), matching atlas Long Range RWD. Light (non-LR) lists 632 V and is not used."
+  },
+  {
+    "vehicle_id": "kia-ev9-long-range-rwd-2026",
+    "field": "powertrain.motor_type",
+    "value": "PM_synchronous",
+    "tier": "P",
+    "source_name": "Kia Media 2026 EV9 specifications: motor type",
+    "source_url": "https://www.kiamedia.com/us/en/models/ev9/2026/specifications",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Motor Type: Permanent Magnet Synchronous Motor (PMSM). Mapped to PM_synchronous."
+  },
+  {
+    "vehicle_id": "kia-ev9-long-range-rwd-2026",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Kia Media 2026 EV9 specifications: Light Long Range RWD",
+    "source_url": "https://www.kiamedia.com/us/en/models/ev9/2026/specifications",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Light Long Range drive type RWD with rear motor only."
+  },
+  {
+    "vehicle_id": "kia-ev9-long-range-rwd-2026",
+    "field": "body.drag_coefficient",
+    "value": 0.28,
+    "tier": "P",
+    "source_name": "Kia Media, 2023-10-09: 2024 EV9 Light / Light Long Range drag coefficient",
+    "source_url": "https://www.kiamedia.com/us/en/media/pressreleases/21267/kia-america-announces-pricing-and-trim-strategy-for-2024-ev9-ev-suv",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Press: drag coefficient of 0.28; footnote applies to Light and Light Long Range trims. Applied to atlas Long Range RWD with model_year 2024.",
+    "disclosed_by_oem": true,
+    "model_year": 2024
+  },
+  {
+    "vehicle_id": "kia-ev9-long-range-rwd-2026",
+    "field": "charging.peak_dc_kw",
+    "value": 210,
+    "tier": "P",
+    "source_name": "Kia Media 2026 EV9 specifications: Light Long Range Peak Power (kW)",
+    "source_url": "https://www.kiamedia.com/us/en/models/ev9/2026/specifications",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Peak Power (kW) 210 kW for Light Long Range (99.8 kWh / 552 V RWD), matching atlas Long Range RWD. Light (non-LR) lists 235 kW and was not applied. The 350 kW EVSE charge-time row is station output, not used as the vehicle peak."
   }
 ]

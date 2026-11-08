@@ -235,5 +235,41 @@
     "access_date": "2026-10-03",
     "confidence": "medium",
     "notes": "Combined output torque 250.4 lb-ft for 233 hp (87 kW + 87 kW) grades. XT 336.6 lb-ft not applied. Atlas EPA row is Solterra AWD (288 mi), not XT."
+  },
+  {
+    "vehicle_id": "subaru-solterra-awd-2026",
+    "field": "battery.system_voltage_v",
+    "value": 391,
+    "tier": "P",
+    "source_name": "Subaru Media 2026 Solterra specifications: rated voltage",
+    "source_url": "https://www.media.subaru.com/download.do?id=2375",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Rated voltage: 391V for the 74.7 kWh lithium-ion pack.",
+    "disclosed_by_oem": true
+  },
+  {
+    "vehicle_id": "subaru-solterra-awd-2026",
+    "field": "powertrain.motor_count",
+    "value": 2,
+    "tier": "P",
+    "source_name": "Subaru Media 2026 Solterra specifications: dual motors",
+    "source_url": "https://www.media.subaru.com/download.do?id=2375",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Front and rear AC synchronous permanent magnet motors; 87 kW x2 on non-XT.",
+    "disclosed_by_oem": true
+  },
+  {
+    "vehicle_id": "subaru-solterra-awd-2026",
+    "field": "powertrain.motor_type",
+    "value": "PM_synchronous",
+    "tier": "P",
+    "source_name": "Subaru Media 2026 Solterra specifications: motor type",
+    "source_url": "https://www.media.subaru.com/download.do?id=2375",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "AC synchronous permanent magnet motors. Mapped to PM_synchronous.",
+    "disclosed_by_oem": true
   }
 ]

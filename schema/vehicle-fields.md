@@ -7,8 +7,8 @@ accept weaker sources for it.
 
 | field path | unit | typical tier | notes |
 |---|---|---|---|
-| identity.msrp_usd | USD | P | base trim as configured; confirm trim exactly; US-market rows |
-| identity.msrp_cny | CNY | P | China-market list price; never invent FX into msrp_usd |
+| identity.msrp_usd | USD | P/D | US OEM USD MSRP (tier P/S), or China list price converted via documented FX (tier D); confirm trim exactly |
+| identity.msrp_cny | CNY | P | China-market list price in CNY; retained as derivation input / trace even when Compare shows only msrp_usd |
 | powertrain.motor_count | count | P | |
 | powertrain.motor_type | enum: PM_synchronous / induction / synchronous_reluctance / unknown | S | rarely stated per-motor by OEM |
 | powertrain.drive_layout | enum: RWD / AWD / FWD | P | |
@@ -21,11 +21,11 @@ accept weaker sources for it.
 | battery.pack_kwh_basis | enum: gross / usable / unstated | — | required whenever pack_kwh is set |
 | battery.system_voltage_v | V | S | OEM sometimes gives a range e.g. "800V+" |
 | battery.cell_format | enum: cylindrical_2170 / cylindrical_4680 / cylindrical_18650 / prismatic / pouch / unknown | S | usually teardown-sourced |
-| battery.cell_chemistry | enum: NMC / NCA / LFP / unknown | S/unverified | supplier contracts rarely public |
+| battery.cell_chemistry | enum: NMC / NCMA / NCA / LFP / unknown | S/unverified | NCMA is distinct from NMC (do not collapse); NIO-style hybrid packs still unstorable |
 | battery.cell_supplier | string | unverified | treat as rumor unless OEM/supplier press release |
 | battery.module_count | count | S | |
 | battery.structural_pack | boolean | S | |
-| charging.port_type | enum: NACS / CCS1 / CCS2 / CHAdeMO | P | |
+| charging.port_type | enum: NACS / CCS1 / CCS2 / CHAdeMO / GB_T | P | GB_T is the China GB/T AC/DC combo port; do not assume from market alone |
 | charging.peak_dc_kw | kW | P/S | OEM often omits; third-party instrumented tests common |
 | charging.onboard_ac_kw | kW | P | |
 | charging.range_added_mi | mi | P | pair with .range_added_time_min; put the OEM's test conditions in notes |
@@ -59,8 +59,14 @@ accept weaker sources for it.
 - CLTC and EPA are different cycles. Never put CLTC values into
   `efficiency.epa_*`, never invent a CLTC↔EPA conversion, and do not rank
   across cycles.
-- China-market prices use `identity.msrp_cny`. Do not invent a CNY→USD FX
-  rate into `identity.msrp_usd`.
+- China-market list prices are sourced in CNY (`identity.msrp_cny`), then
+  Compare uses `identity.msrp_usd` as a tier D claim: CNY divided by a named
+  official FX series (Federal Reserve H.10 / FRED DEXCHUS), with series,
+  window, and rate stated in Methods and in each derived claim. Do not invent
+  a rate from memory. US OEM USD MSRP and FX-converted China list price are
+  not the same kind of price; keep that distinction in notes and chart
+  subtitles. Default USD MSRP charts stay US-only unless the subtitle clearly
+  includes FX-converted China list prices.
 - NHTSA recall fields apply to US-market rows. Leave them absent on
   China-only rows (blank means not applied, not zero recalls).
 - If `battery.pack_kwh_basis` is unset, display `pack_kwh` but don't compute

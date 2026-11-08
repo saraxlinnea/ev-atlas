@@ -149,26 +149,14 @@
     "confidence": "high",
     "field": "charging.port_type",
     "value": "NACS",
-    "notes": "Disclaimer: native NACS port for NACS V3 Supercharger; CCS adapter included for 800V ultra-fast DC. Compare-specs also lists DC Fast Charging (10~80%) NACS V3 Supercharger."
+    "notes": "Disclaimer: native NACS port for NACS V3 Supercharger; CCS adapter included for 800V ultra-fast DC. Compare-specs also lists DC Fast Charging (10~80%) NACS V3 Supercharger. Peak DC vehicle maximum left blank; compare-specs lists 'Ultra-fast charger (up to 800V / 350 kW)' and 'DC Fast Charging (10~80%) w/CCS Adapter 350 kW' as charger-class / charge-time language, not a stated vehicle peak (same rule as EV9 / Daytona). Re-checked 2026-10-04."
   },
   {
     "vehicle_id": "hyundai-ioniq9-rwd-2026",
     "tier": "P",
     "source_name": "Hyundai USA 2026 IONIQ 9 compare-specs (S RWD)",
     "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-9/compare-specs",
-    "access_date": "2026-10-03",
-    "disclosed_by_oem": true,
-    "confidence": "high",
-    "field": "charging.peak_dc_kw",
-    "value": 350,
-    "notes": "Ultra-fast charger (up to 800V / 350 kW) and DC Fast Charging (10~80%) w/CCS Adapter 350 kW at 24 minutes. Native NACS V3 Supercharger is listed with a 40-minute 10-80% time and no separate kW figure on the compare-specs table."
-  },
-  {
-    "vehicle_id": "hyundai-ioniq9-rwd-2026",
-    "tier": "P",
-    "source_name": "Hyundai USA 2026 IONIQ 9 compare-specs (S RWD)",
-    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-9/compare-specs",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "disclosed_by_oem": true,
     "confidence": "high",
     "field": "powertrain.power_hp",
@@ -255,6 +243,66 @@
     "confidence": "high",
     "field": "body.height_in",
     "value": 70.5,
-    "notes": "Height (in.) 70.5. Onboard AC kW and 0-60 left blank: compare-specs gives Level II charge time only (9 h 40 min) without a vehicle AC kW rating, and no RWD 0-60 figure."
+    "notes": "Height (in.) 70.5. Page does not label with/without roof rails. RWD 0-60 left blank on opened Hyundai pages."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq9-rwd-2026",
+    "field": "battery.system_voltage_v",
+    "value": 610,
+    "tier": "P",
+    "source_name": "Hyundai USA 2026 IONIQ 9 compare-specs (S RWD): battery voltage",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-9/compare-specs",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "OEM Voltage 610 for all listed trims including S RWD. Ultra-fast charger up to 800V / 350 kW also listed; pack nominal stored here."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq9-rwd-2026",
+    "field": "body.drag_coefficient",
+    "value": 0.269,
+    "tier": "P",
+    "source_name": "Hyundai USA 2026 IONIQ 9 compare-specs: Coefficient of drag",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-9/compare-specs",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Coefficient of drag (Cd) 0.269.",
+    "disclosed_by_oem": true
+  },
+  {
+    "vehicle_id": "hyundai-ioniq9-rwd-2026",
+    "field": "powertrain.motor_type",
+    "value": "PM_synchronous",
+    "tier": "P",
+    "source_name": "Hyundai USA 2026 IONIQ 9 compare-specs: PMSM",
+    "source_url": "https://www.hyundaiusa.com/us/en/vehicles/ioniq-9/compare-specs",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Permanent Magnet Synchronous Motor.",
+    "disclosed_by_oem": true
+  },
+  {
+    "vehicle_id": "hyundai-ioniq9-rwd-2026",
+    "field": "charging.onboard_ac_kw",
+    "value": 11,
+    "tier": "P",
+    "source_name": "Hyundai News 2026 IONIQ 9 Specs & Features PDF (2025-03-05): AC Level 2 11 kW",
+    "source_url": "https://www.hyundainews.com/assets/documents/original/65341-2026IONIQ9SpecsFeatures20250305.pdf",
+    "access_date": "2026-10-04",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "PDF: AC Level 2 Charging (10-80%) North America 240V / 48A (11 kW), 9 hr 40 min. Matches compare-specs Level II time for S RWD. No RWD 0-60 on opened Hyundai pages."
+  },
+  {
+    "vehicle_id": "hyundai-ioniq9-rwd-2026",
+    "field": "battery.cell_chemistry",
+    "value": "NMC",
+    "tier": "P",
+    "source_name": "Hyundai Motor Korea EV battery cell information PDF (2025-08): Ioniq 9 long-range 2WD NCM",
+    "source_url": "https://www.hyundai.com/content/dam/hyundai/kr/ko/data/ev/hyundai-battery-cell-info-2508.pdf",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Buyer disclosure table: \uc544\uc774\uc624\ub2c9 9 \ud56d\uc18d\ud615 2WD, 110.3 kWh, 610 V, SK ON pouch, \uc8fc\uc694 \uc6d0\ub8cc NCM. Matches atlas S RWD pack (110.3 kWh) and voltage (610 V). NCM mapped to enum NMC."
   }
 ]

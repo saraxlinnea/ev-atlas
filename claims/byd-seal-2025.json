@@ -1,1 +1,187 @@
-[]
+[
+  {
+    "vehicle_id": "byd-seal-2025",
+    "field": "efficiency.cltc_range_km",
+    "value": 510,
+    "tier": "P",
+    "source_name": "MIIT: 减免车辆购置税的新能源汽车车型目录（第四批）: BYD7006BEVA6 比亚迪海豹",
+    "source_url": "https://www.miit.gov.cn/cms_files/filemanager/1226211233/attach/20244/c39421727e4c4721bab15ad551aadc5c.doc",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "notes": "Trim mapping: atlas 510智航版 matched to MIIT vehicle model BYD7006BEVA6 (通用名称 比亚迪海豹) by CLTC 510 km, pack 61.44 kWh, and curb 1950 kg, which aggregator tables also assign to 510智航版. Pure-electric range column: 510(CLTC). Parent announcement: https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2024/art_9455d493ca4548c5b431a8a77b15cf7b.html (工信部公告2024年第5号). 2026-10-04: byd.com/cn/ocean-home/models/haibao/2025haibao re-opened; marketing chrome/JSON only (no trim CLTC table; 3.8 s / 800V language is not applied to this entry trim). Prior qcwp/ZOL 510 figures agree and remain secondary corroboration only."
+  },
+  {
+    "vehicle_id": "byd-seal-2025",
+    "field": "efficiency.cltc_kwh_per_100km",
+    "value": 13,
+    "tier": "S",
+    "source_name": "汽车网评 (qcwp): 比亚迪海豹 2025款 510智航版 parameters",
+    "source_url": "https://www.qcwp.com/series/807/parameter/75045",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "百公里耗电量(kWh/100km) 13 for 510智航版. Not an EPA wall-side figure. MIIT tax-exemption catalog lists CLTC range and pack energy but not kWh/100km; byd.com Seal page still has no extractable efficiency table."
+  },
+  {
+    "vehicle_id": "byd-seal-2025",
+    "field": "identity.msrp_cny",
+    "value": 175800,
+    "tier": "S",
+    "source_name": "汽车网评 (qcwp): 比亚迪海豹 2025款 510智航版 official guide price",
+    "source_url": "https://www.qcwp.com/series/807/parameter/75045",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "官方指导价 17.58万元. MIIT catalogs do not publish list price. 2026-10-04: byd.com Seal page still non-extractable for list price; ZOL lists the same 17.58万 for 510智航版 (tier S corroboration only)."
+  },
+  {
+    "vehicle_id": "byd-seal-2025",
+    "field": "identity.msrp_usd",
+    "value": 25767,
+    "tier": "D",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "China list price converted to USD; not a US MSRP. Original CNY: 175800 (qcwp guide price). FX: Federal Reserve H.10 / FRED DEXCHUS (CNY per USD), simple mean of 185 daily noon buying rates 2026-01-02 through 2026-09-25 (latest published H.10 day as of 2026-10-03; not a full-year 2026 average) = 6.8228. USD = 175800 / 6.8228, rounded to nearest dollar. Series: https://fred.stlouisfed.org/series/DEXCHUS.",
+    "derivation": {
+      "formula": "identity.msrp_cny / 6.8228",
+      "inputs": ["identity.msrp_cny"],
+      "assumptions": [
+        "FX rate 6.8228 CNY per USD is the simple mean of Federal Reserve H.10 / FRED DEXCHUS daily noon buying rates for 2026-01-02 through 2026-09-25 (185 observations; YTD through latest published day as of 2026-10-03 access, not a calendar-year 2026 average).",
+        "Result rounded to nearest USD. China list price converted for Compare; not a US MSRP. Underlying CNY remains tier S aggregator."
+      ]
+    }
+  },
+  {
+    "vehicle_id": "byd-seal-2025",
+    "field": "powertrain.drive_layout",
+    "value": "RWD",
+    "tier": "S",
+    "source_name": "汽车网评 (qcwp): 比亚迪海豹 2025款 510智航版 parameters",
+    "source_url": "https://www.qcwp.com/series/807/parameter/75045",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "驱动方式 后置后驱; single rear motor 170 kW / 380 N·m on the same table. MIIT tax-exemption row for BYD7006BEVA6 does not state drive layout."
+  },
+  {
+    "vehicle_id": "byd-seal-2025",
+    "field": "battery.pack_kwh",
+    "value": 61.44,
+    "tier": "P",
+    "source_name": "MIIT: 减免车辆购置税的新能源汽车车型目录（第四批）: BYD7006BEVA6 pack energy",
+    "source_url": "https://www.miit.gov.cn/cms_files/filemanager/1226211233/attach/20244/c39421727e4c4721bab15ad551aadc5c.doc",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "notes": "动力蓄电池组总能量（kWh）61.44 for BYD7006BEVA6 比亚迪海豹. Mapped to atlas 510智航版 (same CLTC 510 / 61.44 / curb 1950 as aggregator trim tables). Parent announcement: https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2024/art_9455d493ca4548c5b431a8a77b15cf7b.html. byd.com Seal page still has no extractable pack table."
+  },
+  {
+    "vehicle_id": "byd-seal-2025",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "P",
+    "source_name": "MIIT: 减免车辆购置税的新能源汽车车型目录（第四批）: BYD7006BEVA6 pack energy",
+    "source_url": "https://www.miit.gov.cn/cms_files/filemanager/1226211233/attach/20244/c39421727e4c4721bab15ad551aadc5c.doc",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "notes": "Required companion to pack_kwh. MIIT column is 动力蓄电池组总能量 but does not label gross vs usable in atlas terms; left unstated."
+  },
+  {
+    "vehicle_id": "byd-seal-2025",
+    "field": "charging.peak_dc_kw",
+    "value": 180,
+    "tier": "S",
+    "source_name": "汽车网评 (qcwp): 比亚迪海豹 2025款 510智航版 parameters",
+    "source_url": "https://www.qcwp.com/series/807/parameter/75045",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "最大快充功率(kw) 180. Aggregator figure; not confirmed on MIIT catalog or a fetchable BYD OEM trim table. byd.com marketing mentions fast-charge time language without a vehicle peak kW for this trim."
+  },
+  {
+    "vehicle_id": "byd-seal-2025",
+    "field": "powertrain.power_hp",
+    "value": 170,
+    "unit": "kW",
+    "tier": "S",
+    "source_name": "汽车网评 (qcwp): 比亚迪海豹 2025款 510智航版 motor power",
+    "source_url": "https://www.qcwp.com/series/807/parameter/75045",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "电动机总功率(kW) 170; table also lists 231 Ps. Stored in kW as stated; not converted to hp. ZOL same trim lists 170 kW. MIIT tax-exemption catalog does not state motor power; product batch 381 lists only family code BYD7006 without a BEVA6 power row."
+  },
+  {
+    "vehicle_id": "byd-seal-2025",
+    "field": "powertrain.torque_lbft",
+    "value": 380,
+    "unit": "Nm",
+    "tier": "S",
+    "source_name": "汽车网评 (qcwp): 比亚迪海豹 2025款 510智航版 parameters",
+    "source_url": "https://www.qcwp.com/series/807/parameter/75045",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "电动机总扭矩(N·m) 380. Stored in Nm as stated; not converted to lb-ft. MIIT tax-exemption catalog does not state torque."
+  },
+  {
+    "vehicle_id": "byd-seal-2025",
+    "field": "battery.cell_chemistry",
+    "value": "LFP",
+    "tier": "S",
+    "source_name": "汽车网评 (qcwp): 比亚迪海豹 2025款 510智航版 battery type",
+    "source_url": "https://www.qcwp.com/series/807/parameter/75045",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "电池类型 磷酸铁锂电池; 电池特色技术 刀片电池. Still aggregator (tier S). MIIT tax-exemption catalog for BYD7006BEVA6 does not name chemistry; byd.com 海豹智驾版 remained non-extractable for a chemistry table. Not inferred from brand alone."
+  },
+  {
+    "vehicle_id": "byd-seal-2025",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "S",
+    "source_name": "汽车网评 (qcwp): 比亚迪海豹 2025款 510智航版 motor count",
+    "source_url": "https://www.qcwp.com/series/807/parameter/75045",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "驱动电机数 单电机; 电机布局 后置."
+  },
+  {
+    "vehicle_id": "byd-seal-2025",
+    "field": "powertrain.motor_type",
+    "value": "PM_synchronous",
+    "tier": "S",
+    "source_name": "汽车网评 (qcwp): 比亚迪海豹 2025款 510智航版 motor type",
+    "source_url": "https://www.qcwp.com/series/807/parameter/75045",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "电机类型 永磁/同步. Mapped to PM_synchronous."
+  },
+  {
+    "vehicle_id": "byd-seal-2025",
+    "field": "body.drag_coefficient",
+    "value": 0.219,
+    "tier": "S",
+    "source_name": "汽车网评 (qcwp): 比亚迪海豹 2025款 510智航版 drag coefficient",
+    "source_url": "https://www.qcwp.com/series/807/parameter/75045",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "风阻系数(Cd) 0.219."
+  },
+  {
+    "vehicle_id": "byd-seal-2025",
+    "field": "powertrain.accel_0_60_s",
+    "value": 6.5,
+    "unit": "s",
+    "tier": "S",
+    "source_name": "汽车网评 (qcwp): 比亚迪海豹 2025款 510智航版 0-100 km/h",
+    "source_url": "https://www.qcwp.com/series/807/parameter/75045",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "官方百公里加速时间(s) 6.5. Stored as stated 0-100 km/h; not converted to 0-60 mph. BitAuto Global Seal 2025 510km RWD table lists 官方0-100km/h加速 6.5. byd.com marketing 3.8 s is dual-motor performance and was not applied."
+  },
+  {
+    "vehicle_id": "byd-seal-2025",
+    "field": "charging.onboard_ac_kw",
+    "value": 7,
+    "tier": "S",
+    "source_name": "BitAuto Global: 比亚迪海豹 2025 510km 后驱版 AC charge power",
+    "source_url": "https://www.bitauto.com/zh-global/byd/seal/config-232/",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "慢充功率[kW] 7 for 2025 510km 后驱版. Aggregator; not confirmed on MIIT or a fetchable BYD OEM page. charging.port_type left blank: opened qcwp, ZOL, BitAuto, byd.com Seal pages, and MIIT tax-exemption DOC do not state GB/T or 国标充电口 for the vehicle inlet (region=CN alone is never enough)."
+  }
+]

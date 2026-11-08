@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Make | EV Atlas</title>
+  <meta name="description" content="Make dossier for vehicles and sourced claims already in EV Atlas. Incomplete catalog; blank means not found.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page page-wide">
+    <nav aria-label="Site">
+      <a class="nav-brand" href="index.html">EV Atlas</a>
+      <ul class="site-nav">
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="makes.html" aria-current="page">Makes</a></li>
+        <li><a href="figures.html">Figures</a></li>
+        <li><a href="methodology.html">Methods</a></li>
+      </ul>
+    </nav>
+
+    <header class="hero hero-thin" data-make-hero>
+      <p class="brand"><a href="makes.html">Makes</a></p>
+      <h1 data-make-title>Make</h1>
+      <p class="lede" data-make-lede></p>
+    </header>
+
+    <section class="content-section" aria-labelledby="make-background-heading" data-make-page data-src="data/makes.json">
+      <h2 id="make-background-heading" class="kicker">Background</h2>
+      <p class="chart-note">
+        Org fields come from make-level claims (OEM About, corporate, or IR pages
+        actually opened). Summary is number-free identity only. Blank means not
+        found. Not a company encyclopedia.
+      </p>
+      <p class="make-summary" data-make-summary hidden></p>
+      <dl class="make-meta" data-make-meta></dl>
+
+      <h2 class="kicker" id="make-fleet-heading">Fleet in EV Atlas</h2>
+      <p class="chart-note">
+        Rows already claimed for this make. Open Compare filtered to the make
+        when useful. Status is atlas sale-status, not an OEM catalog claim.
+      </p>
+      <div class="makes-wrap">
+        <table class="compare-table makes-table" data-make-fleet-table hidden>
+          <thead>
+            <tr>
+              <th scope="col">Model</th>
+              <th scope="col">Trim</th>
+              <th scope="col" class="num">Year</th>
+              <th scope="col">Market</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody data-make-fleet-body></tbody>
+        </table>
+      </div>
+
+      <h2 class="kicker" id="make-specs-heading">Spec summary</h2>
+      <p class="chart-note">
+        Filled fields only, from flattened winners. Numeric fields show
+        min–max among stated values and how many rows carry a value. EPA and
+        CLTC stay separate by market. Blank fields are omitted, not averaged.
+      </p>
+      <div class="makes-wrap">
+        <table class="compare-table makes-table" data-make-specs-table hidden>
+          <thead>
+            <tr>
+              <th scope="col">Field</th>
+              <th scope="col">Summary</th>
+              <th scope="col">Coverage</th>
+            </tr>
+          </thead>
+          <tbody data-make-specs-body></tbody>
+        </table>
+      </div>
+      <p class="chart-note" data-make-specs-empty hidden>No summarized fields filled for this make yet.</p>
+
+      <h2 class="kicker" id="make-highlights-heading">Highlights</h2>
+      <ul data-make-highlights></ul>
+      <p class="chart-note" data-make-highlights-empty hidden>No conflict or disclosure-gap highlights for this make.</p>
+
+      <h2 class="kicker" id="make-patterns-heading">In this atlas</h2>
+      <p class="chart-note">
+        Battery chemistry, cell supplier, and charge-port patterns among vehicles
+        already claimed for this make. Stated on N of M uses flattened winners
+        (or the disclosure heatmap when a field has no winning value yet).
+      </p>
+      <ul data-make-patterns></ul>
+      <p class="chart-note" data-make-patterns-empty hidden>No chemistry, supplier, or port values stated for this make yet.</p>
+      <p class="chart-note">
+        Incomplete catalog: only vehicles with claim files appear. US rows
+        usually use the entry-level EPA configuration noted on the claim.
+        China-market rows use CLTC fields and leave EPA and NHTSA blank.
+        Side-by-side table: <a data-make-compare-link href="compare.html">Compare</a>.
+        Methods: <a href="methodology.html">Methods</a>.
+      </p>
+
+      <p data-make-error class="error" hidden></p>
+    </section>
+  </div>
+  <script src="sheet.js"></script>
+  <script src="makes.js"></script>
+</body>
+</html>

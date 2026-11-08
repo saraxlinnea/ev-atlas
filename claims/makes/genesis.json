@@ -1,0 +1,26 @@
+[
+  {
+    "make": "Genesis",
+    "field": "org.ev_focus",
+    "value": "multi_powertrain",
+    "tier": "P",
+    "source_name": "Genesis Worldwide home",
+    "source_url": "https://www.genesis.com/worldwide/en.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Navigation lists SUV, Sedan, Electric, and Magma model groups."
+  },
+  {
+    "make": "Genesis",
+    "field": "org.summary",
+    "value": "Genesis is a luxury vehicle brand with sedan, SUV, and electric model groups on its worldwide site. In EV Atlas it is keyed separately from Hyundai and Kia.",
+    "tier": "P",
+    "source_name": "Genesis Worldwide home",
+    "source_url": "https://www.genesis.com/worldwide/en.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb. brand_type left blank without a clear division/standalone statement on this page."
+  }
+]

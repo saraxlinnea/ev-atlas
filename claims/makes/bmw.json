@@ -1,0 +1,62 @@
+[
+  {
+    "make": "BMW",
+    "field": "org.hq_city",
+    "value": "Munich",
+    "tier": "P",
+    "source_name": "BMW Group company page",
+    "source_url": "https://www.bmwgroup.com/en/company.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Page imagery and captions reference the BMW four-cylinder building with Olympiaturm and Olympic stadium context in Munich; used as HQ city for the BMW make."
+  },
+  {
+    "make": "BMW",
+    "field": "org.hq_country",
+    "value": "Germany",
+    "tier": "P",
+    "source_name": "BMW Group company page",
+    "source_url": "https://www.bmwgroup.com/en/company.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "BMW Group company page situates the four-cylinder HQ complex in Munich, Germany."
+  },
+  {
+    "make": "BMW",
+    "field": "org.brand_type",
+    "value": "standalone",
+    "tier": "P",
+    "source_name": "BMW Group company page",
+    "source_url": "https://www.bmwgroup.com/en/company.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "BMW Group page names BMW as a brand of the group and describes BMW Group as manufacturer; make BMW keyed separately from MINI."
+  },
+  {
+    "make": "BMW",
+    "field": "org.home_market",
+    "value": "EU",
+    "tier": "P",
+    "source_name": "BMW Group company page",
+    "source_url": "https://www.bmwgroup.com/en/company.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "BMW Group company page frames a European premium manufacturer with Munich HQ cues."
+  },
+  {
+    "make": "BMW",
+    "field": "org.summary",
+    "value": "BMW is a BMW Group premium vehicle brand with company materials situating headquarters cues in Munich, Germany. In EV Atlas it is keyed separately from MINI.",
+    "tier": "P",
+    "source_name": "BMW Group company page",
+    "source_url": "https://www.bmwgroup.com/en/company.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb from opened BMW Group company page."
+  }
+]

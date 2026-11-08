@@ -170,7 +170,7 @@
     "tier": "P",
     "source_name": "Volvo Cars USA 2026 EX30 specifications (Single Motor Extended Range)",
     "source_url": "https://www.volvocars.com/us/cars/ex30-electric/specifications/",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "disclosed_by_oem": true,
     "confidence": "high",
     "field": "powertrain.power_hp",
@@ -178,14 +178,14 @@
     "conflicts_with": [
       "volvo-ex30-2026#powertrain.power_hp#Volvo Cars USA 2026 EX30 product page"
     ],
-    "notes": "Specs table lists Power as '200 kWh / 268 hp' (kWh label is a page typo for kW). Re-checked 2026-10-03: Single Motor Extended Range still shows 268 hp. Conflicts with the product page 'Up to 272 hp'."
+    "notes": "Specs table lists Power as '200 kWh / 268 hp' (kWh label is a page typo for kW). Re-checked 2026-10-04: specifications page Single Motor Extended Range still shows Power 200 kWh / 268 hp."
   },
   {
     "vehicle_id": "volvo-ex30-2026",
     "tier": "P",
     "source_name": "Volvo Cars USA 2026 EX30 product page",
     "source_url": "https://www.volvocars.com/us/cars/ex30-electric/",
-    "access_date": "2026-10-03",
+    "access_date": "2026-10-04",
     "disclosed_by_oem": true,
     "confidence": "high",
     "field": "powertrain.power_hp",
@@ -193,7 +193,7 @@
     "conflicts_with": [
       "volvo-ex30-2026#powertrain.power_hp#Volvo Cars USA 2026 EX30 specifications (Single Motor Extended Range)"
     ],
-    "notes": "Product page: 'Single Motor Extended Range Up to 272 hp'. Re-checked 2026-10-03: still present. Conflicts with specifications page 268 hp."
+    "notes": "Product page: 'Single Motor Extended Range Up to 272 hp'. Re-checked 2026-10-04: product page still shows Single Motor Extended Range Up to 272 hp."
   },
   {
     "vehicle_id": "volvo-ex30-2026",
@@ -263,5 +263,29 @@
     "access_date": "2026-10-03",
     "confidence": "high",
     "notes": "Single Motor Extended Range: Max torque 253 lb-ft. Twin Motor Performance 400 lb-ft not applied."
+  },
+  {
+    "vehicle_id": "volvo-ex30-2026",
+    "field": "battery.cell_chemistry",
+    "value": "NMC",
+    "tier": "P",
+    "source_name": "Volvo Cars: Small yet mighty EX30 battery tech (Single Motor Extended Range NMC)",
+    "source_url": "https://www.volvocars.com/us/news/safety/small-yet-mighty-say-hello-to-the-fully-electric-Volvo-EX30-small-SUV/",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "OEM: Single Motor Extended Range variant with an NMC extended-range battery (lithium, nickel, manganese and cobalt). Atlas row is Single Motor Extended Range 69.0 kWh. LFP standard-range pack not applied."
+  },
+  {
+    "vehicle_id": "volvo-ex30-2026",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Volvo Cars USA EX30 specifications: Single Motor Extended Range",
+    "source_url": "https://www.volvocars.com/us/cars/ex30-electric/specifications/",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Platform section titled Single Motor Extended Range with RWD driveline. Twin Motor Performance is a separate column and not applied."
   }
 ]

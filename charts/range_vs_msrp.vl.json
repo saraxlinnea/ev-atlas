@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "EPA range vs MSRP",
-    "subtitle": "US-market rows with both a sourced USD MSRP and EPA range. Blank and non-US rows are omitted, not plotted as zero. No CNY→USD conversion.",
+    "subtitle": "US-market rows with both a sourced USD MSRP and EPA range. Blank and non-US rows are omitted, not plotted as zero. FX-converted China list prices are excluded.",
     "fontSize": 16,
     "subtitleFontSize": 11,
     "subtitleColor": "#666"

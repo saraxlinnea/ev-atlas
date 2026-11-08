@@ -126,24 +126,11 @@
     "tier": "P",
     "source_name": "Genesis USA GV60 page: built-in NACS port",
     "source_url": "https://www.genesis.com/us/en/gv60",
-    "access_date": "2026-10-02",
+    "access_date": "2026-10-04",
     "disclosed_by_oem": true,
     "confidence": "medium",
     "model_year": 2027,
-    "notes": "Page: built-in NACS port for Supercharger access. Live page labeled 2027; applied to atlas MY2026 RWD as OEM currently presents NACS as standard on GV60."
-  },
-  {
-    "vehicle_id": "genesis-gv60-rwd-2026",
-    "field": "charging.peak_dc_kw",
-    "value": 350,
-    "tier": "P",
-    "source_name": "Genesis USA GV60 page: 350 kW / 800V ultra-fast charging",
-    "source_url": "https://www.genesis.com/us/en/gv60",
-    "access_date": "2026-10-02",
-    "disclosed_by_oem": true,
-    "confidence": "medium",
-    "model_year": 2027,
-    "notes": "Page: charge 10% to 80% in as little as 18 minutes when using a 350kW/800V DC Ultra-Fast Charger. Live page labeled 2027; applied to atlas MY2026 RWD as the OEM charging claim currently presented for GV60. Peak is the charger class the OEM pairs with that time, not an independently instrumented vehicle curve."
+    "notes": "Page: built-in NACS port for Supercharger access. Live page labeled 2027; applied to atlas MY2026 RWD as OEM currently presents NACS as standard on GV60. Peak DC vehicle maximum left blank; page states 10-80% in as little as 18 minutes when using a 350kW/800V DC Ultra-Fast Charger, which is station output, not a stated vehicle peak (same rule as EV9 / Daytona)."
   },
   {
     "vehicle_id": "genesis-gv60-rwd-2026",
@@ -203,5 +190,47 @@
     "disclosed_by_oem": true,
     "confidence": "high",
     "notes": "Exterior dimensions all models: Overall Width 74.4."
+  },
+  {
+    "vehicle_id": "genesis-gv60-rwd-2026",
+    "field": "battery.system_voltage_v",
+    "value": "800V architecture",
+    "tier": "P",
+    "source_name": "Genesis USA GV60 page: 350 kW / 800V ultra-fast charging",
+    "source_url": "https://www.genesis.com/us/en/gv60",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "notes": "Page pairs ultra-fast charging with a 350kW/800V DC Ultra-Fast Charger. Live page labeled 2027; applied to atlas MY2026 RWD as currently presented. Confidence lowered vs pack Voltage 697V on the 2026 GV60 spec sheet: this claim is charging-architecture language paired with a 350kW/800V station, not a stated pack voltage.",
+    "conflicts_with": [
+      "genesis-gv60-rwd-2026#battery.system_voltage_v#Genesis 2026 GV60 US specification sheet PDF: Battery Voltage 697V"
+    ]
+  },
+  {
+    "vehicle_id": "genesis-gv60-rwd-2026",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Genesis 2026 GV60 US specification sheet PDF: 168kW Rear Electric Motor (RWD)",
+    "source_url": "https://s7d1.scene7.com/is/content/hyundai/2026-GV60-Spec-Sheetpdf",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "RWD standard equipment: 168kW Rear Electric Motor. AWD rows list front and rear motors separately and are not applied."
+  },
+  {
+    "vehicle_id": "genesis-gv60-rwd-2026",
+    "field": "battery.system_voltage_v",
+    "value": 697,
+    "tier": "P",
+    "source_name": "Genesis 2026 GV60 US specification sheet PDF: Battery Voltage 697V",
+    "source_url": "https://s7d1.scene7.com/is/content/hyundai/2026-GV60-Spec-Sheetpdf",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "conflicts_with": [
+      "genesis-gv60-rwd-2026#battery.system_voltage_v#Genesis USA GV60 page: 350 kW / 800V ultra-fast charging"
+    ],
+    "notes": "Battery table lists Voltage 697V with 84.0 kWh system capacity for the RWD/AWD battery block. Conflicts with the prior 800V architecture claim from the Genesis charging-page wording."
   }
 ]

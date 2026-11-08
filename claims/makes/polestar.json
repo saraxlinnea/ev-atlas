@@ -1,0 +1,86 @@
+[
+  {
+    "make": "Polestar",
+    "field": "org.brand_type",
+    "value": "standalone",
+    "tier": "P",
+    "source_name": "Polestar About page",
+    "source_url": "https://www.polestar.com/us/about/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "About timeline: Polestar listed on Nasdaq under ticker PSNY as a publicly listed company."
+  },
+  {
+    "make": "Polestar",
+    "field": "org.ev_focus",
+    "value": "bev_only",
+    "tier": "P",
+    "source_name": "Polestar About page",
+    "source_url": "https://www.polestar.com/us/about/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Design-led electric performance brand; fully electric models throughout timeline."
+  },
+  {
+    "make": "Polestar",
+    "field": "org.home_market",
+    "value": "EU",
+    "tier": "P",
+    "source_name": "Polestar About page",
+    "source_url": "https://www.polestar.com/us/about/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Born in Sweden, driven worldwide."
+  },
+  {
+    "make": "Polestar",
+    "field": "org.hq_country",
+    "value": "Sweden",
+    "tier": "P",
+    "source_name": "Polestar About page",
+    "source_url": "https://www.polestar.com/us/about/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Born in Sweden; city-level HQ left blank on this page."
+  },
+  {
+    "make": "Polestar",
+    "field": "org.listing_status",
+    "value": "public",
+    "tier": "P",
+    "source_name": "Polestar About page",
+    "source_url": "https://www.polestar.com/us/about/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Listed on Nasdaq under ticker PSNY."
+  },
+  {
+    "make": "Polestar",
+    "field": "org.ticker",
+    "value": "PSNY",
+    "tier": "P",
+    "source_name": "Polestar About page",
+    "source_url": "https://www.polestar.com/us/about/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Ticker PSNY per About timeline."
+  },
+  {
+    "make": "Polestar",
+    "field": "org.summary",
+    "value": "Polestar is a publicly listed electric performance brand that began in Sweden. In EV Atlas it is keyed as a make.",
+    "tier": "P",
+    "source_name": "Polestar About page",
+    "source_url": "https://www.polestar.com/us/about/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb. HQ city blank."
+  }
+]

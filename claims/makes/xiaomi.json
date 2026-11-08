@@ -1,0 +1,86 @@
+[
+  {
+    "make": "Xiaomi",
+    "field": "org.brand_type",
+    "value": "standalone",
+    "tier": "P",
+    "source_name": "Xiaomi Global About Us page",
+    "source_url": "https://www.mi.com/global/about/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Xiaomi Corporation presented as the listed company; Auto is a business line on the same About page."
+  },
+  {
+    "make": "Xiaomi",
+    "field": "org.ev_focus",
+    "value": "bev_only",
+    "tier": "P",
+    "source_name": "Xiaomi Global About Us page",
+    "source_url": "https://www.mi.com/global/about/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Xiaomi Auto mission text: high-quality smart electrified vehicles; YU7 described as electric SUV."
+  },
+  {
+    "make": "Xiaomi",
+    "field": "org.home_market",
+    "value": "CN",
+    "tier": "P",
+    "source_name": "Xiaomi Global About Us page",
+    "source_url": "https://www.mi.com/global/about/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Xiaomi Corporation About framing; Auto factory note references Beijing. HQ city left blank without a single HQ address line."
+  },
+  {
+    "make": "Xiaomi",
+    "field": "org.founded_year",
+    "value": 2010,
+    "tier": "P",
+    "source_name": "Xiaomi Global About Us page",
+    "source_url": "https://www.mi.com/global/about/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Founded on April 6, 2010. Stored as calendar year only."
+  },
+  {
+    "make": "Xiaomi",
+    "field": "org.listing_status",
+    "value": "public",
+    "tier": "P",
+    "source_name": "Xiaomi Global About Us page",
+    "source_url": "https://www.mi.com/global/about/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Listed on Hong Kong Stock Exchange Main Board; stock code 1810.HK on About page."
+  },
+  {
+    "make": "Xiaomi",
+    "field": "org.ticker",
+    "value": "1810.HK",
+    "tier": "P",
+    "source_name": "Xiaomi Global About Us page",
+    "source_url": "https://www.mi.com/global/about/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Stock code 1810.HK per Xiaomi About page."
+  },
+  {
+    "make": "Xiaomi",
+    "field": "org.summary",
+    "value": "Xiaomi is a publicly listed electronics and smart manufacturing company that includes Xiaomi Auto. About materials describe smart electrified vehicles. In EV Atlas it is keyed as Xiaomi; China-market rows use CLTC fields.",
+    "tier": "P",
+    "source_name": "Xiaomi Global About Us page",
+    "source_url": "https://www.mi.com/global/about/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb."
+  }
+]

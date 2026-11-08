@@ -289,5 +289,17 @@
     "field": "body.height_in",
     "value": 71.02,
     "notes": "HEIGHT 71.02 in. Width listed only as WIDTH WITH MIRRORS 86.73 in; that with-mirrors figure is not used for body.width_in. Curb weight not stated on the preceding-year specs page used here."
+  },
+  {
+    "vehicle_id": "cadillac-vistiq-2026",
+    "field": "battery.cell_chemistry",
+    "value": "NCMA",
+    "tier": "P",
+    "source_name": "GM Newsroom, 2024-11-12: 2026 Cadillac VISTIQ Battery chemistry NCMA cathode",
+    "source_url": "https://news.gm.com/home.detail.html/Pages/news/us/en/2024/nov/1112-vistiq.html",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "BATTERY SYSTEM: Lithium-ion NCMA cathode, blended graphite anode; 12 modules; 102 kWh usable. Matches atlas VISTIQ Luxury AWD pack. NCMA is not NMC."
   }
 ]

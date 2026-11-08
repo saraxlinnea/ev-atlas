@@ -1,0 +1,14 @@
+[
+  {
+    "vehicle_id": "waymo-ojai-2026",
+    "field": "adas.system_name",
+    "value": "6th-generation Waymo Driver",
+    "tier": "P",
+    "source_name": "Waymo blog, 2026-05-28: Welcoming riders in the Ojai",
+    "source_url": "https://waymo.com/blog/2026/05/welcoming-riders-in-the-ojai/",
+    "access_date": "2026-10-05",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "Waymo: The Ojai will be the first vehicle to debut the 6th-generation Waymo Driver. Robotaxi / AV fleet platform, not a consumer MSRP/EPA Compare peer. Pack, chemistry, voltage, EPA, and NHTSA left blank: opened Waymo pages do not state those for Ojai."
+  }
+]

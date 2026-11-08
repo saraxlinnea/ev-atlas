@@ -277,5 +277,41 @@
     "access_date": "2026-10-03",
     "confidence": "high",
     "notes": "214 horsepower, 261 lb-ft of torque for 160 kW / 75 kWh S+/SV+/PLAT+ configuration used in this atlas. 130 kW / 254 lb-ft row marked unavailable (-)."
+  },
+  {
+    "vehicle_id": "nissan-leaf-2026",
+    "field": "body.drag_coefficient",
+    "value": 0.26,
+    "tier": "P",
+    "source_name": "Nissan USA News 2026 LEAF press kit: drag coefficient",
+    "source_url": "https://usa.nissannews.com/en-US/releases/2026-nissan-leaf-press-kit",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Press kit: drag coefficient of just 0.26.",
+    "disclosed_by_oem": true
+  },
+  {
+    "vehicle_id": "nissan-leaf-2026",
+    "field": "powertrain.motor_type",
+    "value": "PM_synchronous",
+    "tier": "P",
+    "source_name": "Nissan USA News 2026 LEAF press kit: AC synchronous motor",
+    "source_url": "https://usa.nissannews.com/en-US/releases/2026-nissan-leaf-press-kit",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "160 kW AC synchronous electric motor on S+/SV+/PLAT+. Mapped to PM_synchronous.",
+    "disclosed_by_oem": true
+  },
+  {
+    "vehicle_id": "nissan-leaf-2026",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Nissan USA News 2026 LEAF press kit: single motor FWD",
+    "source_url": "https://usa.nissannews.com/en-US/releases/2026-nissan-leaf-press-kit",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Single AC synchronous drive motor; FWD.",
+    "disclosed_by_oem": true
   }
 ]

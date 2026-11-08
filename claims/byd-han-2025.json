@@ -1,0 +1,141 @@
+[
+  {
+    "vehicle_id": "byd-han-2025",
+    "field": "efficiency.cltc_range_km",
+    "value": 506,
+    "tier": "S",
+    "source_name": "ZOL: 比亚迪汉 2025款 EV 智驾版 506KM尊贵型 CLTC",
+    "source_url": "https://detail.zol.com.cn/2106/2105389/param.shtml",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "Trim choice: 2025款 EV 智驾版 506KM尊贵型 (entry pure-electric Han EV trim in opened aggregator tables). CLTC纯电续航里程 506 km. byd.com/cn/dynasty-home/models/han/han-ev-zhijia opened 2026-10-04 but returned chrome-only HTML with no extractable CLTC or trim table; no MIIT catalog HTML opened. Tier S aggregator only."
+  },
+  {
+    "vehicle_id": "byd-han-2025",
+    "field": "efficiency.cltc_kwh_per_100km",
+    "value": 13.2,
+    "tier": "S",
+    "source_name": "ZOL: 比亚迪汉 2025款 EV 智驾版 506KM尊贵型 energy use",
+    "source_url": "https://detail.zol.com.cn/2106/2105389/param.shtml",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "百公里耗电量(kWh/100km) 13.2. Not an EPA wall-side figure. CNMO same trim also lists 13.2."
+  },
+  {
+    "vehicle_id": "byd-han-2025",
+    "field": "battery.pack_kwh",
+    "value": 60.48,
+    "tier": "S",
+    "source_name": "ZOL: 比亚迪汉 2025款 EV 智驾版 506KM尊贵型 battery energy",
+    "source_url": "https://detail.zol.com.cn/2106/2105389/param.shtml",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "电池能量(kWh) 60.48. CNMO same trim lists 电池容量 60.48. Gross vs usable not stated."
+  },
+  {
+    "vehicle_id": "byd-han-2025",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "S",
+    "source_name": "ZOL: 比亚迪汉 2025款 EV 智驾版 506KM尊贵型 battery energy",
+    "source_url": "https://detail.zol.com.cn/2106/2105389/param.shtml",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "Required companion to pack_kwh."
+  },
+  {
+    "vehicle_id": "byd-han-2025",
+    "field": "powertrain.drive_layout",
+    "value": "FWD",
+    "tier": "S",
+    "source_name": "CNMO: 比亚迪汉 2025款 EV 智驾版 506KM尊贵型 前置前驱",
+    "source_url": "https://auto.cnmo.com/han/224002/peizhi/",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "驱动方式 前置前驱; 电机布局 前置; 驱动电机数 单电机. ZOL same trim lists 电机布局 前置 / 单电机."
+  },
+  {
+    "vehicle_id": "byd-han-2025",
+    "field": "identity.msrp_cny",
+    "value": 179800,
+    "tier": "S",
+    "source_name": "ZOL: 比亚迪汉 2025款 EV 智驾版 506KM尊贵型 official guide price",
+    "source_url": "https://detail.zol.com.cn/2106/2105389/param.shtml",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "厂商指导价 17.98万. Not taken from a fetchable BYD OEM price table. CNMO lists the same 17.98万."
+  },
+  {
+    "vehicle_id": "byd-han-2025",
+    "field": "identity.msrp_usd",
+    "value": 26353,
+    "tier": "D",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "China list price converted to USD; not a US MSRP. Original CNY: 179800 (ZOL/CNMO guide price). FX: Federal Reserve H.10 / FRED DEXCHUS (CNY per USD), simple mean of 185 daily noon buying rates 2026-01-02 through 2026-09-25 (latest published H.10 day; FRED series re-accessed 2026-10-04 still shows latest obs 2026-09-25; same documented CN-pass mean, not a new rate) = 6.8228. USD = 179800 / 6.8228, rounded to nearest dollar. Series: https://fred.stlouisfed.org/series/DEXCHUS.",
+    "derivation": {
+      "formula": "identity.msrp_cny / 6.8228",
+      "inputs": ["identity.msrp_cny"],
+      "assumptions": [
+        "FX rate 6.8228 CNY per USD is the simple mean of Federal Reserve H.10 / FRED DEXCHUS daily noon buying rates for 2026-01-02 through 2026-09-25 (185 observations; YTD through latest published day; FRED re-accessed 2026-10-04, same documented CN-pass mean, not a calendar-year 2026 average).",
+        "Result rounded to nearest USD. China list price converted for Compare; not a US MSRP. Underlying CNY remains tier S aggregator."
+      ]
+    }
+  },
+  {
+    "vehicle_id": "byd-han-2025",
+    "field": "battery.cell_chemistry",
+    "value": "LFP",
+    "tier": "S",
+    "source_name": "CNMO: 比亚迪汉 2025款 EV 智驾版 506KM尊贵型 battery type",
+    "source_url": "https://auto.cnmo.com/han/224002/peizhi/",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "电池类型 磷酸铁锂电池; 电芯品牌 弗迪. Mapped to LFP. Not inferred from brand alone. Not restated on opened byd.com Han page."
+  },
+  {
+    "vehicle_id": "byd-han-2025",
+    "field": "charging.peak_dc_kw",
+    "value": 110,
+    "tier": "S",
+    "source_name": "ZOL: 比亚迪汉 2025款 EV 智驾版 506KM尊贵型 peak DC",
+    "source_url": "https://detail.zol.com.cn/2106/2105389/param.shtml",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "快充功率(kW) 110. Aggregator; not confirmed on a fetchable BYD OEM page. charging.port_type left blank: no opened page stated GB/T or 国标充电口."
+  },
+  {
+    "vehicle_id": "byd-han-2025",
+    "field": "powertrain.accel_0_60_s",
+    "value": 7.9,
+    "unit": "s",
+    "tier": "S",
+    "source_name": "ZOL: 比亚迪汉 2025款 EV 智驾版 506KM尊贵型 0-100 km/h",
+    "source_url": "https://detail.zol.com.cn/2106/2105389/param.shtml",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "官方0-100km/h加速(s) 7.9. Stored as stated 0-100 km/h; not converted to 0-60 mph. CNMO same trim lists 7.9."
+  },
+  {
+    "vehicle_id": "byd-han-2025",
+    "field": "powertrain.power_hp",
+    "value": 204,
+    "tier": "S",
+    "source_name": "ZOL: 比亚迪汉 2025款 EV 智驾版 506KM尊贵型 motor power",
+    "source_url": "https://detail.zol.com.cn/2106/2105389/param.shtml",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "电动机(Ps) 204; table also lists 150 kW. Used the PS figure for power_hp."
+  },
+  {
+    "vehicle_id": "byd-han-2025",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "S",
+    "source_name": "CNMO: 比亚迪汉 2025款 EV 智驾版 506KM尊贵型 motor count",
+    "source_url": "https://auto.cnmo.com/han/224002/peizhi/",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "notes": "驱动电机数 单电机; 电机布局 前置."
+  }
+]

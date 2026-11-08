@@ -126,7 +126,11 @@
     "source_url": "https://www.caranddriver.com/volkswagen/id4",
     "access_date": "2026-10-02",
     "confidence": "medium",
-    "notes": "C/D: 'All Volkswagen ID.4 models come with a 77.0-kWh battery pack'. 2026 VW USA model page states range/MSRP/charge times but not pack kWh. Treated as usable-class figure per C/D wording and common net-capacity reporting; see pack_kwh_basis."
+    "notes": "C/D: 'All Volkswagen ID.4 models come with a 77.0-kWh battery pack'. 2026 VW USA model page states range/MSRP/charge times but not pack kWh. Treated as usable-class figure per C/D wording and common net-capacity reporting; see pack_kwh_basis.",
+    "conflicts_with": [
+      "vw-id4-2026#battery.pack_kwh#Volkswagen Media 2026 ID.4 Technical Specifications: High Voltage Battery Capacity, Gross",
+      "vw-id4-2026#battery.pack_kwh#Volkswagen Media 2026 ID.4 Technical Specifications: High Voltage Battery Capacity, Net"
+    ]
   },
   {
     "vehicle_id": "vw-id4-2026",
@@ -137,7 +141,11 @@
     "source_url": "https://www.caranddriver.com/volkswagen/id4",
     "access_date": "2026-10-02",
     "confidence": "medium",
-    "notes": "C/D states 77.0 kWh without saying gross; matched to the commonly cited usable/net figure for the Pro pack. Not an OEM gross/usable label."
+    "notes": "C/D states 77.0 kWh without saying gross; matched to the commonly cited usable/net figure for the Pro pack. Not an OEM gross/usable label.",
+    "conflicts_with": [
+      "vw-id4-2026#battery.pack_kwh_basis#Volkswagen Media 2026 ID.4 Technical Specifications: High Voltage Battery Capacity, Gross",
+      "vw-id4-2026#battery.pack_kwh_basis#Volkswagen Media 2026 ID.4 Technical Specifications: High Voltage Battery Capacity, Net"
+    ]
   },
   {
     "vehicle_id": "vw-id4-2026",
@@ -148,7 +156,11 @@
     "source_url": "https://www.caranddriver.com/volkswagen/id4",
     "access_date": "2026-10-02",
     "confidence": "medium",
-    "notes": "C/D powertrain table for tested 2024 ID.4 Pro S AWD lists Peak DC Fast-Charge Rate 175 kW. Applied to 2026 entry RWD with medium confidence because C/D says the 2026 model is largely unchanged on battery/motor tech; VW USA page gives 10-80% time but not peak kW."
+    "notes": "C/D powertrain table for tested 2024 ID.4 Pro S AWD lists Peak DC Fast-Charge Rate 175 kW. Applied to 2026 entry RWD with medium confidence because C/D says the 2026 model is largely unchanged on battery/motor tech; VW USA page gives 10-80% time but not peak kW.",
+    "conflicts_with": [
+      "vw-id4-2026#charging.peak_dc_kw#Volkswagen Media 2026 ID.4 Technical Specifications: DC Maximum Acceptance Rate",
+      "vw-id4-2026#charging.peak_dc_kw#Volkswagen Media 2026 ID.4 pricing sheet: 170 kW DC fast charging"
+    ]
   },
   {
     "vehicle_id": "vw-id4-2026",
@@ -213,5 +225,155 @@
     "access_date": "2026-10-03",
     "confidence": "high",
     "notes": "Width, without mirrors 72.9 in for 2026 ID.4 Pro RWD."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Volkswagen Media 2026 ID.4 Technical Specifications: Pro RWD rear PSM only",
+    "source_url": "https://media.vw.com/assets/applications/original/19688-2026-id4-tech-specs-final-v2.pdf",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Pro RWD column: Type front blank; Type rear PSM. AWD adds front ASM. Atlas entry is Pro RWD."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "powertrain.power_hp",
+    "value": 282,
+    "tier": "P",
+    "source_name": "Volkswagen Media 2026 ID.4 Technical Specifications: Pro RWD system horsepower",
+    "source_url": "https://media.vw.com/assets/applications/original/19688-2026-id4-tech-specs-final-v2.pdf",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "System Horsepower, hp (SAE) 282 for ID.4 Pro RWD. AWD 335 not applied."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "powertrain.motor_type",
+    "value": "PM_synchronous",
+    "tier": "P",
+    "source_name": "Volkswagen Media 2026 ID.4 Technical Specifications: rear PSM",
+    "source_url": "https://media.vw.com/assets/applications/original/19688-2026-id4-tech-specs-final-v2.pdf",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Type rear: PSM permanent magnet synchronous. Mapped to PM_synchronous."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "battery.system_voltage_v",
+    "value": 400,
+    "tier": "P",
+    "source_name": "Volkswagen Media 2026 ID.4 Technical Specifications: Maximum Voltage 400 V",
+    "source_url": "https://media.vw.com/assets/applications/original/19688-2026-id4-tech-specs-final-v2.pdf",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Battery & Electrical: Maximum Voltage 400 V for Pro RWD."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "battery.pack_kwh",
+    "value": 77,
+    "tier": "P",
+    "source_name": "Volkswagen Media 2026 ID.4 Technical Specifications: High Voltage Battery Capacity, Net",
+    "source_url": "https://media.vw.com/assets/applications/original/19688-2026-id4-tech-specs-final-v2.pdf",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "conflicts_with": [
+      "vw-id4-2026#battery.pack_kwh#Volkswagen Media 2026 ID.4 Technical Specifications: High Voltage Battery Capacity, Gross"
+    ],
+    "notes": "Net capacity 77 kWh for Pro RWD. Conflicts with same-sheet Gross 82 kWh. Upgrades prior C/D 77.0 S claim on tier."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "usable",
+    "tier": "P",
+    "source_name": "Volkswagen Media 2026 ID.4 Technical Specifications: High Voltage Battery Capacity, Net",
+    "source_url": "https://media.vw.com/assets/applications/original/19688-2026-id4-tech-specs-final-v2.pdf",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "conflicts_with": [
+      "vw-id4-2026#battery.pack_kwh_basis#Volkswagen Media 2026 ID.4 Technical Specifications: High Voltage Battery Capacity, Gross"
+    ],
+    "notes": "Paired with Net 77 kWh; OEM Net mapped to usable."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "battery.pack_kwh",
+    "value": 82,
+    "tier": "P",
+    "source_name": "Volkswagen Media 2026 ID.4 Technical Specifications: High Voltage Battery Capacity, Gross",
+    "source_url": "https://media.vw.com/assets/applications/original/19688-2026-id4-tech-specs-final-v2.pdf",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "conflicts_with": [
+      "vw-id4-2026#battery.pack_kwh#Volkswagen Media 2026 ID.4 Technical Specifications: High Voltage Battery Capacity, Net"
+    ],
+    "notes": "Gross capacity 82 kWh for Pro RWD. Conflicts with same-sheet Net 77 kWh."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "battery.pack_kwh_basis",
+    "value": "gross",
+    "tier": "P",
+    "source_name": "Volkswagen Media 2026 ID.4 Technical Specifications: High Voltage Battery Capacity, Gross",
+    "source_url": "https://media.vw.com/assets/applications/original/19688-2026-id4-tech-specs-final-v2.pdf",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "conflicts_with": [
+      "vw-id4-2026#battery.pack_kwh_basis#Volkswagen Media 2026 ID.4 Technical Specifications: High Voltage Battery Capacity, Net"
+    ],
+    "notes": "Paired with Gross 82 kWh."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "charging.peak_dc_kw",
+    "value": 175,
+    "tier": "P",
+    "source_name": "Volkswagen Media 2026 ID.4 Technical Specifications: DC Maximum Acceptance Rate",
+    "source_url": "https://media.vw.com/assets/applications/original/19688-2026-id4-tech-specs-final-v2.pdf",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "DC Maximum Acceptance Rate 175 kW for Pro RWD. Upgrades prior C/D S claim of the same figure.",
+    "conflicts_with": [
+      "vw-id4-2026#charging.peak_dc_kw#Volkswagen Media 2026 ID.4 pricing sheet: 170 kW DC fast charging"
+    ]
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "body.drag_coefficient",
+    "value": 0.28,
+    "tier": "P",
+    "source_name": "Volkswagen Media 2026 ID.4 Technical Specifications: Drag Coefficient",
+    "source_url": "https://media.vw.com/assets/applications/original/19688-2026-id4-tech-specs-final-v2.pdf",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Drag Coefficient 0.28 for Pro RWD."
+  },
+  {
+    "vehicle_id": "vw-id4-2026",
+    "field": "charging.peak_dc_kw",
+    "value": 170,
+    "tier": "P",
+    "source_name": "Volkswagen Media 2026 ID.4 pricing sheet: 170 kW DC fast charging",
+    "source_url": "https://media.vw.com/assets/applications/original/19685-2026-id4-pricing-sheet-final.pdf",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "conflicts_with": [
+      "vw-id4-2026#charging.peak_dc_kw#Volkswagen Media 2026 ID.4 Technical Specifications: DC Maximum Acceptance Rate"
+    ],
+    "notes": "Pricing sheet: 170 kW DC fast charging capability for 82 kWh battery. Conflicts with Technical Specifications DC Maximum Acceptance Rate 175 kW for the same Pro RWD pack class."
   }
 ]

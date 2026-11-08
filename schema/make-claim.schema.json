@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/saraxlinne/ev-atlas/main/schema/make-claim.schema.json",
+  "title": "MakeClaim",
+  "description": "One sourced value for one org field of one make. Make dossier identity numbers and blurbs trace back to these claims.",
+  "type": "object",
+  "required": ["make", "field", "value", "tier", "access_date"],
+  "additionalProperties": false,
+  "properties": {
+    "make": {
+      "type": "string",
+      "description": "Make name as recorded in vehicles.json, e.g. 'Cadillac' or 'Mercedes-Benz'."
+    },
+    "field": {
+      "type": "string",
+      "description": "Dot-path into make fields, e.g. 'org.hq_city' or 'org.parent'."
+    },
+    "value": {
+      "description": "The claimed value, any JSON type. Defaults and allowed enums are in make-fields.md."
+    },
+    "unit": {
+      "type": "string",
+      "description": "Optional unit override when needed."
+    },
+    "tier": {
+      "type": "string",
+      "enum": ["P", "S", "D", "unverified"],
+      "description": "P = OEM About / corporate / IR / press actually opened, or government filing. S = credible outlet. D = derived from other make claims. unverified = plausible but no findable source. Wikipedia is not tier P."
+    },
+    "source_name": {
+      "type": "string",
+      "description": "Human-readable source, e.g. 'Lucid Motors Lucid Headquarters page'."
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Required for tier P and S. Omit only for tier D or unverified."
+    },
+    "access_date": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO date the claim was captured."
+    },
+    "disclosed_by_oem": {
+      "type": "boolean",
+      "description": "True if the OEM or parent published this value."
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low"]
+    },
+    "conflicts_with": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Ids (make#field#source_name) of disagreeing make claims."
+    },
+    "derivation": {
+      "type": "object",
+      "description": "Required when tier == 'D'.",
+      "properties": {
+        "formula": { "type": "string" },
+        "inputs": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Field paths; use make#field for another make's claim."
+        },
+        "assumptions": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["formula", "inputs"]
+    },
+    "notes": {
+      "type": "string",
+      "description": "Caveats and provenance in plain language."
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "tier": { "const": "D" } } },
+      "then": { "required": ["derivation"] }
+    },
+    {
+      "if": { "properties": { "tier": { "enum": ["P", "S"] } } },
+      "then": { "required": ["source_url", "source_name"] }
+    }
+  ]
+}

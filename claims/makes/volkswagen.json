@@ -1,0 +1,50 @@
+[
+  {
+    "make": "Volkswagen",
+    "field": "org.parent",
+    "value": "Volkswagen Group",
+    "tier": "P",
+    "source_name": "Volkswagen Group about page",
+    "source_url": "https://www.volkswagenag.com/en/group.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Group page lists Volkswagen among ten brands from five European countries."
+  },
+  {
+    "make": "Volkswagen",
+    "field": "org.brand_type",
+    "value": "division",
+    "tier": "P",
+    "source_name": "Volkswagen Group about page",
+    "source_url": "https://www.volkswagenag.com/en/group.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Volkswagen named as a brand within Volkswagen Group, not treated here as the group hub page."
+  },
+  {
+    "make": "Volkswagen",
+    "field": "org.home_market",
+    "value": "EU",
+    "tier": "P",
+    "source_name": "Volkswagen Group about page",
+    "source_url": "https://www.volkswagenag.com/en/group.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Group framed as European multi-brand manufacturer."
+  },
+  {
+    "make": "Volkswagen",
+    "field": "org.summary",
+    "value": "Volkswagen is a vehicle brand within the Volkswagen Group. In EV Atlas it is keyed separately from Audi and Porsche. Group listing tickers are not copied onto the brand make.",
+    "tier": "P",
+    "source_name": "Volkswagen Group about page",
+    "source_url": "https://www.volkswagenag.com/en/group.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb from opened group page."
+  }
+]

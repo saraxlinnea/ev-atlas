@@ -196,5 +196,53 @@
     "access_date": "2026-10-03",
     "confidence": "high",
     "notes": "Vehicle width without mirrors 1865 mm (6.1 ft) = 73.4 in. Width including mirrors 2108 mm not used."
+  },
+  {
+    "vehicle_id": "audi-q4-45-etron-2026",
+    "field": "battery.system_voltage_v",
+    "value": 352,
+    "tier": "P",
+    "source_name": "Audi MediaCenter Battery technology lexicon: MEB platform nominal voltage 352 volts",
+    "source_url": "https://www.audi-mediacenter.com/en/audi-technology-lexicon-7180/battery-technology-16872",
+    "access_date": "2026-10-04",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "notes": "Lexicon (status as of December 2025): high-voltage batteries of the MEB platform operate at a nominal voltage of 352 volts. Q4 e-tron is MEB; atlas 45 trim uses that platform. Numeric pack V, not PPE 800V. PPE NMC 8:1:1 chemistry on the same page was not applied (PPE only)."
+  },
+  {
+    "vehicle_id": "audi-q4-45-etron-2026",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Audi USA Media Q4 e-tron model page: 2026 Q4 45 e-tron single PSM rear",
+    "source_url": "https://media.audiusa.com/models/q4-e-tron",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Technical Specifications Motor(s): single PSM rear for Q4 45 e-tron. Dual ASM/PSM is the 55 e-tron quattro column."
+  },
+  {
+    "vehicle_id": "audi-q4-45-etron-2026",
+    "field": "powertrain.motor_type",
+    "value": "PM_synchronous",
+    "tier": "P",
+    "source_name": "Audi USA Media Q4 e-tron model page: 2026 Q4 45 e-tron PSM",
+    "source_url": "https://media.audiusa.com/models/q4-e-tron",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "single PSM rear. Mapped to PM_synchronous."
+  },
+  {
+    "vehicle_id": "audi-q4-45-etron-2026",
+    "field": "powertrain.accel_0_60_s",
+    "value": 6.3,
+    "tier": "P",
+    "source_name": "Audi USA Media Q4 e-tron model page: 2026 Q4 45 e-tron 0-60",
+    "source_url": "https://media.audiusa.com/models/q4-e-tron",
+    "access_date": "2026-11-05",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "0-60 mph (sec) 6.3 for Q4 45 e-tron."
   }
 ]

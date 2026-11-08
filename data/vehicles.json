@@ -11,6 +11,17 @@
     "status_checked_date": "2026-10-02"
   },
   {
+    "vehicle_id": "lucid-air-grand-touring-2026",
+    "make": "Lucid",
+    "model": "Air",
+    "trim": "Grand Touring AWD (19in wheels)",
+    "model_year": 2026,
+    "lineage_id": "lucid-air",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-05"
+  },
+  {
     "vehicle_id": "tesla-model-y-premium-rwd-2026",
     "make": "Tesla",
     "model": "Model Y",
@@ -66,6 +77,28 @@
     "status_checked_date": "2026-10-02"
   },
   {
+    "vehicle_id": "rivian-r1s-2026",
+    "make": "Rivian",
+    "model": "R1S",
+    "trim": "Dual Standard (20in wheels)",
+    "model_year": 2026,
+    "lineage_id": "rivian-r1",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-05"
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2026",
+    "make": "Rivian",
+    "model": "R1T",
+    "trim": "Dual Large (20in wheels)",
+    "model_year": 2026,
+    "lineage_id": "rivian-r1",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-05"
+  },
+  {
     "vehicle_id": "rivian-r2-2027",
     "make": "Rivian",
     "model": "R2",
@@ -95,8 +128,8 @@
     "model_year": 2025,
     "lineage_id": "hyundai-ioniq6",
     "region": "US",
-    "status": "unverified_availability",
-    "status_checked_date": "2026-10-02"
+    "status": "current",
+    "status_checked_date": "2026-10-03"
   },
   {
     "vehicle_id": "kia-ev6-2026",
@@ -161,8 +194,8 @@
     "model_year": 2026,
     "lineage_id": "vw-id4",
     "region": "US",
-    "status": "unverified_availability",
-    "status_checked_date": "2026-10-02"
+    "status": "current",
+    "status_checked_date": "2026-10-03"
   },
   {
     "vehicle_id": "bmw-i4-2026",
@@ -172,8 +205,8 @@
     "model_year": 2026,
     "lineage_id": "bmw-i4",
     "region": "US",
-    "status": "unverified_availability",
-    "status_checked_date": "2026-10-02"
+    "status": "discontinued",
+    "status_checked_date": "2026-10-03"
   },
   {
     "vehicle_id": "mercedes-cla-electric-2026",
@@ -238,8 +271,8 @@
     "model_year": 2025,
     "lineage_id": "polestar-2",
     "region": "US",
-    "status": "unverified_availability",
-    "status_checked_date": "2026-10-02"
+    "status": "discontinued",
+    "status_checked_date": "2026-10-03"
   },
   {
     "vehicle_id": "honda-prologue-fwd-2026",
@@ -293,7 +326,7 @@
     "model_year": 2026,
     "lineage_id": "subaru-solterra",
     "region": "US",
-    "status": "unverified_availability",
+    "status": "current",
     "status_checked_date": "2026-10-03"
   },
   {
@@ -315,7 +348,7 @@
     "model_year": 2026,
     "lineage_id": "lexus-rz",
     "region": "US",
-    "status": "unverified_availability",
+    "status": "current",
     "status_checked_date": "2026-10-03"
   },
   {
@@ -381,7 +414,7 @@
     "model_year": 2026,
     "lineage_id": "kia-ev9",
     "region": "US",
-    "status": "unverified_availability",
+    "status": "current",
     "status_checked_date": "2026-10-03"
   },
   {
@@ -403,7 +436,7 @@
     "model_year": 2025,
     "lineage_id": "vw-id-buzz",
     "region": "US",
-    "status": "unverified_availability",
+    "status": "current",
     "status_checked_date": "2026-10-03"
   },
   {
@@ -465,7 +498,7 @@
     "vehicle_id": "byd-seal-2025",
     "make": "BYD",
     "model": "Seal",
-    "trim": "entry (CN)",
+    "trim": "510\u667a\u822a\u7248",
     "model_year": 2025,
     "lineage_id": "byd-seal",
     "region": "CN",
@@ -476,7 +509,7 @@
     "vehicle_id": "zeekr-001-2025",
     "make": "Zeekr",
     "model": "001",
-    "trim": "entry (CN)",
+    "trim": "WE 95 kWh RWD",
     "model_year": 2025,
     "lineage_id": "zeekr-001",
     "region": "CN",
@@ -487,18 +520,18 @@
     "vehicle_id": "nio-et5-2025",
     "make": "NIO",
     "model": "ET5",
-    "trim": "entry (CN)",
+    "trim": "New ET5 75 kWh",
     "model_year": 2025,
     "lineage_id": "nio-et5",
     "region": "CN",
-    "status": "unverified_availability",
+    "status": "current",
     "status_checked_date": "2026-10-03"
   },
   {
     "vehicle_id": "xiaomi-su7-2025",
     "make": "Xiaomi",
     "model": "SU7",
-    "trim": "entry (CN)",
+    "trim": "SU7 (standard)",
     "model_year": 2025,
     "lineage_id": "xiaomi-su7",
     "region": "CN",
@@ -509,11 +542,341 @@
     "vehicle_id": "xpeng-g6-2025",
     "make": "XPeng",
     "model": "G6",
-    "trim": "entry (CN)",
+    "trim": "625\u957f\u7eed\u822a Max \u79d1\u6280\u7248",
     "model_year": 2025,
     "lineage_id": "xpeng-g6",
     "region": "CN",
-    "status": "unverified_availability",
+    "status": "current",
     "status_checked_date": "2026-10-03"
+  },
+  {
+    "vehicle_id": "byd-han-2025",
+    "make": "BYD",
+    "model": "Han",
+    "trim": "EV \u667a\u9a7e\u7248 506KM\u5c0a\u8d35\u578b",
+    "model_year": 2025,
+    "lineage_id": "byd-han",
+    "region": "CN",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-04"
+  },
+  {
+    "vehicle_id": "zeekr-7x-2025",
+    "make": "Zeekr",
+    "model": "7X",
+    "trim": "\u540e\u9a71\u667a\u9a7e\u7248 75 kWh",
+    "model_year": 2025,
+    "lineage_id": "zeekr-7x",
+    "region": "CN",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-04"
+  },
+  {
+    "vehicle_id": "nio-es6-2025",
+    "make": "NIO",
+    "model": "ES6",
+    "trim": "New ES6 75 kWh",
+    "model_year": 2025,
+    "lineage_id": "nio-es6",
+    "region": "CN",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-04"
+  },
+  {
+    "vehicle_id": "waymo-ojai-2026",
+    "make": "Waymo",
+    "model": "Ojai",
+    "trim": "Robotaxi (6th-gen Waymo Driver)",
+    "model_year": 2026,
+    "lineage_id": "waymo-ojai",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-05"
+  },
+  {
+    "vehicle_id": "zoox-robotaxi-2026",
+    "make": "Zoox",
+    "model": "Robotaxi",
+    "trim": "Purpose-built autonomous ride-hail",
+    "model_year": 2026,
+    "lineage_id": "zoox-robotaxi",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-10-05"
+  },
+  {
+    "vehicle_id": "lucid-air-pure-2025",
+    "make": "Lucid",
+    "model": "Air",
+    "trim": "Pure RWD (19in wheels)",
+    "model_year": 2025,
+    "lineage_id": "lucid-air",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "lucid-air-pure-2024",
+    "make": "Lucid",
+    "model": "Air",
+    "trim": "Pure RWD (19in wheels)",
+    "model_year": 2024,
+    "lineage_id": "lucid-air",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "lucid-air-pure-awd-2023",
+    "make": "Lucid",
+    "model": "Air",
+    "trim": "Pure AWD (19in wheels)",
+    "model_year": 2023,
+    "lineage_id": "lucid-air",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "lucid-air-grand-touring-2025",
+    "make": "Lucid",
+    "model": "Air",
+    "trim": "Grand Touring AWD (19in wheels)",
+    "model_year": 2025,
+    "lineage_id": "lucid-air",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "lucid-air-grand-touring-2024",
+    "make": "Lucid",
+    "model": "Air",
+    "trim": "Grand Touring AWD (19in wheels)",
+    "model_year": 2024,
+    "lineage_id": "lucid-air",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "lucid-air-grand-touring-2023",
+    "make": "Lucid",
+    "model": "Air",
+    "trim": "Grand Touring AWD (19in wheels)",
+    "model_year": 2023,
+    "lineage_id": "lucid-air",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "lucid-air-grand-touring-2022",
+    "make": "Lucid",
+    "model": "Air",
+    "trim": "Grand Touring AWD (19in wheels)",
+    "model_year": 2022,
+    "lineage_id": "lucid-air",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "chevrolet-equinox-ev-2024",
+    "make": "Chevrolet",
+    "model": "Equinox EV",
+    "trim": "FWD",
+    "model_year": 2024,
+    "lineage_id": "chevrolet-equinox-ev",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "chevrolet-equinox-ev-2025",
+    "make": "Chevrolet",
+    "model": "Equinox EV",
+    "trim": "FWD",
+    "model_year": 2025,
+    "lineage_id": "chevrolet-equinox-ev",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "chevrolet-equinox-ev-2027",
+    "make": "Chevrolet",
+    "model": "Equinox EV",
+    "trim": "FWD",
+    "model_year": 2027,
+    "lineage_id": "chevrolet-equinox-ev",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2023",
+    "make": "Chevrolet",
+    "model": "Bolt EV",
+    "trim": "Base (EPA single row)",
+    "model_year": 2023,
+    "lineage_id": "chevrolet-bolt-ev",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2022",
+    "make": "Chevrolet",
+    "model": "Bolt EV",
+    "trim": "Base (EPA single row)",
+    "model_year": 2022,
+    "lineage_id": "chevrolet-bolt-ev",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2021",
+    "make": "Chevrolet",
+    "model": "Bolt EV",
+    "trim": "Base (EPA single row)",
+    "model_year": 2021,
+    "lineage_id": "chevrolet-bolt-ev",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2020",
+    "make": "Chevrolet",
+    "model": "Bolt EV",
+    "trim": "Base (EPA single row)",
+    "model_year": 2020,
+    "lineage_id": "chevrolet-bolt-ev",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2019",
+    "make": "Chevrolet",
+    "model": "Bolt EV",
+    "trim": "Base (EPA single row)",
+    "model_year": 2019,
+    "lineage_id": "chevrolet-bolt-ev",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2018",
+    "make": "Chevrolet",
+    "model": "Bolt EV",
+    "trim": "Base (EPA single row)",
+    "model_year": 2018,
+    "lineage_id": "chevrolet-bolt-ev",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "chevrolet-bolt-ev-2017",
+    "make": "Chevrolet",
+    "model": "Bolt EV",
+    "trim": "Base (EPA single row)",
+    "model_year": 2017,
+    "lineage_id": "chevrolet-bolt-ev",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "lucid-gravity-2027",
+    "make": "Lucid",
+    "model": "Gravity",
+    "trim": "Touring (20in front / 21in rear wheels)",
+    "model_year": 2027,
+    "lineage_id": "lucid-gravity",
+    "region": "US",
+    "status": "unverified_availability",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "lucid-gravity-gt-2025",
+    "make": "Lucid",
+    "model": "Gravity",
+    "trim": "Grand Touring AWD (20in front / 21in rear, 2-row)",
+    "model_year": 2025,
+    "lineage_id": "lucid-gravity",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "rivian-r1t-2025",
+    "make": "Rivian",
+    "model": "R1T",
+    "trim": "Dual Standard (20in wheels)",
+    "model_year": 2025,
+    "lineage_id": "rivian-r1",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "rivian-r1s-2025",
+    "make": "Rivian",
+    "model": "R1S",
+    "trim": "Dual Standard (20in wheels)",
+    "model_year": 2025,
+    "lineage_id": "rivian-r1",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-standard-plus-2024",
+    "make": "Rivian",
+    "model": "R1T",
+    "trim": "Dual Standard Plus (21in wheels)",
+    "model_year": 2024,
+    "lineage_id": "rivian-r1",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "rivian-r1s-dual-standard-plus-2024",
+    "make": "Rivian",
+    "model": "R1S",
+    "trim": "Dual Standard Plus (21in wheels)",
+    "model_year": 2024,
+    "lineage_id": "rivian-r1",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "rivian-r1t-dual-large-2023",
+    "make": "Rivian",
+    "model": "R1T",
+    "trim": "Dual Large (21in wheels)",
+    "model_year": 2023,
+    "lineage_id": "rivian-r1",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
+  },
+  {
+    "vehicle_id": "rivian-r1s-dual-large-2023",
+    "make": "Rivian",
+    "model": "R1S",
+    "trim": "Dual Large (21in wheels)",
+    "model_year": 2023,
+    "lineage_id": "rivian-r1",
+    "region": "US",
+    "status": "discontinued",
+    "status_checked_date": "2026-11-05"
   }
 ]

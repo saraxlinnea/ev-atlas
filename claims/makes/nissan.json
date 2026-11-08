@@ -1,0 +1,74 @@
+[
+  {
+    "make": "Nissan",
+    "field": "org.hq_city",
+    "value": "Yokohama",
+    "tier": "P",
+    "source_name": "Nissan Motor Co., Ltd. company outline",
+    "source_url": "https://www.nissan-global.com/EN/COMPANY/PROFILE/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Headquarters address in Nishi-ku, Yokohama, Kanagawa, Japan."
+  },
+  {
+    "make": "Nissan",
+    "field": "org.hq_country",
+    "value": "Japan",
+    "tier": "P",
+    "source_name": "Nissan Motor Co., Ltd. company outline",
+    "source_url": "https://www.nissan-global.com/EN/COMPANY/PROFILE/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Headquarters listed in Yokohama, Japan."
+  },
+  {
+    "make": "Nissan",
+    "field": "org.brand_type",
+    "value": "standalone",
+    "tier": "P",
+    "source_name": "Nissan Motor Co., Ltd. company outline",
+    "source_url": "https://www.nissan-global.com/EN/COMPANY/PROFILE/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Company name Nissan Motor Co., Ltd.; make keyed as Nissan."
+  },
+  {
+    "make": "Nissan",
+    "field": "org.home_market",
+    "value": "JP",
+    "tier": "P",
+    "source_name": "Nissan Motor Co., Ltd. company outline",
+    "source_url": "https://www.nissan-global.com/EN/COMPANY/PROFILE/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Headquarters in Yokohama, Japan."
+  },
+  {
+    "make": "Nissan",
+    "field": "org.founded_year",
+    "value": 1933,
+    "tier": "P",
+    "source_name": "Nissan Motor Co., Ltd. company outline",
+    "source_url": "https://www.nissan-global.com/EN/COMPANY/PROFILE/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Date of Establishment December 26, 1933. Stored as calendar year only."
+  },
+  {
+    "make": "Nissan",
+    "field": "org.summary",
+    "value": "Nissan is Nissan Motor Co., Ltd., headquartered in Yokohama, Japan. In EV Atlas it is keyed as a make.",
+    "tier": "P",
+    "source_name": "Nissan Motor Co., Ltd. company outline",
+    "source_url": "https://www.nissan-global.com/EN/COMPANY/PROFILE/",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb from opened company outline."
+  }
+]

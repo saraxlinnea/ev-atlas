@@ -1,0 +1,74 @@
+[
+  {
+    "make": "Honda",
+    "field": "org.hq_city",
+    "value": "Tokyo",
+    "tier": "P",
+    "source_name": "Honda Motor Co., Ltd. company overview",
+    "source_url": "https://global.honda/en/about/overview.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Head Office: TORANOMON ALCEA TOWER, Minato-ku, Tokyo, Japan."
+  },
+  {
+    "make": "Honda",
+    "field": "org.hq_country",
+    "value": "Japan",
+    "tier": "P",
+    "source_name": "Honda Motor Co., Ltd. company overview",
+    "source_url": "https://global.honda/en/about/overview.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Head Office address in Tokyo, Japan."
+  },
+  {
+    "make": "Honda",
+    "field": "org.brand_type",
+    "value": "standalone",
+    "tier": "P",
+    "source_name": "Honda Motor Co., Ltd. company overview",
+    "source_url": "https://global.honda/en/about/overview.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Company name Honda Motor Co., Ltd.; make keyed as Honda."
+  },
+  {
+    "make": "Honda",
+    "field": "org.home_market",
+    "value": "JP",
+    "tier": "P",
+    "source_name": "Honda Motor Co., Ltd. company overview",
+    "source_url": "https://global.honda/en/about/overview.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Head Office in Tokyo, Japan."
+  },
+  {
+    "make": "Honda",
+    "field": "org.founded_year",
+    "value": 1948,
+    "tier": "P",
+    "source_name": "Honda Motor Co., Ltd. company overview",
+    "source_url": "https://global.honda/en/about/overview.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Established September 1948. Stored as calendar year only."
+  },
+  {
+    "make": "Honda",
+    "field": "org.summary",
+    "value": "Honda is Honda Motor Co., Ltd., with head office in Tokyo. Company overview lists motorcycles, automobiles, and power products among main lines. In EV Atlas it is keyed separately from Acura.",
+    "tier": "P",
+    "source_name": "Honda Motor Co., Ltd. company overview",
+    "source_url": "https://global.honda/en/about/overview.html",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb from opened company overview."
+  }
+]

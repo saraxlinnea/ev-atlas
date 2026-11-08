@@ -1,0 +1,50 @@
+[
+  {
+    "make": "BYD",
+    "field": "org.brand_type",
+    "value": "standalone",
+    "tier": "P",
+    "source_name": "BYD Europe About BYD page",
+    "source_url": "https://www.byd.com/eu/about-byd",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Page presents BYD as the company and NEV leader, not a division brand of another OEM."
+  },
+  {
+    "make": "BYD",
+    "field": "org.ev_focus",
+    "value": "nev_bev_phev",
+    "tier": "P",
+    "source_name": "BYD Europe About BYD page",
+    "source_url": "https://www.byd.com/eu/about-byd",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Page calls BYD world leader in electric and plug-in hybrid vehicles and cites NEV sales/production milestones."
+  },
+  {
+    "make": "BYD",
+    "field": "org.founded_year",
+    "value": 1994,
+    "tier": "P",
+    "source_name": "BYD Europe About BYD page",
+    "source_url": "https://www.byd.com/eu/about-byd",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Founded in November 1994. Stored as calendar year only."
+  },
+  {
+    "make": "BYD",
+    "field": "org.summary",
+    "value": "BYD is a multinational company framed on its About page as a leader in electric and plug-in hybrid vehicles under a new-energy vehicle posture. In EV Atlas China-market rows use CLTC fields and leave EPA and NHTSA blank.",
+    "tier": "P",
+    "source_name": "BYD Europe About BYD page",
+    "source_url": "https://www.byd.com/eu/about-byd",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb. HQ city blank in this pass."
+  }
+]

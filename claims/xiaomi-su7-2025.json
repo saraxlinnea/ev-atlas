@@ -1,1 +1,194 @@
-[]
+[
+  {
+    "vehicle_id": "xiaomi-su7-2025",
+    "field": "efficiency.cltc_range_km",
+    "value": 700,
+    "tier": "P",
+    "source_name": "Xiaomi Auto SU7 / SU7 Pro / SU7 Max configuration PDF: SU7 (standard)",
+    "source_url": "https://s1.xiaomiev.com/activity-outer-assets/0328/env/SU7%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%A1%A8.pdf",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Trim choice: SU7 (standard / entry column; not Pro or Max). CLTC续航里程 700 km. Live xiaomiev.com/su7 now markets 新一代 SU7 with different headline figures; this row keeps the first-generation official configuration PDF that matches the 2025 vehicle_id."
+  },
+  {
+    "vehicle_id": "xiaomi-su7-2025",
+    "field": "powertrain.drive_layout",
+    "value": "RWD",
+    "tier": "P",
+    "source_name": "Xiaomi Auto SU7 / SU7 Pro / SU7 Max configuration PDF: SU7 (standard)",
+    "source_url": "https://s1.xiaomiev.com/activity-outer-assets/0328/env/SU7%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%A1%A8.pdf",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "SU7 standard lists 后永磁/同步 only (single rear motor). Max column is dual-motor and is not applied."
+  },
+  {
+    "vehicle_id": "xiaomi-su7-2025",
+    "field": "battery.pack_kwh",
+    "value": 73.6,
+    "tier": "P",
+    "source_name": "Xiaomi Auto SU7 / SU7 Pro / SU7 Max configuration PDF: SU7 (standard)",
+    "source_url": "https://s1.xiaomiev.com/activity-outer-assets/0328/env/SU7%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%A1%A8.pdf",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "电池容量（kWh）73.6 for SU7 standard. PDF does not label gross vs usable."
+  },
+  {
+    "vehicle_id": "xiaomi-su7-2025",
+    "field": "battery.pack_kwh_basis",
+    "value": "unstated",
+    "tier": "P",
+    "source_name": "Xiaomi Auto SU7 / SU7 Pro / SU7 Max configuration PDF: SU7 (standard)",
+    "source_url": "https://s1.xiaomiev.com/activity-outer-assets/0328/env/SU7%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%A1%A8.pdf",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "Required companion to pack_kwh. OEM table states capacity only."
+  },
+  {
+    "vehicle_id": "xiaomi-su7-2025",
+    "field": "identity.msrp_cny",
+    "value": 215900,
+    "tier": "P",
+    "source_name": "Xiaomi Auto WeChat: Lei Jun SU7 launch, standard list price 21.59万元",
+    "source_url": "https://mp.weixin.qq.com/s/eFuV8fm-WpthT8IkcwcLJQ",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "model_year": 2024,
+    "notes": "Official Xiaomi Auto / Lei Jun WeChat launch post: 小米SU7 标准版售价 21.59 万元. Configuration PDF has no list price. Live xiaomiev.com/su7 now headlines 新一代 SU7 at a different starting price; this row keeps first-gen launch list price paired with the first-gen PDF."
+  },
+  {
+    "vehicle_id": "xiaomi-su7-2025",
+    "field": "identity.msrp_usd",
+    "value": 31644,
+    "tier": "D",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "China list price converted to USD; not a US MSRP. Original CNY: 215900. FX: Federal Reserve H.10 / FRED DEXCHUS (CNY per USD), simple mean of 185 daily noon buying rates 2026-01-02 through 2026-09-25 (latest published H.10 day as of 2026-10-03; not a full-year 2026 average) = 6.8228. USD = 215900 / 6.8228, rounded to nearest dollar. Series: https://fred.stlouisfed.org/series/DEXCHUS.",
+    "derivation": {
+      "formula": "identity.msrp_cny / 6.8228",
+      "inputs": ["identity.msrp_cny"],
+      "assumptions": [
+        "FX rate 6.8228 CNY per USD is the simple mean of Federal Reserve H.10 / FRED DEXCHUS daily noon buying rates for 2026-01-02 through 2026-09-25 (185 observations; YTD through latest published day as of 2026-10-03 access, not a calendar-year 2026 average).",
+        "Result rounded to nearest USD. China list price converted for Compare; not a US MSRP."
+      ]
+    }
+  },
+  {
+    "vehicle_id": "xiaomi-su7-2025",
+    "field": "powertrain.power_hp",
+    "value": 299,
+    "tier": "P",
+    "source_name": "Xiaomi Auto SU7 / SU7 Pro / SU7 Max configuration PDF: SU7 (standard)",
+    "source_url": "https://s1.xiaomiev.com/activity-outer-assets/0328/env/SU7%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%A1%A8.pdf",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "最大马力（PS）299 for SU7 / SU7 Pro; Max is 673 and is not applied. PDF also lists 最大功率 220 kW for the same columns."
+  },
+  {
+    "vehicle_id": "xiaomi-su7-2025",
+    "field": "powertrain.torque_lbft",
+    "value": 400,
+    "unit": "Nm",
+    "tier": "P",
+    "source_name": "Xiaomi Auto SU7 / SU7 Pro / SU7 Max configuration PDF: SU7 (standard)",
+    "source_url": "https://s1.xiaomiev.com/activity-outer-assets/0328/env/SU7%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%A1%A8.pdf",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "notes": "最大扭矩（N·m）400 for SU7 / SU7 Pro. Stored in Nm as stated; not converted to lb-ft."
+  },
+  {
+    "vehicle_id": "xiaomi-su7-2025",
+    "field": "battery.cell_chemistry",
+    "value": "LFP",
+    "tier": "P",
+    "source_name": "Xiaomi SU7 official configuration PDF: standard column battery type",
+    "source_url": "https://s1.xiaomiev.com/activity-outer-assets/0328/env/SU7%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%A1%A8.pdf",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "标准版 电池类型 磷酸铁锂电池. Max 三元锂电池 not applied."
+  },
+  {
+    "vehicle_id": "xiaomi-su7-2025",
+    "field": "battery.structural_pack",
+    "value": true,
+    "tier": "P",
+    "source_name": "Xiaomi SU7 official configuration PDF: CTB",
+    "source_url": "https://s1.xiaomiev.com/activity-outer-assets/0328/env/SU7%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%A1%A8.pdf",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "电池特色技术 CTB一体化电池技术."
+  },
+  {
+    "vehicle_id": "xiaomi-su7-2025",
+    "field": "powertrain.motor_count",
+    "value": 1,
+    "tier": "P",
+    "source_name": "Xiaomi SU7 official configuration PDF: motor layout",
+    "source_url": "https://s1.xiaomiev.com/activity-outer-assets/0328/env/SU7%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%A1%A8.pdf",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "标准版 电机类型 后永磁/同步 (single rear motor)."
+  },
+  {
+    "vehicle_id": "xiaomi-su7-2025",
+    "field": "powertrain.motor_type",
+    "value": "PM_synchronous",
+    "tier": "P",
+    "source_name": "Xiaomi SU7 official configuration PDF: motor type",
+    "source_url": "https://s1.xiaomiev.com/activity-outer-assets/0328/env/SU7%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%A1%A8.pdf",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "后永磁/同步. Mapped to PM_synchronous."
+  },
+  {
+    "vehicle_id": "xiaomi-su7-2025",
+    "field": "body.drag_coefficient",
+    "value": 0.195,
+    "tier": "P",
+    "source_name": "Xiaomi SU7 official configuration PDF: drag coefficient",
+    "source_url": "https://s1.xiaomiev.com/activity-outer-assets/0328/env/SU7%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%A1%A8.pdf",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "风阻系数 0.195."
+  },
+  {
+    "vehicle_id": "xiaomi-su7-2025",
+    "field": "powertrain.accel_0_60_s",
+    "value": 5.28,
+    "unit": "s",
+    "tier": "P",
+    "source_name": "Xiaomi Auto SU7 configuration PDF: SU7 (standard) 0-100 km/h",
+    "source_url": "https://s1.xiaomiev.com/activity-outer-assets/0328/env/SU7%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%A1%A8.pdf",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "0-100km/h加速时间 (s）5.28 for SU7 standard column. Stored as stated 0-100 km/h; not converted to 0-60 mph. Pro 5.7 and Max 2.78 not applied."
+  },
+  {
+    "vehicle_id": "xiaomi-su7-2025",
+    "field": "charging.onboard_ac_kw",
+    "value": 7,
+    "tier": "S",
+    "source_name": "汽车经纬网: 小米SU7答网友问 (OEM FAQ) onboard AC",
+    "source_url": "https://www.qichejingwei.com/article-20851.html",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "notes": "Republished Xiaomi SU7 FAQ: 标准版及Pro版车端交流充电机为7kW (11 kW AC pile still charges at 7 kW at the car). Peak DC kW not stated as a single official figure for standard on opened PDF (only 10%-80% time 25 min). charging.port_type left blank: FAQ discusses 国标 home piles and a portable gun with 国家标准交流接口, but does not label the vehicle port as GB/T or 国标充电口."
+  },
+  {
+    "vehicle_id": "xiaomi-su7-2025",
+    "field": "efficiency.cltc_kwh_per_100km",
+    "value": 12.3,
+    "tier": "S",
+    "source_name": "懂车帝: 小米SU7 2024款 后驱标准长续航版 energy use",
+    "source_url": "https://www.dongchedi.com/auto/params-carIds-95922-99782-99695-78784",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "百公里耗电量(kWh/100km) 12.3 for 后驱标准长续航版 (matches this row's 73.6 kWh / 700 km CLTC trim). Not on the opened OEM configuration PDF. Not an EPA wall-side figure."
+  }
+]

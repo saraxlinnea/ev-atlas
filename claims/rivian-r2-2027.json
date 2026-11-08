@@ -249,5 +249,41 @@
     "access_date": "2026-10-03",
     "confidence": "high",
     "notes": "R2 Performance: 609 lb-ft Torque (656 hp). Premium 537 lb-ft and Standard 355 lb-ft not applied. Matches EPA Performance AWD atlas row."
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "battery.structural_pack",
+    "value": true,
+    "tier": "P",
+    "source_name": "Rivian: Meet R2 and R3 (structural battery unit)",
+    "source_url": "https://rivian.com/stories/meet-r2-and-r3",
+    "access_date": "2026-10-03",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "OEM: structural battery unit where the top of the pack also serves as the floor. Also mentions all-new 4695 cell (format enum has no 4695; cell_format left blank)."
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "powertrain.motor_count",
+    "value": 2,
+    "tier": "P",
+    "source_name": "Rivian: Meet R2 and R3 (Dual-Motor AWD)",
+    "source_url": "https://rivian.com/stories/meet-r2-and-r3",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "disclosed_by_oem": true,
+    "notes": "Atlas row is Performance AWD; page lists Dual-Motor (AWD) among Single/Dual/Tri variants. Applied as two motors."
+  },
+  {
+    "vehicle_id": "rivian-r2-2027",
+    "field": "charging.onboard_ac_kw",
+    "value": 11,
+    "tier": "P",
+    "source_name": "Rivian: R2 Charging at Home (11 kW wall charger)",
+    "source_url": "https://rivian.com/stories/r2-home-charging",
+    "access_date": "2026-10-04",
+    "disclosed_by_oem": true,
+    "confidence": "medium",
+    "notes": "OEM home-charging guide: hardwired Rivian Wall Charger on a 60-amp circuit 'charges at 11kW, adding up to 38 miles of range per hour for R2'. Treated as vehicle AC acceptance / onboard capability paired with that charger. Not an R1T/R1S 11.5 kW figure."
   }
 ]

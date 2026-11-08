@@ -1,0 +1,38 @@
+[
+  {
+    "make": "Zeekr",
+    "field": "org.brand_type",
+    "value": "standalone",
+    "tier": "P",
+    "source_name": "Zeekr Global About page",
+    "source_url": "https://zeekrglobal.com/about",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "About page presents Zeekr as the luxury electric automobile brand/company without naming a parent on this page; parent left blank."
+  },
+  {
+    "make": "Zeekr",
+    "field": "org.ev_focus",
+    "value": "bev_only",
+    "tier": "P",
+    "source_name": "Zeekr Global About page",
+    "source_url": "https://zeekrglobal.com/about",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Page: re-imagine luxury electric automobiles; Evolving the Electric Era naming."
+  },
+  {
+    "make": "Zeekr",
+    "field": "org.summary",
+    "value": "Zeekr presents itself as a luxury electric automobile brand. About materials note a global design center in Gothenburg. In EV Atlas China-market rows use CLTC fields.",
+    "tier": "P",
+    "source_name": "Zeekr Global About page",
+    "source_url": "https://zeekrglobal.com/about",
+    "access_date": "2026-10-04",
+    "confidence": "high",
+    "disclosed_by_oem": true,
+    "notes": "Number-free identity blurb. Do not treat design-center city as HQ."
+  }
+]

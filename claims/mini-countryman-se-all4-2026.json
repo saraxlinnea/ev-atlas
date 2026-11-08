@@ -232,5 +232,43 @@
     "confidence": "medium",
     "model_year": 2025,
     "notes": "Overall height 64.6 in."
+  },
+  {
+    "vehicle_id": "mini-countryman-se-all4-2026",
+    "field": "body.drag_coefficient",
+    "value": 0.26,
+    "tier": "P",
+    "source_name": "BMW Group / MINI press: Countryman SE ALL4 drag coefficient",
+    "source_url": "https://www.press.bmwgroup.com/global/article/detail/T0437841EN/suitable-for-any-terrain-and-fully-electric:-the-mini-countryman-se-all4?language=en",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "OEM: achieves a drag coefficient of 0.26. Launch press; model_year 2024 language.",
+    "disclosed_by_oem": true,
+    "model_year": 2024
+  },
+  {
+    "vehicle_id": "mini-countryman-se-all4-2026",
+    "field": "powertrain.motor_count",
+    "value": 2,
+    "tier": "P",
+    "source_name": "BMW Group / MINI press: Countryman SE ALL4 dual motors",
+    "source_url": "https://www.press.bmwgroup.com/global/article/detail/T0437841EN/suitable-for-any-terrain-and-fully-electric:-the-mini-countryman-se-all4?language=en",
+    "access_date": "2026-10-03",
+    "confidence": "medium",
+    "notes": "Two powerful electric motors with a total output of 230 kW/313 hp.",
+    "disclosed_by_oem": true,
+    "model_year": 2024
+  },
+  {
+    "vehicle_id": "mini-countryman-se-all4-2026",
+    "field": "charging.port_type",
+    "value": "CCS1",
+    "tier": "P",
+    "source_name": "MINI USA Electric Vehicles page: Countryman SE ALL4 CCS ports",
+    "source_url": "https://www.miniusa.com/model/electric-vehicles.html",
+    "access_date": "2026-10-04",
+    "disclosed_by_oem": true,
+    "confidence": "high",
+    "notes": "FAQ: existing MINI Countryman SE ALL4 models with CCS ports use Lectron NACS to CCS DC adapter for NACS stations. Mapped to CCS1."
   }
 ]

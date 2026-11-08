@@ -1,17 +1,21 @@
 /**
- * Shared Compare table: filters, group-by-make, column picker, drag reorder,
- * provenance. Reads only site/data/compare.json (generated). Missing = —.
+ * Shared Compare table: filters, group-by-make, a-la-carte column picker,
+ * preset shortcuts, drag reorder, provenance. Reads only site/data/compare.json
+ * (generated). Missing = —.
  */
 (function (global) {
   "use strict";
 
   var MISSING = "\u2014";
   var CONFLICT_MARK = "\u2020"; /* † quiet footnote marker */
-  var STORAGE_KEY = "ev-atlas-compare-cols";
+  /* Legacy: preset checkbox state before a-la-carte selection. */
+  var LEGACY_PRESET_STORAGE_KEY = "ev-atlas-compare-cols";
+  var LEGACY_HIDDEN_COLS_STORAGE_KEY = "ev-atlas-compare-hidden-cols";
+  var VISIBLE_COLS_STORAGE_KEY = "ev-atlas-compare-visible-cols";
+  var ACTIVE_PRESET_STORAGE_KEY = "ev-atlas-compare-active-preset";
   var ORDER_STORAGE_KEY = "ev-atlas-compare-col-order";
   var HEIGHT_STORAGE_KEY = "ev-atlas-compare-height";
   var FILTER_STORAGE_KEY = "ev-atlas-compare-filters";
-  var HIDDEN_COLS_STORAGE_KEY = "ev-atlas-compare-hidden-cols";
   var FILTER_KEYS = ["market", "make", "year", "drive", "port"];
   var MARKET_OPTIONS = ["US", "CN"];
   /* Market defaults to US (not All) so EPA-focused views stay honest. */
@@ -29,121 +33,198 @@
     { key: "model_year", label: "Year", sticky: 2, num: true }
   ];
 
-  /* Default visual order (efficiency cluster together). */
+  var COL_GROUPS = [
+    { id: "buyer", label: "Buyer" },
+    { id: "efficiency", label: "Efficiency" },
+    { id: "charging", label: "Charging" },
+    { id: "body", label: "Body" },
+    { id: "chemistry", label: "Chemistry" },
+    { id: "advanced", label: "Advanced" }
+  ];
+
+  /*
+   * Default visual order. presets[] list which one-click shortcuts include the
+   * column. Visibility is picker selection only; presets replace that set.
+   *
+   * Buyer keeps wall-side kWh/100 mi (not MPGe): energy use is easier to read
+   * next to pack kWh; MPGe stays on the Efficiency preset.
+   */
   var SPEC_COLS = [
     {
       key: "identity.msrp_usd",
       label: "MSRP ($)",
       num: true,
-      presets: ["buyer"]
-    },
-    {
-      key: "identity.msrp_cny",
-      label: "MSRP (CNY)",
-      num: true,
+      group: "buyer",
       presets: ["buyer"]
     },
     {
       key: "efficiency.epa_range_mi",
       label: "EPA range (mi)",
       num: true,
-      presets: ["buyer", "efficiency"]
-    },
-    {
-      key: "efficiency.epa_mpge_combined",
-      label: "MPGe",
-      num: true,
+      group: "buyer",
       presets: ["buyer", "efficiency"]
     },
     {
       key: "efficiency.epa_kwh_per_100mi",
       label: "kWh/100 mi (wall)",
       num: true,
+      group: "efficiency",
       presets: ["buyer", "efficiency"]
+    },
+    {
+      key: "efficiency.epa_mpge_combined",
+      label: "MPGe",
+      num: true,
+      group: "efficiency",
+      presets: ["efficiency"]
     },
     {
       key: "efficiency.cltc_range_km",
       label: "CLTC range (km)",
       num: true,
-      presets: ["buyer", "efficiency"]
+      group: "efficiency",
+      presets: ["efficiency"]
     },
     {
       key: "efficiency.cltc_kwh_per_100km",
       label: "CLTC kWh/100 km",
       num: true,
-      presets: ["buyer", "efficiency"]
+      group: "efficiency",
+      presets: ["efficiency"]
     },
     {
       key: "battery.pack_kwh",
       label: "Pack (kWh)",
       num: true,
+      group: "buyer",
       presets: ["buyer", "efficiency", "charging"]
     },
     {
       key: "battery.pack_kwh_basis",
-      label: "Pack basis",
-      presets: ["buyer", "efficiency"]
-    },
-    {
-      key: "battery.system_voltage_v",
-      label: "Voltage (V)",
-      presets: ["efficiency"]
+      label: "Pack basis (metadata)",
+      group: "advanced",
+      presets: []
     },
     {
       key: "powertrain.drive_layout",
       label: "Drive",
+      group: "buyer",
       presets: ["buyer"]
     },
     {
       key: "charging.peak_dc_kw",
       label: "Peak DC (kW)",
       num: true,
+      group: "charging",
       presets: ["buyer", "charging"]
     },
     {
       key: "charging.port_type",
       label: "Port",
+      group: "charging",
       presets: ["buyer", "charging"]
     },
     {
       key: "charging.onboard_ac_kw",
       label: "Onboard AC (kW)",
       num: true,
+      group: "charging",
+      presets: ["charging"]
+    },
+    {
+      key: "charging.nacs_adapter_included",
+      label: "NACS adapter included",
+      group: "charging",
       presets: ["charging"]
     },
     {
       key: "powertrain.accel_0_60_s",
-      label: "0–60 (s)",
+      label: "Accel (s)",
+      subtitle: "cycle in cell",
       num: true,
+      group: "buyer",
       presets: ["buyer"]
     },
     {
       key: "powertrain.power_hp",
       label: "Power (hp)",
       num: true,
+      group: "buyer",
       presets: ["buyer"]
     },
     {
-      key: "body.curb_weight_lb",
-      label: "Curb weight (lb)",
+      key: "powertrain.torque_lbft",
+      label: "Torque (lb-ft)",
       num: true,
-      presets: ["efficiency"]
+      group: "buyer",
+      presets: []
     },
     {
-      key: "derived.kwh_per_100mi_battery_side",
-      label: "Battery-side kWh/100 mi",
+      key: "powertrain.motor_count",
+      label: "Motors",
       num: true,
-      presets: ["efficiency"]
+      group: "buyer",
+      presets: ["buyer"]
     },
     {
       key: "recalls.campaign_count",
       label: "Recalls (count)",
       num: true,
+      group: "buyer",
       presets: ["buyer"]
+    },
+    {
+      key: "derived.kwh_per_100mi_battery_side",
+      label: "Battery-side kWh/100 mi",
+      num: true,
+      group: "efficiency",
+      presets: ["efficiency"]
+    },
+    {
+      key: "battery.system_voltage_v",
+      label: "Voltage (V)",
+      group: "chemistry",
+      presets: ["efficiency"]
+    },
+    {
+      key: "body.curb_weight_lb",
+      label: "Curb weight (lb)",
+      num: true,
+      group: "body",
+      presets: ["efficiency"]
+    },
+    {
+      key: "body.length_in",
+      label: "Length (in)",
+      num: true,
+      group: "body",
+      presets: []
+    },
+    {
+      key: "body.width_in",
+      label: "Width (in)",
+      num: true,
+      group: "body",
+      presets: []
+    },
+    {
+      key: "body.height_in",
+      label: "Height (in)",
+      num: true,
+      group: "body",
+      presets: []
+    },
+    {
+      key: "body.wheelbase_in",
+      label: "Wheelbase (in)",
+      num: true,
+      group: "body",
+      presets: []
     },
     {
       key: "battery.cell_chemistry",
       label: "Chemistry",
+      group: "chemistry",
       presets: ["chemistry"]
     }
   ];
@@ -157,20 +238,108 @@
     COL_BY_KEY[col.key] = col;
   });
 
-  var DEFAULT_PRESETS = {
-    buyer: true,
-    efficiency: false,
-    charging: false,
-    chemistry: false
+  var PRESET_NAMES = ["buyer", "efficiency", "charging", "chemistry"];
+
+  /*
+   * Field defaults from schema/vehicle-fields.md. Compare headers use these
+   * labels; when a winning claim stores a different unit, formatCell appends
+   * that unit (no silent conversion).
+   */
+  var FIELD_DEFAULT_UNITS = {
+    "powertrain.power_hp": "hp",
+    "powertrain.torque_lbft": "lb-ft"
   };
 
   function isMissing(value) {
     return value === null || value === undefined || value === "";
   }
 
-  function formatCell(key, value) {
+  function formatNumber(value) {
+    if (typeof value !== "number") {
+      return String(value);
+    }
+    return Number.isInteger(value) ? String(value) : String(value);
+  }
+
+  function normalizeUnit(unit) {
+    return String(unit)
+      .toLowerCase()
+      .replace(/\s+/g, "")
+      .replace(/lb-ft|lbft|lbf·ft|lbf\.ft/g, "lbft");
+  }
+
+  function claimUnit(row, key) {
+    if (!row || !row.units) {
+      return null;
+    }
+    var unit = row.units[key];
+    if (isMissing(unit)) {
+      return null;
+    }
+    return String(unit);
+  }
+
+  function nonDefaultUnit(key, row) {
+    var unit = claimUnit(row, key);
+    if (!unit) {
+      return null;
+    }
+    var def = FIELD_DEFAULT_UNITS[key];
+    if (!def) {
+      return null;
+    }
+    if (normalizeUnit(unit) === normalizeUnit(def)) {
+      return null;
+    }
+    return unit;
+  }
+
+  function looksLike0100Kmh(blob) {
+    return /0-100|0–100|0\u2013100/i.test(String(blob || ""));
+  }
+
+  function formatCell(key, value, row) {
     if (isMissing(value)) {
       return { text: MISSING, missing: true };
+    }
+    if (key === "charging.nacs_adapter_included") {
+      var boolish = String(value).toLowerCase();
+      if (value === true || boolish === "true") {
+        return { text: "yes", missing: false };
+      }
+      if (value === false || boolish === "false") {
+        return { text: "no", missing: false };
+      }
+    }
+    if (key === "battery.pack_kwh") {
+      var packText =
+        typeof value === "number" ? formatNumber(value) : String(value);
+      var basis = row ? row["battery.pack_kwh_basis"] : null;
+      if (!isMissing(basis)) {
+        /* Fold basis into Pack cell: "102 usable", "110.3 unstated". */
+        return { text: packText + " " + String(basis), missing: false };
+      }
+      return { text: packText, missing: false };
+    }
+    if (key === "powertrain.motor_count") {
+      var n = typeof value === "number" ? value : Number(value);
+      var layout =
+        n === 1
+          ? "Single"
+          : n === 2
+            ? "Dual"
+            : n === 3
+              ? "Tri"
+              : n === 4
+                ? "Quad"
+                : null;
+      if (layout && Number.isFinite(n)) {
+        return { text: layout + " (" + formatNumber(n) + ")", missing: false };
+      }
+      return {
+        text: typeof value === "number" ? formatNumber(value) : String(value),
+        missing: false
+      };
     }
     if (
       (key === "identity.msrp_usd" || key === "identity.msrp_cny") &&
@@ -178,9 +347,34 @@
     ) {
       return { text: value.toLocaleString("en-US"), missing: false };
     }
+    if (key === "powertrain.accel_0_60_s") {
+      var accelText =
+        typeof value === "number" ? formatNumber(value) : String(value);
+      /* CN rows store stated 0-100 km/h in this field; do not imply 0-60 mph. */
+      var accelUnit = claimUnit(row, key);
+      if (accelUnit && looksLike0100Kmh(accelUnit)) {
+        return { text: accelText + " (0\u2013100 km/h)", missing: false };
+      }
+      if (row && row.accel_basis === "0-100_kmh") {
+        return { text: accelText + " (0\u2013100 km/h)", missing: false };
+      }
+      var srcName =
+        row && row.source_names ? row.source_names[key] : null;
+      if (looksLike0100Kmh(srcName)) {
+        return { text: accelText + " (0\u2013100 km/h)", missing: false };
+      }
+      return { text: accelText, missing: false };
+    }
+    var altUnit = nonDefaultUnit(key, row);
+    if (altUnit) {
+      var withUnit =
+        (typeof value === "number" ? formatNumber(value) : String(value)) +
+        " " +
+        altUnit;
+      return { text: withUnit, missing: false };
+    }
     if (typeof value === "number") {
-      var text = Number.isInteger(value) ? String(value) : String(value);
-      return { text: text, missing: false };
+      return { text: formatNumber(value), missing: false };
     }
     return { text: String(value), missing: false };
   }
@@ -251,15 +445,78 @@
     return String(av).localeCompare(String(bv)) * dir;
   }
 
-  function loadPresets() {
+  var CLTC_RANGE_KEYS = [
+    "efficiency.cltc_range_km",
+    "efficiency.cltc_kwh_per_100km"
+  ];
+
+  function marketIsCnOnly(marketFilter) {
+    return (
+      Array.isArray(marketFilter) &&
+      marketFilter.length === 1 &&
+      marketFilter[0] === "CN"
+    );
+  }
+
+  function keysForPreset(presetName, marketFilter) {
+    var out = [];
+    SPEC_COLS.forEach(function (col) {
+      if (col.presets.indexOf(presetName) !== -1) {
+        out.push(col.key);
+      }
+    });
+    /* CN-only Market: Buyer/Efficiency should surface CLTC cycle columns. */
+    if (
+      marketIsCnOnly(marketFilter) &&
+      (presetName === "buyer" || presetName === "efficiency")
+    ) {
+      CLTC_RANGE_KEYS.forEach(function (key) {
+        if (out.indexOf(key) === -1) {
+          out.push(key);
+        }
+      });
+    }
+    return out;
+  }
+
+  function defaultVisibleKeys(marketFilter) {
+    return keysForPreset("buyer", marketFilter);
+  }
+
+  function visibleMapFromKeys(keys) {
+    var out = {};
+    if (Array.isArray(keys)) {
+      keys.forEach(function (key) {
+        if (COL_BY_KEY[key]) {
+          out[key] = true;
+        }
+      });
+    }
+    return out;
+  }
+
+  function visibleKeysList(visibleMap) {
+    return SPEC_COLS.filter(function (col) {
+      return visibleMap[col.key];
+    }).map(function (col) {
+      return col.key;
+    });
+  }
+
+  function loadLegacyPresets() {
     try {
-      var raw = sessionStorage.getItem(STORAGE_KEY);
+      var raw = sessionStorage.getItem(LEGACY_PRESET_STORAGE_KEY);
       if (!raw) {
-        return Object.assign({}, DEFAULT_PRESETS);
+        return { buyer: true, efficiency: false, charging: false, chemistry: false };
       }
       var parsed = JSON.parse(raw);
-      var out = Object.assign({}, DEFAULT_PRESETS);
-      Object.keys(DEFAULT_PRESETS).forEach(function (k) {
+      var out = {
+        buyer: false,
+        efficiency: false,
+        charging: false,
+        chemistry: false
+      };
+      PRESET_NAMES.forEach(function (k) {
         if (typeof parsed[k] === "boolean") {
           out[k] = parsed[k];
         }
@@ -269,15 +526,126 @@
       }
       return out;
     } catch (e) {
-      return Object.assign({}, DEFAULT_PRESETS);
+      return { buyer: true, efficiency: false, charging: false, chemistry: false };
     }
   }
 
-  function savePresets(presets) {
+  function loadLegacyHiddenCols() {
     try {
-      sessionStorage.setItem(STORAGE_KEY, JSON.stringify(presets));
+      var raw = sessionStorage.getItem(LEGACY_HIDDEN_COLS_STORAGE_KEY);
+      if (!raw) {
+        return {};
+      }
+      var parsed = JSON.parse(raw);
+      var out = {};
+      Object.keys(parsed || {}).forEach(function (k) {
+        if (COL_BY_KEY[k] && parsed[k]) {
+          out[k] = true;
+        }
+      });
+      return out;
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function migrateVisibleFromLegacy() {
+    var presets = loadLegacyPresets();
+    var hidden = loadLegacyHiddenCols();
+    var keys = [];
+    SPEC_COLS.forEach(function (col) {
+      var inPreset = col.presets.some(function (p) {
+        return presets[p];
+      });
+      if (inPreset && !hidden[col.key]) {
+        keys.push(col.key);
+      }
+    });
+    if (!keys.length) {
+      return defaultVisibleKeys();
+    }
+    return keys;
+  }
+
+  function loadVisibleCols() {
+    try {
+      var raw = sessionStorage.getItem(VISIBLE_COLS_STORAGE_KEY);
+      if (raw) {
+        var parsed = JSON.parse(raw);
+        if (Array.isArray(parsed)) {
+          var map = visibleMapFromKeys(parsed);
+          if (visibleKeysList(map).length) {
+            return map;
+          }
+        }
+      }
+      var migrated = migrateVisibleFromLegacy();
+      var migratedMap = visibleMapFromKeys(migrated);
+      saveVisibleCols(migratedMap);
+      try {
+        sessionStorage.removeItem(LEGACY_HIDDEN_COLS_STORAGE_KEY);
+      } catch (e2) {
+        /* ignore */
+      }
+      return migratedMap;
+    } catch (e) {
+      return visibleMapFromKeys(defaultVisibleKeys());
+    }
+  }
+
+  function saveVisibleCols(visibleMap) {
+    try {
+      sessionStorage.setItem(
+        VISIBLE_COLS_STORAGE_KEY,
+        JSON.stringify(visibleKeysList(visibleMap))
+      );
     } catch (e) {
       /* ignore quota / private mode */
+    }
+  }
+
+  function loadActivePreset() {
+    try {
+      var raw = sessionStorage.getItem(ACTIVE_PRESET_STORAGE_KEY);
+      if (raw && PRESET_NAMES.indexOf(raw) !== -1) {
+        return raw;
+      }
+      /* Infer from legacy multi-preset flags when migrating. */
+      var legacy = loadLegacyPresets();
+      var checked = PRESET_NAMES.filter(function (k) {
+        return legacy[k];
+      });
+      if (checked.length === 1) {
+        return checked[0];
+      }
+      return "buyer";
+    } catch (e) {
+      return "buyer";
+    }
+  }
+
+  function saveActivePreset(name) {
+    try {
+      if (name && PRESET_NAMES.indexOf(name) !== -1) {
+        sessionStorage.setItem(ACTIVE_PRESET_STORAGE_KEY, name);
+      } else {
+        sessionStorage.removeItem(ACTIVE_PRESET_STORAGE_KEY);
+      }
+      /* Keep legacy key in sync so older tabs do not thrash migration. */
+      var flags = {
+        buyer: false,
+        efficiency: false,
+        charging: false,
+        chemistry: false
+      };
+      if (name && flags.hasOwnProperty(name)) {
+        flags[name] = true;
+      } else {
+        flags.buyer = true;
+      }
+      sessionStorage.setItem(LEGACY_PRESET_STORAGE_KEY, JSON.stringify(flags));
+    } catch (e) {
+      /* ignore */
     }
   }
 
@@ -326,15 +694,9 @@
     });
   }
 
-  function visibleSpecCols(presets, order, hiddenCols) {
-    hiddenCols = hiddenCols || {};
+  function visibleSpecCols(order, visibleMap) {
     return orderedSpecCols(order).filter(function (col) {
-      if (hiddenCols[col.key]) {
-        return false;
-      }
-      return col.presets.some(function (p) {
-        return presets[p];
-      });
+      return !!visibleMap[col.key];
     });
   }
 
@@ -360,6 +722,24 @@
       return a.localeCompare(b);
     });
     return out;
+  }
+
+  function makeSlug(make) {
+    return String(make || "")
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+  }
+
+  function makeFromQuery() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var raw = (params.get("make") || "").trim();
+      return raw || null;
+    } catch (e) {
+      return null;
+    }
   }
 
   function loadFilters() {
@@ -403,33 +783,6 @@
   function saveFilters(filters) {
     try {
       sessionStorage.setItem(FILTER_STORAGE_KEY, JSON.stringify(filters));
-    } catch (e) {
-      /* ignore */
-    }
-  }
-
-  function loadHiddenCols() {
-    try {
-      var raw = sessionStorage.getItem(HIDDEN_COLS_STORAGE_KEY);
-      if (!raw) {
-        return {};
-      }
-      var parsed = JSON.parse(raw);
-      var out = {};
-      Object.keys(parsed || {}).forEach(function (k) {
-        if (COL_BY_KEY[k] && parsed[k]) {
-          out[k] = true;
-        }
-      });
-      return out;
-    } catch (e) {
-      return {};
-    }
-  }
-
-  function saveHiddenCols(hiddenCols) {
-    try {
-      sessionStorage.setItem(HIDDEN_COLS_STORAGE_KEY, JSON.stringify(hiddenCols));
     } catch (e) {
       /* ignore */
     }
@@ -479,6 +832,77 @@
     return filterVal.length + " selected";
   }
 
+  var EXPORT_IDENTITY_KEYS = [
+    "vehicle_id",
+    "make",
+    "model",
+    "trim",
+    "model_year",
+    "region"
+  ];
+
+  function dateStamp(d) {
+    var dt = d || new Date();
+    var y = dt.getFullYear();
+    var m = String(dt.getMonth() + 1);
+    var day = String(dt.getDate());
+    if (m.length < 2) {
+      m = "0" + m;
+    }
+    if (day.length < 2) {
+      day = "0" + day;
+    }
+    return y + "-" + m + "-" + day;
+  }
+
+  function csvEscape(value) {
+    var s = value === null || value === undefined ? "" : String(value);
+    if (/[",\r\n]/.test(s)) {
+      return '"' + s.replace(/"/g, '""') + '"';
+    }
+    return s;
+  }
+
+  function exportCellRaw(row, key) {
+    var v = row[key];
+    if (isMissing(v)) {
+      return "";
+    }
+    if (typeof v === "boolean") {
+      return v ? "true" : "false";
+    }
+    return String(v);
+  }
+
+  function rowsToCsv(headers, rows) {
+    var lines = [headers.map(csvEscape).join(",")];
+    rows.forEach(function (row) {
+      lines.push(
+        headers
+          .map(function (key) {
+            return csvEscape(exportCellRaw(row, key));
+          })
+          .join(",")
+      );
+    });
+    return lines.join("\r\n") + "\r\n";
+  }
+
+  function triggerCsvDownload(filename, csvText) {
+    var blob = new Blob([csvText], { type: "text/csv;charset=utf-8" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    a.rel = "noopener";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    window.setTimeout(function () {
+      URL.revokeObjectURL(url);
+    }, 1000);
+  }
+
   function mount(root) {
     if (!root) {
       return;
@@ -489,7 +913,7 @@
     var groupToggle = root.querySelector("[data-compare-group]");
     var countEl = root.querySelector("[data-compare-count]");
     var presetBox = root.querySelector("[data-compare-presets]");
-    var resetOrderBtn = root.querySelector("[data-compare-reset-order]");
+    var resetColsBtn = root.querySelector("[data-compare-reset-order]");
     var table = root.querySelector("[data-compare-table]");
     var theadRow = root.querySelector("[data-compare-thead-row]");
     var tbody = root.querySelector("[data-compare-body]");
@@ -499,6 +923,8 @@
     var colPicker = root.querySelector("[data-compare-col-picker]");
     var colSummary = root.querySelector("[data-col-summary]");
     var colDetail = root.querySelector("[data-compare-col-detail]");
+    var downloadBtn = root.querySelector("[data-compare-download]");
+    var downloadFullLink = root.querySelector("[data-compare-download-full]");
 
     var filterRoots = {
       market: root.querySelector('[data-compare-filter="market"]'),
@@ -516,10 +942,10 @@
     };
 
     var allRows = [];
-    var presets = loadPresets();
+    var visibleCols = loadVisibleCols();
+    var activePreset = loadActivePreset();
     var colOrder = loadOrder();
     var filters = loadFilters();
-    var hiddenCols = loadHiddenCols();
     var sortState = { key: "make", dir: 1 };
     var groupByMake = !groupToggle || groupToggle.checked;
     var openConflict = null; /* { vid, field } or null */
@@ -532,11 +958,46 @@
     };
 
     function activeSpecCols() {
-      return visibleSpecCols(presets, colOrder, hiddenCols);
+      return visibleSpecCols(colOrder, visibleCols);
     }
 
     function colCount() {
       return IDENTITY_COLS.length + activeSpecCols().length;
+    }
+
+    function applyPreset(name) {
+      var keys = keysForPreset(name, filters.market);
+      if (!keys.length) {
+        return;
+      }
+      visibleCols = visibleMapFromKeys(keys);
+      activePreset = name;
+      saveVisibleCols(visibleCols);
+      saveActivePreset(activePreset);
+      syncPresetUI();
+      syncColPickerUI();
+      render();
+    }
+
+    function ensureCnCycleColumns() {
+      if (!marketIsCnOnly(filters.market)) {
+        return false;
+      }
+      if (activePreset !== "buyer" && activePreset !== "efficiency") {
+        return false;
+      }
+      var changed = false;
+      CLTC_RANGE_KEYS.forEach(function (key) {
+        if (!visibleCols[key] && COL_BY_KEY[key]) {
+          visibleCols[key] = true;
+          changed = true;
+        }
+      });
+      if (changed) {
+        saveVisibleCols(visibleCols);
+        syncColPickerUI();
+      }
+      return changed;
     }
 
     function syncPresetUI() {
@@ -545,7 +1006,7 @@
       }
       presetBox.querySelectorAll("[data-preset]").forEach(function (input) {
         var key = input.getAttribute("data-preset");
-        input.checked = !!presets[key];
+        input.checked = activePreset === key;
       });
     }
 
@@ -606,9 +1067,17 @@
       th.textContent = "";
       th.appendChild(handle);
       th.appendChild(label);
+      if (col.key === "powertrain.accel_0_60_s" && col.subtitle) {
+        var sub = document.createElement("span");
+        sub.className = "col-sub";
+        sub.textContent = col.subtitle;
+        th.appendChild(sub);
+      }
       th.setAttribute(
         "aria-label",
-        col.label + ". Click to sort. Drag to reorder columns."
+        col.label +
+          (col.subtitle ? " (" + col.subtitle + ")" : "") +
+          ". Click to sort. Drag to reorder columns."
       );
 
       th.addEventListener("dragstart", function (ev) {
@@ -728,10 +1197,16 @@
       IDENTITY_COLS.forEach(function (col) {
         var td = document.createElement("td");
         td.className = "sticky sticky-" + col.sticky;
-        var cell = formatCell(col.key, row[col.key]);
+        var cell = formatCell(col.key, row[col.key], row);
         if (cell.missing) {
           td.className += " missing";
           td.textContent = cell.text;
+        } else if (col.key === "make") {
+          var makeLink = document.createElement("a");
+          makeLink.href = "make.html?m=" + encodeURIComponent(makeSlug(cell.text));
+          makeLink.className = "compare-make-link";
+          makeLink.textContent = cell.text;
+          td.appendChild(makeLink);
         } else if (col.key === "model") {
           td.innerHTML = '<span class="vehicle-label"></span>';
           td.querySelector(".vehicle-label").textContent = cell.text;
@@ -776,7 +1251,7 @@
       activeSpecCols().forEach(function (col) {
         var key = col.key;
         var td = document.createElement("td");
-        var cell = formatCell(key, row[key]);
+        var cell = formatCell(key, row[key], row);
         if (cell.missing) {
           td.className = "missing";
           td.textContent = cell.text;
@@ -853,7 +1328,7 @@
       var tiers = row.tiers || {};
       var sources = row.sources || {};
       var names = row.source_names || {};
-      var shown = formatCell(field, row[field]);
+      var shown = formatCell(field, row[field], row);
       var shownTier = tiers[field] || "unverified";
       var shownSrc = shortSource(names[field], sources[field]);
       var detail = document.createElement("tr");
@@ -904,7 +1379,13 @@
       var lineAlso = document.createElement("p");
       lineAlso.className = "compare-conflict-line";
       if (alt && !isMissing(alt.value)) {
-        var alsoCell = formatCell(field, alt.value);
+        /* Thread alt.unit so Nm/kW losers are not shown under hp/lb-ft alone. */
+        var alsoRow = null;
+        if (!isMissing(alt.unit)) {
+          alsoRow = { units: {} };
+          alsoRow.units[field] = alt.unit;
+        }
+        var alsoCell = formatCell(field, alt.value, alsoRow);
         lineAlso.appendChild(document.createTextNode("Also recorded: "));
         if (alt.source_url) {
           var alsoLink = document.createElement("a");
@@ -1069,6 +1550,26 @@
         n + " of " + allRows.length + " vehicle" + (allRows.length === 1 ? "" : "s");
     }
 
+    function downloadVisibleCsv() {
+      var headers = EXPORT_IDENTITY_KEYS.slice();
+      activeSpecCols().forEach(function (col) {
+        headers.push(col.key);
+      });
+      var rows = sortRows(filteredRows());
+      var csv = rowsToCsv(headers, rows);
+      triggerCsvDownload("ev-atlas-compare-" + dateStamp() + ".csv", csv);
+    }
+
+    function syncFullDownloadName() {
+      if (!downloadFullLink) {
+        return;
+      }
+      downloadFullLink.setAttribute(
+        "download",
+        "ev-atlas-flattened-" + dateStamp() + ".csv"
+      );
+    }
+
     function render() {
       var rows = sortRows(filteredRows());
       updateCount(rows.length);
@@ -1165,6 +1666,9 @@
       }
       saveFilters(filters);
       syncFilterSummary(key);
+      if (key === "market") {
+        ensureCnCycleColumns();
+      }
       render();
     }
 
@@ -1187,6 +1691,9 @@
       }
       saveFilters(filters);
       syncFilterSummary(key);
+      if (key === "market") {
+        ensureCnCycleColumns();
+      }
       render();
     }
 
@@ -1239,57 +1746,92 @@
       }
     }
 
+    function syncColSummary() {
+      if (!colSummary) {
+        return;
+      }
+      var shown = visibleKeysList(visibleCols).length;
+      colSummary.textContent =
+        shown === SPEC_COLS.length ? "All" : shown + " shown";
+    }
+
     function syncColPickerUI() {
       if (!colPicker) {
         return;
       }
       colPicker.innerHTML = "";
-      var visibleCount = 0;
-      orderedSpecCols(colOrder).forEach(function (col) {
-        var label = document.createElement("label");
-        label.className = "compare-check";
-        var input = document.createElement("input");
-        input.type = "checkbox";
-        input.setAttribute("data-col-key", col.key);
-        input.checked = !hiddenCols[col.key];
-        if (input.checked) {
-          visibleCount += 1;
-        }
-        input.addEventListener("change", function () {
-          if (input.checked) {
-            delete hiddenCols[col.key];
-          } else {
-            hiddenCols[col.key] = true;
-          }
-          saveHiddenCols(hiddenCols);
-          syncColSummary();
-          render();
+      COL_GROUPS.forEach(function (group) {
+        var groupCols = orderedSpecCols(colOrder).filter(function (col) {
+          return col.group === group.id;
         });
-        label.appendChild(input);
-        label.appendChild(document.createTextNode(" " + col.label));
-        colPicker.appendChild(label);
-      });
-      if (colSummary) {
-        if (visibleCount === SPEC_COLS.length) {
-          colSummary.textContent = "All";
-        } else {
-          colSummary.textContent = visibleCount + " shown";
+        if (!groupCols.length) {
+          return;
         }
-      }
+        var heading = document.createElement("div");
+        heading.className = "compare-col-group-label";
+        heading.textContent = group.label;
+        colPicker.appendChild(heading);
+        groupCols.forEach(function (col) {
+          var label = document.createElement("label");
+          label.className = "compare-check";
+          var input = document.createElement("input");
+          input.type = "checkbox";
+          input.setAttribute("data-col-key", col.key);
+          input.checked = !!visibleCols[col.key];
+          input.addEventListener("change", function () {
+            if (input.checked) {
+              visibleCols[col.key] = true;
+            } else {
+              delete visibleCols[col.key];
+            }
+            /* Manual toggles leave presets as last-applied shortcuts only. */
+            saveVisibleCols(visibleCols);
+            syncColSummary();
+            render();
+          });
+          label.appendChild(input);
+          label.appendChild(document.createTextNode(" " + col.label));
+          colPicker.appendChild(label);
+        });
+      });
+      syncColSummary();
     }
 
-    function syncColSummary() {
-      if (!colSummary) {
-        return;
-      }
-      var shown = SPEC_COLS.filter(function (col) {
-        return !hiddenCols[col.key];
-      }).length;
-      colSummary.textContent =
-        shown === SPEC_COLS.length ? "All" : shown + " shown";
+    function resetColumns() {
+      colOrder = DEFAULT_ORDER.slice();
+      visibleCols = visibleMapFromKeys(defaultVisibleKeys(filters.market));
+      activePreset = "buyer";
+      saveOrder(colOrder);
+      saveVisibleCols(visibleCols);
+      saveActivePreset(activePreset);
+      syncPresetUI();
+      syncColPickerUI();
+      render();
     }
 
     function initFacets() {
+      var queryMake = makeFromQuery();
+      if (queryMake) {
+        /* Dossier / deep link: prefer URL make over session filter. */
+        var makeNames = uniqueSorted(
+          allRows.map(function (r) {
+            return r.make;
+          })
+        );
+        var matched = null;
+        makeNames.forEach(function (name) {
+          if (
+            name === queryMake ||
+            makeSlug(name) === makeSlug(queryMake)
+          ) {
+            matched = name;
+          }
+        });
+        if (matched) {
+          filters.make = [matched];
+          saveFilters(filters);
+        }
+      }
       fillFilterOptions("market", MARKET_OPTIONS.slice());
       fillFilterOptions(
         "make",
@@ -1392,8 +1934,8 @@
       if (colAllBtn) {
         colAllBtn.addEventListener("click", function (ev) {
           ev.preventDefault();
-          hiddenCols = {};
-          saveHiddenCols(hiddenCols);
+          visibleCols = visibleMapFromKeys(DEFAULT_ORDER.slice());
+          saveVisibleCols(visibleCols);
           syncColPickerUI();
           render();
         });
@@ -1401,11 +1943,9 @@
       if (colNoneBtn) {
         colNoneBtn.addEventListener("click", function (ev) {
           ev.preventDefault();
-          hiddenCols = {};
-          SPEC_COLS.forEach(function (col) {
-            hiddenCols[col.key] = true;
-          });
-          saveHiddenCols(hiddenCols);
+          /* Sticky identity columns stay; clear all spec columns. */
+          visibleCols = {};
+          saveVisibleCols(visibleCols);
           syncColPickerUI();
           render();
         });
@@ -1419,24 +1959,27 @@
           return;
         }
         var key = t.getAttribute("data-preset");
-        presets[key] = !!t.checked;
-        if (!presets.buyer && !presets.efficiency && !presets.charging && !presets.chemistry) {
-          presets.buyer = true;
-          syncPresetUI();
+        if (t.checked) {
+          applyPreset(key);
+        } else if (activePreset === key) {
+          /* Unchecking the active preset restores Buyer. */
+          applyPreset("buyer");
         }
-        savePresets(presets);
-        render();
       });
     }
 
-    if (resetOrderBtn) {
-      resetOrderBtn.addEventListener("click", function () {
-        colOrder = DEFAULT_ORDER.slice();
-        saveOrder(colOrder);
-        syncColPickerUI();
-        render();
+    if (resetColsBtn) {
+      resetColsBtn.addEventListener("click", function () {
+        resetColumns();
       });
     }
+
+    if (downloadBtn) {
+      downloadBtn.addEventListener("click", function () {
+        downloadVisibleCsv();
+      });
+    }
+    syncFullDownloadName();
 
     if (searchInput) {
       searchInput.addEventListener("input", function () {
@@ -1471,6 +2014,7 @@
       .then(function (data) {
         allRows = Array.isArray(data) ? data : [];
         initFacets();
+        ensureCnCycleColumns();
         render();
         if (table) {
           table.hidden = false;
